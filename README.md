@@ -10,10 +10,14 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 
 ### Prerequisites
 
+<<<<<<< HEAD
 * Node (I recommend using v8.2.0 or higher)
 * [Gatsby CLI](https://www.gatsbyjs.org/docs/)
 
 ### Run Locally
+=======
+Netlify CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. The example here is the Kaldi coffee company template (adapted from [One Click Hugo CMS](https://github.com/netlify-templates/one-click-hugo-cms)).
+>>>>>>> master
 
 ```sh
 gatsby new [SITE_DIRECTORY_NAME] https://github.com/konsumer/gatsby-starter-bootstrap-netlify/

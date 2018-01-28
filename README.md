@@ -1,52 +1,61 @@
-# Gatsby + Netlify CMS Starter
+# Gatsby Bootstrap Netlify Starter
 
-This repo contains an example business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://gatsby-netlify-cms.netlify.com/)**.
+[Bootstrap 4](http://getbootstrap.com/), [bootswatch](https://bootswatch.com/) and netlify CMS starter for Gatsby
 
-It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
+This repo contains an example blog that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://netlifycms.org): [demo](https://gatsby-starter-bootstrap-netlify.netlify.com)
 
-## Prerequisites
+It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](netlify.com) for continuous deployment, and CDN distribution.
 
-- Node (I recommend using v8.2.0 or higher)
-- [Gatsby CLI](https://www.gatsbyjs.org/docs/)
+## Getting Started
 
-## Getting Started (Recommended)
+### Prerequisites
 
-Netlify CMS can run in any frontend web environment, but the quickest way to try it out is by running it on a pre-configured starter site with Netlify. The example here is the Kaldi coffee company template (adapted from [One Click Hugo CMS](https://github.com/netlify-templates/one-click-hugo-cms)). Use the button below to build and deploy your own copy of the repository:
+* Node (I recommend using v8.2.0 or higher)
+* [Gatsby CLI](https://www.gatsbyjs.org/docs/)
 
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/AustinGreen/gatsby-starter-netlify-cms&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+### Run Locally
 
-After clicking that button, you’ll authenticate with GitHub and choose a repository name. Netlify will then automatically create a repository in your GitHub account with a copy of the files from the template. Next, it will build and deploy the new site on Netlify, bringing you to the site dashboard when the build is complete. Next, you’ll need to set up Netlify’s Identity service to authorize users to log in to the CMS.
-
-### Access Locally
-```
-$ git clone https://github.com/[GITHUB_USERNAME]/[REPO_NAME].git
-$ cd [REPO_NAME]
-$ yarn
-$ npm run develop
-```
-To test the CMS locally, you'll need run a production build of the site:
-```
-$ npm run build
-$ npm run serve
+```sh
+gatsby new [SITE_DIRECTORY_NAME] https://github.com/konsumer/gatsby-starter-bootstrap-netlify/
+cd [SITE_DIRECTORY_NAME]
+npm start
 ```
 
-## Getting Started (Without Netlify)
-```
-$ gatsby new [SITE_DIRECTORY_NAME] https://github.com/AustinGreen/gatsby-starter-netlify-cms/
-$ cd [SITE_DIRECTORY_NAME]
-$ npm run build
-$ npm run serve
-```
+## Accessing the CMS
 
-### Setting up the CMS
 Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting.
 
-## Debugging
-Windows users might encounter ```node-gyp``` errors when trying to npm install.
-To resolve, make sure that you have both Python 2.7 and the Visual C++ build environment installed.
-```
-npm config set python python2.7
-npm install --global --production windows-build-tools
-```
+### Configuration
 
-[Full details here](https://www.npmjs.com/package/node-gyp 'NPM node-gyp page')
+Set your site's title in `gatsby-config.js`. If you set `disqus` to your ID, it will be used for your comments, set it to `false` and it will be left out. It's currently set to `gatsby-starter-blog`, for the demo, but you can set it to your disqus ID. `author` and `authorLink` aren't currently used for anything, but maybe later.
+
+
+### Theming
+
+You can quickly load any theme from [bootswatch](https://bootswatch.com/) by editing `src/layouts/index.scss`, and switching out `cosmo` for one of these:
+
+* cosmo
+* cerulean
+* cyborg
+* darkly
+* flatly
+* journal
+* litera
+* lumen
+* lux
+* materia
+* minty
+* pulse
+* sandstone
+* simplex
+* sketchy
+* slate
+* solar
+* spacelab
+* superhero
+* united
+* yeti
+
+There's 2 lines to change.
+
+You can also comment/uncomment lines in that file to customize exactly what parts of bootstrap are loaded.

@@ -1,39 +1,33 @@
 {
-  "name": "gatsby-starter-netlify-cms",
-  "description": "Example Gatsby, and Netlify CMS project",
-  "version": "1.1.0",
-  "author": "Austin Green",
+  "name": "gatsby-starter-bootstrap-netlify",
+  "description": "Example Gatsby, Bootstrap, and Netlify CMS project",
+  "version": "1.0.0",
+  "author": "David Konsumer <konsumer@jetboystudio.com>",
   "dependencies": {
-    "bulma": "^0.6.0",
+    "bootstrap": "^4.0.0-beta.2",
+    "bootswatch": "^4.0.0-beta.2",
     "gatsby": "^1.9.63",
     "gatsby-link": "^1.6.21",
-    "gatsby-plugin-netlify-cms": "^1.0.2",
+    "gatsby-plugin-netlify": "^1.0.7",
+    "gatsby-plugin-offline": "^1.0.10",
     "gatsby-plugin-react-helmet": "^1.0.5",
     "gatsby-plugin-sass": "^1.0.12",
-    "gatsby-plugin-sharp": "^1.6.18",
-    "gatsby-remark-images": "^1.5.18",
+    "gatsby-remark-copy-linked-files": "^1.5.16",
+    "gatsby-remark-prismjs": "^1.2.9",
     "gatsby-source-filesystem": "^1.5.5",
     "gatsby-transformer-remark": "^1.7.17",
-    "gatsby-transformer-sharp": "^1.6.13",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-helmet": "^5.2.0",
-    "react-load-script": "0.0.6"
+    "reactstrap": "^5.0.0-alpha.3"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "bootstrap",
+    "bootswatch",
+    "netlify"
   ],
   "license": "MIT",
-  "main": "n/a",
   "scripts": {
-    "start": "npm run develop",
     "build": "gatsby build",
-    "develop": "gatsby develop",
-    "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write src/**/*.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gatsby develop"
   },
-  "devDependencies": {
-    "prettier": "^1.7.4"
-  }
+  "devDependencies": {}
 }

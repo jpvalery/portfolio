@@ -1,39 +1,84 @@
-import React from 'react'
-import { Container, Card, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap'
-import Link from 'gatsby-link'
-import graphql from 'graphql'
+import React from 'react';
+import styled from 'styled-components';
 
-const IndexPage = ({ data }) => (
-  <Container>
-    {data.allMarkdownRemark.edges.filter(post => post.node.frontmatter.contentType === 'blog').map(({ node: post }) => (
-      <Card style={{marginBottom: 10}} key={post.id}>
-        <CardBody>
-          <CardTitle><Link to={post.frontmatter.path}>{post.frontmatter.title}</Link></CardTitle>
-          <CardSubtitle style={{marginBottom: 10}}>{post.frontmatter.date}</CardSubtitle>
-          <CardText>{post.excerpt}</CardText>
-        </CardBody>
-      </Card>
-    ))}
-  </Container>
-)
+import Card from '../components/Card';
+import Header from '../components/Header';
+import config from '../../config/SiteConfig';
+import * as palette from '../../config/Style';
 
-export default IndexPage
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(${palette.GRID_COLUMNS}, 1fr);
+  grid-gap: 1rem;
 
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  .gatsby-image-outer-wrapper, .gatsby-image-wrapper {
+    position: static !important;
+  }
+`;
+
+const Content = styled.div`
+  max-width: ${palette.MAX_WIDTH}px;
+  position: relative;
+  padding-top: 1rem;
+`;
+
+const Index = (props) => {
+  const projectEdges = props.data.allMarkdownRemark.edges;
+
+  return (
+    <div>
+      <Content>
+        <Grid>
+          {projectEdges.map(project => (
+            <Card
+              date={project.node.frontmatter.date}
+              title={project.node.frontmatter.title}
+              cover={project.node.frontmatter.cover.childImageSharp.sizes}
+              path={project.node.fields.slug}
+              areas={project.node.frontmatter.areas}
+              slug={project.node.fields.slug}
+              key={project.node.fields.slug}
+            />
+        ))}
+        </Grid>
+      </Content>
+    </div>
+  );
+};
+
+export default Index;
+
+/* eslint no-undef: off */
 export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+  query HomeQuery {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
-          excerpt(pruneLength: 400)
-          id
+          fields {
+            slug
+          }
           frontmatter {
+            cover {
+              childImageSharp {
+                sizes(
+                  maxWidth: 850
+                  quality: 90
+                  traceSVG: { color: "#328bff" }
+                ) {
+                  ...GatsbyImageSharpSizes_withWebp_tracedSVG
+                }
+              }
+            }
+            date
             title
-            contentType
-            date(formatString: "MMMM DD, YYYY")
-            path
+            areas
           }
         }
       }
     }
   }
-`
+`;

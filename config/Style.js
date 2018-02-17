@@ -18,7 +18,3 @@ export const GRID_COLUMNS = '2';
 export const CONTENT_PADDING = '1.0875rem';
 
 export const CONTENT_HEIGHT = '90vh';
-
-export const HERO_HEIGHT = '82vh';
-
-export const NAV_HEIGHT = '8vh';

@@ -13,8 +13,12 @@ import * as palette from '../../config/Style';
 injectGlobal`
   :root {
     font-size: 16px;
+<<<<<<< HEAD
     padding: .618rem;
     padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+=======
+    padding: 1rem;
+>>>>>>> parent of 5219473... Update
     background: ${palette.HTML_COLOR };
   }
 
@@ -57,6 +61,7 @@ const TemplateWrapper = (props) => {
         <link rel="shortcut icon" href={favicon} />
       </Helmet>
       <SEO />
+      <Header />
       {children()}
       <Footer />
     </div>

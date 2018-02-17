@@ -1,7 +1,7 @@
 ---
 cover: "./matt-cannon.jpg"
 date: "2017-12-04"
-title: "test4"
+title: "Matt Cannon"
 areas:
     - Photography
 ---

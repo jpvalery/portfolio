@@ -31,7 +31,6 @@ const Index = (props) => {
 
   return (
     <div>
-    <Header />
       <Content>
         <Grid>
           {projectEdges.map(project => (

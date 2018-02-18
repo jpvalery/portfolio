@@ -16,14 +16,13 @@ const Project = (props) => {
   const { slug, next, prev } = props.pathContext;
   const postNode = props.data.markdownRemark;
   const project = postNode.frontmatter;
-  const date = format(project.date, config.dateFormat);
+  const date = format(project.date, config.dateFormat); 
 
   return (
     <div>
       <Helmet title={`${project.title} | ${config.siteTitle}`} />
       <SEO postPath={slug} postNode={postNode} postSEO />
       <ProjectHeader
-        avatar={config.avatar}
         name={config.name}
         date={date}
         title={project.title}

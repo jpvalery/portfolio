@@ -8,6 +8,7 @@ module.exports = {
     siteUrl: config.siteUrl + pathPrefix,
   },
   plugins: [
+
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
@@ -17,6 +18,13 @@ module.exports = {
         path: `${__dirname}/content/projects`,
       },
     },
+    {
+    resolve: `gatsby-source-contentful`,
+    options: {
+        spaceId: `34j7b1jydvza`,
+        accessToken: `73e6dcc347ff9069cd52099a443dcc3670a5179afcee081db69f58412e8c308a`,
+    },
+},
     {
       resolve: 'gatsby-transformer-remark',
       options: {

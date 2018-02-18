@@ -1,7 +1,7 @@
 ---
 cover: "./amy-luo.jpg"
 date: "2017-12-01"
-title: "Amy Luo"
+title: "test1"
 areas:
     - Photography
     - Art

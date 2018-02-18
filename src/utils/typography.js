@@ -6,8 +6,8 @@ const typography = new Typography({
   title: 'I AM MATTHIAS',
   baseFontSize: config.baseFontSize,
   baseLineHeight: 1,
-  headerFontFamily: [config.headerFontFamily, 'sans-serif'],
-  bodyFontFamily: [config.bodyFontFamily, 'sans-serif'],
+  headerFontFamily: ['Cardo', 'Georgia', 'serif'],
+  bodyFontFamily: ['Raleway', 'Helvetica', 'Arial', 'sans-serif'], 
   headerWeight: 700,
   googleFonts: [
     {

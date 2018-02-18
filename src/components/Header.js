@@ -7,7 +7,7 @@ import * as palette from '../../config/Style';
 
 const NavBar = styled.div`
     height: ${palette.NAV_HEIGHT};
-    min-height: 50px;
+    min-height: 65px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,8 +21,12 @@ position: relative;
 opacity: 1;
 align-self: self-start;
 display: flex;
+align-items: center;
+justify-content: center;
 flex-direction: row;
+vertical-align: middle;
 img{height:1.616rem;margin:0 1rem 0 0;}
+h4 {margin:0;}
 @media (max-width: 768px) {
   h4 {display: none;}
 }

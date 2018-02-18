@@ -13,7 +13,7 @@ import * as palette from '../../config/Style';
 injectGlobal`
   :root {
     font-size: 16px;
-    padding: 1rem;
+    padding: .5rem;
     background: ${palette.HTML_COLOR };
   }
 
@@ -56,7 +56,7 @@ const TemplateWrapper = (props) => {
         <link rel="shortcut icon" href={favicon} />
       </Helmet>
       <SEO />
-      <Header />
+      
       {children()}
       <Footer />
     </div>

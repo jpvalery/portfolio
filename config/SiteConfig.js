@@ -5,7 +5,7 @@ module.exports = {
   siteTitleAlt: 'Matthias Kronfeld Jordan', // Alternative Site title for SEO
   siteUrl: '', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  siteLogo: '/logos/logo-1024.png', // Used for SEO and manifest
+  siteLogo: '/assets/Logo_export.40pt.svg', // Used for SEO and manifest
   siteDescription: 'Portfolio',
 
   siteFBAppID: '123456789', // Facebook App ID

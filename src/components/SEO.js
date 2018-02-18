@@ -70,7 +70,6 @@ const SEO = (props) => {
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJSONLD)}
       </script>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
       <meta property="og:locale" content="de_DE" />
       <meta property="og:site_name" content={config.ogSiteName} />
       <meta property="og:url" content={postSEO ? postURL : blogURL} />

@@ -1,13 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { injectGlobal } from 'styled-components';
 
-import SEO from '../components/SEO';
-import Header from '../components/Header';
+import * as palette from '../utils/styles';
+
+import Nav from '../components/Nav';
 import Footer from '../components/Footer';
-import favicon from './favicon.ico';
-import config from '../../config/SiteConfig';
-import * as palette from '../../config/Style';
 
 /* eslint no-unused-expressions: off */
 injectGlobal`
@@ -16,7 +15,6 @@ injectGlobal`
     padding: .5rem;
     background: ${palette.HTML_COLOR };
   }
-
   body {
     background: ${palette.BG_COLOR };
     padding: 1rem;
@@ -24,43 +22,37 @@ injectGlobal`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
   a {
-    color: ${palette.LINK_COLOR};
-    transition: color .5s;
+    color: ${palette.COLOR };
+    transition: color 10s;
     text-decoration: none;
   }
-
   a:hover {
     text-decoration: none;
-    color: ${palette.LINK_HOVER_COLOR};
+    color: ${palette.SECONDARY_COLOR };
   }
-
   .gatsby-resp-image-wrapper {
     margin: 2.75rem 0;
   }
 `;
 
-const TemplateWrapper = (props) => {
-  const { children } = props;
-
-  return (
-    <div>
-      <Helmet
-        title={config.siteTitleAlt}
-        meta={[
-            { name: 'description', content: '{config.iteDescription}' },
-            { name: 'keywords', content: '{config.iteDescription}' },
-          ]}
-      >
-        <link rel="shortcut icon" href={favicon} />
-      </Helmet>
-      <SEO />
-      
+const TemplateWrapper = ({ children }) => (
+  <div>
+    <Helmet
+      title="I AM MATTHIAS"
+      meta={[
+        { name: 'description', content: 'Sample' },
+        { name: 'keywords', content: 'sample, something' },
+      ]}
+    />
+      <Nav />
       {children()}
       <Footer />
-    </div>
-  );
-};
+  </div>
+)
 
-export default TemplateWrapper;
+TemplateWrapper.propTypes = {
+  children: PropTypes.func,
+}
+
+export default TemplateWrapper

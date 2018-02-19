@@ -1,90 +1,41 @@
-const config = require('./config/SiteConfig');
-
-const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
+require('dotenv').config()
 
 module.exports = {
-  pathPrefix: config.pathPrefix,
-  siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix,
-  },
-  plugins: [
-
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'projects',
-        path: `${__dirname}/content/projects`,
-      },
+    siteMetadata: {
+        title: 'Gatsby Default Starter',
     },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-external-links',
-            options: {
-              target: '_blank',
-              rel: 'nofollow noopener noreferrer',
-            },
+    plugins: [
+      'gatsby-plugin-react-helmet',
+      'gatsby-transformer-remark',
+      {
+        resolve: `gatsby-plugin-typography`,
+        options: {
+            pathToConfigModule: `src/utils/typography.js`,
           },
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 1400,
-              quality: 90,
-              linkImagesToOriginal: false,
-            },
+        },
+        {
+          resolve: `gatsby-source-contentful`,
+          options: {
+            spaceId: process.env.CONTENTFUL_SPACE_ID || '',
+            accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || '',
           },
-        ],
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: config.googleAnalyticsID,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-nprogress',
-      options: {
-        color: config.themeColor,
-      },
-    },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography.js',
-      },
-    },
-    'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: config.siteTitle,
-        short_name: config.siteTitleAlt,
-        description: config.siteDescription,
-        start_url: config.pathPrefix,
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
-        display: 'minimal-ui',
-        icons: [
-          {
-            src: '/logos/logo-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/logos/logo-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
-      },
-    },
-    'gatsby-plugin-offline',
-  ],
+        },
+        {
+   resolve: `gatsby-transformer-remark`,
+   options: {
+     plugins: [
+       `gatsby-plugin-sharp`,
+       {
+         resolve: `gatsby-remark-images`,
+         options: {
+           // It's important to specify the maxWidth (in pixels) of
+           // the content container as this plugin uses this as the
+           // base for generating different widths of each image.
+           maxWidth: 740,
+         },
+       },
+     ],
+   },
+ },
+    ],
 };

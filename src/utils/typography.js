@@ -1,21 +1,19 @@
-import Typography from 'typography';
-
-const config = require('../../config/SiteConfig');
+import Typography from "typography";
 
 const typography = new Typography({
   title: 'I AM MATTHIAS',
-  baseFontSize: config.baseFontSize,
-  baseLineHeight: 1,
+  baseFontSize: '16px',
+  baseLineHeight: 1.618,
   headerFontFamily: ['Cardo', 'Georgia', 'serif'],
-  bodyFontFamily: ['Raleway', 'Helvetica', 'Arial', 'sans-serif'], 
+  bodyFontFamily: ['Raleway', 'Helvetica', 'Arial', 'sans-serif'],
   headerWeight: 700,
   googleFonts: [
     {
-      name: config.headerFontFamily,
+      name: 'Cardo',
       styles: ['700'],
     },
     {
-      name: config.bodyFontFamily,
+      name: 'Raleway',
       styles: ['400'],
     },
   ],

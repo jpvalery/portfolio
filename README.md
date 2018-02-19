@@ -1,5 +1,6 @@
-# gatsby-starter-default
-The default Gatsby starter
+# staging.iammatthias.com
+
+Built on the default Gatsby starter. Powered by Contentful.
 
 For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
 

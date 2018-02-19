@@ -20,13 +20,21 @@ const Grid = styled.div`
 `;
 
 const GridTitle = styled.div`
-    box-sizing: border-box;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const GridContent = styled.div`
 display: grid;
 grid-auto-flow: row dense;
+`;
+
+const HideOnMobile = styled.div`
+@media (max-width: 768px) {
+  display: none;
+}
 `;
 
 
@@ -38,10 +46,16 @@ class BlogPost extends Component {
 <Wrapper>
 <Grid>
 <GridTitle>
-<h1>
+<div><h1>
     {title}
 </h1>
 <p>{createdAt}</p>
+</div>
+<HideOnMobile><h1>
+    {title}
+</h1>
+<p>{createdAt}</p>
+</HideOnMobile>
 </GridTitle>
 <GridContent>
 <div dangerouslySetInnerHTML={{__html:content.childMarkdownRemark.html}} />

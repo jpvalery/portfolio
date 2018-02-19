@@ -18,13 +18,14 @@ const Content = styled.p`
     color: ${palette.SECONDARY_COLOR };
     padding: 1rem;
     text-align: center;
-    line-height: 12px;
 `;
 
 const MiniBio = () => (
 <Wrapper>
   <Content>
-        Hello, and welcome to the site.
+  Matthias Jordan
+  <br/>Photographer & Content Creator
+  <br/>Product & Marketing Coordinator @ Surf Air
   </Content>
 </Wrapper>
 );

@@ -34,11 +34,10 @@ const Card = styled(Link)`
     position: relative;
     overflow: hidden;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: top;
     flex-direction: column;
-    color: ${palette.BG_COLOR };
-    text-shadow: 0px 0px 2px ${palette.COLOR };
+    text-shadow: 0px 0px 1px ${palette.BG_COLOR };
 `;
 
 const Cover = styled.div`
@@ -117,8 +116,8 @@ export const pageQuery = graphql`
                     slug
                     createdAt(formatString: "MMMM DD, YYYY")
                     featuredImage {
-                        resolutions(width: 300) {
-                            ...GatsbyContentfulResolutions
+                        resolutions(width: 740) {
+                            ...GatsbyContentfulResolutions_withWebp
                         }
                     }
                     content {

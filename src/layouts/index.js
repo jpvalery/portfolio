@@ -24,12 +24,11 @@ injectGlobal`
   }
   a {
     color: ${palette.COLOR };
-    transition: color 10s;
     text-decoration: none;
   }
   a:hover {
+    color: ${palette.COLOR };
     text-decoration: none;
-    color: ${palette.SECONDARY_COLOR };
   }
   .gatsby-resp-image-wrapper {
     margin: 2.75rem 0;

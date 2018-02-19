@@ -2,9 +2,10 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components';
 
-import * as palette from '../../utils/styles';
+import * as palette from './../../utils/styles';
 
-import heroImg from "../../assets/20171222_bear-valley_008.jpg";
+import heroImg from "./../../assets/20171222_bear-valley_008.jpg";
+import Logo from "./../../assets/Logo_export.30pt.svg";
 
 const Header = styled.div`
    height: 80vh;
@@ -44,7 +45,7 @@ const Hero = ({
 }) => (
     <Header>
           <Avatar>
-          {/* <img src="/assets/Logo_export.30pt.svg" /> */}
+          <img src={Logo} />
           </Avatar>
     </Header>
 );

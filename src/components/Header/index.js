@@ -2,20 +2,20 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components';
 
+import { withPrefix } from 'gatsby-link'
+
 import * as palette from './../../utils/styles';
 
-import heroImg from "./../../assets/20171222_bear-valley_008.jpg";
-import Logo from "./../../assets/Logo_export.30pt.svg";
 
 const Header = styled.div`
-   height: 80vh;
+   height: ${palette.HERO_HEIGHT };
    position: relative;
    display: flex;
    justify-content: center;
    flex-direction: column;
    color: ${palette.SECONDARY_COLOR };
    background: ${palette.SECONDARY_COLOR };
-   background-image: url(./20171222_bear-valley_008.jpg);
+   background-image: url(./hero_trees.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
@@ -45,7 +45,7 @@ const Hero = ({
 }) => (
     <Header>
           <Avatar>
-          <img src={Logo} />
+          <img src={withPrefix('./Logo_export.30pt.svg')} />
           </Avatar>
     </Header>
 );

@@ -8,6 +8,4 @@ export const SECONDARY_COLOR = '#001f3f';
 
 export const CONTENT_HEIGHT = '90vh';
 
-export const HERO_HEIGHT = '82vh';
-
-export const NAV_HEIGHT = '8vh';
+export const HERO_HEIGHT = '80vh';

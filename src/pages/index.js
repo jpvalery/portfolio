@@ -15,8 +15,8 @@ const Wrapper = styled.div`
 const Grid = styled.div`
   margin: 1rem 0;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
+  grid-template-columns: repeat( auto-fit, minmax(25vw, 1fr) );
+  grid-auto-flow: row dense;
   grid-gap: 1rem;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;

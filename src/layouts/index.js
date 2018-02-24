@@ -19,6 +19,12 @@ injectGlobal`
     to bottom right,
     ${palette.HTML_COLOR },
     ${palette.SECONDARY_COLOR } 100%);
+    @supports(padding: max(0px)) {
+    .post {
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
+    }
+}
   }
   body {
     background: ${palette.BG_COLOR };
@@ -42,13 +48,11 @@ injectGlobal`
 
 const TemplateWrapper = ({ children }) => (
   <div>
-    <Helmet
-      title="I AM MATTHIAS"
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>I AM MATTHIAS</title>
+      <meta name='viewport' content='initial-scale=1, viewport-fit=cover' />
+      </Helmet>
       <Nav />
       {children()}
       <Footer />

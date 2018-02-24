@@ -14,13 +14,9 @@ injectGlobal`
     font-size: 16px;
     padding: .5rem;
     background: ${palette.HTML_COLOR };
-    background-image:
-  linear-gradient(
-    to bottom right,
-    ${palette.HTML_COLOR },
-    ${palette.SECONDARY_COLOR } 100%);
     @supports(padding: max(0px)) {
         padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+        background: ${palette.BG_COLOR };
 }
   }
   body {

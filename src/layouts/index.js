@@ -20,9 +20,7 @@ injectGlobal`
     ${palette.HTML_COLOR },
     ${palette.SECONDARY_COLOR } 100%);
     @supports(padding: max(0px)) {
-    .post {
         padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-    }
 }
   }
   body {

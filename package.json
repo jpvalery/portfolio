@@ -7,6 +7,8 @@
     "gatsby": "^1.9.153",
     "gatsby-image": "^1.0.37",
     "gatsby-link": "^1.6.34",
+    "gatsby-plugin-canonical-urls": "^1.0.13",
+    "gatsby-plugin-catch-links": "^1.0.17",
     "gatsby-plugin-react-helmet": "^2.0.3",
     "gatsby-plugin-sharp": "^1.6.31",
     "gatsby-plugin-typography": "^1.7.14",

@@ -41,20 +41,20 @@ const HideOnMobile = styled.div`
 class BlogPost extends Component {
     render() {
         console.log(this.props)
-        const { title, createdAt, featuredImage, content } = this.props.data.contentfulBlog
+        const { title, createdAt, featuredImage, content, blurb } = this.props.data.contentfulBlog
         return (
 <Wrapper>
 <Grid>
 <GridTitle>
-<div><h1>
-    {title}
-</h1>
+<div><h1>{title}</h1>
 <p>{createdAt}</p>
+<p>{blurb}</p>
 </div>
 <HideOnMobile><h1>
     {title}
 </h1>
 <p>{createdAt}</p>
+<p>{blurb}</p>
 </HideOnMobile>
 </GridTitle>
 <GridContent>
@@ -77,6 +77,7 @@ export const pageQuery = graphql`
     query blogPostQuery($slug: String!){
         contentfulBlog(slug: {eq: $slug}) {
             title
+            blurb
             createdAt(formatString: "MMMM DD, YYYY")
             featuredImage {
                 sizes(maxWidth: 740) {

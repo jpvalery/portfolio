@@ -14,7 +14,7 @@ injectGlobal`
     font-size: 16px;
     padding: .5rem;
     background: ${palette.HTML_COLOR };
-    @supports(padding: max(0px)) {
+    @supports(padding: max(0)) {
         padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
         background: ${palette.BG_COLOR };
 }

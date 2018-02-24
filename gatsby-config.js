@@ -8,6 +8,14 @@ module.exports = {
     },
     plugins: [
       'gatsby-plugin-react-helmet',
+      'gatsby-plugin-catch-links',
+      'gatsby-image',
+      {
+    resolve: `gatsby-plugin-canonical-urls`,
+    options: {
+      siteUrl: `https://staging.iammatthias.com`,
+    },
+  },
       {
         resolve: `gatsby-plugin-typography`,
         options: {

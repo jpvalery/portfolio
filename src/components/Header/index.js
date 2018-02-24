@@ -30,24 +30,11 @@ const Content = styled.div`
 `;
 
 
-const Avatar = styled.div`
-    height: 125px;
-    width: 125px;
-    margin: 0 auto;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: -o-crisp-edges;
-    image-rendering: -webkit-optimize-contrast;
-    -ms-interpolation-mode: nearest-neighbor;
-`;
 
 const Hero = ({
   avatar
 }) => (
-    <Header>
-          <Avatar>
-          <img src={withPrefix('./Logo_export.30pt.svg')} />
-          </Avatar>
-    </Header>
+    <Header/>
 );
 
 export default Hero;

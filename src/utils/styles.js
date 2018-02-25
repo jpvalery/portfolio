@@ -8,4 +8,6 @@ export const SECONDARY_COLOR = '#001f3f';
 
 export const CONTENT_HEIGHT = '90vh';
 
-export const HERO_HEIGHT = '80vh';
+export const HEIGHT = '80vh';
+
+export const FooterHEIGHT = '90vh';

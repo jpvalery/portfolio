@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import * as palette from '../../utils/styles';
 
 const Wrapper = styled.div`
-    height: 90vh;
+    height: ${palette.FooterHEIGHT };;
     display: flex;
     flex-direction: column;
     align-items: center;

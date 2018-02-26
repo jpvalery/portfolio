@@ -21,15 +21,6 @@ module.exports = {
             },
         },
         {
-            resolve: `gatsby-plugin-sitemap`
-        },
-        {
-            resolve: `gatsby-plugin-canonical-urls`,
-            options: {
-                siteUrl: `https://staging.iammatthias.com`,
-            },
-        },
-        {
             resolve: `gatsby-plugin-typography`,
             options: {
                 pathToConfigModule: `src/utils/typography.js`,

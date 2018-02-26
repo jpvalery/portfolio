@@ -91,11 +91,13 @@ const page = data.contentfulHome;
   return (
       <wrapper>
         <Grid>
+          <GridItem>
           <Hero>
           <Cover>
             <Img sizes={page.hero.sizes}/>
           </Cover>
-      </Hero>
+           </Hero>
+           </GridItem>
         <MiniBio dangerouslySetInnerHTML={{ __html: page.bio.childMarkdownRemark.html }} />
         <SubGridLeft>
         <GridItem>

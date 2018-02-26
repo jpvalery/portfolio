@@ -7,15 +7,6 @@ import * as palette from '../utils/styles';
 
 const Wrapper = styled.div`
 `
-const Hero = styled.div`
-height: ${palette.HEIGHT };
-position: relative;
-overflow: hidden;
-display: flex;
-align-items: left;
-justify-content: top;
-flex-direction: column;
-`;
 const Grid = styled.div`
   margin: 1rem 0;
   display: grid;
@@ -25,6 +16,15 @@ const Grid = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
+`
+const Hero = styled.div`
+height: ${palette.HEIGHT };
+position: relative;
+overflow: hidden;
+display: flex;
+align-items: left;
+justify-content: top;
+flex-direction: column;
 `
 const SubGridLeft = styled.div`
   display: grid;
@@ -90,12 +90,12 @@ const page = data.contentfulHome;
 
   return (
       <wrapper>
-      <Hero>
+        <Grid>
+          <Hero>
           <Cover>
             <Img sizes={page.hero.sizes}/>
           </Cover>
       </Hero>
-        <Grid>
         <MiniBio dangerouslySetInnerHTML={{ __html: page.bio.childMarkdownRemark.html }} />
         <SubGridLeft>
         <GridItem>

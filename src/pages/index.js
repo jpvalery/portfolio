@@ -29,35 +29,50 @@ flex-direction: column;
 `
 const SubGrid = styled.ul`
   display: grid;
+  margin: 0;
   grid-template-columns: 1fr 1fr;
   grid-auto-flow: row dense;
   grid-gap: 1rem;
   align-items: center;
   justify-content: center;
   list-style-type: none;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
-
 const SubGridLeft = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-auto-flow: row dense;
   grid-gap: 1rem;
-
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
 const SubGridRight = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-auto-flow: row dense;
   grid-gap: 1rem;
-
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `
 const GridItem = styled.div`
   .gatsby-image-outer-wrapper, .gatsby-image-wrapper {
     position: static !important;
+  }
+`
+const GridItemSwap = styled.div`
+  .gatsby-image-outer-wrapper, .gatsby-image-wrapper {
+    position: static !important;
+  }
+  @media (max-width: 768px) {
+      order: 2;
   }
 `
 const MiniBio = styled.div`
@@ -99,23 +114,23 @@ const IndexPage = ({data}) => {
 const posts = data.allContentfulBlog.edges;
 const page = data.contentfulHome;
 
-  return (
-      <wrapper>
-        <Grid>
-          <GridItem>
-          <Hero>
+return (
+  <wrapper>
+    <Grid>
+      <GridItem>
+        <Hero>
           <Cover>
             <Img sizes={page.hero.sizes}/>
           </Cover>
-           </Hero>
-           </GridItem>
-        <MiniBio dangerouslySetInnerHTML={{ __html: page.bio.childMarkdownRemark.html }} />
-        <SubGridLeft>
+        </Hero>
+      </GridItem>
+      <MiniBio dangerouslySetInnerHTML={{ __html: page.bio.childMarkdownRemark.html }} />
+      <SubGridLeft>
         <GridItem>
           <Card to={posts[0].node.slug + "/"} >
-              <Cover>
-                <Img sizes={posts[0].node.featuredImage.sizes}/>
-              </Cover>
+            <Cover>
+              <Img sizes={posts[0].node.featuredImage.sizes}/>
+            </Cover>
           </Card>
         </GridItem>
         <GridItem>
@@ -124,41 +139,37 @@ const page = data.contentfulHome;
             <Description>{posts[0].node.blurb}</Description>
           </Data>
         </GridItem>
-        </SubGridLeft>
-        <SubGridRight>
+      </SubGridLeft>
+      <SubGridRight>
+        <GridItemSwap>
+          <Data to={posts[1].node.slug + "/"} >
+            <Name>{posts[1].node.title}</Name>
+            <Description>{posts[1].node.blurb}</Description>
+          </Data>
+        </GridItemSwap>
         <GridItem>
-        <Data to={posts[1].node.slug + "/"} >
-          <Name>{posts[1].node.title}</Name>
-          <Description>{posts[1].node.blurb}</Description>
-        </Data>
-        </GridItem>
-        <GridItem>
-        <Card to={posts[1].node.slug + "/"} >
+          <Card to={posts[1].node.slug + "/"} >
             <Cover>
               <Img sizes={posts[1].node.featuredImage.sizes}/>
             </Cover>
-        </Card>
+          </Card>
         </GridItem>
-        </SubGridRight>
-        <SubGrid>
-
-          {posts.slice(2).map(({ node: post }) => (
-            <li key={post.id}>
+      </SubGridRight>
+      <SubGrid>
+        {posts.slice(2).map(({ node: post }) => (
+          <GridItem key={post.id}>
             <Card to={post.slug + "/"} >
-                <Cover>
-                  <Img sizes={post.featuredImage.sizes}/>
-                </Cover>
+              <Cover>
+                <Img sizes={post.featuredImage.sizes}/>
+              </Cover>
             </Card>
-            </li>
+          </GridItem>
           ))}
-
-        </SubGrid>
-        </Grid>
-      </wrapper>
+      </SubGrid>
+    </Grid>
+  </wrapper>
     )
 }
-
-export default IndexPage
 
 export const query = graphql`
   query HomeQuery {
@@ -196,3 +207,4 @@ export const query = graphql`
     }
   }
 `
+export default IndexPage

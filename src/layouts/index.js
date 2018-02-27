@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 injectGlobal`
 :root {
   font-size: 16px;
-  
+
   background: ${palette.BG_COLOR };
   @supports(padding: max(0px)) {
       padding-left: env(safe-area-inset-left);
@@ -37,7 +37,7 @@ injectGlobal`
   .gatsby-resp-image-wrapper {
     margin: 2.75rem 0;
   }
-`;
+`
 
 const TemplateWrapper = ({ children }) => (
   <div>

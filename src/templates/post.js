@@ -8,8 +8,7 @@ import * as palette from '../utils/styles';
 
 const Wrapper = styled.div`
 
-`;
-
+`
 const Grid = styled.div`
   margin: 1rem 0;
   display: grid;
@@ -19,8 +18,7 @@ const Grid = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
-`;
-
+`
 const HeroGrid = styled.div`
   margin: 1rem 0;
   display: grid;
@@ -36,7 +34,6 @@ const GridItem = styled.div`
     position: static !important;
   }
 `
-
 const Hero = styled.div`
 height: ${palette.HEIGHT };
 margin-top: -1rem;
@@ -65,72 +62,62 @@ const Title = styled.div`
   justify-content: center;
   flex-direction: column;
   text-transform: uppercase;
-`;
-
+`
 const GridTitle = styled.div`
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`;
-
+`
 const GridContent = styled.div`
 display: grid;
 grid-auto-flow: row dense;
-`;
-
+`
 const HideOnMobile = styled.div`
 @media (max-width: 768px) {
   display: none;
 }
-`;
-
-
+`
 class BlogPost extends Component {
-    render() {
-        console.log(this.props)
-        const { title, createdAt, featuredImage, content, blurb } = this.props.data.contentfulBlog
-        return (
-<Wrapper>
-<HeroGrid>
-  <GridItem>
-  <Hero>
-  <Cover>
-    <Img sizes={featuredImage.sizes}/>
-  </Cover>
-  <Title><h1>{title}</h1>
-  <h3>{createdAt}</h3>
-  </Title>
-   </Hero>
-   </GridItem>
-   </HeroGrid>
-<Grid>
-<GridTitle>
-<div>
-<p>{blurb}</p>
-</div>
-<HideOnMobile><h1>
-    {title}
-</h1>
-<p>{createdAt}</p>
-<p>{blurb}</p>
-</HideOnMobile>
-</GridTitle>
-<GridContent>
-<div dangerouslySetInnerHTML={{__html:content.childMarkdownRemark.html}} />
-</GridContent>
-</Grid>
+render() {
+  console.log(this.props)
+    const { title, createdAt, featuredImage, content, blurb } = this.props.data.contentfulBlog
+return (
+  <Wrapper>
+    <HeroGrid>
+      <GridItem>
+        <Hero>
+          <Cover>
+            <Img sizes={featuredImage.sizes}/>
+          </Cover>
+          <Title><h1>{title}</h1>
+            <h3>{createdAt}</h3>
+          </Title>
+        </Hero>
+      </GridItem>
+    </HeroGrid>
+    <Grid>
+      <GridTitle>
+        <div>
+          <p>{blurb}</p>
+        </div>
+        <HideOnMobile>
+          <h1>{title}</h1>
+          <p>{createdAt}</p>
+          <p>{blurb}</p>
+        </HideOnMobile>
+      </GridTitle>
+      <GridContent>
+        <div dangerouslySetInnerHTML={{__html:content.childMarkdownRemark.html}} />
+      </GridContent>
+    </Grid>
 </Wrapper>
-
-        )
-    }
+    )
+  }
 }
-
 BlogPost.PropTypes = {
     data: PropTypes.object.isRequired
 }
-
-export default BlogPost
 
 export const pageQuery = graphql`
     query blogPostQuery($slug: String!){
@@ -151,3 +138,4 @@ export const pageQuery = graphql`
         }
     }
 `
+export default BlogPost

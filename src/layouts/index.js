@@ -12,13 +12,11 @@ import Footer from '../components/Footer';
 injectGlobal`
 :root {
   font-size: 16px;
-  padding: .5rem;
-  background: ${palette.HTML_COLOR };
+  
+  background: ${palette.BG_COLOR };
   @supports(padding: max(0px)) {
-      padding: .5rem;
       padding-left: env(safe-area-inset-left);
       padding-right:env(safe-area-inset-right);
-      background: ${palette.BG_COLOR };
 }
   }
   body {

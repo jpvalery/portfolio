@@ -19,6 +19,7 @@ const Grid = styled.div`
 `
 const Hero = styled.div`
 height: ${palette.HEIGHT };
+margin-top: -1rem;
 position: relative;
 overflow: hidden;
 display: flex;
@@ -26,6 +27,16 @@ align-items: left;
 justify-content: top;
 flex-direction: column;
 `
+const SubGrid = styled.ul`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: row dense;
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+`
+
 const SubGridLeft = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -129,6 +140,19 @@ const page = data.contentfulHome;
         </Card>
         </GridItem>
         </SubGridRight>
+        <SubGrid>
+
+          {posts.slice(2).map(({ node: post }) => (
+            <li key={post.id}>
+            <Card to={post.slug + "/"} >
+                <Cover>
+                  <Img sizes={post.featuredImage.sizes}/>
+                </Cover>
+            </Card>
+            </li>
+          ))}
+
+        </SubGrid>
         </Grid>
       </wrapper>
     )

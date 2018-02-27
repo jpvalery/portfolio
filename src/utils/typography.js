@@ -4,9 +4,10 @@ import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
 const typography = new Typography({
   title: 'I AM MATTHIAS',
   baseFontSize: '16px',
+  scaleRatio: 3,
   baseLineHeight: 1.618,
-  headerFontFamily: ['Montserrat', 'Helvetica', 'Arial'],
-  bodyFontFamily: ['Merriweather'],
+  headerFontFamily: ['Playfair Display', 'serif'],
+  bodyFontFamily: ['Crimson Text', 'serif'],
   headerWeight: 900,
 
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({

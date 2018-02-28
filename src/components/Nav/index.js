@@ -23,7 +23,8 @@ align-self: self-start;
 display: flex;
 align-items: center;
 justify-content: center;
-img{height:2rem;margin:0 1rem 0 0;}
+a{height:2rem;margin:0 1rem 0 0;}
+img{height: 100%;}
 h4 {margin:0;}
 @media (max-width: 768px) {
   h4 {display: none;}

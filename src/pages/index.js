@@ -5,6 +5,11 @@ import styled from 'styled-components';
 
 import * as palette from '../utils/styles';
 
+const IndexPage = ({data}) => {
+
+const posts = data.allContentfulBlog.edges;
+const page = data.contentfulHome;
+
 const Wrapper = styled.div`
 `
 const Grid = styled.div`
@@ -109,11 +114,6 @@ const Name = styled.h1`
 const Description = styled.p`
 `
 
-const IndexPage = ({data}) => {
-
-const posts = data.allContentfulBlog.edges;
-const page = data.contentfulHome;
-
 return (
   <wrapper>
     <Grid>
@@ -207,4 +207,4 @@ export const query = graphql`
     }
   }
 `
-export default IndexPage
+export default IndexPage;

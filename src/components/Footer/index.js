@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import * as palette from '../../utils/styles';
 
+const Footer = () => {
 const Wrapper = styled.div`
     height: ${palette.FooterHEIGHT };;
     display: flex;
@@ -12,16 +13,14 @@ const Wrapper = styled.div`
     position: relative;
     img{height:1.618rem;margin:0;}
 
-`;
-
+`
 const Content = styled.p`
     color: ${palette.SECONDARY_COLOR };
     padding: 1rem;
     text-align: center;
     font-size: 10px;
     margin: 0;
-`;
-
+`
 const Icon = styled.div`
     display: flex;
     flex-direction: row;
@@ -30,9 +29,9 @@ const Icon = styled.div`
     position: relative;
     img{height:1.618rem;margin:1rem;}
 
-`;
+`
 
-const Footer = () => (
+return (
 <Wrapper>
   <Content>
         &copy; {(new Date().getFullYear())} Matthias Kronfeld Jordan
@@ -47,6 +46,7 @@ const Footer = () => (
 
 </Icon>
 </Wrapper>
-);
+)
+}
 
 export default Footer;

@@ -4,6 +4,9 @@ import styled from 'styled-components';
 
 import * as palette from '../utils/styles';
 
+const AboutPage = ({data}) => {
+const {name,bio,portrait} = data.contentfulAbout;
+
 const Wrapper = styled.div`
 `
 const Grid = styled.div`
@@ -51,9 +54,6 @@ const Name = styled.h1`
     font-size: 2rem;
 `
 
-
-const AboutPage = ({data}) => {
-const {name,bio,portrait} = data.contentfulAbout;
 return (
   <wrapper>
     <Grid>
@@ -97,4 +97,4 @@ export const query = graphql`
     }
   }
 `
-export default AboutPage
+export default AboutPage;

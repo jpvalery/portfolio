@@ -5,6 +5,10 @@ import styled from 'styled-components';
 
 import * as palette from '../utils/styles';
 
+class BlogPost extends Component {
+render() {
+  console.log(this.props)
+    const { title, createdAt, featuredImage, content, blurb } = this.props.data.contentfulBlog
 
 const Wrapper = styled.div`
 
@@ -78,10 +82,7 @@ const HideOnMobile = styled.div`
   display: none;
 }
 `
-class BlogPost extends Component {
-render() {
-  console.log(this.props)
-    const { title, createdAt, featuredImage, content, blurb } = this.props.data.contentfulBlog
+
 return (
   <Wrapper>
     <HeroGrid>
@@ -138,4 +139,4 @@ export const pageQuery = graphql`
         }
     }
 `
-export default BlogPost
+export default BlogPost;

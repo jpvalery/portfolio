@@ -6,14 +6,15 @@ import { withPrefix } from 'gatsby-link'
 
 import * as palette from '../../utils/styles'
 
+const Hero = ({avatar}) => {
+
 const NavBar = styled.div`
     height: 4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #000000;
-`;
-
+`
 const NavLeft = styled.div`
 padding: 1rem;
 position: relative;
@@ -27,8 +28,7 @@ h4 {margin:0;}
 @media (max-width: 768px) {
   h4 {display: none;}
 }
-`;
-
+`
 const NavRight = styled.div`
    padding: 1rem;
    position: relative;
@@ -38,22 +38,20 @@ const NavRight = styled.div`
    align-items: center;
    justify-content: center;
    img{height:1.618rem;margin:0 0 0 0;}
-`;
+`
 
-
-const Hero = ({
-  avatar
-}) => (
-  <nav>
+return (
+<nav>
   <NavBar>
-  <NavLeft>
-    <a href="/"><img src={withPrefix('./Logo_export.40pt.svg')} /></a><a href="/"><h4>I AM MATTHIAS</h4></a>
-  </NavLeft>
-  <NavRight>
-    <img src={withPrefix('./menu.svg')} />
-  </NavRight>
+    <NavLeft>
+      <a href="/"><img src={withPrefix('./Logo_export.40pt.svg')} /></a><a href="/"><h4>I AM MATTHIAS</h4></a>
+    </NavLeft>
+    <NavRight>
+      <img src={withPrefix('./menu.svg')} />
+    </NavRight>
   </NavBar>
-    </nav>
-);
+</nav>
+)
+}
 
 export default Hero;

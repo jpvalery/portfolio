@@ -8,6 +8,8 @@ import * as palette from '../utils/styles';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 
+const TemplateWrapper = ({ children }) => {
+
 /* eslint no-unused-expressions: off */
 injectGlobal`
 :root {
@@ -38,8 +40,7 @@ injectGlobal`
     margin: 2.75rem 0;
   }
 `
-
-const TemplateWrapper = ({ children }) => (
+return (
   <div>
     <Helmet>
       <meta charSet="utf-8" />
@@ -55,5 +56,6 @@ const TemplateWrapper = ({ children }) => (
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
 }
+}
 
-export default TemplateWrapper
+export default TemplateWrapper;

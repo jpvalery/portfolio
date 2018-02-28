@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import * as palette from '../utils/styles';
 
+const NotFoundPage = () => {
+
 const Wrapper = styled.div`
 `
 const Grid = styled.div`
@@ -25,7 +27,7 @@ justify-content: center;
 text-align: center;
 `
 
-const NotFoundPage = () => {
+
 return (
   <Wrapper>
     <GridItem>
@@ -35,4 +37,4 @@ return (
   </Wrapper>
 )
 }
-export default NotFoundPage
+export default NotFoundPage;

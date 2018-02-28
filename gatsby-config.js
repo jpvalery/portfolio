@@ -11,6 +11,9 @@ module.exports = {
         `gatsby-plugin-netlify`,
         'gatsby-plugin-catch-links',
         'gatsby-image',
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
+        `gatsby-plugin-styled-components`,
         {
             resolve: `gatsby-plugin-nprogress`,
             options: {
@@ -37,7 +40,6 @@ module.exports = {
             resolve: `gatsby-transformer-remark`,
             options: {
                 plugins: [
-                    `gatsby-plugin-sharp`,
                     {
                         resolve: `gatsby-remark-images`,
                         options: {

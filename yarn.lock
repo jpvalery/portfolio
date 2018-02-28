@@ -375,7 +375,7 @@ axios@^0.16.1:
     follow-redirects "^1.2.3"
     is-buffer "^1.1.5"
 
-"axios@github:contentful/axios#fix/https-via-http-proxy":
+axios@contentful/axios#fix/https-via-http-proxy:
   version "0.17.1"
   resolved "https://codeload.github.com/contentful/axios/tar.gz/4b06f4a63db3ac16c99f7c61b584ef0e6d11f1af"
   dependencies:
@@ -3757,6 +3757,12 @@ gatsby-plugin-sitemap@^1.2.13:
     babel-runtime "^6.26.0"
     sitemap "^1.12.0"
 
+gatsby-plugin-styled-components@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-2.0.8.tgz#6f6bf7fb1721c27a67514bc59430d8d9f2754688"
+  dependencies:
+    babel-runtime "^6.26.0"
+
 gatsby-plugin-typography@^1.7.14:
   version "1.7.14"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-1.7.14.tgz#911baf7e5b5db1478f4aca7a50ad57622a32560a"
@@ -3824,6 +3830,15 @@ gatsby-transformer-remark@^1.7.32:
     unist-util-remove-position "^1.1.1"
     unist-util-select "^1.5.0"
     unist-util-visit "^1.1.1"
+
+gatsby-transformer-sharp@^1.6.21:
+  version "1.6.21"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-1.6.21.tgz#90daed7a471d96ed1d49fde83baf5e18d05e1aab"
+  dependencies:
+    babel-runtime "^6.26.0"
+    bluebird "^3.5.0"
+    fs-extra "^4.0.2"
+    probe-image-size "^3.2.0"
 
 gatsby@^1.9.153:
   version "1.9.213"

@@ -80,7 +80,7 @@ const GridItemSwap = styled.div`
       order: 2;
   }
 `
-const MiniBio = styled.div`
+const Blurb = styled.div`
 height: 50vh;
 display: flex;
 flex-direction: column;
@@ -124,7 +124,7 @@ return (
           </Cover>
         </Hero>
       </GridItem>
-      <MiniBio dangerouslySetInnerHTML={{ __html: page.bio.childMarkdownRemark.html }} />
+      <Blurb dangerouslySetInnerHTML={{ __html: page.bio.childMarkdownRemark.html }} />
       <SubGridLeft>
         <GridItem>
           <Card to={posts[0].node.slug + "/"} >
@@ -155,7 +155,7 @@ return (
           </Card>
         </GridItem>
       </SubGridRight>
-        <MiniBio dangerouslySetInnerHTML={{ __html: page.bio.childMarkdownRemark.html }} />
+        <Blurb dangerouslySetInnerHTML={{ __html: page.bio.childMarkdownRemark.html }} />
       <SubGrid>
         {posts.slice(2).map(({ node: post }) => (
           <GridItem key={post.id}>

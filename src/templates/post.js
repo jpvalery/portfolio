@@ -28,6 +28,15 @@ const GridItem = styled.div`
     position: static !important;
   }
 `
+const GridContent = styled.div`
+  padding: auto 25vw;
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+  pre{
+    white-space: pre-wrap;
+  }
+`
 const Hero = styled.div`
 height: ${palette.HEIGHT };
 margin-top: -1rem;
@@ -72,7 +81,7 @@ return (
       </GridItem>
   
       <GridItem>
-        <div dangerouslySetInnerHTML={{__html:content.childMarkdownRemark.html}} />
+        <GridContent dangerouslySetInnerHTML={{__html:content.childMarkdownRemark.html}} />
       </GridItem>
     </Grid>
 </Wrapper>

@@ -81,6 +81,7 @@ return (
           </Cover>
           <Title><h1>{title}</h1>
             <h3>{createdAt}</h3>
+            <p>{blurb}</p>
           </Title>
         </Hero>
       </GridItem>

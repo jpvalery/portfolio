@@ -16,11 +16,12 @@ const Wrapper = styled.div`
 const Grid = styled.div`
   margin: 1rem 0;
   display: grid;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-gap: 1rem;
+  padding: auto 25vw;
   @media (max-width: 768px) {
-    grid-template-columns: 1fr;
+    padding: 1rem;
   }
 `
 const HeroGrid = styled.div`
@@ -74,13 +75,7 @@ const GridTitle = styled.div`
   justify-content: space-between;
 `
 const GridContent = styled.div`
-display: grid;
-grid-auto-flow: row dense;
-p { padding-right: 25vw;
-@media (max-width: 768px) {
-  padding: auto 1rem;
-}
-}
+
 `
 const HideOnMobile = styled.div`
 @media (max-width: 768px) {
@@ -103,16 +98,6 @@ return (
       </GridItem>
     </HeroGrid>
     <Grid>
-      <GridTitle>
-        <div>
-          <p>{blurb}</p>
-        </div>
-        <HideOnMobile>
-          <h1>{title}</h1>
-          <p>{createdAt}</p>
-          <p>{blurb}</p>
-        </HideOnMobile>
-      </GridTitle>
       <GridContent>
         <div dangerouslySetInnerHTML={{__html:content.childMarkdownRemark.html}} />
       </GridContent>

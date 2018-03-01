@@ -76,6 +76,11 @@ const GridTitle = styled.div`
 const GridContent = styled.div`
 display: grid;
 grid-auto-flow: row dense;
+p { padding-right: 25vw;
+@media (max-width: 768px) {
+  padding: auto 1rem;
+}
+}
 `
 const HideOnMobile = styled.div`
 @media (max-width: 768px) {

@@ -29,6 +29,7 @@ const GridItem = styled.div`
   }
 `
 const GridContent = styled.div`
+  margin: 0 auto;
   width: 50vw;
   @media (max-width: 768px) {
   width: 90vw;

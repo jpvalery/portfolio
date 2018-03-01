@@ -87,6 +87,11 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 text-align: center;
+p { margin: 25vw;
+  @media (max-width: 768px) {
+      margin: 1rem;
+  }
+}
 `
 const Card = styled(Link)`
     height: ${palette.HEIGHT };

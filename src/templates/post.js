@@ -35,7 +35,10 @@ const GridContent = styled.div`
   width: 90vw;
   }
   pre{
-    white-space: pre-wrap;
+    padding: 1rem;
+    color: ${palette.SECONDARY_COLOR };
+    white-space: pre;
+    overflow-x: auto;
     border: 1px solid ${palette.SECONDARY_COLOR };
   }
 `

@@ -11,20 +11,9 @@ render() {
     const { title, createdAt, featuredImage, content, blurb } = this.props.data.contentfulBlog
 
 const Wrapper = styled.div`
+`
 
-`
 const Grid = styled.div`
-  margin: 1rem 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-gap: 1rem;
-  padding: auto 25vw;
-  @media (max-width: 768px) {
-    padding: 1rem;
-  }
-`
-const HeroGrid = styled.div`
   margin: 1rem 0;
   display: grid;
   grid-template-columns: repeat( 1fr);
@@ -68,24 +57,9 @@ const Title = styled.div`
   flex-direction: column;
   text-transform: uppercase;
 `
-const GridTitle = styled.div`
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`
-const GridContent = styled.div`
-
-`
-const HideOnMobile = styled.div`
-@media (max-width: 768px) {
-  display: none;
-}
-`
-
 return (
   <Wrapper>
-    <HeroGrid>
+    <Grid>
       <GridItem>
         <Hero>
           <Cover>
@@ -96,11 +70,10 @@ return (
           </Title>
         </Hero>
       </GridItem>
-    </HeroGrid>
-    <Grid>
-      <GridContent>
+  
+      <GridItem>
         <div dangerouslySetInnerHTML={{__html:content.childMarkdownRemark.html}} />
-      </GridContent>
+      </GridItem>
     </Grid>
 </Wrapper>
     )

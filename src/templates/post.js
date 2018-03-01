@@ -29,9 +29,9 @@ const GridItem = styled.div`
   }
 `
 const GridContent = styled.div`
-  padding: auto 25vw;
+  width: 50vw;
   @media (max-width: 768px) {
-    padding: 1rem;
+  width: 90vw;
   }
   pre{
     white-space: pre-wrap;

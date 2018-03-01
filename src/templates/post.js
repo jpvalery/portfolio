@@ -36,6 +36,7 @@ const GridContent = styled.div`
   }
   pre{
     white-space: pre-wrap;
+    border: 1px solid ${palette.SECONDARY_COLOR };
   }
 `
 const Hero = styled.div`

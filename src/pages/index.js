@@ -155,6 +155,7 @@ return (
           </Card>
         </GridItem>
       </SubGridRight>
+        <MiniBio dangerouslySetInnerHTML={{ __html: page.bio.childMarkdownRemark.html }} />
       <SubGrid>
         {posts.slice(2).map(({ node: post }) => (
           <GridItem key={post.id}>

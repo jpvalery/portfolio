@@ -205,12 +205,12 @@ export const query = graphql`
           html
         }
       }
-    }
       snippet {
         childMarkdownRemark {
           html
         }
-     }
+      }
+    }
   }
 `
 export default IndexPage;

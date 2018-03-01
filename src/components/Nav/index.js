@@ -13,7 +13,7 @@ const NavBar = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #000000;
+    color: ${palette.SECONDARY_COLOR };
 `
 const NavLeft = styled.div`
 padding: 1rem;
@@ -26,6 +26,7 @@ justify-content: center;
 a img {height:2rem;margin: 0;}
 img{height: 100%;margin: 0;vertical-align:middle;}
 h4 {margin:0 0 0 1rem;}
+a h4 {color: ${palette.SECONDARY_COLOR };}
 @media (max-width: 768px) {
   h4 {display: none;}
 }

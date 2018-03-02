@@ -92,6 +92,9 @@ p { margin: 25vw;
       margin: 1rem;
   }
 }
+@media (max-width: 768px) {
+    height: ${palette.BLURB_HEIGHT };
+}
 `
 const Card = styled(Link)`
     height: ${palette.HEIGHT };

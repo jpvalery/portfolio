@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import * as palette from '../../utils/styles';
 
 const Footer = () => {
-const Wrapper = styled.div`
-    height: ${palette.FooterHEIGHT };;
+const Wrapper = styled.footer`
+    height: ${palette.FOOTER_HEIGHT };;
     display: flex;
     flex-direction: column;
     align-items: center;

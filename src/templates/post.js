@@ -19,7 +19,7 @@ const Grid = styled.div`
   grid-template-columns: repeat( 1fr);
   grid-auto-flow: row dense;
   grid-gap: 1rem;
-max-width: 90vw;
+max-width: 100vw;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
@@ -58,7 +58,7 @@ const Cover = styled.div`
     height: 100%;
     position: absolute;
     transition: 1s;
-    filter: blur(6.18px);
+    filter: blur(3.82px);
 `
 const Title = styled.div`
   text-align: center;
@@ -80,13 +80,13 @@ return (
           <Cover>
             <Img sizes={featuredImage.sizes}/>
           </Cover>
-          <Title><h1>{title}</h1>
+          <Title><h2>{title}</h2>
             <h3>{createdAt}</h3>
             <p>{blurb}</p>
           </Title>
         </Hero>
       </GridItem>
-  
+
       <GridItem>
         <GridContent dangerouslySetInnerHTML={{__html:content.childMarkdownRemark.html}} />
       </GridItem>

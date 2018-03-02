@@ -10,4 +10,6 @@ export const CONTENT_HEIGHT = '90vh';
 
 export const HEIGHT = '80vh';
 
-export const FooterHEIGHT = '90vh';
+export const BLURB_HEIGHT = '90vh';
+
+export const FOOTER_HEIGHT = '90vh';

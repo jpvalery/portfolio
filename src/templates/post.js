@@ -19,6 +19,7 @@ const Grid = styled.div`
   grid-template-columns: repeat( 1fr);
   grid-auto-flow: row dense;
   grid-gap: 1rem;
+max-width: 90vw;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }

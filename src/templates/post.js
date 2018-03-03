@@ -64,13 +64,14 @@ const Title = styled.div`
   text-align: center;
   z-index:10;
   background: rgba(255,255,255,.35);
-  max-width:75vw;
+  width:100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-transform: uppercase;
+p {width: 75vw;}
 `
 return (
   <Wrapper>

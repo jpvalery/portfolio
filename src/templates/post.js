@@ -5,10 +5,10 @@ import styled from 'styled-components';
 
 import * as palette from '../utils/styles';
 
-class BlogPost extends Component {
+class Gallery extends Component {
 render() {
   console.log(this.props)
-    const { title, createdAt, featuredImage, content, blurb } = this.props.data.contentfulBlog
+    const { title, createdAt, featuredImage, content, blurb } = this.props.data.contentfulGallery
 
 const Wrapper = styled.div`
 `
@@ -95,13 +95,13 @@ return (
     )
   }
 }
-BlogPost.PropTypes = {
+Gallery.PropTypes = {
     data: PropTypes.object.isRequired
 }
 
 export const pageQuery = graphql`
-    query blogPostQuery($slug: String!){
-        contentfulBlog(slug: {eq: $slug}) {
+    query galleryPostQuery($slug: String!){
+        contentfulGallery(slug: {eq: $slug}) {
             title
             blurb
             createdAt(formatString: "MMMM DD, YYYY")
@@ -118,4 +118,4 @@ export const pageQuery = graphql`
         }
     }
 `
-export default BlogPost;
+export default Gallery;

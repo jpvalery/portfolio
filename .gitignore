@@ -7,3 +7,4 @@ public
 yarn.lock
 .env
 *.jpg
+aerial/

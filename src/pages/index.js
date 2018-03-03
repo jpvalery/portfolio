@@ -7,7 +7,7 @@ import * as palette from '../utils/styles';
 
 const IndexPage = ({data}) => {
 
-const posts = data.allContentfulBlog.edges;
+const posts = data.allContentfulGallery.edges;
 const page = data.contentfulHome;
 
 const Wrapper = styled.div`
@@ -81,7 +81,7 @@ const GridItemSwap = styled.div`
   }
 `
 const Blurb = styled.div`
-height: 50vh;
+height: ${palette.BLURB_HEIGHT };
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -93,7 +93,7 @@ p { margin: 25vw;
   }
 }
 @media (max-width: 768px) {
-    height: ${palette.BLURB_HEIGHT };
+    height: ${palette.BLURB_HEIGHT.MOBILE };
 }
 `
 const Card = styled(Link)`
@@ -148,33 +148,7 @@ return (
           </Data>
         </GridItem>
       </SubGridLeft>
-      <SubGridRight>
-        <GridItemSwap>
-          <Data to={posts[1].node.slug + "/"} >
-            <Name>{posts[1].node.title}</Name>
-            <Description>{posts[1].node.blurb}</Description>
-          </Data>
-        </GridItemSwap>
-        <GridItem>
-          <Card to={posts[1].node.slug + "/"} >
-            <Cover>
-              <Img sizes={posts[1].node.featuredImage.sizes}/>
-            </Cover>
-          </Card>
-        </GridItem>
-      </SubGridRight>
-        <Blurb dangerouslySetInnerHTML={{ __html: page.snippet.childMarkdownRemark.html }} />
-      <SubGrid>
-        {posts.slice(2).map(({ node: post }) => (
-          <GridItem key={post.id}>
-            <Card to={post.slug + "/"} >
-              <Cover>
-                <Img sizes={post.featuredImage.sizes}/>
-              </Cover>
-            </Card>
-          </GridItem>
-          ))}
-      </SubGrid>
+
     </Grid>
   </wrapper>
     )
@@ -182,7 +156,7 @@ return (
 
 export const query = graphql`
   query HomeQuery {
-    allContentfulBlog {
+    allContentfulGallery {
       edges {
         node {
           title

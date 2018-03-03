@@ -64,7 +64,7 @@ const Title = styled.div`
   text-align: center;
   z-index:10;
   background: rgba(255,255,255,.35);
-  width:100%;
+  max-width:75vw;
   height: 100%;
   display: flex;
   align-items: center;

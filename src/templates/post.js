@@ -72,6 +72,7 @@ const Title = styled.div`
   justify-content: center;
   flex-direction: column;
   text-transform: uppercase;
+p {width: 75vw;}
 `
 return (
   <Wrapper>

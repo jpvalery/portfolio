@@ -1,39 +1,39 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Img from "gatsby-image"
-import styled from 'styled-components';
+import Img from 'gatsby-image'
+import styled from 'styled-components'
+import sizeMe from 'react-sizeme'
+import StackGrid from 'react-stack-grid'
 
-import * as palette from '../utils/styles';
+import * as palette from '../utils/styles'
 
 class Gallery extends Component {
 render() {
   console.log(this.props)
-    const { title, createdAt, featuredImage, content, blurb } = this.props.data.contentfulGallery
+    const { title, createdAt, featuredImage, content, blurb, images, size: width  } = this.props.data.contentfulGallery
 
-const Wrapper = styled.div`
-`
+    const Grid = styled.div`
+      margin: 1rem 0;
+      display: grid;
+      grid-template-columns: repeat( 1fr);
+      grid-auto-flow: row dense;
+      grid-gap: 1rem;
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    `
 
-const Grid = styled.div`
-  margin: 1rem 0;
-  display: grid;
-  grid-template-columns: repeat( 1fr);
-  grid-auto-flow: row dense;
-  grid-gap: 1rem;
-max-width: 100vw;
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-`
 const GridItem = styled.div`
   .gatsby-image-outer-wrapper, .gatsby-image-wrapper {
     position: static !important;
   }
 `
+
 const GridContent = styled.div`
   margin: 0 auto;
   width: 50vw;
   @media (max-width: 768px) {
-  width: 90vw;
+  width: 75vw;
   }
   pre{
     padding: 1rem;
@@ -57,13 +57,12 @@ const Cover = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
-    transition: 1s;
-    filter: blur(3.82px);
+    filter: blur(1.91px);
 `
 const Title = styled.div`
   text-align: center;
   z-index:10;
-  background: rgba(0,0,0,.35);
+  background: rgba(0,0,0,.618);
   color: ${palette.POST_COLOR};
   width:100%;
   height: 100%;
@@ -72,28 +71,31 @@ const Title = styled.div`
   justify-content: center;
   flex-direction: column;
   text-transform: uppercase;
-p {width: 75vw;}
+p {width: 50vw;}
 `
-return (
-  <Wrapper>
-    <Grid>
-      <GridItem>
-        <Hero>
-          <Cover>
-            <Img sizes={featuredImage.sizes}/>
-          </Cover>
-          <Title><h2>{title}</h2>
-            <h3>{createdAt}</h3>
-            <p>{blurb}</p>
-          </Title>
-        </Hero>
-      </GridItem>
 
-      <GridItem>
-        <GridContent dangerouslySetInnerHTML={{__html:content.childMarkdownRemark.html}} />
-      </GridItem>
-    </Grid>
-</Wrapper>
+return (
+  <Grid>
+    <GridItem>
+      <Hero>
+        <Cover>
+          <Img sizes={featuredImage.sizes}/>
+        </Cover>
+        <Title><h2>{title}</h2>
+          <h3>{createdAt}</h3>
+          <p>{blurb}</p>
+        </Title>
+      </Hero>
+    </GridItem>
+
+<GridContent dangerouslySetInnerHTML={{__html:content.childMarkdownRemark.html}} />
+
+<StackGrid columnWidth={width <= 768 ? '100%' : '33.333%'} gutterWidth={16} gutterHeight={16} duration={0}>
+  {images && ( images.map((images, index) => ( <Img key={index} sizes={images.sizes} alt={images.title} title={images.title} /> )) )}
+</StackGrid>
+
+  </Grid>
+
     )
   }
 }
@@ -117,7 +119,13 @@ export const pageQuery = graphql`
                     html
                 }
             }
+            images {
+              title
+              sizes(maxWidth: 740) {
+                ...GatsbyContentfulSizes_noBase64
+              }
+            }
         }
     }
 `
-export default Gallery;
+export default sizeMe()(Gallery);

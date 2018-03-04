@@ -10,8 +10,6 @@ const IndexPage = ({data}) => {
 const posts = data.allContentfulGallery.edges;
 const page = data.contentfulHome;
 
-const Wrapper = styled.div`
-`
 const Grid = styled.div`
   margin: 1rem 0;
   display: grid;
@@ -109,7 +107,6 @@ const Cover = styled.div`
     width: 100%;
     height: 100%;
     position: absolute;
-    transition: 1s;
 `
 const Data = styled.div`
     padding: 1rem;
@@ -128,7 +125,6 @@ const Description = styled.p`
 `
 
 return (
-  <wrapper>
     <Grid>
       <GridItem>
         <Hero>
@@ -187,7 +183,6 @@ return (
         ))}
       </SubGrid>
     </Grid>
-  </wrapper>
     )
 }
 

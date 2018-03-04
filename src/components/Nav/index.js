@@ -41,6 +41,8 @@ const NavRight = styled.div`
    align-items: center;
    justify-content: center;
    img{height:1.618rem;margin:0 0 0 0;}
+   h4 {margin:0 0 0 1rem;}
+   a h4 {color: ${palette.SECONDARY_COLOR };}
 `
 
 const toggleMenu = () => {

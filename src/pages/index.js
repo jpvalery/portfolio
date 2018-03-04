@@ -153,6 +153,7 @@ return (
           </Data>
         </GridItem>
       </SubGridLeft>
+
       <SubGridRight>
         <GridItemSwap>
           <Data to={posts[1].node.slug + "/"} >
@@ -168,7 +169,9 @@ return (
           </Card>
         </GridItem>
       </SubGridRight>
+
         <Blurb dangerouslySetInnerHTML={{ __html: page.snippet.childMarkdownRemark.html }} />
+
       <SubGrid>
       {posts.slice(2).map(({ node: posts }) => (
         <GridItem key={posts.id}>

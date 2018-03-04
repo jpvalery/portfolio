@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Img from "gatsby-image"
 import styled from 'styled-components'
 
 import { withPrefix } from 'gatsby-link'
@@ -42,6 +43,16 @@ const NavRight = styled.div`
    img{height:1.618rem;margin:0 0 0 0;}
 `
 
+const toggleMenu = () => {
+  const wrapper = document.getElementById('nav');
+  wrapper.classList.toggle('open--menu');
+}
+
+const closeMenu = () => {
+  const wrapper = document.getElementById('nav');
+  wrapper.classList.remove('open--menu');
+}
+
 return (
 <nav>
   <NavBar>
@@ -49,7 +60,7 @@ return (
       <a href="/"><img src={withPrefix('./Logo_export.40pt.svg')} /></a><a href="/"><h4>I AM MATTHIAS</h4></a>
     </NavLeft>
     <NavRight>
-      <img src={withPrefix('./menu.svg')} />
+      <a href="/about"><h4>ABOUT</h4></a>
     </NavRight>
   </NavBar>
 </nav>

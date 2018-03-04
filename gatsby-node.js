@@ -32,5 +32,34 @@ exports.createPages = ({graphql, boundActionCreators}) => {
                 return
             })
         )
+        const blogPostTemplate = path.resolve('src/templates/post.js')
+resolve(
+    graphql(`
+        {
+            allContentfulBlog (limit:100) {
+                edges {
+                    node {
+                        id
+                        slug
+                    }
+                }
+            }
+        }
+    `).then((result) => {
+        if (result.errors) {
+            reject(result.errors)
+        }
+        result.data.allContentfulBlog.edges.forEach((edge) => {
+            createPage ({
+                path: edge.node.slug,
+                component: blogPostTemplate,
+                context: {
+                    slug: edge.node.slug
+                }
+            })
+        })
+        return
+    })
+)
     })
 }

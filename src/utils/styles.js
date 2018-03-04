@@ -6,6 +6,8 @@ export const COLOR = '#111111';
 
 export const SECONDARY_COLOR = '#001f3f';
 
+export const POST_COLOR = '#fefefe';
+
 export const CONTENT_HEIGHT = '90vh';
 
 export const HEIGHT = '80vh';

@@ -120,6 +120,11 @@ const Name = styled.h1`
     font-size: 2rem;
 `
 const Description = styled.p`
+    margin: 0 auto;
+    width: 25vw;
+    @media (max-width: 768px) {
+        width: 75vw;
+    }
 `
 
 return (
@@ -148,7 +153,36 @@ return (
           </Data>
         </GridItem>
       </SubGridLeft>
-
+      <SubGridRight>
+        <GridItemSwap>
+          <Data to={posts[1].node.slug + "/"} >
+            <Name>{posts[1].node.title}</Name>
+            <Description>{posts[1].node.blurb}</Description>
+          </Data>
+        </GridItemSwap>
+        <GridItem>
+          <Card to={posts[1].node.slug + "/"} >
+            <Cover>
+              <Img sizes={posts[1].node.featuredImage.sizes}/>
+            </Cover>
+          </Card>
+        </GridItem>
+      </SubGridRight>
+        <Blurb dangerouslySetInnerHTML={{ __html: page.snippet.childMarkdownRemark.html }} />
+      <SubGrid>
+      {posts.slice(2).map(({ node: posts }) => (
+        <GridItem key={posts.id}>
+          <Card to={posts.slug + "/"} >
+            <Cover>
+              <Img sizes={posts.featuredImage.sizes}/>
+            </Cover>
+          </Card>
+          <Data to={posts.slug + "/"} >
+            <Name>{posts.title}</Name>
+          </Data>
+        </GridItem>
+        ))}
+      </SubGrid>
     </Grid>
   </wrapper>
     )

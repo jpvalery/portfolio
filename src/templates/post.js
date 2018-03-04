@@ -63,7 +63,8 @@ const Cover = styled.div`
 const Title = styled.div`
   text-align: center;
   z-index:10;
-  background: rgba(255,255,255,.35);
+  background: rgba(0,0,0,.35);
+  color: ${palette.POST_COLOR};
   width:100%;
   height: 100%;
   display: flex;

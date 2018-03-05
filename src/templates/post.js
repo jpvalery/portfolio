@@ -10,7 +10,8 @@ import * as palette from '../utils/styles'
 class Gallery extends Component {
 render() {
   console.log(this.props)
-    const { title, createdAt, featuredImage, content, blurb, images, width  } = this.props.data.contentfulGallery
+    const { title, createdAt, featuredImage, content, blurb, images } = this.props.data.contentfulGallery
+    const {width} = this.props.size
 
     const Grid = styled.div`
       margin: 1rem 0;

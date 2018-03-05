@@ -10,7 +10,7 @@ import * as palette from '../utils/styles'
 class Gallery extends Component {
 render() {
   console.log(this.props)
-    const { title, createdAt, featuredImage, content, blurb, images, size: width  } = this.props.data.contentfulGallery
+    const { title, createdAt, featuredImage, content, blurb, images, width  } = this.props.data.contentfulGallery
 
     const Grid = styled.div`
       margin: 1rem 0;
@@ -90,7 +90,7 @@ return (
 
 <GridContent dangerouslySetInnerHTML={{__html:content.childMarkdownRemark.html}} />
 
-<StackGrid columnWidth={width <= 768 ? '100%' : '33.333%'} gutterWidth={16} gutterHeight={16} duration={0}>
+<StackGrid columnWidth={width <= 768 ? '100%' : '33.33%'} gutterWidth={16} gutterHeight={16} duration={0}>
   {images && ( images.map((images, index) => ( <Img key={index} sizes={images.sizes} alt={images.title} title={images.title} /> )) )}
 </StackGrid>
 

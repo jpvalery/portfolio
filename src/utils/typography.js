@@ -6,9 +6,27 @@ const typography = new Typography({
   baseFontSize: '16px',
   scaleRatio: 3,
   baseLineHeight: 1.618,
-  headerFontFamily: ['Playfair Display', 'serif'],
-  bodyFontFamily: ['Crimson Text', 'serif'],
-  headerWeight: 900,
+  headerFontFamily: ['Oswald', 'sans-serif'],
+  bodyFontFamily: ['Open Sans', 'sans-serif'],
+  headerWeight: 700,
+  
+  googleFonts: [
+  {
+    name: 'Oswald',
+    styles: [
+      '700',
+    ],
+  },
+  {
+    name: 'Open Sans',
+    styles: [
+      '400',
+      '400i',
+      '700',
+      '700i',
+    ],
+  },
+],
 
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
     'h1,h2,h3,h4,h5,h6': {

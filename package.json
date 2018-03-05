@@ -1,7 +1,7 @@
 {
   "name": "iammatthias",
   "description": "Personal portfolio site built with GatsbyJS",
-  "version": "0.6",
+  "version": "0.6.0",
   "author": "Matthias Jordan <me@iammatthias.com>",
   "dependencies": {
     "gatsby": "^1.9.153",

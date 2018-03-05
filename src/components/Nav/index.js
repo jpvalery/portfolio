@@ -26,10 +26,10 @@ align-items: center;
 justify-content: center;
 a img {height:2rem;margin: 0;}
 img{height: 100%;margin: 0;vertical-align:middle;}
-h4 {margin:0 0 0 1rem;}
-a h4 {color: ${palette.SECONDARY_COLOR };}
+h3 {margin:0 0 0 1rem;}
+a h3 {color: ${palette.SECONDARY_COLOR };}
 @media (max-width: 768px) {
-  h4 {display: none;}
+  h3 {display: none;}
 }
 `
 const NavRight = styled.div`
@@ -41,8 +41,8 @@ const NavRight = styled.div`
    align-items: center;
    justify-content: center;
    img{height:1.618rem;margin:0 0 0 0;}
-   h4 {margin:0 0 0 1rem;}
-   a h4 {color: ${palette.SECONDARY_COLOR };}
+   h3 {margin:0 0 0 1rem;}
+   a h3 {color: ${palette.SECONDARY_COLOR };}
 `
 
 const toggleMenu = () => {
@@ -59,10 +59,10 @@ return (
 <nav>
   <NavBar>
     <NavLeft>
-      <a href="/"><img src={withPrefix('./Logo_export.40pt.svg')} /></a><a href="/"><h4>I AM MATTHIAS</h4></a>
+      <a href="/"><img src={withPrefix('./Logo_export.40pt.svg')} /></a><a href="/"><h3>I AM MATTHIAS</h3></a>
     </NavLeft>
     <NavRight>
-      <a href="/about"><h4>ABOUT</h4></a>
+      <a href="/about"><h3>ABOUT</h3></a>
     </NavRight>
   </NavBar>
 </nav>

@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "iammatthias",
+  "description": "Personal portfolio site built with GatsbyJS",
+  "version": "0.6",
+  "author": "Matthias Jordan <me@iammatthias.com>",
   "dependencies": {
     "gatsby": "^1.9.153",
     "gatsby-image": "^1.0.37",

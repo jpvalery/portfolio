@@ -178,6 +178,7 @@ return (
           </Card>
           <Data to={posts.slug + "/"} >
             <Name>{posts.title}</Name>
+            <Description>{posts.blurb}</Description>
           </Data>
         </GridItem>
         ))}

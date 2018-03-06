@@ -33,7 +33,7 @@ flex-direction: column;
 const SubGrid = styled.ul`
   display: grid;
   margin: 0;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-auto-flow: row dense;
   grid-gap: 1rem;
   align-items: center;

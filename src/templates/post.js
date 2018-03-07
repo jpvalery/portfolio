@@ -31,7 +31,7 @@ const GridItem = styled.div`
 `
 
 const GridContent = styled.div`
-  margin: 0 auto;
+  margin: 3rem auto 1rem;
   width: 50vw;
   @media (max-width: 768px) {
   width: 75vw;
@@ -43,6 +43,19 @@ const GridContent = styled.div`
     overflow-x: auto;
     border: 1px solid ${palette.SECONDARY_COLOR };
   }
+  blockquote{
+    position: relative;
+    padding-left: 40px;
+    border-left: 2px solid #fff;
+}
+
+blockquote span {
+  display: block;
+  font-size: 24px;
+  line-height: 40px;
+  margin-top: 10px;
+  font-style: normal;
+}
 `
 const Hero = styled.div`
 height: ${palette.HEIGHT };
@@ -84,7 +97,6 @@ return (
         </Cover>
         <Title><h2>{title}</h2>
           <h3>{createdAt}</h3>
-          <p>{blurb}</p>
         </Title>
       </Hero>
     </GridItem>

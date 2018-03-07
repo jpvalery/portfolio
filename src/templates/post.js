@@ -46,16 +46,13 @@ const GridContent = styled.div`
   blockquote{
     position: relative;
     padding-left: 40px;
-    border-left: 2px solid #fff;
-}
-
-blockquote span {
-  display: block;
-  font-size: 24px;
-  line-height: 40px;
-  margin-top: 10px;
-  font-style: normal;
-}
+    border-left: 2px solid ${palette.SECONDARY_COLOR };
+  }
+  blockquote span {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+  }
 `
 const Hero = styled.div`
 height: ${palette.HEIGHT };

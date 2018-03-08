@@ -9,7 +9,7 @@ const typography = new Typography({
   headerFontFamily: ['Oswald', 'sans-serif'],
   bodyFontFamily: ['Open Sans', 'sans-serif'],
   headerWeight: 700,
-  
+
   googleFonts: [
   {
     name: 'Oswald',
@@ -40,7 +40,7 @@ const typography = new Typography({
       color: options.bodyColor,
     },
     blockquote: {
-      ...scale(1 / 5),
+
       fontStyle: 'italic',
       paddingLeft: rhythm(13 / 16),
       marginLeft: 0,

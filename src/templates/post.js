@@ -31,7 +31,8 @@ const GridItem = styled.div`
 `
 
 const GridContent = styled.div`
-  margin: 3rem auto 1rem;
+  margin: 0 auto;
+  padding: 3rem 0 1rem;
   width: 50vw;
   @media (max-width: 768px) {
   width: 75vw;

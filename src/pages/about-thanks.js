@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import * as palette from '../utils/styles';
 
 const AboutPage = ({data}) => {
-const {name,bio,portrait} = data.contentfulAbout;
+const {name,bio,portrait,formSubmission} = data.contentfulAbout;
 
 const Wrapper = styled.div`
 `
@@ -53,43 +53,7 @@ const Name = styled.h1`
     text-transform: uppercase;
     font-size: 2rem;
 `
-const SayHi = styled.div`
-    input, textarea {
-    width: 25vw;
-    padding: .25rem 0px .75rem;
-    background: transparent;
-    border: 0;
-    border-bottom: .25rem solid ${palette.COLOR };
-    outline: none;
-    resize: none;
-    overflow: auto;
-    color: ${palette.COLOR };
-    }
-    button {
-    width: 25vw;
-    padding: 1rem 0px;
-    background: transparent;
-    outline: none;
-    color: ${palette.COLOR };
-    }
-    .hidden {
-      display: none;
-    }
-    .btn, .btn:link, .btn:visited {
-      border: .25rem solid ${palette.COLOR };
-      color: ${palette.COLOR };
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: color 0.618s, border 0.618s;
-      h2 {
-        padding: 0;
-        margin: 0;
-      }
-    }
-    .btn:hover, .btn:focus {
-        color: ${palette.HOVER_COLOR };
-        border: .25rem solid ${palette.HOVER_COLOR };
-        transition: color 0.618s, border 0.618s; }
+const Thanks = styled.h3`
 `
 
 
@@ -109,16 +73,7 @@ return (
             <CardContent>
               <Name>{name}</Name>
               <div dangerouslySetInnerHTML={{ __html: bio.childMarkdownRemark.html }} />
-              <SayHi>
-                <form name="contact" method="POST" action="/about-thanks" data-netlify="true" data-netlify-honeypot="bot-field" >
-                  <input type="hidden" name="form-name" value="contact" />
-                  <input className="hidden" name="bot-field" />
-                  <input type="text" name="name" placeholder="Name" />
-                  <input type="email" name="_replyto" placeholder="Email" />
-                  <textarea name="message" placeholder="Message" />
-                  <button className="btn" type="submit"><h2>Say Hi</h2></button>
-                </form>
-              </SayHi>
+              <Thanks>{formSubmission}</Thanks>
             </CardContent>
           </Data>
         </Card>
@@ -129,7 +84,7 @@ return (
 }
 
 export const query = graphql`
-  query AboutQuery {
+  query AboutThanksQuery {
     contentfulAbout {
       name
       id

@@ -51,9 +51,9 @@ const CardContent = styled.div`
 `
 const Name = styled.h1`
     text-transform: uppercase;
-    font-size: 2rem;
 `
-const Thanks = styled.h3`
+const Thanks = styled.h2`
+
 `
 
 
@@ -73,7 +73,7 @@ return (
             <CardContent>
               <Name>{name}</Name>
               <div dangerouslySetInnerHTML={{ __html: bio.childMarkdownRemark.html }} />
-              <Thanks>{formSubmission}</Thanks>
+              <Thanks dangerouslySetInnerHTML={{ __html: formSubmission.childMarkdownRemark.html }} />
             </CardContent>
           </Data>
         </Card>
@@ -88,7 +88,11 @@ export const query = graphql`
     contentfulAbout {
       name
       id
-      formSubmission
+      formSubmission {
+        childMarkdownRemark {
+          html
+        }
+      }
       portrait {
         resolutions(width: 740) {
             ...GatsbyContentfulResolutions_withWebp

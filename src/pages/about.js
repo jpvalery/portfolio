@@ -133,7 +133,11 @@ export const query = graphql`
     contentfulAbout {
       name
       id
-      formSubmission
+      formSubmission {
+        childMarkdownRemark {
+          html
+        }
+      }
       portrait {
         resolutions(width: 740) {
             ...GatsbyContentfulResolutions_withWebp

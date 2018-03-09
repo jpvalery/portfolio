@@ -109,11 +109,11 @@ return (
               <Name>{name}</Name>
               <div dangerouslySetInnerHTML={{ __html: bio.childMarkdownRemark.html }} />
               <SayHi>
-              <form name="Say Hi" netlify data-netlify="true" data-netlify-honeypot="bot-field" method="POST" action="thank-you" >
-                <input className="hidden" name="bot-field" placeholder="Dumb bot." />
+              <form name="Say Hi" method="post" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field" >
+                <input className="hidden" name="bot-field" />
                 <input type="text" name="name" placeholder="Name" />
                 <input type="email" name="_replyto" placeholder="Email" />
-                <textarea name="message" placeholder="Message" ></textarea>
+                <textarea name="message" placeholder="Message" />
                 <button className="btn" type="submit"><h2>Say Hi</h2></button>
               </form>
               </SayHi>

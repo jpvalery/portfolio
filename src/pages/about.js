@@ -4,8 +4,6 @@ import styled from 'styled-components';
 
 import * as palette from '../utils/styles';
 
-import Form from '../components/Form';
-
 const AboutPage = ({data}) => {
 const {name,bio,portrait} = data.contentfulAbout;
 

@@ -114,7 +114,6 @@ const Data = styled.div`
 `
 const Name = styled.h1`
     text-transform: uppercase;
-    font-size: 2rem;
 `
 const Description = styled.p`
     margin: 0 auto;

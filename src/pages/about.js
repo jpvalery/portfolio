@@ -110,7 +110,8 @@ return (
               <Name>{name}</Name>
               <div dangerouslySetInnerHTML={{ __html: bio.childMarkdownRemark.html }} />
               <SayHi>
-                <form name="Say Hi" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" >
+                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" >
+                  <input type="hidden" name="form-name" value="contact" />
                   <input className="hidden" name="bot-field" />
                   <input type="text" name="name" placeholder="Name" />
                   <input type="email" name="_replyto" placeholder="Email" />

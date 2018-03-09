@@ -59,35 +59,37 @@ const SayHi = styled.div`
     padding: .25rem 0px .75rem;
     background: transparent;
     border: 0;
-    border-bottom: .25rem solid ${palette.SECONDARY_COLOR };
+    border-bottom: .25rem solid ${palette.COLOR };
     outline: none;
     resize: none;
     overflow: auto;
-    color: ${palette.SECONDARY_COLOR };
+    color: ${palette.COLOR };
     }
     button {
     width: 25vw;
     padding: 1rem 0px;
     background: transparent;
     outline: none;
-    resize: none;
-    overflow: auto;
-    color: ${palette.SECONDARY_COLOR };
+    color: ${palette.COLOR };
     }
     .hidden {
       display: none;
     }
     .btn, .btn:link, .btn:visited {
-      border: .25rem solid ${palette.SECONDARY_COLOR };
-      color: ${palette.SECONDARY_COLOR };
+      border: .25rem solid ${palette.COLOR };
+      color: ${palette.COLOR };
       text-decoration: none;
       text-transform: uppercase;
-      transition: color 0.4s, background-color 0.4s, border 0.4s;
+      transition: color 0.618s, border 0.618s;
       h2 {
         padding: 0;
         margin: 0;
       }
     }
+    .btn:hover, .btn:focus {
+        color: ${palette.HOVER_COLOR };
+        border: .25rem solid ${palette.HOVER_COLOR };
+        transition: color 0.618s, border 0.618s; }
 `
 
 return (
@@ -107,7 +109,7 @@ return (
               <Name>{name}</Name>
               <div dangerouslySetInnerHTML={{ __html: bio.childMarkdownRemark.html }} />
               <SayHi>
-              <form name="contact" netlify data-netlify="true" data-netlify-honeypot="bot-field" method="POST" action="thank-you" >
+              <form name="Say Hi" netlify data-netlify="true" data-netlify-honeypot="bot-field" method="POST" action="thank-you" >
                 <input className="hidden" name="bot-field" placeholder="Dumb bot." />
                 <input type="text" name="name" placeholder="Name" />
                 <input type="email" name="_replyto" placeholder="Email" />

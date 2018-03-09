@@ -33,11 +33,11 @@ const typography = new Typography({
       lineHeight: 1.1,
     },
     a: {
-      color: '#ff5700',
+      color: '#001f3f',
       textDecoration: 'none',
     },
     'a:hover,a:active': {
-      color: options.bodyColor,
+      color: '#FE5F55',
     },
     blockquote: {
 

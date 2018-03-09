@@ -27,7 +27,6 @@ justify-content: center;
 a img {height:2rem;margin: 0;}
 img{height: 100%;margin: 0;vertical-align:middle;}
 h3 {margin:0 0 0 1rem;}
-a h3 {color: ${palette.SECONDARY_COLOR };}
 @media (max-width: 768px) {
   h3 {display: none;}
 }
@@ -42,7 +41,6 @@ const NavRight = styled.div`
    justify-content: center;
    img{height:1.618rem;margin:0 0 0 0;}
    h3 {margin:0 0 0 1rem;}
-   a h3 {color: ${palette.SECONDARY_COLOR };}
 `
 
 const toggleMenu = () => {

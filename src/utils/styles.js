@@ -1,10 +1,12 @@
-export const HTML_COLOR = '#fff7f0';
+export const HTML_COLOR = '#F7F7FF';
 
-export const BG_COLOR = '#fefefe';
+export const BG_COLOR = '#F7F7FF';
 
-export const COLOR = '#111111';
+export const COLOR = '#333745';
 
 export const SECONDARY_COLOR = '#001f3f';
+
+export const HOVER_COLOR = '#FE5F55';
 
 export const POST_COLOR = '#fefefe';
 

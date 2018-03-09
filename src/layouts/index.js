@@ -29,12 +29,12 @@ injectGlobal`
     -moz-osx-font-smoothing: grayscale;
   }
   a {
-    color: ${palette.COLOR };
-    text-decoration: none;
+    color: ${palette.SECONDARY_COLOR };
+    transition: color 0.618s;
   }
-  a:hover {
-    color: ${palette.COLOR };
-    text-decoration: none;
+  a:hover, a:focus {
+   color: ${palette.HOVER_COLOR };
+   transition:color 0.618s;
   }
   .gatsby-resp-image-wrapper {
     margin: 2.75rem 0;

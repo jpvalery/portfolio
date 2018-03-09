@@ -26,7 +26,7 @@ const GridItem = styled.div`
 
 `
 const Card = styled.div`
-    height: ${palette.HEIGHT };;
+    min-height: ${palette.HEIGHT };
     position: relative;
     overflow: hidden;
     display: flex;
@@ -53,6 +53,42 @@ const Name = styled.h1`
     text-transform: uppercase;
     font-size: 2rem;
 `
+const SayHi = styled.div`
+    input, textarea {
+    width: 25vw;
+    padding: .25rem 0px .75rem;
+    background: transparent;
+    border: 0;
+    border-bottom: .25rem solid ${palette.SECONDARY_COLOR };
+    outline: none;
+    resize: none;
+    overflow: auto;
+    color: ${palette.SECONDARY_COLOR };
+    }
+    button {
+    width: 25vw;
+    padding: 1rem 0px;
+    background: transparent;
+    outline: none;
+    resize: none;
+    overflow: auto;
+    color: ${palette.SECONDARY_COLOR };
+    }
+    .hidden {
+      display: none;
+    }
+    .btn, .btn:link, .btn:visited {
+      border: .25rem solid ${palette.SECONDARY_COLOR };
+      color: ${palette.SECONDARY_COLOR };
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.4s, background-color 0.4s, border 0.4s;
+      h2 {
+        padding: 0;
+        margin: 0;
+      }
+    }
+`
 
 return (
   <wrapper>
@@ -70,6 +106,15 @@ return (
             <CardContent>
               <Name>{name}</Name>
               <div dangerouslySetInnerHTML={{ __html: bio.childMarkdownRemark.html }} />
+              <SayHi>
+              <form name="contact" netlify data-netlify="true" data-netlify-honeypot="bot-field" method="POST" action="thank-you" >
+                <input className="hidden" name="bot-field" placeholder="Dumb bot." />
+                <input type="text" name="name" placeholder="Name" />
+                <input type="email" name="_replyto" placeholder="Email" />
+                <textarea name="message" placeholder="Message" ></textarea>
+                <button className="btn" type="submit"><h2>Say Hi</h2></button>
+              </form>
+              </SayHi>
             </CardContent>
           </Data>
         </Card>

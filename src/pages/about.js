@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import * as palette from '../utils/styles';
 
+import Form from '../components/Form';
+
 const AboutPage = ({data}) => {
 const {name,bio,portrait} = data.contentfulAbout;
 
@@ -92,6 +94,7 @@ const SayHi = styled.div`
         transition: color 0.618s, border 0.618s; }
 `
 
+
 return (
   <wrapper>
     <Grid>
@@ -109,13 +112,13 @@ return (
               <Name>{name}</Name>
               <div dangerouslySetInnerHTML={{ __html: bio.childMarkdownRemark.html }} />
               <SayHi>
-              <form name="Say Hi" method="post" action="/thanks/" data-netlify="true" data-netlify-honeypot="bot-field" >
-                <input className="hidden" name="bot-field" />
-                <input type="text" name="name" placeholder="Name" />
-                <input type="email" name="_replyto" placeholder="Email" />
-                <textarea name="message" placeholder="Message" />
-                <button className="btn" type="submit"><h2>Say Hi</h2></button>
-              </form>
+                <form name="Say Hi" method="post" action="/thanks/" netlify data-netlify="true" data-netlify-honeypot="bot-field" >
+                  <input className="hidden" name="bot-field" />
+                  <input type="text" name="name" placeholder="Name" />
+                  <input type="email" name="_replyto" placeholder="Email" />
+                  <textarea name="message" placeholder="Message" />
+                  <button className="btn" type="submit"><h2>Say Hi</h2></button>
+                </form>
               </SayHi>
             </CardContent>
           </Data>

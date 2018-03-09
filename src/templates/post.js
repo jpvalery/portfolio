@@ -93,8 +93,7 @@ return (
         <Cover>
           <Img sizes={featuredImage.sizes}/>
         </Cover>
-        <Title><h2>{title}</h2>
-          <h3>{createdAt}</h3>
+        <Title><h1>{title}</h1>
         </Title>
       </Hero>
     </GridItem>

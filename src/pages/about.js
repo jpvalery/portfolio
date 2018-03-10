@@ -59,27 +59,27 @@ const SayHi = styled.div`
     padding: .25rem 0px .75rem;
     background: transparent;
     border: 0;
-    border-bottom: .25rem solid ${palette.COLOR };
-border-radius: 0;
-box-shadow: none;
+    border-bottom: .25rem solid ${palette.SECONDARY_COLOR };
+    border-radius: 0;
+    box-shadow: none;
     outline: none;
     resize: none;
     overflow: auto;
-    color: ${palette.COLOR };
+    color: ${palette.SECONDARY_COLOR };
     }
     button {
     width: 25vw;
     padding: 1rem 0px;
     background: transparent;
     outline: none;
-    color: ${palette.COLOR };
+    color: ${palette.SECONDARY_COLOR };
     }
     .hidden {
       display: none;
     }
     .btn, .btn:link, .btn:visited {
-      border: .25rem solid ${palette.COLOR };
-      color: ${palette.COLOR };
+      border: .25rem solid ${palette.SECONDARY_COLOR };
+      color: ${palette.SECONDARY_COLOR };
       text-decoration: none;
       text-transform: uppercase;
       transition: color 0.618s, border 0.618s;

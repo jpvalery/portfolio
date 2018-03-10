@@ -43,10 +43,33 @@ injectGlobal`
 return (
   <div>
     <Helmet>
-      <meta charSet="utf-8" />
-      <title>I AM MATTHIAS</title>
+      // COMMON TAGS
+      <meta charset="utf-8" />
+      <title>I Am Matthias</title>
       <meta name='viewport' content='initial-scale=1, viewport-fit=cover' />
+      // Search Engine
+      <meta name="description" content="Portfolio of content creator Matthias Kronfeld Jordan, based in Santa Monica, California " />
+      <meta name="image" content="https://staging.iammatthias.com/Logo_export.40pt.svg" />
+      // Schema.org for Google
+      <meta itemprop="name" content="I Am Matthias" />
+      <meta itemprop="description" content="Portfolio of content creator Matthias Kronfeld Jordan, based in Santa Monica, California " />
+      <meta itemprop="image" content="https://staging.iammatthias.com/Logo_export.40pt.svg" />
+      // Twitter
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="I Am Matthias" />
+      <meta name="twitter:description" content="Portfolio of content creator Matthias Kronfeld Jordan, based in Santa Monica, California " />
+      <meta name="twitter:site" content="@iammatthias" />
+      <meta name="twitter:creator" content="@iammatthias" />
+      <meta name="twitter:image:src" content="https://staging.iammatthias.com/Logo_export.40pt.svg" />
+      // Open Graph general (Facebook, Pinterest & Google+)
+      <meta name="og:title" content="I Am Matthias" />
+      <meta name="og:description" content="Portfolio of content creator Matthias Kronfeld Jordan, based in Santa Monica, California " />
+      <meta name="og:image" content="https://staging.iammatthias.com/Logo_export.40pt.svg" />
+      <meta name="og:url" content="https://staging.iammatthias.com"/>
+      <meta name="og:site_name" content="I Am Matthias"/>
+      <meta name="og:type" content="website" />
       </Helmet>
+
       <Nav />
       {children()}
       <Footer />

@@ -90,6 +90,11 @@ const SayHi = styled.div`
         color: ${palette.HOVER_COLOR };
         border: .25rem solid ${palette.HOVER_COLOR };
         transition: color 0.618s, border 0.618s; }
+    @media (max-width: 768px) {
+          input, textarea, button {
+            width: 100%;
+          }
+        }
 `
 
 

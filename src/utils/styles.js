@@ -19,3 +19,4 @@ export const BLURB_HEIGHT = '61.8vh';
 export const BLURB_HEIGHT_MOBILE = '90vh';
 
 export const FOOTER_HEIGHT = '90vh';
+ 

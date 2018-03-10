@@ -29,6 +29,9 @@ display: flex;
 align-items: left;
 justify-content: top;
 flex-direction: column;
+.gatsby-image-outer-wrapper, .gatsby-image-wrapper {
+  position: static !important;
+}
 `
 const SubGrid = styled.ul`
   display: grid;
@@ -45,7 +48,7 @@ const SubGrid = styled.ul`
 `
 const SubGridLeft = styled.div`
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   grid-auto-flow: row dense;
   grid-gap: 1rem;
   align-items: center;
@@ -56,26 +59,43 @@ const SubGridLeft = styled.div`
 `
 const SubGridRight = styled.div`
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr;
   grid-auto-flow: row dense;
   grid-gap: 1rem;
-  align-items: center;
-  justify-content: center;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 `
-const GridItem = styled.div`
+const GridItem = styled(Link)`
   .gatsby-image-outer-wrapper, .gatsby-image-wrapper {
     position: static !important;
   }
 `
-const GridItemSwap = styled.div`
+const GridItemLeft = styled(Link)`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  justify-content: center;
   .gatsby-image-outer-wrapper, .gatsby-image-wrapper {
     position: static !important;
   }
   @media (max-width: 768px) {
-      order: 2;
+      grid-template-columns: 1fr;
+  }
+`
+const GridItemRight = styled(Link)`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  justify-content: center;
+  .gatsby-image-outer-wrapper, .gatsby-image-wrapper {
+    position: static !important;
+  }
+  @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      .reverse {
+        order: 2;
+      }
   }
 `
 const Blurb = styled.div`
@@ -94,7 +114,7 @@ p { margin: 25vw;
     height: ${palette.BLURB_HEIGHT.MOBILE };
 }
 `
-const Card = styled(Link)`
+const Card = styled.div`
     height: ${palette.HEIGHT };
     position: relative;
     overflow: hidden;
@@ -125,57 +145,56 @@ const Description = styled.p`
 
 return (
     <Grid>
-      <GridItem>
+
         <Hero>
           <Cover>
             <Img sizes={page.hero.sizes}/>
           </Cover>
         </Hero>
-      </GridItem>
+
       <Blurb dangerouslySetInnerHTML={{ __html: page.bio.childMarkdownRemark.html }} />
+
       <SubGridLeft>
-        <GridItem>
-          <Card to={posts[0].node.slug + "/"} >
+        <GridItemLeft to={posts[0].node.slug + "/"} >
+          <Card>
             <Cover>
               <Img sizes={posts[0].node.featuredImage.sizes}/>
             </Cover>
           </Card>
-        </GridItem>
-        <GridItem>
-          <Data to={posts[0].node.slug + "/"} >
+
+          <Data>
             <Name>{posts[0].node.title}</Name>
             <Description>{posts[0].node.blurb}</Description>
           </Data>
-        </GridItem>
+        </GridItemLeft>
       </SubGridLeft>
 
       <SubGridRight>
-        <GridItemSwap>
-          <Data to={posts[1].node.slug + "/"} >
+        <GridItemRight to={posts[1].node.slug + "/"}>
+          <Data className="reverse">
             <Name>{posts[1].node.title}</Name>
             <Description>{posts[1].node.blurb}</Description>
           </Data>
-        </GridItemSwap>
-        <GridItem>
-          <Card to={posts[1].node.slug + "/"} >
+
+          <Card >
             <Cover>
               <Img sizes={posts[1].node.featuredImage.sizes}/>
             </Cover>
           </Card>
-        </GridItem>
+        </GridItemRight>
       </SubGridRight>
 
         <Blurb dangerouslySetInnerHTML={{ __html: page.snippet.childMarkdownRemark.html }} />
 
       <SubGrid>
       {posts.slice(2).map(({ node: posts }) => (
-        <GridItem key={posts.id}>
-          <Card to={posts.slug + "/"} >
+        <GridItem key={posts.id} to={posts.slug + "/"} >
+          <Card>
             <Cover>
               <Img sizes={posts.featuredImage.sizes}/>
             </Cover>
           </Card>
-          <Data to={posts.slug + "/"} >
+          <Data>
             <Name>{posts.title}</Name>
             <Description>{posts.blurb}</Description>
           </Data>

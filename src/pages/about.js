@@ -60,6 +60,8 @@ const SayHi = styled.div`
     background: transparent;
     border: 0;
     border-bottom: .25rem solid ${palette.COLOR };
+border-radius: 0;
+box-shadow: none;
     outline: none;
     resize: none;
     overflow: auto;

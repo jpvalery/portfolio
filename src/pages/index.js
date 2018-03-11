@@ -39,26 +39,7 @@ const SubGrid = styled.ul`
     grid-template-columns: 1fr;
   }
 `
-const SubGridLeft = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-flow: row dense;
-  grid-gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-`
-const SubGridRight = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-flow: row dense;
-  grid-gap: 1rem;
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-`
+
 const GridItem = styled(Link)`
   .gatsby-image-outer-wrapper, .gatsby-image-wrapper {
     position: static !important;
@@ -146,7 +127,7 @@ return (
 
       <Blurb dangerouslySetInnerHTML={{ __html: page.bio.childMarkdownRemark.html }} />
 
-      <SubGridLeft>
+
         <GridItemLeft to={posts[0].node.slug + "/"} >
           <Card>
             <Cover>
@@ -159,9 +140,9 @@ return (
             <Description>{posts[0].node.blurb}</Description>
           </Data>
         </GridItemLeft>
-      </SubGridLeft>
 
-      <SubGridRight>
+
+
         <GridItemRight to={posts[1].node.slug + "/"}>
           <Data className="reverse">
             <Name>{posts[1].node.title}</Name>
@@ -174,7 +155,7 @@ return (
             </Cover>
           </Card>
         </GridItemRight>
-      </SubGridRight>
+
 
         <Blurb dangerouslySetInnerHTML={{ __html: page.snippet.childMarkdownRemark.html }} />
 

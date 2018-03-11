@@ -27,7 +27,7 @@ justify-content: center;
 a img {height:2rem;margin: 0;}
 img{height: 100%;margin: 0;vertical-align:middle;}
 h3 {margin:0 0 0 1rem;}
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   h3 {display: none;}
 }
 `

@@ -19,7 +19,7 @@ render() {
       grid-template-columns: repeat( 1fr);
       grid-auto-flow: row dense;
       grid-gap: 1rem;
-      @media (max-width: 768px) {
+      @media (max-width: 991px) {
         grid-template-columns: 1fr;
       }
     `
@@ -34,7 +34,7 @@ const GridContent = styled.div`
   margin: 0 auto;
   padding: 3rem 0 1rem;
   width: 50vw;
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
   width: 75vw;
   }
   pre{

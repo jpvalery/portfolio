@@ -15,7 +15,7 @@ const Grid = styled.div`
   grid-template-columns: repeat( 2, minmax(25vw, 1fr) );
   grid-auto-flow: row dense;
   grid-gap: 1rem;
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     grid-template-columns: 1fr;
   }
 `
@@ -92,7 +92,7 @@ const SayHi = styled.div`
         color: ${palette.HOVER_COLOR };
         border: .25rem solid ${palette.HOVER_COLOR };
         transition: color 0.618s, border 0.618s; }
-    @media (max-width: 768px) {
+    @media (max-width: 991px) {
           input, textarea, button {
             width: 100%;
           }

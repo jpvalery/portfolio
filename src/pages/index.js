@@ -12,21 +12,22 @@ const page = data.contentfulHome;
 
 const Grid = styled.div`
   margin: 1rem 0;
-  display: grid;
-  grid-template-columns: repeat( 1fr);
-  grid-auto-flow: row;
-  grid-gap: 1rem;
 `
 const Hero = styled.div`
-height: ${palette.HEIGHT };
-margin-top: -1rem;
-position: relative;
-overflow: hidden;
-.gatsby-image-outer-wrapper, .gatsby-image-wrapper {
-  position: static !important;
+  height: ${palette.HEIGHT };
+  margin-top: -1rem;
+  position: relative;
+  overflow: hidden;
+  .gatsby-image-outer-wrapper, .gatsby-image-wrapper {
+    position: static !important;
 }
 `
-const SubGrid = styled.ul`
+const SubGrid1 = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+`
+const SubGrid2 = styled.ul`
   display: grid;
   margin: 0;
   grid-template-columns: 1fr 1fr 1fr;
@@ -35,7 +36,7 @@ const SubGrid = styled.ul`
   align-items: center;
   justify-content: center;
   list-style-type: none;
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     grid-template-columns: 1fr;
   }
 `
@@ -53,7 +54,7 @@ const GridItemLeft = styled(Link)`
   .gatsby-image-outer-wrapper, .gatsby-image-wrapper {
     position: static !important;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
       grid-template-columns: 1fr;
   }
 `
@@ -65,7 +66,7 @@ const GridItemRight = styled(Link)`
   .gatsby-image-outer-wrapper, .gatsby-image-wrapper {
     position: static !important;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
       grid-template-columns: 1fr;
       .reverse {
         order: 2;
@@ -80,11 +81,11 @@ align-items: center;
 justify-content: center;
 text-align: center;
 p { margin: 25vw;
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
       margin: 1rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     height: ${palette.BLURB_HEIGHT.MOBILE };
 }
 `
@@ -112,7 +113,7 @@ const Name = styled.h1`
 const Description = styled.p`
     margin: 0 auto;
     width: 25vw;
-    @media (max-width: 768px) {
+    @media (max-width: 991px) {
         width: 75vw;
     }
 `
@@ -127,7 +128,7 @@ return (
 
       <Blurb dangerouslySetInnerHTML={{ __html: page.bio.childMarkdownRemark.html }} />
 
-
+      <SubGrid1>
         <GridItemLeft to={posts[0].node.slug + "/"} >
           <Card>
             <Cover>
@@ -140,9 +141,6 @@ return (
             <Description>{posts[0].node.blurb}</Description>
           </Data>
         </GridItemLeft>
-
-
-
         <GridItemRight to={posts[1].node.slug + "/"}>
           <Data className="reverse">
             <Name>{posts[1].node.title}</Name>
@@ -155,11 +153,11 @@ return (
             </Cover>
           </Card>
         </GridItemRight>
-
+      </SubGrid1>
 
         <Blurb dangerouslySetInnerHTML={{ __html: page.snippet.childMarkdownRemark.html }} />
 
-      <SubGrid>
+      <SubGrid2>
       {posts.slice(2).map(({ node: posts }) => (
         <GridItem key={posts.id} to={posts.slug + "/"} >
           <Card>
@@ -173,7 +171,7 @@ return (
           </Data>
         </GridItem>
         ))}
-      </SubGrid>
+      </SubGrid2>
     </Grid>
     )
 }

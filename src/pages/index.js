@@ -25,10 +25,6 @@ height: ${palette.HEIGHT };
 margin-top: -1rem;
 position: relative;
 overflow: hidden;
-display: flex;
-align-items: left;
-justify-content: top;
-flex-direction: column;
 .gatsby-image-outer-wrapper, .gatsby-image-wrapper {
   position: static !important;
 }
@@ -145,13 +141,14 @@ const Description = styled.p`
 
 return (
     <Grid>
-
+      <GridItem>
         <Hero>
           <Cover>
             <Img sizes={page.hero.sizes}/>
           </Cover>
         </Hero>
-
+      </GridItem>
+      
       <Blurb dangerouslySetInnerHTML={{ __html: page.bio.childMarkdownRemark.html }} />
 
       <SubGridLeft>

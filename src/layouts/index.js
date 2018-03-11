@@ -14,12 +14,11 @@ const TemplateWrapper = ({ children }) => {
 injectGlobal`
 :root {
   font-size: 16px;
-
   background: ${palette.BG_COLOR };
   @supports(padding: max(0px)) {
       padding-left: env(safe-area-inset-left);
       padding-right:env(safe-area-inset-right);
-}
+    }
   }
   body {
     background: ${palette.BG_COLOR };
@@ -36,9 +35,7 @@ injectGlobal`
    color: ${palette.HOVER_COLOR };
    transition:color 0.618s;
   }
-  .gatsby-resp-image-wrapper {
-    margin: 2.75rem 0;
-  }
+
 `
 return (
   <div>

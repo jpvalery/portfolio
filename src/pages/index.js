@@ -141,14 +141,12 @@ const Description = styled.p`
 
 return (
     <Grid>
-      <GridItem>
         <Hero>
           <Cover>
             <Img sizes={page.hero.sizes}/>
           </Cover>
         </Hero>
-      </GridItem>
-      
+
       <Blurb dangerouslySetInnerHTML={{ __html: page.bio.childMarkdownRemark.html }} />
 
       <SubGridLeft>

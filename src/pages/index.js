@@ -14,11 +14,8 @@ const Grid = styled.div`
   margin: 1rem 0;
   display: grid;
   grid-template-columns: repeat( 1fr);
-  grid-auto-flow: row dense;
+  grid-auto-flow: row;
   grid-gap: 1rem;
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
 `
 const Hero = styled.div`
 height: ${palette.HEIGHT };

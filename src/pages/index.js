@@ -80,11 +80,14 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 text-align: center;
-p { margin: 25vw;
+p { margin: 25vw auto;
+    width: 50vw;
   @media (max-width: 991px) {
       margin: 1rem;
+      width: 75vw;
   }
 }
+
 @media (max-width: 991px) {
     height: ${palette.BLURB_HEIGHT.MOBILE };
 }

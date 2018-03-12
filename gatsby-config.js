@@ -67,7 +67,7 @@ module.exports = {
   {
     resolve: `gatsby-plugin-favicon`,
     options: {
-      logo: "./favicon.png",
+      logo: "./src/favicon.png",
       injectHTML: true,
       icons: {
         android: true,

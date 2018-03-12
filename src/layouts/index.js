@@ -35,6 +35,9 @@ injectGlobal`
    color: ${palette.HOVER_COLOR };
    transition:color 0.618s;
   }
+  .hidden {
+    display: none;
+  }
 
 `
 return (

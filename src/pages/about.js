@@ -74,9 +74,7 @@ const SayHi = styled.div`
     outline: none;
     color: ${palette.SECONDARY_COLOR };
     }
-    .hidden {
-      display: none;
-    }
+
     .btn, .btn:link, .btn:visited {
       border: .25rem solid ${palette.SECONDARY_COLOR };
       color: ${palette.SECONDARY_COLOR };
@@ -117,6 +115,7 @@ return (
               <Name>{name}</Name>
               <div dangerouslySetInnerHTML={{ __html: bio.childMarkdownRemark.html }} />
               <SayHi>
+                <a href="/about-thanks" className="hidden" />
                 <form name="contact" method="POST" action="/about-thanks/" data-netlify="true" data-netlify-honeypot="bot-field" >
                   <input type="hidden" name="form-name" value="contact" />
                   <input className="hidden" name="bot-field" />

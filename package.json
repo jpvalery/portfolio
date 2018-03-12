@@ -9,6 +9,7 @@
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-canonical-urls": "^1.0.13",
     "gatsby-plugin-catch-links": "^1.0.17",
+    "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-google-analytics": "^1.0.22",
     "gatsby-plugin-netlify": "^1.0.18",
     "gatsby-plugin-nprogress": "^1.0.12",

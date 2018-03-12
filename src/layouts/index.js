@@ -53,18 +53,18 @@ return (
       // Schema.org for Google
       <meta itemprop="name" content="I Am Matthias" />
       <meta itemprop="description" content="Portfolio of content creator Matthias Kronfeld Jordan, based in Santa Monica, California " />
-      <meta itemprop="image" content="https://staging.iammatthias.com/Logo_export.40pt.svg" />
+      <meta itemprop="image" content="https://images.ctfassets.net/34j7b1jydvza/2RuegZGLxeciwmwAU6uWUQ/0dbaea1d7676c2504359711433977366/aerial-018.jpg?w=600&h=450&q=50" />
       // Twitter
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content="I Am Matthias" />
       <meta name="twitter:description" content="Portfolio of content creator Matthias Kronfeld Jordan, based in Santa Monica, California " />
       <meta name="twitter:site" content="@iammatthias" />
       <meta name="twitter:creator" content="@iammatthias" />
-      <meta name="twitter:image:src" content="https://staging.iammatthias.com/Logo_export.40pt.svg" />
+      <meta name="twitter:image" content="https://images.ctfassets.net/34j7b1jydvza/2RuegZGLxeciwmwAU6uWUQ/0dbaea1d7676c2504359711433977366/aerial-018.jpg?w=600&h=450&q=50" />
       // Open Graph general (Facebook, Pinterest & Google+)
       <meta name="og:title" content="I Am Matthias" />
       <meta name="og:description" content="Portfolio of content creator Matthias Kronfeld Jordan, based in Santa Monica, California " />
-      <meta name="og:image" content="https://staging.iammatthias.com/Logo_export.40pt.svg" />
+      <meta name="og:image" content="https://images.ctfassets.net/34j7b1jydvza/2RuegZGLxeciwmwAU6uWUQ/0dbaea1d7676c2504359711433977366/aerial-018.jpg?w=600&h=450&q=50" />
       <meta name="og:url" content="https://staging.iammatthias.com"/>
       <meta name="og:site_name" content="I Am Matthias"/>
       <meta name="og:type" content="website" />

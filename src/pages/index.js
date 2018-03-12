@@ -144,6 +144,7 @@ return (
             <Description>{posts[0].node.blurb}</Description>
           </Data>
         </GridItemLeft>
+
         <GridItemRight to={posts[1].node.slug + "/"}>
           <Data className="reverse">
             <Name>{posts[1].node.title}</Name>
@@ -170,7 +171,7 @@ return (
           </Card>
           <Data>
             <Name>{posts.title}</Name>
-            <Description>{posts.blurb}</Description>
+            
           </Data>
         </GridItem>
         ))}

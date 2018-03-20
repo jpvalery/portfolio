@@ -42,6 +42,7 @@ const Footer = () => {
         <br />Photographer & Content Creator
         <br />Product & Marketing Coordinator @ Surf Air
         <br />Made with ♡ in Santa Monica, California, USA.
+        <br /><br /><a href="/resume"><h5>RESUME 2018</h5></a>
       </Content>
       <Icon>
         <a href="https://www.contentful.com/" rel="nofollow">

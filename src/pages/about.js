@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "gatsby-link";
 import Img from "gatsby-image";
 import styled from "styled-components";
 
@@ -49,57 +50,62 @@ const AboutPage = ({ data }) => {
   `;
   const Name = styled.h1`
     text-transform: uppercase;
-    font-size: 2rem;
   `;
-  const SayHi = styled.div`
+
+  const Form = styled.form`
+    max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
     input,
     textarea {
-      width: 25vw;
-      padding: 0.25rem 0px 0.75rem;
-      background: transparent;
-      border: 0;
-      border-bottom: 0.25rem solid ${palette.SECONDARY_COLOR};
-      border-radius: 0;
-      box-shadow: none;
+      font-family: inherit;
+      font-size: inherit;
+      background: none;
+      border: 1px ${palette.SECONDARY_COLOR} solid;
       outline: none;
+      color: ${palette.SECONDARY_COLOR};
+      border-radius: 0px;
+      padding: 1em;
       resize: none;
-      overflow: auto;
-      color: ${palette.SECONDARY_COLOR};
+      &:focus {
+        outline: none;
+      }
+      &:required {
+        box-shadow: none;
+      }
     }
-    button {
-      width: 25vw;
-      padding: 1rem 0px;
-      background: transparent;
-      outline: none;
-      color: ${palette.SECONDARY_COLOR};
-    }
+  `;
 
-    .btn,
-    .btn:link,
-    .btn:visited {
-      border: 0.25rem solid ${palette.SECONDARY_COLOR};
-      color: ${palette.SECONDARY_COLOR};
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: color 0.618s, border 0.618s;
-      h2 {
-        padding: 0;
-        margin: 0;
-      }
+  const FormName = styled.input`
+    margin: 0 0 1em 0;
+    width: 100%;
+    @media (min-width: 992px) {
+      width: 49%;
     }
-    .btn:hover,
-    .btn:focus {
-      color: ${palette.HOVER_COLOR};
-      border: 0.25rem solid ${palette.HOVER_COLOR};
-      transition: color 0.618s, border 0.618s;
+  `;
+
+  const Email = styled.input`
+    margin: 0 0 1em 0;
+    width: 100%;
+    @media (min-width: 992px) {
+      width: 49%;
     }
-    @media (max-width: 991px) {
-      input,
-      textarea,
-      button {
-        width: 100%;
-      }
-    }
+  `;
+
+  const Message = styled.textarea`
+    width: 100%;
+    margin: 0 0 1em 0;
+    line-height: 1.6;
+    min-height: 125px;
+    resize: vertical;
+  `;
+  const Submit = styled.input`
+    cursor: pointer;
+    transition: 0.2s;
+    width: 100%;
   `;
 
   return (
@@ -122,36 +128,55 @@ const AboutPage = ({ data }) => {
                     __html: bio.childMarkdownRemark.html
                   }}
                 />
-                <SayHi>
+
+                <Form
+                  name="contact"
+                  method="POST"
+                  action="/about-thanks"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                >
                   <a href="/about-thanks" className="hidden">
                     thanks
                   </a>
-                  <form
-                    name="contact"
-                    method="POST"
-                    action="/about-thanks"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                  >
-                    <input
-                      type="hidden"
-                      name="form-name"
-                      value="contact"
-                      action="/about-thanks/"
-                    />
-                    <input className="hidden" name="bot-field" />
-                    <input type="text" name="name" placeholder="Name" />
-                    <input type="email" name="_replyto" placeholder="Email" />
-                    <textarea name="message" placeholder="Message" />
-                    <button className="btn" type="submit">
-                      <h2>Say Hi</h2>
-                    </button>
-                  </form>
-                </SayHi>
+                  <input
+                    type="hidden"
+                    name="form-name"
+                    value="contact"
+                    action="/about-thanks/"
+                  />
+                  <p hidden>
+                    <label>
+                      Don’t fill this out:{" "}
+                      <input className="hidden" name="bot-field" />
+                    </label>
+                  </p>
+
+                  <FormName
+                    name="name"
+                    type="text"
+                    placeholder="Full Name"
+                    required
+                  />
+                  <Email
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    required
+                  />
+                  <Message
+                    name="message"
+                    type="text"
+                    placeholder="Message"
+                    required
+                  />
+                  <Submit name="submit" type="submit" value="Send" />
+                </Form>
               </CardContent>
             </Data>
           </Card>
         </GridItem>
+
       </Grid>
     </wrapper>
   );

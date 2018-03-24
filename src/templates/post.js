@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Img from "gatsby-image";
 import styled from "styled-components";
 
-import * as palette from "../utils/styles"; 
+import * as palette from "../utils/styles";
 
 class Blog extends Component {
   render() {
@@ -13,7 +13,8 @@ class Blog extends Component {
       createdAt,
       featuredImage,
       content,
-      slug
+      slug,
+      blurb
     } = this.props.data.contentfulBlog;
 
     const Grid = styled.div`
@@ -87,9 +88,15 @@ class Blog extends Component {
       justify-content: center;
       flex-direction: column;
       text-transform: uppercase;
-      p {
-        width: 50vw;
-      }
+    `;
+    const Name = styled.h1`
+      text-transform: uppercase;
+    `;
+    const Date = styled.h4`
+      text-transform: uppercase;
+    `;
+    const Slug = styled.p`
+
     `;
 
     return (
@@ -100,7 +107,9 @@ class Blog extends Component {
               <Img sizes={featuredImage.sizes} />
             </Cover>
             <Title>
-              <h1>{title}</h1>
+            <Name>{title}</Name>
+            <Date>{createdAt}</Date>
+            <Slug>{blurb}</Slug>
             </Title>
           </Hero>
         </GridItem>

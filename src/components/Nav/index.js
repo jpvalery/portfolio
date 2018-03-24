@@ -78,6 +78,10 @@ const Hero = ({ avatar }) => {
           </a>
         </NavLeft>
         <NavRight>
+          <a href="/blog">
+            <h3>BLOG</h3>
+          </a>
+
           <a href="/about">
             <h3>ABOUT</h3>
           </a>

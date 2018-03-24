@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Img from "gatsby-image";
 import styled from "styled-components";
+import sizeMe from "react-sizeme";
+import StackGrid from "react-stack-grid";
 
 import * as palette from "../utils/styles";
 
-class Blog extends Component {
+class Gallery extends Component {
   render() {
     console.log(this.props);
     const {
@@ -13,8 +15,10 @@ class Blog extends Component {
       createdAt,
       featuredImage,
       content,
-      slug
-    } = this.props.data.contentfulBlog;
+      blurb,
+      images
+    } = this.props.data.contentfulGallery;
+    const { width } = this.props.size;
 
     const Grid = styled.div`
       margin: 1rem 0;
@@ -109,17 +113,33 @@ class Blog extends Component {
           dangerouslySetInnerHTML={{ __html: content.childMarkdownRemark.html }}
         />
 
+        <StackGrid
+          columnWidth={width <= 768 ? "100%" : "33.33%"}
+          gutterWidth={16}
+          gutterHeight={16}
+          duration={0}
+        >
+          {images &&
+            images.map((images, index) => (
+              <Img
+                key={index}
+                sizes={images.sizes}
+                alt={images.title}
+                title={images.title}
+              />
+            ))}
+        </StackGrid>
       </Grid>
     );
   }
 }
-Blog.PropTypes = {
+Gallery.PropTypes = {
   data: PropTypes.object.isRequired
 };
 
 export const pageQuery = graphql`
-  query blogPostQuery($slug: String!) {
-    contentfulBlog(slug: { eq: $slug }) {
+  query galleryPostQuery($slug: String!) {
+    contentfulGallery(slug: { eq: $slug }) {
       title
       blurb
       createdAt(formatString: "MMMM DD, YYYY")
@@ -133,8 +153,13 @@ export const pageQuery = graphql`
           html
         }
       }
-
+      images {
+        title
+        sizes(maxWidth: 740) {
+          ...GatsbyContentfulSizes_noBase64
+        }
+      }
     }
   }
 `;
-export default Blog;
+export default sizeMe()(Gallery);

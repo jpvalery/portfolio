@@ -22,6 +22,10 @@ const Footer = () => {
     text-align: center;
     font-size: 10px;
     margin: 0;
+    span {
+      font-weight: 900;
+      font-family: Oswald;
+    }
   `;
   const Icon = styled.div`
     display: flex;
@@ -42,7 +46,7 @@ const Footer = () => {
         <br />Photographer & Content Creator
         <br />Product & Marketing Coordinator @ Surf Air
         <br />Made with ♡ in Santa Monica, California, USA.
-        <br /><br /><a href="/resume"><h5>RESUME 2018</h5></a>
+        <br /><br /><a href="/resume"><span>RESUME 2018</span></a>
       </Content>
       <Icon>
         <a href="https://www.contentful.com/" rel="nofollow">

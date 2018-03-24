@@ -51,7 +51,7 @@ exports.createPages = ({graphql, boundActionCreators}) => {
                 }
                 result.data.allContentfulBlog.edges.forEach((edge) => {
                     createPage ({
-                        path: edge.node.slug,
+                        path: "/blog/" + edge.node.slug,
                         component: blogPostTemplate,
                         context: {
                             slug: edge.node.slug

@@ -58,7 +58,7 @@ const IndexPage = ({ data }) => {
     <Grid>
 
         {posts.slice(0).map(({ node: posts }) => (
-          <GridItem key={posts.id} to={posts.slug + "/"}>
+          <GridItem key={posts.id} to={ "/blog/" + posts.slug + "/"}>
             <Card>
               <Cover>
                 <Img sizes={posts.featuredImage.sizes} />

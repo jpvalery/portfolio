@@ -36,8 +36,9 @@ class Blog extends Component {
     `;
 
     const GridContent = styled.div`
+      border: 1px solid ${palette.SECONDARY_COLOR};
       margin: 0 auto;
-      padding: 3rem 0 1rem;
+      padding: 3rem 1rem 1rem;
       width: 50vw;
       @media (max-width: 991px) {
         width: 75vw;
@@ -61,6 +62,7 @@ class Blog extends Component {
       }
     `;
     const Hero = styled.div`
+      border: 1px solid ${palette.SECONDARY_COLOR};
       height: ${palette.HEIGHT};
       margin-top: -1rem;
       position: relative;

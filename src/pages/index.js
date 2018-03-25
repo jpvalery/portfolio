@@ -13,6 +13,7 @@ const IndexPage = ({ data }) => {
     margin: 1rem 0;
   `;
   const Hero = styled.div`
+    border: 1px solid ${palette.SECONDARY_COLOR};
     height: ${palette.HEIGHT};
     margin-top: -1rem;
     position: relative;
@@ -42,12 +43,14 @@ const IndexPage = ({ data }) => {
   `;
 
   const GridItem = styled(Link)`
+    border: 1px solid ${palette.SECONDARY_COLOR};
     .gatsby-image-outer-wrapper,
     .gatsby-image-wrapper {
       position: static !important;
     }
   `;
   const GridItemLeft = styled(Link)`
+    border: 1px solid ${palette.SECONDARY_COLOR};
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: center;
@@ -61,6 +64,7 @@ const IndexPage = ({ data }) => {
     }
   `;
   const GridItemRight = styled(Link)`
+    border: 1px solid ${palette.SECONDARY_COLOR};
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;

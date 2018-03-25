@@ -12,13 +12,16 @@ const IndexPage = ({ data }) => {
     margin: 1rem 0;
     display: grid;
     grid-template-columns: 1fr;
+    grid-gap: 1rem;
   `;
 
   const GridItem = styled(Link)`
+  border: 1px solid ${palette.SECONDARY_COLOR};
   display: grid;
-  grid-template-columns: 1fr .5fr 2fr;
+  grid-template-columns: 1fr 2fr;
     align-items: center;
     justify-content: center;
+    grid-gap: 1rem;
     .gatsby-image-outer-wrapper,
     .gatsby-image-wrapper {
       position: static !important;
@@ -44,6 +47,17 @@ const IndexPage = ({ data }) => {
   `;
   const Data = styled.div`
     padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1rem;
+    @media (max-width: 991px) {
+      text-align: center;
+      grid-template-columns: 1fr;
+      grid-gap: 0;
+    }
+  `;
+  const Title = styled.div`
+    padding: 1rem;
     @media (max-width: 991px) {
       text-align: center;
     }
@@ -53,6 +67,7 @@ const IndexPage = ({ data }) => {
   `;
   const Date = styled.h4`
     text-transform: uppercase;
+    margin-bottom: 0;
   `;
   const Slug = styled.p`
 
@@ -70,10 +85,10 @@ const IndexPage = ({ data }) => {
               </Cover>
             </Card>
             <Data>
+              <Title>
               <Name>{posts.title}</Name>
               <Date>{posts.createdAt}</Date>
-            </Data>
-            <Data>
+              </Title>
               <Slug>{posts.blurb}</Slug>
             </Data>
           </GridItem>

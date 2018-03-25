@@ -20,12 +20,14 @@ const AboutPage = ({ data }) => {
     }
   `;
   const GridItem = styled.div`
+
     .gatsby-image-outer-wrapper,
     .gatsby-image-wrapper {
       position: static !important;
     }
   `;
   const Card = styled.div`
+  border: 1px solid ${palette.SECONDARY_COLOR};
     min-height: ${palette.HEIGHT};
     position: relative;
     overflow: hidden;

@@ -53,11 +53,18 @@ class Gallery extends Component {
         white-space: pre;
         overflow-x: auto;
 
+
       }
       blockquote {
         position: relative;
-        padding-left: 40px;
-        border-left: 2px solid ${palette.SECONDARY_COLOR};
+        margin: 0 1rem 1rem;
+        padding: .5rem 2rem;
+        border-left: 1px solid ${palette.SECONDARY_COLOR};
+        @media (max-width: 991px) {
+          width: 75vw;
+          margin: 0 1rem 1rem;
+          padding: .5rem 2rem;
+        }
       }
       blockquote span {
         display: block;
@@ -80,7 +87,7 @@ class Gallery extends Component {
       width: 100%;
       height: 100%;
       position: absolute;
-      
+
     `;
     const Title = styled.div`
       text-align: center;

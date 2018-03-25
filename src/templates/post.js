@@ -45,6 +45,7 @@ class Blog extends Component {
         width: 90vw;
       }
       pre {
+        border: 1px solid ${palette.SECONDARY_COLOR};
         padding: 1rem;
         color: ${palette.SECONDARY_COLOR};
         white-space: pre;
@@ -53,8 +54,14 @@ class Blog extends Component {
       }
       blockquote {
         position: relative;
-        padding-left: 40px;
-        border-left: 2px solid ${palette.SECONDARY_COLOR};
+        margin: 0 1rem 1rem;
+        padding: .5rem 2rem;
+        border-left: 1px solid ${palette.SECONDARY_COLOR};
+        @media (max-width: 991px) {
+          width: 75vw;
+          margin: 0 1rem 1rem;
+          padding: .5rem 2rem;
+        }
       }
       blockquote span {
         display: block;

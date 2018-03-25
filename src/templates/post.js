@@ -41,7 +41,7 @@ class Blog extends Component {
       padding: 3rem 1rem 1rem;
       width: 50vw;
       @media (max-width: 991px) {
-        width: 75vw;
+        width: 90vw;
       }
       pre {
         padding: 1rem;

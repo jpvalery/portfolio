@@ -12,6 +12,7 @@ class Blog extends Component {
       title,
       createdAt,
       featuredImage,
+      timeToRead,
       content,
       slug,
       blurb
@@ -101,8 +102,12 @@ class Blog extends Component {
     const Name = styled.h1`
       text-transform: uppercase;
     `;
-    const Date = styled.h4`
+    const ReadingTime = styled.h4`
       text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      span {text-align: right;}
     `;
     const Slug = styled.p`
 
@@ -117,15 +122,15 @@ class Blog extends Component {
             </Cover>
             <Title>
             <Name>{title}</Name>
-            <Date>{createdAt}</Date>
             <Slug>{blurb}</Slug>
             </Title>
           </Hero>
         </GridItem>
 
-        <GridContent
-          dangerouslySetInnerHTML={{ __html: content.childMarkdownRemark.html }}
-        />
+        <GridContent>
+          <ReadingTime>{createdAt} <span>Reading Time: {content.childMarkdownRemark.timeToRead} min</span></ReadingTime>
+          <div dangerouslySetInnerHTML={{ __html: content.childMarkdownRemark.html }} />
+        </GridContent>
 
       </Grid>
     );
@@ -149,6 +154,7 @@ export const pageQuery = graphql`
       content {
         childMarkdownRemark {
           html
+          timeToRead
         }
       }
 

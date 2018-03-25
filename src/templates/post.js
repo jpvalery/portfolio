@@ -36,7 +36,8 @@ class Blog extends Component {
     `;
 
     const GridContent = styled.div`
-      border: 1px solid ${palette.SECONDARY_COLOR};
+
+      background: ${palette.POST_COLOR};
       margin: 0 auto;
       padding: 3rem 1rem 1rem;
       width: 50vw;
@@ -48,7 +49,7 @@ class Blog extends Component {
         color: ${palette.SECONDARY_COLOR};
         white-space: pre;
         overflow-x: auto;
-        border: 1px solid ${palette.SECONDARY_COLOR};
+
       }
       blockquote {
         position: relative;
@@ -62,7 +63,7 @@ class Blog extends Component {
       }
     `;
     const Hero = styled.div`
-      border: 1px solid ${palette.SECONDARY_COLOR};
+
       height: ${palette.HEIGHT};
       margin-top: -1rem;
       position: relative;
@@ -76,7 +77,6 @@ class Blog extends Component {
       width: 100%;
       height: 100%;
       position: absolute;
-      filter: blur(1.91px);
     `;
     const Title = styled.div`
       text-align: center;

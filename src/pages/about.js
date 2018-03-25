@@ -27,7 +27,8 @@ const AboutPage = ({ data }) => {
     }
   `;
   const Card = styled.div`
-  border: 1px solid ${palette.SECONDARY_COLOR};
+
+  background: ${palette.POST_COLOR};
     min-height: ${palette.HEIGHT};
     position: relative;
     overflow: hidden;

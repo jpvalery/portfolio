@@ -16,7 +16,8 @@ const IndexPage = ({ data }) => {
   `;
 
   const GridItem = styled(Link)`
-  border: 1px solid ${palette.SECONDARY_COLOR};
+
+  background: ${palette.POST_COLOR};
   display: grid;
   grid-template-columns: 1fr 2fr;
     align-items: center;
@@ -110,7 +111,7 @@ export const query = graphql`
           createdAt(formatString: "MMMM DD, YYYY")
           featuredImage {
             title
-            sizes(maxWidth: 740) {
+            sizes(maxWidth: 1200) {
               ...GatsbyContentfulSizes_noBase64
             }
           }

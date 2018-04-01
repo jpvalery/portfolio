@@ -208,8 +208,8 @@ export const query = graphql`
           createdAt(formatString: "MMMM DD, YYYY")
           featuredImage {
             title
-            sizes(maxWidth: 740) {
-              ...GatsbyContentfulSizes_noBase64
+            sizes(maxWidth: 900) {
+              ...GatsbyContentfulSizes_withWebp
             }
           }
         }
@@ -220,8 +220,8 @@ export const query = graphql`
       id
       hero {
         title
-        sizes(maxWidth: 1200) {
-          ...GatsbyContentfulSizes_noBase64
+        sizes(maxWidth: 1800) {
+          ...GatsbyContentfulSizes_withWebp
         }
       }
       bio {

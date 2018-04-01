@@ -124,7 +124,7 @@ class Gallery extends Component {
         />
 
         <StackGrid
-          columnWidth={width <= 768 ? "100%" : "33.33%"}
+          columnWidth={width <= 768 ? "100%" : "33.333%"}
           gutterWidth={16}
           gutterHeight={16}
           duration={0}

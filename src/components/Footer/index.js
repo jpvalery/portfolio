@@ -33,7 +33,7 @@ const Footer = () => {
     width: 100%;
     display: grid;
     grid-template-rows: 1fr;
-    grid-gap: 1rem;
+    grid-gap: 0rem;
     @media (max-width: 991px) {
       grid-gap: 0.5rem;
     }
@@ -44,10 +44,7 @@ const Footer = () => {
     text-align: left;
     font-size: 10px;
     margin: 0;
-    span {
-      font-weight: 900;
-      font-family: Oswald;
-    }
+
     @media (max-width: 991px) {
       text-align: center;
     }
@@ -60,7 +57,7 @@ const Footer = () => {
     position: relative;
     img {
       height: 1.618rem;
-      margin: 1rem;
+      margin: .618rem 1rem;
     }
     @media (max-width: 991px) {
       justify-content: center;
@@ -77,7 +74,7 @@ const Footer = () => {
     position: relative;
     img {
       height: 1.382rem;
-      margin: 1rem;
+      margin: .618rem 1rem;
     }
     @media (max-width: 991px) {
       justify-content: center;
@@ -95,11 +92,6 @@ const Footer = () => {
           <br />Photographer & Content Creator
           <br />Product & Marketing Coordinator @ Surf Air
           <br />Made with ♡ in Santa Monica, California, USA.
-          <br />
-          <br />
-          <a href="/resume">
-            <span>RESUME 2018</span>
-          </a>
         </Content>
         <Social>
           <SocialIcon>
@@ -114,6 +106,9 @@ const Footer = () => {
             </a>
             <a href="https://www.facebook.com/iammatthias">
               <img src={withPrefix("./facebook.svg")} />
+            </a>
+            <a href="/resume">
+              <img src={withPrefix("./file-text.svg")} />
             </a>
           </SocialIcon>
           <Icon>

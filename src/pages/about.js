@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "gatsby-link";
+import { withPrefix } from "gatsby-link";
 import Img from "gatsby-image";
 import styled from "styled-components";
 
@@ -71,7 +71,7 @@ const AboutPage = ({ data }) => {
       outline: none;
       color: ${palette.SECONDARY_COLOR};
       border-radius: 0px;
-      padding: 1em;
+      padding: .618rem;
       resize: none;
       &:focus {
         outline: none;
@@ -83,7 +83,7 @@ const AboutPage = ({ data }) => {
   `;
 
   const FormName = styled.input`
-    margin: 0 0 1em 0;
+    margin: 0 0 1rem 0;
     width: 100%;
     @media (min-width: 992px) {
       width: 49%;
@@ -91,7 +91,7 @@ const AboutPage = ({ data }) => {
   `;
 
   const Email = styled.input`
-    margin: 0 0 1em 0;
+    margin: 0 0 1rem 0;
     width: 100%;
     @media (min-width: 992px) {
       width: 49%;
@@ -100,15 +100,33 @@ const AboutPage = ({ data }) => {
 
   const Message = styled.textarea`
     width: 100%;
-    margin: 0 0 1em 0;
+    margin: 0 0 1rem 0;
     line-height: 1.6;
-    min-height: 125px;
+    min-height: 15vh;
     resize: vertical;
   `;
   const Submit = styled.input`
     cursor: pointer;
     transition: 0.2s;
     width: 100%;
+  `;
+  const SocialIcon = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-bottom: .618rem;
+    a {
+      margin: 1rem;
+    }
+    a:first-child {
+      margin-left: 0;
+    }
+    img {
+      height: 1.382rem;
+      margin: 0;
+      vertical-align: middle;
+    }
   `;
 
   return (
@@ -126,6 +144,23 @@ const AboutPage = ({ data }) => {
             <Data>
               <CardContent>
                 <Name>{name}</Name>
+                <SocialIcon>
+                  <a href="https://instagram.com/iammatthias/">
+                    <img src={withPrefix("./instagram.svg")} />
+                  </a>
+                  <a href="https://twitter.com/iamMatthias">
+                    <img src={withPrefix("./twitter.svg")} />
+                  </a>
+                  <a href="https://www.linkedin.com/in/iammatthias/">
+                    <img src={withPrefix("./linkedin.svg")} />
+                  </a>
+                  <a href="https://www.facebook.com/iammatthias">
+                    <img src={withPrefix("./facebook.svg")} />
+                  </a>
+                  <a href="/resume">
+                    <img src={withPrefix("./file-text.svg")} />
+                  </a>
+                </SocialIcon>
                 <div
                   dangerouslySetInnerHTML={{
                     __html: bio.childMarkdownRemark.html

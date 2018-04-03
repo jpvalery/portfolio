@@ -39,7 +39,6 @@ class Blog extends Component {
     `;
 
     const GridContent = styled.div`
-
       background: ${palette.POST_COLOR};
       margin: 0 auto;
       padding: 3rem 1rem 1rem;
@@ -53,17 +52,16 @@ class Blog extends Component {
         color: ${palette.SECONDARY_COLOR};
         white-space: pre;
         overflow-x: auto;
-
       }
       blockquote {
         position: relative;
         margin: 0 1rem 1rem;
-        padding: .5rem 2rem;
+        padding: 0.5rem 2rem;
         border-left: 1px solid ${palette.SECONDARY_COLOR};
         @media (max-width: 991px) {
           width: 75vw;
           margin: 0 1rem 1rem;
-          padding: .5rem 2rem;
+          padding: 0.5rem 2rem;
         }
       }
       blockquote span {
@@ -73,7 +71,6 @@ class Blog extends Component {
       }
     `;
     const Hero = styled.div`
-
       height: ${palette.HEIGHT};
       margin-top: -1rem;
       position: relative;
@@ -109,11 +106,11 @@ class Blog extends Component {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      span {text-align: right;}
+      span {
+        text-align: right;
+      }
     `;
-    const Slug = styled.p`
-
-    `;
+    const Slug = styled.p``;
 
     return (
       <Grid>
@@ -123,17 +120,25 @@ class Blog extends Component {
               <Img sizes={featuredImage.sizes} />
             </Cover>
             <Title>
-            <Name>{title}</Name>
-            <Slug>{blurb}</Slug>
+              <Name>{title}</Name>
+              <Slug>{blurb}</Slug>
             </Title>
           </Hero>
         </GridItem>
 
         <GridContent>
-          <ReadingTime>{createdAt} <span>Reading Time: {content.childMarkdownRemark.timeToRead} min</span></ReadingTime>
-          <div dangerouslySetInnerHTML={{ __html: content.childMarkdownRemark.html }} />
+          <ReadingTime>
+            {createdAt}{" "}
+            <span>
+              Reading Time: {content.childMarkdownRemark.timeToRead} min
+            </span>
+          </ReadingTime>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: content.childMarkdownRemark.html
+            }}
+          />
         </GridContent>
-
       </Grid>
     );
   }
@@ -159,7 +164,6 @@ export const pageQuery = graphql`
           timeToRead
         }
       }
-
     }
   }
 `;

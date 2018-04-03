@@ -12,23 +12,18 @@ const AboutPage = ({ data }) => {
   const Grid = styled.div`
     margin: 1rem 0;
     display: grid;
-    grid-template-columns: repeat(2, minmax(25vw, 1fr));
+    grid-template-columns: 1fr;
     grid-auto-flow: row dense;
     grid-gap: 1rem;
-    @media (max-width: 991px) {
-      grid-template-columns: 1fr;
-    }
   `;
   const GridItem = styled.div`
-
     .gatsby-image-outer-wrapper,
     .gatsby-image-wrapper {
       position: static !important;
     }
   `;
   const Card = styled.div`
-
-  background: ${palette.POST_COLOR};
+    background: ${palette.POST_COLOR};
     min-height: ${palette.HEIGHT};
     position: relative;
     overflow: hidden;
@@ -43,9 +38,17 @@ const AboutPage = ({ data }) => {
     position: absolute;
   `;
   const Data = styled.div`
+    background: ${palette.POST_COLOR};
     padding: 1rem;
     z-index: 10;
     opacity: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row dense;
+    grid-gap: 1rem;
+    @media (max-width: 991px) {
+      grid-template-columns: 1fr;
+    }
   `;
   const CardContent = styled.div`
     padding: 1rem;
@@ -71,7 +74,7 @@ const AboutPage = ({ data }) => {
       outline: none;
       color: ${palette.SECONDARY_COLOR};
       border-radius: 0px;
-      padding: .618rem;
+      padding: 0.618rem;
       resize: none;
       &:focus {
         outline: none;
@@ -115,7 +118,7 @@ const AboutPage = ({ data }) => {
     flex-direction: row;
     align-items: center;
     position: relative;
-    margin-bottom: .618rem;
+    margin-bottom: 0.618rem;
     a {
       margin: 1rem;
     }
@@ -133,88 +136,80 @@ const AboutPage = ({ data }) => {
     <wrapper>
       <Grid>
         <GridItem>
+          <Data>
+            <CardContent>
+              <Name>{name}</Name>
+              <SocialIcon>
+                <a href="https://instagram.com/iammatthias/">
+                  <img src={withPrefix("./instagram.svg")} />
+                </a>
+                <a href="https://twitter.com/iamMatthias">
+                  <img src={withPrefix("./twitter.svg")} />
+                </a>
+                <a href="https://www.linkedin.com/in/iammatthias/">
+                  <img src={withPrefix("./linkedin.svg")} />
+                </a>
+                <a href="https://www.facebook.com/iammatthias">
+                  <img src={withPrefix("./facebook.svg")} />
+                </a>
+                <a href="/resume">
+                  <img src={withPrefix("./file-text.svg")} />
+                </a>
+              </SocialIcon>
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: bio.childMarkdownRemark.html
+                }}
+              />
+            </CardContent>
+
+            <Form
+              name="contact"
+              method="POST"
+              action="/about-thanks"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
+              <a href="/about-thanks" className="hidden">
+                thanks
+              </a>
+              <input
+                type="hidden"
+                name="form-name"
+                value="contact"
+                action="/about-thanks/"
+              />
+              <p hidden>
+                <label>
+                  Don’t fill this out:{" "}
+                  <input className="hidden" name="bot-field" />
+                </label>
+              </p>
+
+              <FormName
+                name="name"
+                type="text"
+                placeholder="Full Name"
+                required
+              />
+              <Email name="email" type="email" placeholder="Email" required />
+              <Message
+                name="message"
+                type="text"
+                placeholder="Message"
+                required
+              />
+              <Submit name="submit" type="submit" value="Send" />
+            </Form>
+          </Data>
+        </GridItem>
+        <GridItem>
           <Card>
             <Cover>
               <Img resolutions={portrait.resolutions} />
             </Cover>
           </Card>
         </GridItem>
-        <GridItem>
-          <Card>
-            <Data>
-              <CardContent>
-                <Name>{name}</Name>
-                <SocialIcon>
-                  <a href="https://instagram.com/iammatthias/">
-                    <img src={withPrefix("./instagram.svg")} />
-                  </a>
-                  <a href="https://twitter.com/iamMatthias">
-                    <img src={withPrefix("./twitter.svg")} />
-                  </a>
-                  <a href="https://www.linkedin.com/in/iammatthias/">
-                    <img src={withPrefix("./linkedin.svg")} />
-                  </a>
-                  <a href="https://www.facebook.com/iammatthias">
-                    <img src={withPrefix("./facebook.svg")} />
-                  </a>
-                  <a href="/resume">
-                    <img src={withPrefix("./file-text.svg")} />
-                  </a>
-                </SocialIcon>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: bio.childMarkdownRemark.html
-                  }}
-                />
-
-                <Form
-                  name="contact"
-                  method="POST"
-                  action="/about-thanks"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                >
-                  <a href="/about-thanks" className="hidden">
-                    thanks
-                  </a>
-                  <input
-                    type="hidden"
-                    name="form-name"
-                    value="contact"
-                    action="/about-thanks/"
-                  />
-                  <p hidden>
-                    <label>
-                      Don’t fill this out:{" "}
-                      <input className="hidden" name="bot-field" />
-                    </label>
-                  </p>
-
-                  <FormName
-                    name="name"
-                    type="text"
-                    placeholder="Full Name"
-                    required
-                  />
-                  <Email
-                    name="email"
-                    type="email"
-                    placeholder="Email"
-                    required
-                  />
-                  <Message
-                    name="message"
-                    type="text"
-                    placeholder="Message"
-                    required
-                  />
-                  <Submit name="submit" type="submit" value="Send" />
-                </Form>
-              </CardContent>
-            </Data>
-          </Card>
-        </GridItem>
-
       </Grid>
     </wrapper>
   );
@@ -231,7 +226,7 @@ export const query = graphql`
         }
       }
       portrait {
-        resolutions(width: 740) {
+        resolutions(width: 1800) {
           ...GatsbyContentfulResolutions_withWebp
         }
       }

@@ -62,8 +62,8 @@ module.exports = {
               // setting this to '{ sh: "bash" }' will let you use
               // the language "sh" which will highlight using the
               // bash highlighter.
-              aliases: {},
-            },
+              aliases: {}
+            }
           },
           {
             resolve: `gatsby-remark-images`,

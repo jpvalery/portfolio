@@ -51,7 +51,7 @@ text-decoration: none;
     }
   `;
   const GridItemLeft = styled(Link)`
-
+text-decoration: none;
     background: ${palette.POST_COLOR};
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -66,7 +66,7 @@ text-decoration: none;
     }
   `;
   const GridItemRight = styled(Link)`
-
+text-decoration: none;
     background: ${palette.POST_COLOR};
     display: grid;
     grid-template-columns: 1fr 2fr;

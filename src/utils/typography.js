@@ -27,7 +27,8 @@ const typography = new Typography({
     },
     a: {
       color: "#001f3f",
-      textDecoration: "none"
+      textDecoration: "underline",
+      fontFamily: ["Oswald", "sans-serif"].join(','),
     },
     "a:hover,a:active": {
       color: "#FE5F55"

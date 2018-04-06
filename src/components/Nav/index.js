@@ -21,6 +21,7 @@ const Hero = ({ avatar }) => {
     display: flex;
     align-items: center;
     justify-content: center;
+a {text-decoration:none;}
     a img {
       height: 2rem;
       margin: 0;

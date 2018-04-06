@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => {
   `;
 
   const GridItem = styled(Link)`
-
+text-decoration: none;
     background: ${palette.POST_COLOR};
     .gatsby-image-outer-wrapper,
     .gatsby-image-wrapper {

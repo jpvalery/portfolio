@@ -41,6 +41,7 @@ a {text-decoration:none;}
     }
   `;
   const NavRight = styled.div`
+a {text-decoration:none;}
     padding: 1rem;
     position: relative;
     opacity: 1;

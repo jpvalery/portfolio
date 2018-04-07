@@ -51,12 +51,15 @@ text-decoration: none;
     }
   `;
   const GridItemLeft = styled(Link)`
-text-decoration: none;
+    text-decoration: none;
     background: ${palette.POST_COLOR};
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: center;
     justify-content: center;
+    p {
+      font-family: Open Sans, sans-serif;
+    }
     .gatsby-image-outer-wrapper,
     .gatsby-image-wrapper {
       position: static !important;
@@ -66,11 +69,14 @@ text-decoration: none;
     }
   `;
   const GridItemRight = styled(Link)`
-text-decoration: none;
+    text-decoration: none;
     background: ${palette.POST_COLOR};
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
+    p {
+      font-family: Open Sans, sans-serif;
+    }
     justify-content: center;
     .gatsby-image-outer-wrapper,
     .gatsby-image-wrapper {

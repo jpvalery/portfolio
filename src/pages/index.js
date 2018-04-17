@@ -226,7 +226,9 @@ export const query = graphql`
       id
       hero {
         title
-        sizes(maxWidth: 1800) {
+        sizes(
+duotone: { highlight: "#0ec4f1", shadow: "#192550", opacity: 25 }
+maxWidth: 1800) {
           ...GatsbyContentfulSizes_withWebp
         }
       }

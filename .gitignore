@@ -1,10 +1,9 @@
-node_modules/
-public
-.gatsby-context.js
-.DS_Store
-.intermediate-representation/
-.cache/
-yarn.lock
+# Project dependencies
+.cache
+node_modules
+yarn-error.log
 .env
-*.jpg
-aerial/
+
+# Build directory
+/public
+.DS_Store

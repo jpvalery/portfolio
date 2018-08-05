@@ -1,20 +1,26 @@
-#### iammatthias.com v2
+# gatsby-starter-default
+The default Gatsby starter.
 
-![I Am Matthias](/iammatthias.gif)
+For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
 
-Built on the default Gatsby starter. Powered by Contentful. Hosted by Netlify.
-Made with ♡ in Santa Monica, California, USA
+## Install
 
-#### Built Using:
+Make sure that you have the Gatsby CLI program installed:
+```sh
+npm install --global gatsby-cli
+```
 
-- [GatsbyJS](https://www.gatsbyjs.org)
-- [Contentful](https://www.contentful.com)
-- [Styled Components](https://www.styled-components.com)
+And run from your CLI:
+```sh
+gatsby new gatsby-example-site
+```
 
-#### Hosted With:
+Then you can run it by:
+```sh
+cd gatsby-example-site
+gatsby develop
+```
 
-- [Netlify](https://www.netlify.com)
+## Deploy
 
-##### License
-
-© [iammatthias](https://iammatthias.com)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)

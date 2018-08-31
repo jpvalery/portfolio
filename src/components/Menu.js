@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { slide as SideMenu } from 'react-burger-menu'
 
 const Nav = styled.nav`
-  background: #ffffff;
+  background: #fff;
   width: 100%;
   height: 3.5rem;
   position: fixed;
@@ -22,7 +22,7 @@ const Title = styled.h1`
   color: black;
 `
 const Header = styled.header`
-  background: #ffffff;
+  background: #fff;
   width: 3.5rem;
   height: 3.5rem;
   position: fixed;

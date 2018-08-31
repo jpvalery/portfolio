@@ -5110,13 +5110,11 @@ gatsby-plugin-styled-components@next:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-typography@^1.7.19:
-  version "1.7.19"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-1.7.19.tgz#64a7bbb49d1ed4456dbe6b45f25a891f06a63b6d"
+gatsby-plugin-typography@next:
+  version "2.2.0-rc.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-2.2.0-rc.2.tgz#152054141f3abe26fb8cb3be8de741372ecc4a6b"
   dependencies:
-    babel-runtime "^6.26.0"
-    react-typography "^0.16.1"
-    typography "^0.16.0"
+    "@babel/runtime" "^7.0.0"
 
 gatsby-react-router-scroll@^2.0.0-rc.2:
   version "2.0.0-rc.2"
@@ -5126,12 +5124,12 @@ gatsby-react-router-scroll@^2.0.0-rc.2:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-remark-images-contentful@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images-contentful/-/gatsby-remark-images-contentful-1.0.2.tgz#0d23e20ac3a5383d8de4354f247e6b114b16932b"
+gatsby-remark-images-contentful@next:
+  version "2.0.0-rc.2"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images-contentful/-/gatsby-remark-images-contentful-2.0.0-rc.2.tgz#39bbc7eecd327c5cf765813d36d03bdb33b8dec2"
   dependencies:
+    "@babel/runtime" "^7.0.0"
     axios "^0.18.0"
-    babel-runtime "^6.26.0"
     cheerio "^1.0.0-rc.2"
     is-relative-url "^2.0.0"
     lodash "^4.17.4"
@@ -9592,7 +9590,7 @@ react-transition-group@^1.2.0:
     prop-types "^15.5.6"
     warning "^3.0.0"
 
-react-typography@^0.16.1, react-typography@^0.16.13:
+react-typography@^0.16.13:
   version "0.16.13"
   resolved "https://registry.yarnpkg.com/react-typography/-/react-typography-0.16.13.tgz#94bdd2a9448823bc74d8ebf7465d86c7dbe20dcf"
 
@@ -11446,7 +11444,7 @@ typography-normalize@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/typography-normalize/-/typography-normalize-0.14.0.tgz#1d77c1fe2aaf4a51b3673c4c85c85a65a2d4b573"
 
-typography@^0.16.0, typography@^0.16.17:
+typography@^0.16.17:
   version "0.16.17"
   resolved "https://registry.yarnpkg.com/typography/-/typography-0.16.17.tgz#e166eda9b533d51c115e2b38becdb5cedd0a30e4"
   dependencies:
@@ -12028,8 +12026,8 @@ webpack-dev-server@^3.1.1:
     yargs "12.0.1"
 
 webpack-hot-middleware@^2.21.0:
-  version "2.22.3"
-  resolved "https://registry.yarnpkg.com/webpack-hot-middleware/-/webpack-hot-middleware-2.22.3.tgz#ae6025d57d656085c5b716b44e0bc0f796787776"
+  version "2.23.0"
+  resolved "https://registry.yarnpkg.com/webpack-hot-middleware/-/webpack-hot-middleware-2.23.0.tgz#344d48f2f6d8f39bec9cee222f676f4c42ab973d"
   dependencies:
     ansi-html "0.0.7"
     html-entities "^1.2.0"

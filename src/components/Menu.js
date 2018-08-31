@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { slide as SideMenu } from 'react-burger-menu'
 
 const Nav = styled.nav`
-  background: #fff;
+  background: ${props => props.theme.colors.base};
   width: 100%;
   height: 3.5rem;
   position: fixed;
@@ -14,17 +14,16 @@ const Nav = styled.nav`
   transition: 0.5s ease;
 `
 const Title = styled(Link)`
-  width: 100%;
-  text-align: left;
+  text-decoration: none;
   h1 {
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-size: 1rem;
-    color: black;
     padding: 1.25rem 2rem;
+    color: ${props => props.theme.colors.secondary};
   }
 `
 const Header = styled.header`
-  background: #fff;
+  background: ${props => props.theme.colors.base};
   width: 3.5rem;
   height: 3.5rem;
   position: fixed;
@@ -32,6 +31,39 @@ const Header = styled.header`
   top: 0;
   z-index: 10;
   transition: 0.5s ease;
+  div {
+    .bm-overlay {
+      background: rgba(16, 11, 0, 0.9) !important;
+      backdrop-filter: blur(5px) !important;
+      left: 0;
+    }
+    .bm-menu {
+      padding: 2rem 0;
+      font-size: 2rem;
+      color: ${props => props.theme.colors.base};
+    }
+    .bm-cross {
+      background: ${props => props.theme.colors.base} !important;
+      height: 2rem !important;
+      width: 0.35rem !important;
+    }
+    .bm-cross-button {
+      height: 2rem !important;
+      width: 2rem !important;
+      top: 0.5rem !important;
+      right: 2rem !important;
+    }
+    .bm-burger-bars {
+      background: #100b00;
+      height: 0.35rem;
+    }
+    .bm-burger-button {
+      position: relative;
+      width: 1.5rem;
+      height: 1.5rem;
+      top: 1rem;
+    }
+  }
 `
 
 const MenuMobile = styled(SideMenu)`
@@ -44,50 +76,25 @@ const MenuMobile = styled(SideMenu)`
   }
   li {
     display: block;
-    margin-left: 1em;
+    margin: 0 2rem;
     padding: 0.8rem 0;
+    text-align: right;
   }
   a {
     text-decoration: none;
-    color: white;
-    font-weight: 600;
+    padding: 1rem;
+    font-weight: 800;
     transition: all 0.5s;
+    color: ${props => props.theme.colors.base};
+    text-transform: uppercase;
+    &:hover {
+      color: ${props => props.theme.colors.highlight};
+    }
+  }
+  img {
+    display: inline-block;
   }
 `
-
-var styles = {
-  bmBurgerButton: {
-    position: 'relative',
-    width: '1.5rem',
-    height: '1.5rem',
-    left: '20px',
-    top: '20px',
-  },
-  bmBurgerBars: {
-    background: '#223843',
-    height: '5px',
-  },
-  bmCrossButton: {
-    height: '35px',
-    width: '35px',
-    top: '25px',
-    right: '25px',
-  },
-  bmCross: {
-    background: '#D77A61',
-  },
-  bmMenu: {
-    padding: '1em 0',
-    fontSize: '2em',
-  },
-  bmMorphShape: {
-    fill: '#223843',
-  },
-  bmOverlay: {
-    background: 'rgba(34, 56, 67,.95)',
-    left: '0px',
-  },
-}
 
 const Menu = () => {
   return (
@@ -96,7 +103,7 @@ const Menu = () => {
         <h1>I Am Matthias</h1>
       </Title>
       <Header>
-        <MenuMobile right styles={styles} width={'100%'} isOpen={false}>
+        <MenuMobile right width={'100%'} isOpen={false}>
           <ul>
             <li>
               <Link to="/">Portfolio</Link>

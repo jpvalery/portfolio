@@ -4,9 +4,9 @@ import find from 'lodash/find'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
-import Hero from '../components/Hero'
-import ContainerPost from '../components/ContainerPost'
-import PageBody from '../components/PageBody'
+import BlogHero from '../components/BlogHero'
+import BlogContainer from '../components/BlogContainer'
+import BlogPost from '../components/BlogPost'
 import SEO from '../components/SEO'
 
 const PostTemplate = ({ data }) => {
@@ -18,6 +18,7 @@ const PostTemplate = ({ data }) => {
     body,
     publishDate,
     tags,
+    timeToRead,
   } = data.contentfulPost
   const postNode = data.contentfulPost
 
@@ -33,22 +34,23 @@ const PostTemplate = ({ data }) => {
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} postSEO />
       {tags && (
-        <Hero
+        <BlogHero
           title={title}
           date={publishDate}
           image={heroImage}
           tags={tags}
+          time={body.childMarkdownRemark.timeToRead}
           height={'50vh'}
         />
       )}
 
-      <ContainerPost>
-        <PageBody
+      <BlogContainer>
+        <BlogPost
           body={body}
           previous={postIndex.previous}
           next={postIndex.next}
         />
-      </ContainerPost>
+      </BlogContainer>
     </Layout>
   )
 }
@@ -86,6 +88,7 @@ export const query = graphql`
         childMarkdownRemark {
           html
           excerpt(pruneLength: 320)
+          timeToRead
         }
       }
     }

@@ -10,8 +10,8 @@ const Wrapper = styled.section`
   grid-template-areas: 'left right';
 `
 
-const Container = props => {
+const BlogContainer = props => {
   return <Wrapper>{props.children}</Wrapper>
 }
 
-export default Container
+export default BlogContainer

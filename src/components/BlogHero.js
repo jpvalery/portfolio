@@ -33,25 +33,28 @@ const Title = styled.h1`
   text-transform: capitalize;
   font-weight: 600;
   position: fixed;
-  width: 100%;
+  background: ${props => props.theme.colors.tertiary};
+  padding: 1rem;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
   transform: translate(-50%, -50%);
+  top: 30%;
+  left: 25%;
   text-align: center;
-  color: white;
+  color: ${props => props.theme.colors.base};
 `
-const Date = styled.p`
+const TitleCopy = styled.p`
   font-size: 1em;
-  text-transform: capitalize;
+  text-transform: uppercase;
   font-weight: 600;
   position: fixed;
-  width: 100%;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
-  padding: 0 1rem;
+  background: ${props => props.theme.colors.tertiary};
+  padding: 0.5rem 1rem;
   top: 40%;
   left: 25%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  color: ${props => props.theme.colors.base};
   display: inline-block;
   span {
     font-weight: 600;
@@ -65,11 +68,10 @@ const List = styled.ul`
   width: 100%;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
   padding: 0 1rem;
-  top: 45%;
+  top: 47.5%;
   left: 25%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
   display: inline-block;
 `
 
@@ -78,28 +80,26 @@ const Tag = styled.li`
   a {
     transition: 0.2s;
     background: ${props => props.theme.colors.tertiary};
-    padding: 0.5em;
-    border-radius: 2px;
+    padding: 0.5rem 1rem;
     text-transform: capitalize;
     margin: 0 0.5em 0 0;
     text-decoration: none;
     color: ${props => props.theme.colors.base};
-    border: 1px solid ${props => props.theme.colors.secondary};
     &:hover {
       background: ${props => props.theme.colors.secondary};
     }
   }
 `
 
-const Hero = props => (
+const BlogHero = props => (
   <Wrapper>
     <Cover>
       <Img fluid={props.image.fluid} backgroundColor={'#eeeeee'} />
     </Cover>
     <Title>{props.title}</Title>
-    <Date>
-      <span>Published:</span> {props.date}
-    </Date>
+    <TitleCopy>
+      Published: {props.date} || Reading time: {props.time} min
+    </TitleCopy>
     <List>
       {props.tags.map(tag => (
         <Tag key={tag.id}>
@@ -110,4 +110,4 @@ const Hero = props => (
   </Wrapper>
 )
 
-export default Hero
+export default BlogHero

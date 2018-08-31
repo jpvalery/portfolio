@@ -3,13 +3,17 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 const List = styled.ul`
-  margin: 2rem 0;
+  margin: 2rem auto;
+  text-align: center;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
 `
 
 const Tag = styled.li`
+  text-align: center;
+  margin: 0 auto;
   display: inline-block;
   a {
+    margin: 0 0.5rem;
     font-size: 14px;
     font-weight: normal;
     transition: 0.2s;
@@ -17,12 +21,10 @@ const Tag = styled.li`
     padding: 0.5em;
     border-radius: 2px;
     text-transform: capitalize;
-    margin: 0 0.5em 0 0;
     text-decoration: none;
     color: ${props => props.theme.colors.base};
-    border: 1px solid ${props => props.theme.colors.secondary};
     &:hover {
-      background: ${props => props.theme.colors.secondary};
+      background: ${props => props.theme.colors.highlight};
     }
   }
 `

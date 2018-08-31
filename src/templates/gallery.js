@@ -4,11 +4,11 @@ import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
-import Container from '../components/ContainerGallery'
+import GalleryContainer from '../components/GalleryContainer'
 import GalleryHead from '../components/GalleryHead'
+import GalleryTitle from '../components/GalleryTitle'
 import TagList from '../components/TagList'
 import SEO from '../components/SEO'
-import PageTitle from '../components/PageTitle'
 import sizeMe from 'react-sizeme'
 import StackGrid from 'react-stack-grid'
 
@@ -25,10 +25,10 @@ const GalleryTemplate = ({ data }) => {
       <SEO pagePath={slug} galleryNode={galleryNode} gallerySEO />
 
       <GalleryHead>
-        <PageTitle>{title}</PageTitle>
+        <GalleryTitle>{title}</GalleryTitle>
         {tags && <TagList tags={tags} />}
       </GalleryHead>
-      <Container>
+      <GalleryContainer>
         <StackGrid
           columnWidth={width <= 768 ? '100%' : '33.333%'}
           gutterWidth={32}
@@ -45,7 +45,7 @@ const GalleryTemplate = ({ data }) => {
               />
             ))}
         </StackGrid>
-      </Container>
+      </GalleryContainer>
     </Layout>
   )
 }

@@ -14,6 +14,11 @@ const ProjectLink = styled(Link)`
   grid-gap: 2rem;
   grid-template-areas: 'left right';
   align-items: center;
+  transition: all 0.5s;
+  text-decoration: none;
+  h1 {
+    color: ${props => props.theme.colors.secondary};
+  }
   &:hover div {
     @media screen and (min-width: ${props => props.theme.responsive.medium}) {
       @supports (object-fit: cover) {
@@ -22,6 +27,9 @@ const ProjectLink = styled(Link)`
         visibility: visible;
       }
     }
+  }
+  &:hover h1 {
+    color: ${props => props.theme.colors.highlight};
   }
 `
 const Cover = styled.div`
@@ -36,7 +44,7 @@ const Cover = styled.div`
     height: calc(100vh - 2rem);
     top: 0;
     left: 2rem;
-    z-index: -99;
+    z-index: 2;
     opacity: 0;
     visibility: hidden;
     div {
@@ -47,7 +55,10 @@ const Cover = styled.div`
 `
 const Title = styled.h1`
   grid-area: right;
-  padding: 2rem 0;
+  padding: 2rem;
+  z-index: 3;
+  text-transform: uppercase;
+  text-align: center;
 `
 const Hero = styled.img`
   display: none;
@@ -60,7 +71,7 @@ const Hero = styled.img`
     height: calc(100vh - 2rem);
     top: 0;
     left: 2rem;
-    z-index: -100;
+    z-index: 1;
     object-fit: cover !important;
   }
 `
@@ -70,7 +81,7 @@ const Home = props => {
     <Content key={props.id}>
       <ProjectLink to={`/${props.slug}/`}>
         <Cover>
-          <Img fluid={props.image.fluid} backgroundColor={'#eeeeee'} />
+          <Img fluid={props.image.fluid} />
         </Cover>
         <Title>{props.title}</Title>
       </ProjectLink>

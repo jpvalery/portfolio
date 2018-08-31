@@ -9,13 +9,13 @@ const typography = new Typography({
   googleFonts: [
     {
       name: 'Open Sans',
-      styles: ['400', '700'],
+      styles: ['400', '700', '800'],
     },
   ],
   headerFontFamily: ['Open Sans', 'sans-serif'],
   bodyFontFamily: ['Open Sans', 'sans-serif'],
-  bodyColor: 'black',
-  headerWeight: 700,
+  bodyColor: '#223843',
+  headerWeight: 800,
   bodyWeight: 400,
   boldWeight: 700,
   scaleRatio: 2,
@@ -24,27 +24,27 @@ const typography = new Typography({
       lineHeight: 1.1,
     },
     a: {
-      color: '#223843',
-      textDecoration: 'none',
+      color: '#100B00',
+      textDecoration: 'underline',
       fontWeight: options.boldWeight,
     },
     'a:hover,a:active': {
-      color: options.bodyColor,
+      color: '#E94F37',
     },
     blockquote: {
       ...scale(1 / 5),
-      color: '223843',
+      color: '#100B00',
       fontStyle: 'italic',
       paddingLeft: rhythm(13 / 16),
       marginLeft: 0,
-      borderLeft: `${rhythm(3 / 16)} solid '#223843'`,
+      borderLeft: `${rhythm(3 / 16)} solid '#E94F37'`,
     },
     'blockquote > :last-child': {
       marginBottom: 0,
     },
     'blockquote cite': {
       ...adjustFontSizeTo(options.baseFontSize),
-      color: options.bodyColor,
+      color: '#100B00',
       fontWeight: options.bodyWeight,
     },
     'blockquote cite:before': {

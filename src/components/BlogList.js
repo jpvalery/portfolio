@@ -7,6 +7,7 @@ const Content = styled.div`
   width: 100%;
 `
 const ProjectLink = styled(Link)`
+  text-decoration: none;
   display: grid;
   height: 100%;
   grid-template-columns: 1fr 1fr;
@@ -14,6 +15,10 @@ const ProjectLink = styled(Link)`
   grid-gap: 2rem;
   grid-template-areas: 'left right';
   align-items: center;
+  transition: all 0.5s;
+  h1 {
+    color: ${props => props.theme.colors.secondary};
+  }
   &:hover div {
     @media screen and (min-width: ${props => props.theme.responsive.medium}) {
       @supports (object-fit: cover) {
@@ -22,6 +27,9 @@ const ProjectLink = styled(Link)`
         visibility: visible;
       }
     }
+  }
+  &:hover h1 {
+    color: ${props => props.theme.colors.highlight};
   }
 `
 const Cover = styled.div`
@@ -45,14 +53,6 @@ const Cover = styled.div`
     }
   }
 `
-const Right = styled.div`
-  grid-area: right;
-`
-const Title = styled.h1`
-  text-transform: uppercase;
-  padding: 2rem 0 0.5rem;
-  text-decoration: none;
-`
 const Hero = styled.img`
   display: none;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
@@ -68,15 +68,26 @@ const Hero = styled.img`
     object-fit: cover !important;
   }
 `
+const Right = styled.div`
+  grid-area: right;
+`
+const Title = styled.h1`
+  grid-area: right;
+  padding: 1rem;
+  z-index: 3;
+  text-transform: uppercase;
+  text-align: center;
+`
 const Date = styled.p`
+  text-align: center;
   text-transform: capitalize;
-  padding: 0 1rem;
+  padding: 0 1rem 1rem;
   span {
     font-weight: 600;
   }
 `
 
-const Home = props => {
+const BlogList = props => {
   return (
     <Content key={props.id}>
       <ProjectLink to={`/blog/${props.slug}/`}>
@@ -85,9 +96,7 @@ const Home = props => {
         </Cover>
         <Right>
           <Title>{props.title}</Title>
-          <Date>
-            <span>Published:</span> {props.date}
-          </Date>
+          <Date>{props.date}</Date>
         </Right>
       </ProjectLink>
       <Hero
@@ -98,4 +107,4 @@ const Home = props => {
   )
 }
 
-export default Home
+export default BlogList

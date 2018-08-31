@@ -1,4 +1,4 @@
-import { injectGlobal } from 'styled-components'
+import { injectGlobal, ThemeProvider } from 'styled-components'
 
 injectGlobal`
   /* http://meyerweb.com/eric/tools/css/reset/
@@ -78,12 +78,12 @@ injectGlobal`
   }
 
   body {
-    background: white;
-    line-height: 1;
+    background: #F5FBF5;
     font-variant-ligatures: none;
     text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-
   }
 
   img {

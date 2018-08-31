@@ -1,25 +1,25 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Home from '../components/Home'
+import BlogList from '../components/BlogList'
 import Container from '../components/Container'
 import SEO from '../components/SEO'
 
-const Index = ({ data }) => {
-  const galleries = data.allContentfulGallery.edges
+const Blog = ({ data }) => {
+  const posts = data.allContentfulPost.edges
 
   return (
     <Layout>
       <SEO />
       <Container>
-        {galleries.map(({ node: gallery }) => (
-          <Home
-            key={gallery.id}
-            slug={gallery.slug}
-            image={gallery.heroImage}
-            title={gallery.title}
-            date={gallery.publishDate}
-            excerpt={gallery.body}
+        {posts.map(({ node: post }) => (
+          <BlogList
+            key={post.id}
+            slug={post.slug}
+            image={post.heroImage}
+            title={post.title}
+            date={post.publishDate}
+            excerpt={post.body}
           />
         ))}
       </Container>
@@ -29,7 +29,7 @@ const Index = ({ data }) => {
 
 export const query = graphql`
   query {
-    allContentfulGallery(
+    allContentfulPost(
       limit: 1000
       sort: { fields: [publishDate], order: DESC }
     ) {
@@ -57,4 +57,4 @@ export const query = graphql`
   }
 `
 
-export default Index
+export default Blog

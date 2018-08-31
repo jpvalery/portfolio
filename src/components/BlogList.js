@@ -45,9 +45,13 @@ const Cover = styled.div`
     }
   }
 `
-const Title = styled.h1`
+const Right = styled.div`
   grid-area: right;
-  padding: 2rem 0;
+`
+const Title = styled.h1`
+  text-transform: uppercase;
+  padding: 2rem 0 0.5rem;
+  text-decoration: none;
 `
 const Hero = styled.img`
   display: none;
@@ -64,6 +68,13 @@ const Hero = styled.img`
     object-fit: cover !important;
   }
 `
+const Date = styled.p`
+  text-transform: capitalize;
+  padding: 0 1rem;
+  span {
+    font-weight: 600;
+  }
+`
 
 const Home = props => {
   return (
@@ -72,7 +83,12 @@ const Home = props => {
         <Cover>
           <Img fluid={props.image.fluid} backgroundColor={'#eeeeee'} />
         </Cover>
-        <Title>{props.title}</Title>
+        <Right>
+          <Title>{props.title}</Title>
+          <Date>
+            <span>Published:</span> {props.date}
+          </Date>
+        </Right>
       </ProjectLink>
       <Hero
         src="https://images.ctfassets.net/34j7b1jydvza/9JniDzvzIkUE48MKowk6s/d506346e5d4088f9ee9e46d9c51fe682/aerial-001.jpg"

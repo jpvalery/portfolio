@@ -1,9 +1,9 @@
-# Project dependencies
-.cache
 node_modules
-yarn-error.log
-.env
-
-# Build directory
-/public
+.cache/
+public/
 .DS_Store
+yarn*
+*.log
+contentful-import-error-log*
+.env*
+.contentful.json

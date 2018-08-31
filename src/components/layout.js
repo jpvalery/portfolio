@@ -1,53 +1,36 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import { StaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
-import styled from "styled-components";
+import React from 'react'
+import { ThemeProvider } from 'styled-components'
+import Helmet from 'react-helmet'
+import favicon from '../images/favicon.ico'
+import '../styles/global'
+import theme from '../styles/theme'
+import config from '../utils/siteConfig'
+import Menu from '../components/Menu'
 
-import Header from "./header";
-import "./layout.css";
+const Template = ({ children }) => {
+  return (
+    <div className="siteRoot">
+      <Helmet>
+        <title>{config.siteTitle}</title>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href={favicon} />
+        <meta name="description" content={config.siteDescription} />
+        <meta property="og:title" content={config.siteTitle} />
+        <meta property="og:url" content={config.siteUrl} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={config.siteTitle} />
+      </Helmet>
 
-const Layout = ({ children, data }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: "description", content: "Sample" },
-            { name: "keywords", content: "sample, something" }
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: "0 auto",
-            maxWidth: 960,
-            padding: "0px 1.0875rem 1.45rem",
-            paddingTop: 0
-          }}
-        >
-          {children}
-        </div>
-      </>
-    )}
-  />
-);
+      <ThemeProvider theme={theme}>
+        <>
+          <Menu />
+          <div className="siteContent">{children}</div>
+        </>
+      </ThemeProvider>
+    </div>
+  )
+}
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
-};
-
-export default Layout;
+export default Template

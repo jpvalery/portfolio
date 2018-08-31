@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 const Content = styled.div`
   width: 100%;
 `
-const ProjectLink = styled(Link)`
+const ProjectLink = styled.div`
   display: grid;
   height: 100%;
   grid-template-columns: 1fr 1fr;
@@ -45,9 +45,13 @@ const Cover = styled.div`
     }
   }
 `
-const Title = styled.h1`
+const Title = styled(Link)`
   grid-area: right;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-transform: uppercase;
   padding: 2rem 0;
+  text-decoration: none;
 `
 const Hero = styled.img`
   display: none;
@@ -68,11 +72,11 @@ const Hero = styled.img`
 const Home = props => {
   return (
     <Content key={props.id}>
-      <ProjectLink to={`/${props.slug}/`}>
+      <ProjectLink>
         <Cover>
           <Img fluid={props.image.fluid} backgroundColor={'#eeeeee'} />
         </Cover>
-        <Title>{props.title}</Title>
+        <Title to={`/${props.slug}/`}>{props.title}</Title>
       </ProjectLink>
       <Hero
         src="https://images.ctfassets.net/34j7b1jydvza/9JniDzvzIkUE48MKowk6s/d506346e5d4088f9ee9e46d9c51fe682/aerial-001.jpg"

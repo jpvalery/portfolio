@@ -13,13 +13,15 @@ const Nav = styled.nav`
   z-index: 9;
   transition: 0.5s ease;
 `
-const Title = styled.h1`
-  text-transform: capitalize;
-  font-size: 1rem;
+const Title = styled(Link)`
   width: 100%;
-  padding: 1rem 2rem;
   text-align: left;
-  color: black;
+  h1 {
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: black;
+    padding: 1.25rem 2rem;
+  }
 `
 const Header = styled.header`
   background: #fff;
@@ -90,12 +92,14 @@ var styles = {
 const Menu = () => {
   return (
     <Nav>
-      <Title>I Am Matthias</Title>
+      <Title to="/">
+        <h1>I Am Matthias</h1>
+      </Title>
       <Header>
         <MenuMobile right styles={styles} width={'100%'} isOpen={false}>
           <ul>
             <li>
-              <Link to="#">Portfolio</Link>
+              <Link to="/">Portfolio</Link>
             </li>
             <li>
               <Link to="/blog">Blog</Link>

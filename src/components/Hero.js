@@ -17,10 +17,10 @@ const Cover = styled.div`
     position: fixed !important;
     pointer-events: none;
     transition: opacity 0.3s, visibility 0.3s;
-    width: calc(50% - 2rem);
-    height: 100vh;
+    width: calc(50% - 4rem);
+    height: calc(100vh - 2rem);
     top: 0;
-    left: 0;
+    left: 2rem;
     z-index: -99;
     div {
       height: 100% !important;

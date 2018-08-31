@@ -32,10 +32,10 @@ const Cover = styled.div`
     position: fixed !important;
     pointer-events: none;
     transition: opacity 0.3s, visibility 0.3s;
-    width: calc(50% - 2rem);
-    height: 100vh;
+    width: calc(50% - 4rem);
+    height: calc(100vh - 2rem);
     top: 0;
-    left: 0;
+    left: 2rem;
     z-index: -99;
     opacity: 0;
     visibility: hidden;
@@ -60,10 +60,10 @@ const Hero = styled.img`
     visibility: visible;
     position: fixed !important;
     pointer-events: none;
-    width: calc(50% - 2rem);
-    height: 100vh;
+    width: calc(50% - 4rem);
+    height: calc(100vh - 2rem);
     top: 0;
-    left: 0;
+    left: 2rem;
     z-index: -100;
     object-fit: cover !important;
   }
@@ -79,7 +79,7 @@ const Date = styled.p`
 const Home = props => {
   return (
     <Content key={props.id}>
-      <ProjectLink to={`/${props.slug}/`}>
+      <ProjectLink to={`/blog/${props.slug}/`}>
         <Cover>
           <Img fluid={props.image.fluid} backgroundColor={'#eeeeee'} />
         </Cover>

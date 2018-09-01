@@ -1,8 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import WrapperBlog from '../components/WrapperBlog'
+import BlogHero from '../components/BlogHero'
 import BlogList from '../components/BlogList'
-import Container from '../components/Container'
 import SEO from '../components/SEO'
 
 const Blog = ({ data }) => {
@@ -11,7 +12,8 @@ const Blog = ({ data }) => {
   return (
     <Layout>
       <SEO />
-      <Container>
+      <BlogHero />
+      <WrapperBlog>
         {posts.map(({ node: post }) => (
           <BlogList
             key={post.id}
@@ -22,7 +24,7 @@ const Blog = ({ data }) => {
             excerpt={post.body}
           />
         ))}
-      </Container>
+      </WrapperBlog>
     </Layout>
   )
 }

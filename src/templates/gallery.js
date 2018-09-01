@@ -6,7 +6,6 @@ import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
 import GalleryContainer from '../components/GalleryContainer'
 import GalleryHead from '../components/GalleryHead'
-import GalleryTitle from '../components/GalleryTitle'
 import TagList from '../components/TagList'
 import SEO from '../components/SEO'
 import sizeMe from 'react-sizeme'
@@ -16,6 +15,7 @@ const GalleryTemplate = ({ data }) => {
   const { title, slug, tags, images } = data.contentfulGallery
   const galleryNode = data.contentfulGallery
   const { width } = images
+  console.log(images)
 
   return (
     <Layout>
@@ -23,10 +23,7 @@ const GalleryTemplate = ({ data }) => {
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO pagePath={slug} galleryNode={galleryNode} gallerySEO />
-      <GalleryHead>
-        <GalleryTitle>{title}</GalleryTitle>
-        {tags && <TagList tags={tags} />}
-      </GalleryHead>
+      <GalleryHead title={title} tags={tags} />
       <GalleryContainer>
         <StackGrid
           columnWidth={width <= 768 ? '100%' : '33.333%'}
@@ -78,12 +75,7 @@ export const query = graphql`
           height
         }
       }
-      body {
-        childMarkdownRemark {
-          html
-          excerpt(pruneLength: 320)
-        }
-      }
+
       images {
         title
         fluid(maxWidth: 1800) {

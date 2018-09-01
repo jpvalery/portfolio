@@ -15,8 +15,8 @@ const Hero = styled.img`
     position: fixed !important;
     pointer-events: none;
     width: calc(50% - 4rem);
-    height: calc(100vh - 2rem);
-    top: 0;
+    height: calc(100vh - 5.5rem);
+    top: 3.5rem;
     left: 2rem;
     z-index: 1;
     object-fit: cover !important;

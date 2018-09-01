@@ -2,12 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.section`
-  margin: 1.7rem auto 0;
-  padding: 2rem;
-  width: 100%;
-  height: 100vh;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    margin: 0 auto;
+    width: 50%;
+    height: 100vh;
+    float: right;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,8 +13,8 @@ const Wrapper = styled.section`
   }
 `
 
-const Container = props => {
+const WrapperPortfolio = props => {
   return <Wrapper>{props.children}</Wrapper>
 }
 
-export default Container
+export default WrapperPortfolio

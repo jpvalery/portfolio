@@ -5,6 +5,7 @@ import favicon from '../images/favicon.ico'
 import '../styles/global'
 import theme from '../styles/theme'
 import config from '../utils/siteConfig'
+import Wrapper from '../components/Wrapper'
 import Menu from '../components/Menu'
 
 const Template = ({ children }) => {
@@ -24,10 +25,10 @@ const Template = ({ children }) => {
       </Helmet>
 
       <ThemeProvider theme={theme}>
-        <>
+        <Wrapper>
           <Menu />
           <div className="siteContent">{children}</div>
-        </>
+        </Wrapper>
       </ThemeProvider>
     </div>
   )

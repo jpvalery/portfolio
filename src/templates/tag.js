@@ -4,10 +4,10 @@ import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
-import Tag from '../components/Tag'
-import Tags from '../components/Tags'
-import PageTitle from '../components/PageTitle'
-import Container from '../components/Container'
+import WrapperTag from '../components/WrapperTag'
+import TagHero from '../components/TagHero'
+import TagList from '../components/TagList'
+import TagTitle from '../components/TagTitle'
 
 const TagTemplate = ({ data }) => {
   const { title, slug } = data.contentfulTag
@@ -24,16 +24,17 @@ const TagTemplate = ({ data }) => {
         />
         <meta property="og:url" content={`${config.siteUrl}/tag/${slug}/`} />
       </Helmet>
-      <Container>
-        <PageTitle small>
+      <TagHero />
+
+      <WrapperTag>
+        <TagTitle small>
           Tag: &ldquo;
           {title}
           &rdquo;
-        </PageTitle>
-
-        <Tags>
+        </TagTitle>
+        <>
           {posts.map(post => (
-            <Card
+            <TagList
               key={post.id}
               slug={post.slug}
               image={post.heroImage}
@@ -42,8 +43,8 @@ const TagTemplate = ({ data }) => {
               excerpt={post.body}
             />
           ))}
-        </Tags>
-      </Container>
+        </>
+      </WrapperTag>
     </Layout>
   )
 }

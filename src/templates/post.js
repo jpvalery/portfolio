@@ -4,9 +4,9 @@ import find from 'lodash/find'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
-import BlogHero from '../components/BlogHero'
-import BlogContainer from '../components/BlogContainer'
-import BlogPost from '../components/BlogPost'
+import ArticleHero from '../components/ArticleHero'
+import WrapperBlog from '../components/WrapperBlog'
+import Article from '../components/Article'
 import SEO from '../components/SEO'
 
 const PostTemplate = ({ data }) => {
@@ -33,7 +33,7 @@ const PostTemplate = ({ data }) => {
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} postSEO />
       {tags && (
-        <BlogHero
+        <ArticleHero
           title={title}
           date={publishDate}
           image={heroImage}
@@ -43,13 +43,13 @@ const PostTemplate = ({ data }) => {
         />
       )}
 
-      <BlogContainer>
-        <BlogPost
+      <WrapperBlog>
+        <Article
           body={body}
           previous={postIndex.previous}
           next={postIndex.next}
         />
-      </BlogContainer>
+      </WrapperBlog>
     </Layout>
   )
 }

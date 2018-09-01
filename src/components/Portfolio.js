@@ -3,28 +3,16 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-const Content = styled.div`
-  width: 100%;
-  position: relative;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 2rem;
-    grid-template-areas: '. right';
-  }
-`
 const ProjectLink = styled(Link)`
-  grid-area: right;
+  text-decoration: none;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     transition: all 0.5s;
-    text-decoration: none;
+    width: 100%;
     h1 {
       color: ${props => props.theme.colors.secondary};
     }
     &:hover div {
       @supports (object-fit: cover) {
-        display: block;
         opacity: 1;
         visibility: visible;
       }
@@ -35,6 +23,8 @@ const ProjectLink = styled(Link)`
   }
 `
 const Cover = styled.div`
+  top: 3.5rem;
+  position: relative;
   div {
     height: 100% !important;
     width: 100%;
@@ -46,8 +36,8 @@ const Cover = styled.div`
     pointer-events: none;
     transition: opacity 0.3s, visibility 0.3s;
     width: calc(50% - 4rem);
-    height: calc(100vh - 2rem);
-    top: 0;
+    height: calc(100vh - 5.5rem);
+    top: 3.5rem;
     left: 2rem;
     z-index: 2;
     opacity: 0;
@@ -62,6 +52,7 @@ const Title = styled.h1`
   padding: 0 0 2rem;
   text-transform: uppercase;
   text-align: center;
+  position: relative;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     padding: 2rem;
     z-index: 3;
@@ -71,14 +62,12 @@ const Title = styled.h1`
 `
 const Portfolio = props => {
   return (
-    <Content key={props.id}>
-      <ProjectLink to={`/${props.slug}/`}>
-        <Cover>
-          <Img fluid={props.image.fluid} />
-        </Cover>
-        <Title>{props.title}</Title>
-      </ProjectLink>
-    </Content>
+    <ProjectLink key={props.id} to={`/${props.slug}/`}>
+      <Cover>
+        <Img fluid={props.image.fluid} />
+      </Cover>
+      <Title>{props.title}</Title>
+    </ProjectLink>
   )
 }
 

@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Home from '../components/Home'
-import HomeHero from '../components/HomeHero'
-import Container from '../components/Container'
+import WrapperPortfolio from '../components/WrapperPortfolio'
+import Portfolio from '../components/Portfolio'
+import PortfolioHero from '../components/PortfolioHero'
 import SEO from '../components/SEO'
 
 const Index = ({ data }) => {
@@ -12,21 +12,19 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <SEO />
-      <Container>
-        <HomeHero />
-        <>
-          {galleries.map(({ node: gallery }) => (
-            <Home
-              key={gallery.id}
-              slug={gallery.slug}
-              image={gallery.heroImage}
-              title={gallery.title}
-              date={gallery.publishDate}
-              excerpt={gallery.body}
-            />
-          ))}
-        </>
-      </Container>
+      <PortfolioHero />
+      <WrapperPortfolio>
+        {galleries.map(({ node: gallery }) => (
+          <Portfolio
+            key={gallery.id}
+            slug={gallery.slug}
+            image={gallery.heroImage}
+            title={gallery.title}
+            date={gallery.publishDate}
+            excerpt={gallery.body}
+          />
+        ))}
+      </WrapperPortfolio>
     </Layout>
   )
 }

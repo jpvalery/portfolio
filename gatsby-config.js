@@ -44,6 +44,9 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-page-transitions',
+    },
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-transformer-remark`,

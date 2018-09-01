@@ -8,6 +8,7 @@ import Card from '../components/Card'
 import CardList from '../components/CardList'
 import PageTitle from '../components/PageTitle'
 import Container from '../components/Container'
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 const TagTemplate = ({ data }) => {
   const { title, slug } = data.contentfulTag
@@ -24,27 +25,28 @@ const TagTemplate = ({ data }) => {
         />
         <meta property="og:url" content={`${config.siteUrl}/tag/${slug}/`} />
       </Helmet>
+      <PageTransition>
+        <Container>
+          <PageTitle small>
+            Tag: &ldquo;
+            {title}
+            &rdquo;
+          </PageTitle>
 
-      <Container>
-        <PageTitle small>
-          Tag: &ldquo;
-          {title}
-          &rdquo;
-        </PageTitle>
-
-        <CardList>
-          {posts.map(post => (
-            <Card
-              key={post.id}
-              slug={post.slug}
-              image={post.heroImage}
-              title={post.title}
-              date={post.publishDate}
-              excerpt={post.body}
-            />
-          ))}
-        </CardList>
-      </Container>
+          <CardList>
+            {posts.map(post => (
+              <Card
+                key={post.id}
+                slug={post.slug}
+                image={post.heroImage}
+                title={post.title}
+                date={post.publishDate}
+                excerpt={post.body}
+              />
+            ))}
+          </CardList>
+        </Container>
+      </PageTransition>
     </Layout>
   )
 }

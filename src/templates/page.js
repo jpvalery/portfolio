@@ -7,6 +7,7 @@ import Container from '../components/Container'
 import PageTitle from '../components/PageTitle'
 import PageBody from '../components/PageBody'
 import SEO from '../components/SEO'
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 const PageTemplate = ({ data }) => {
   const { title, slug, body } = data.contentfulPage
@@ -18,11 +19,12 @@ const PageTemplate = ({ data }) => {
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} pageSEO />
-
-      <Container>
-        <PageTitle>{title}</PageTitle>
-        <PageBody body={body} />
-      </Container>
+      <PageTransition>
+        <Container>
+          <PageTitle>{title}</PageTitle>
+          <PageBody body={body} />
+        </Container>
+      </PageTransition>
     </Layout>
   )
 }

@@ -8,6 +8,7 @@ import BlogHero from '../components/BlogHero'
 import BlogContainer from '../components/BlogContainer'
 import BlogPost from '../components/BlogPost'
 import SEO from '../components/SEO'
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 const PostTemplate = ({ data }) => {
   const {
@@ -33,24 +34,26 @@ const PostTemplate = ({ data }) => {
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} postSEO />
-      {tags && (
-        <BlogHero
-          title={title}
-          date={publishDate}
-          image={heroImage}
-          tags={tags}
-          time={body.childMarkdownRemark.timeToRead}
-          height={'50vh'}
-        />
-      )}
+      <PageTransition>
+        {tags && (
+          <BlogHero
+            title={title}
+            date={publishDate}
+            image={heroImage}
+            tags={tags}
+            time={body.childMarkdownRemark.timeToRead}
+            height={'50vh'}
+          />
+        )}
 
-      <BlogContainer>
-        <BlogPost
-          body={body}
-          previous={postIndex.previous}
-          next={postIndex.next}
-        />
-      </BlogContainer>
+        <BlogContainer>
+          <BlogPost
+            body={body}
+            previous={postIndex.previous}
+            next={postIndex.next}
+          />
+        </BlogContainer>
+      </PageTransition>
     </Layout>
   )
 }

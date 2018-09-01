@@ -6,6 +6,7 @@ import Container from '../components/Container'
 import PageTitle from '../components/PageTitle'
 import ContactForm from '../components/ContactForm'
 import SEO from '../components/SEO'
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 const Contact = ({ data }) => {
   const postNode = {
@@ -18,11 +19,12 @@ const Contact = ({ data }) => {
         <title>{`Contact - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postNode={postNode} pagePath="contact" customTitle />
-
-      <Container>
-        <PageTitle>Contact</PageTitle>
-        <ContactForm />
-      </Container>
+      <PageTransition>
+        <Container>
+          <PageTitle>Contact</PageTitle>
+          <ContactForm />
+        </Container>
+      </PageTransition>
     </Layout>
   )
 }

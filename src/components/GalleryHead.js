@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 const Wrapper = styled.section`
   position: sticky;
-  z-index: 2;
+  z-index: 99;
   background: ${props => props.theme.colors.base};
   top: 0;
   margin: 0 auto;

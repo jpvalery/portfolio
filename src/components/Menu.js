@@ -10,11 +10,12 @@ const Nav = styled.nav`
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 9;
+  z-index: 100;
   transition: 0.5s ease;
 `
 const Title = styled(Link)`
   text-decoration: none;
+  display: inline-block;
   h1 {
     text-transform: uppercase;
     font-size: 1rem;

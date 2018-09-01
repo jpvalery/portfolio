@@ -1864,8 +1864,8 @@ better-assert@~1.0.0:
     callsite "1.0.0"
 
 better-queue-memory@^1.0.1:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/better-queue-memory/-/better-queue-memory-1.0.2.tgz#aa6d169aa1d0cc77409185cb9cb5c7dc251bcd41"
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/better-queue-memory/-/better-queue-memory-1.0.3.tgz#4e71fbb5f5976188656e0c5610da7b411af41493"
 
 better-queue@^3.8.6, better-queue@^3.8.7:
   version "3.8.10"
@@ -4207,7 +4207,7 @@ eslint-visitor-keys@^1.0.0:
 
 eslint@^4.19.1:
   version "4.19.1"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.19.1.tgz#32d1d653e1d90408854bfb296f076ec7e186a300"
+  resolved "http://registry.npmjs.org/eslint/-/eslint-4.19.1.tgz#32d1d653e1d90408854bfb296f076ec7e186a300"
   dependencies:
     ajv "^5.3.0"
     babel-code-frame "^6.22.0"
@@ -5112,8 +5112,8 @@ gatsby-plugin-styled-components@next:
     "@babel/runtime" "^7.0.0"
 
 gatsby-plugin-typography@next:
-  version "2.2.0-rc.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-2.2.0-rc.2.tgz#152054141f3abe26fb8cb3be8de741372ecc4a6b"
+  version "2.2.0-rc.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-typography/-/gatsby-plugin-typography-2.2.0-rc.3.tgz#d09b8044a1f0a0f5a419764dc92b47a58a9ea662"
   dependencies:
     "@babel/runtime" "^7.0.0"
 
@@ -11430,7 +11430,7 @@ typography-breakpoint-constants@^0.15.10:
 
 typography-normalize@^0.14.0:
   version "0.14.0"
-  resolved "https://registry.yarnpkg.com/typography-normalize/-/typography-normalize-0.14.0.tgz#1d77c1fe2aaf4a51b3673c4c85c85a65a2d4b573"
+  resolved "http://registry.npmjs.org/typography-normalize/-/typography-normalize-0.14.0.tgz#1d77c1fe2aaf4a51b3673c4c85c85a65a2d4b573"
 
 typography@^0.16.17:
   version "0.16.17"

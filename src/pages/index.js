@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Home from '../components/Home'
+import HomeHero from '../components/HomeHero'
 import Container from '../components/Container'
 import SEO from '../components/SEO'
 
@@ -12,16 +13,19 @@ const Index = ({ data }) => {
     <Layout>
       <SEO />
       <Container>
-        {galleries.map(({ node: gallery }) => (
-          <Home
-            key={gallery.id}
-            slug={gallery.slug}
-            image={gallery.heroImage}
-            title={gallery.title}
-            date={gallery.publishDate}
-            excerpt={gallery.body}
-          />
-        ))}
+        <HomeHero />
+        <>
+          {galleries.map(({ node: gallery }) => (
+            <Home
+              key={gallery.id}
+              slug={gallery.slug}
+              image={gallery.heroImage}
+              title={gallery.title}
+              date={gallery.publishDate}
+              excerpt={gallery.body}
+            />
+          ))}
+        </>
       </Container>
     </Layout>
   )

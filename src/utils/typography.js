@@ -3,7 +3,7 @@ import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
 
 const typography = new Typography({
   title: 'Plex',
-  baseFontSize: '18px',
+  baseFontSize: '16px',
   baseLineHeight: 1.45,
   blockMarginBottom: 0.8,
   googleFonts: [

@@ -7,7 +7,6 @@ const Wrapper = styled.div`
   grid-area: right;
   display: flex;
   flex-direction: column;
-  margin: 4rem 4rem 2rem 2rem;
   a {
     background: ${props => props.theme.colors.base};
     color: white;

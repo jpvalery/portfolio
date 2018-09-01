@@ -5,15 +5,20 @@ import { Link } from 'gatsby'
 
 const Wrapper = styled.section`
   position: relative;
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-`
-const Cover = styled.div`
-  grid-area: left;
-  position: relative;
-  transition: none;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+`
+const Hero = styled.div`
+  position: relative;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    grid-area: left;
     position: fixed !important;
     pointer-events: none;
     transition: opacity 0.3s, visibility 0.3s;
@@ -29,50 +34,56 @@ const Cover = styled.div`
   }
 `
 const Title = styled.h1`
-  font-size: 3em;
   text-transform: capitalize;
   font-weight: 600;
-  position: fixed;
   background: ${props => props.theme.colors.tertiary};
   padding: 1rem;
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
-  transform: translate(-50%, -50%);
-  top: 30%;
-  left: 25%;
   text-align: center;
   color: ${props => props.theme.colors.base};
+  position: relative;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    max-width: ${props => props.theme.sizes.maxWidthCentered};
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 25%;
+  }
 `
 const TitleCopy = styled.p`
-  font-size: 1em;
   text-transform: uppercase;
   font-weight: 600;
-  position: fixed;
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
   background: ${props => props.theme.colors.tertiary};
   padding: 0.5rem 1rem;
-  top: 40%;
-  left: 25%;
-  transform: translate(-50%, -50%);
   text-align: center;
   color: ${props => props.theme.colors.base};
   display: inline-block;
+  position: relative;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    max-width: ${props => props.theme.sizes.maxWidthCentered};
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 25%;
+  }
   span {
     font-weight: 600;
   }
 `
 const List = styled.ul`
-  font-size: 1em;
   text-transform: capitalize;
   font-weight: 600;
-  position: fixed;
   width: 100%;
-  max-width: ${props => props.theme.sizes.maxWidthCentered};
   padding: 0 1rem;
-  top: 47.5%;
-  left: 25%;
-  transform: translate(-50%, -50%);
   text-align: center;
-  display: inline-block;
+  display: block;
+  position: relative;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    max-width: ${props => props.theme.sizes.maxWidthCentered};
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 25%;
+  }
 `
 
 const Tag = styled.li`
@@ -93,9 +104,9 @@ const Tag = styled.li`
 
 const BlogHero = props => (
   <Wrapper>
-    <Cover>
+    <Hero>
       <Img fluid={props.image.fluid} backgroundColor={'#eeeeee'} />
-    </Cover>
+    </Hero>
     <Title>{props.title}</Title>
     <TitleCopy>
       Published: {props.date} || Reading time: {props.time} min

@@ -6,8 +6,14 @@ const Wrapper = styled.section`
   height: 100%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-gap: 2rem;
-  grid-template-areas: 'left right';
+  margin: 4rem;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    margin: 4rem 4rem 2rem 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 2rem;
+    grid-template-areas: 'left right';
+  }
 `
 
 const BlogContainer = props => {

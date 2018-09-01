@@ -5,9 +5,10 @@ import Img from 'gatsby-image'
 
 const ProjectLink = styled(Link)`
   text-decoration: none;
+  padding: 1rem 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     flex-grow: 1;
-    width: 50%;
+    width: 100%;
     transition: all 0.5s;
     h1 {
       color: ${props => props.theme.colors.secondary};
@@ -50,25 +51,27 @@ const Cover = styled.div`
   }
 `
 const Title = styled.h1`
-  padding: 0 0 2rem;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
   position: relative;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    padding: 2rem;
-    z-index: 3;
-    text-transform: uppercase;
-    text-align: center;
-  }
+  background: ${props => props.theme.colors.base};
 `
 const Date = styled.p`
-  text-align: center;
+  padding: 0.5rem 1rem;
+  text-align: left;
   text-transform: uppercase;
+  text-transform: capitalize;
   position: relative;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    text-transform: capitalize;
-    padding: 0 1rem 1rem;
-  }
+  background: ${props => props.theme.colors.base};
+`
+const Excerpt = styled.p`
+  padding: 0.5rem 1rem;
+  text-align: left;
+  text-transform: uppercase;
+  text-transform: capitalize;
+  position: relative;
+  font-weight: 400;
+  background: ${props => props.theme.colors.base};
 `
 
 const BlogList = props => {
@@ -79,6 +82,11 @@ const BlogList = props => {
       </Cover>
       <Title>{props.title}</Title>
       <Date>{props.date}</Date>
+      <Excerpt
+        dangerouslySetInnerHTML={{
+          __html: props.excerpt.childMarkdownRemark.excerpt,
+        }}
+      />
     </ProjectLink>
   )
 }

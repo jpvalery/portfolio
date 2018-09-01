@@ -7,7 +7,6 @@ const Wrapper = styled.section`
     padding-right: 2rem;
     width: 50%;
     max-width: 50%;
-    height: 100vh;
     float: right;
     display: flex;
     flex-wrap: wrap;

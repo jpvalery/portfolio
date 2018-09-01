@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import Img from 'gatsby-image'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
-import GalleryContainer from '../components/GalleryContainer'
+import WrapperGallery from '../components/WrapperGallery'
 import GalleryHead from '../components/GalleryHead'
 import TagList from '../components/TagList'
 import SEO from '../components/SEO'
@@ -24,7 +24,7 @@ const GalleryTemplate = ({ data }) => {
       </Helmet>
       <SEO pagePath={slug} galleryNode={galleryNode} gallerySEO />
       <GalleryHead title={title} tags={tags} />
-      <GalleryContainer>
+      <WrapperGallery>
         <StackGrid
           columnWidth={width <= 768 ? '100%' : '33.333%'}
           gutterWidth={32}
@@ -41,7 +41,7 @@ const GalleryTemplate = ({ data }) => {
               />
             ))}
         </StackGrid>
-      </GalleryContainer>
+      </WrapperGallery>
     </Layout>
   )
 }

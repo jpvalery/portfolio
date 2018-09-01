@@ -6,7 +6,7 @@ const Wrapper = styled.section`
   position: sticky;
   z-index: 2;
   background: ${props => props.theme.colors.base};
-  top: 0rem;
+  top: 0;
   margin: 0 auto;
   padding: 1rem 2rem 0;
   width: 100%;

@@ -1,4 +1,4 @@
-import { injectGlobal, ThemeProvider } from 'styled-components'
+import { injectGlobal } from 'styled-components'
 
 injectGlobal`
   /* http://meyerweb.com/eric/tools/css/reset/

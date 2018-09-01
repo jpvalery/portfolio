@@ -19,7 +19,6 @@ const PostTemplate = ({ data }) => {
     body,
     publishDate,
     tags,
-    timeToRead,
   } = data.contentfulPost
   const postNode = data.contentfulPost
 

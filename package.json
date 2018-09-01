@@ -28,6 +28,7 @@
     "gatsby-source-contentful": "next",
     "gatsby-source-filesystem": "next",
     "gatsby-transformer-remark": "next",
+    "history": "^4.7.2",
     "inquirer": "^6.2.0",
     "lodash": "^4.17.10",
     "path": "^0.12.7",

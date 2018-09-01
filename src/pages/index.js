@@ -4,7 +4,6 @@ import Layout from '../components/Layout'
 import Home from '../components/Home'
 import Container from '../components/Container'
 import SEO from '../components/SEO'
-import PageTransition from 'gatsby-plugin-page-transitions'
 
 const Index = ({ data }) => {
   const galleries = data.allContentfulGallery.edges
@@ -12,20 +11,18 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <SEO />
-      <PageTransition>
-        <Container>
-          {galleries.map(({ node: gallery }) => (
-            <Home
-              key={gallery.id}
-              slug={gallery.slug}
-              image={gallery.heroImage}
-              title={gallery.title}
-              date={gallery.publishDate}
-              excerpt={gallery.body}
-            />
-          ))}
-        </Container>
-      </PageTransition>
+      <Container>
+        {galleries.map(({ node: gallery }) => (
+          <Home
+            key={gallery.id}
+            slug={gallery.slug}
+            image={gallery.heroImage}
+            title={gallery.title}
+            date={gallery.publishDate}
+            excerpt={gallery.body}
+          />
+        ))}
+      </Container>
     </Layout>
   )
 }

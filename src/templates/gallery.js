@@ -11,7 +11,6 @@ import TagList from '../components/TagList'
 import SEO from '../components/SEO'
 import sizeMe from 'react-sizeme'
 import StackGrid from 'react-stack-grid'
-import PageTransition from 'gatsby-plugin-page-transitions'
 
 const GalleryTemplate = ({ data }) => {
   const { title, slug, tags, images } = data.contentfulGallery
@@ -24,30 +23,28 @@ const GalleryTemplate = ({ data }) => {
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO pagePath={slug} galleryNode={galleryNode} gallerySEO />
-      <PageTransition>
-        <GalleryHead>
-          <GalleryTitle>{title}</GalleryTitle>
-          {tags && <TagList tags={tags} />}
-        </GalleryHead>
-        <GalleryContainer>
-          <StackGrid
-            columnWidth={width <= 768 ? '100%' : '33.333%'}
-            gutterWidth={32}
-            gutterHeight={32}
-            duration={0}
-          >
-            {images &&
-              images.map((images, index) => (
-                <Img
-                  key={index}
-                  sizes={images.fluid}
-                  alt={images.title}
-                  title={images.title}
-                />
-              ))}
-          </StackGrid>
-        </GalleryContainer>
-      </PageTransition>
+      <GalleryHead>
+        <GalleryTitle>{title}</GalleryTitle>
+        {tags && <TagList tags={tags} />}
+      </GalleryHead>
+      <GalleryContainer>
+        <StackGrid
+          columnWidth={width <= 768 ? '100%' : '33.333%'}
+          gutterWidth={32}
+          gutterHeight={32}
+          duration={0}
+        >
+          {images &&
+            images.map((images, index) => (
+              <Img
+                key={index}
+                sizes={images.fluid}
+                alt={images.title}
+                title={images.title}
+              />
+            ))}
+        </StackGrid>
+      </GalleryContainer>
     </Layout>
   )
 }

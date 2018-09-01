@@ -4,8 +4,8 @@ import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
-import Card from '../components/Card'
-import CardList from '../components/CardList'
+import Tag from '../components/Tag'
+import Tags from '../components/Tags'
 import PageTitle from '../components/PageTitle'
 import Container from '../components/Container'
 
@@ -31,7 +31,7 @@ const TagTemplate = ({ data }) => {
           &rdquo;
         </PageTitle>
 
-        <CardList>
+        <Tags>
           {posts.map(post => (
             <Card
               key={post.id}
@@ -42,7 +42,7 @@ const TagTemplate = ({ data }) => {
               excerpt={post.body}
             />
           ))}
-        </CardList>
+        </Tags>
       </Container>
     </Layout>
   )

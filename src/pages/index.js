@@ -1,29 +1,39 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import WrapperPortfolio from '../components/WrapperPortfolio'
-import Portfolio from '../components/Portfolio'
-import PortfolioHero from '../components/PortfolioHero'
+import WrapperPortfolio from '../components/Portfolio/WrapperPortfolio'
+import PortfolioHero from '../components/Portfolio/PortfolioHero'
+import PortfolioBody from '../components/Portfolio/PortfolioBody'
+import PortfolioBodyTop from '../components/Portfolio/PortfolioBodyTop'
+import PortfolioBodyBottom from '../components/Portfolio/PortfolioBodyBottom'
+import PortfolioContent from '../components/Portfolio/PortfolioContent'
+import Social from '../components/Social'
 import SEO from '../components/SEO'
 
 const Index = ({ data }) => {
   const galleries = data.allContentfulGallery.edges
+  const home = data.contentfulHome
 
   return (
     <Layout>
       <SEO />
-      <PortfolioHero />
       <WrapperPortfolio>
-        {galleries.map(({ node: gallery }) => (
-          <Portfolio
-            key={gallery.id}
-            slug={gallery.slug}
-            image={gallery.heroImage}
-            title={gallery.title}
-            date={gallery.publishDate}
-            excerpt={gallery.body}
-          />
-        ))}
+        <PortfolioHero />
+        <PortfolioBody>
+          <PortfolioBodyTop body={home.body} />
+          <PortfolioBodyBottom>
+            {galleries.map(({ node: gallery }) => (
+              <PortfolioContent
+                key={gallery.id}
+                slug={gallery.slug}
+                image={gallery.heroImage}
+                title={gallery.title}
+                date={gallery.publishDate}
+              />
+            ))}
+          </PortfolioBodyBottom>
+          <Social />
+        </PortfolioBody>
       </WrapperPortfolio>
     </Layout>
   )
@@ -53,6 +63,15 @@ export const query = graphql`
               excerpt(pruneLength: 80)
             }
           }
+        }
+      }
+    }
+    contentfulHome {
+      title
+      id
+      body {
+        childMarkdownRemark {
+          html
         }
       }
     }

@@ -5,11 +5,11 @@ import Img from 'gatsby-image'
 
 const ProjectLink = styled(Link)`
   text-decoration: none;
-  padding: 1rem 0;
+  padding: 0;
+  margin: 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    flex-grow: 1;
-    width: 100%;
     transition: all 0.5s;
+    display: inline-block;
     h1 {
       color: ${props => props.theme.colors.secondary};
     }
@@ -37,7 +37,7 @@ const Cover = styled.div`
     position: fixed !important;
     pointer-events: none;
     transition: opacity 0.3s, visibility 0.3s;
-    width: calc(50% - 4rem);
+    width: calc(50% - 3rem);
     height: calc(100vh - 5.5rem);
     top: 3.5rem;
     left: 2rem;
@@ -52,12 +52,11 @@ const Cover = styled.div`
 `
 const Title = styled.h1`
   text-transform: uppercase;
-  text-align: left;
-  position: relative;
-  background: ${props => props.theme.colors.base};
+  z-index: 3;
+  padding: 2rem 1rem 0.5rem;
 `
 const Date = styled.p`
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   text-align: left;
   text-transform: uppercase;
   text-transform: capitalize;
@@ -65,7 +64,7 @@ const Date = styled.p`
   background: ${props => props.theme.colors.base};
 `
 const Excerpt = styled.p`
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   text-align: left;
   text-transform: uppercase;
   text-transform: capitalize;

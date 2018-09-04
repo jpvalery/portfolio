@@ -4,9 +4,10 @@ import find from 'lodash/find'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
-import ArticleHero from '../components/ArticleHero'
-import WrapperBlog from '../components/WrapperBlog'
-import Article from '../components/Article'
+import WrapperArticle from '../components/Article/WrapperArticle'
+import ArticleHead from '../components/Article/ArticleHead'
+import ArticleHero from '../components/Article/ArticleHero'
+import Article from '../components/Article/Article'
 import SEO from '../components/SEO'
 
 const PostTemplate = ({ data }) => {
@@ -32,24 +33,20 @@ const PostTemplate = ({ data }) => {
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} postSEO />
-      {tags && (
-        <ArticleHero
+      <WrapperArticle>
+        <ArticleHead
           title={title}
           date={publishDate}
-          image={heroImage}
           tags={tags}
           time={body.childMarkdownRemark.timeToRead}
-          height={'50vh'}
         />
-      )}
-
-      <WrapperBlog>
+        <ArticleHero image={heroImage} />
         <Article
           body={body}
           previous={postIndex.previous}
           next={postIndex.next}
         />
-      </WrapperBlog>
+      </WrapperArticle>
     </Layout>
   )
 }

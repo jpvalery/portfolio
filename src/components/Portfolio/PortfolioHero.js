@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
 const Wrapper = styled.div`
+  grid-area: HomeLeft;
   width: 100%;
 `
 
@@ -14,7 +15,7 @@ const Hero = styled.img`
     visibility: visible;
     position: fixed !important;
     pointer-events: none;
-    width: calc(50% - 4rem);
+    width: calc(50% - 3rem);
     height: calc(100vh - 5.5rem);
     top: 3.5rem;
     left: 2rem;

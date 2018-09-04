@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 import { slide as SideMenu } from 'react-burger-menu'
+import Social from '../components/Social'
 
 const Nav = styled.nav`
   background: ${props => props.theme.colors.base};
@@ -70,6 +71,7 @@ const Header = styled.header`
 const MenuMobile = styled(SideMenu)`
   padding: 4rem 0;
   z-index: 110;
+  text-align: right;
   ul {
     display: flex;
     justify-content: space-between;
@@ -95,6 +97,13 @@ const MenuMobile = styled(SideMenu)`
   img {
     display: inline-block;
   }
+  svg {
+    transition: all 0.2s;
+    fill: ${props => props.theme.colors.base};
+    &:hover {
+      fill: ${props => props.theme.colors.highlight};
+    }
+  }
 `
 
 const Menu = () => {
@@ -114,6 +123,9 @@ const Menu = () => {
             </li>
             <li>
               <Link to="/contact">Info</Link>
+            </li>
+            <li>
+              <Social />
             </li>
             <li>
               <a

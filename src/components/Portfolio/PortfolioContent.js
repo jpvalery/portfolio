@@ -5,9 +5,11 @@ import Img from 'gatsby-image'
 
 const ProjectLink = styled(Link)`
   text-decoration: none;
+  padding: 0;
+  margin: 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     transition: all 0.5s;
-    width: 100%;
+    display: inline-block;
     h1 {
       color: ${props => props.theme.colors.secondary};
     }
@@ -35,7 +37,7 @@ const Cover = styled.div`
     position: fixed !important;
     pointer-events: none;
     transition: opacity 0.3s, visibility 0.3s;
-    width: calc(50% - 4rem);
+    width: calc(50% - 3rem);
     height: calc(100vh - 5.5rem);
     top: 3.5rem;
     left: 2rem;
@@ -49,15 +51,10 @@ const Cover = styled.div`
   }
 `
 const Title = styled.h1`
-  padding: 0 0 2rem;
   text-transform: uppercase;
-  text-align: center;
-  position: relative;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     padding: 2rem;
     z-index: 3;
-    text-transform: uppercase;
-    text-align: center;
   }
 `
 const Portfolio = props => {

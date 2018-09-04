@@ -78,7 +78,7 @@ injectGlobal`
   }
 
   body {
-    background: #F5FBF5;
+    background: #E6E3E1;
     font-variant-ligatures: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;

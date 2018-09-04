@@ -4,20 +4,9 @@ import { Link } from 'gatsby'
 require('prismjs/themes/prism.css')
 
 const Wrapper = styled.div`
-  grid-area: right;
-  display: flex;
-  flex-direction: column;
-  a {
-    background: ${props => props.theme.colors.base};
-    color: white;
-    padding: 1em;
-    border-radius: 2px;
-    text-decoration: none;
-    transition: 0.2s;
-    &:hover {
-      background: ${props => props.theme.colors.highlight};
-    }
-  }
+  grid-area: ArticleRight;
+  margin: 0;
+  padding: 11rem 0 0;
 `
 
 const Body = styled.div`
@@ -47,7 +36,7 @@ const Body = styled.div`
 
   a {
     transition: 0.2s;
-    color: ${props => props.theme.colors.base};
+    color: ${props => props.theme.colors.tertiary};
     &:hover {
       color: ${props => props.theme.colors.highlight};
     }

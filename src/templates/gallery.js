@@ -7,8 +7,7 @@ import Layout from '../components/Layout'
 import WrapperGallery from '../components/Gallery/WrapperGallery'
 import GalleryHead from '../components/Gallery/GalleryHead'
 import SEO from '../components/SEO'
-import sizeMe from 'react-sizeme'
-import StackGrid from 'react-stack-grid'
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
 const GalleryTemplate = ({ data }) => {
   const { title, slug, tags, images } = data.contentfulGallery
@@ -24,22 +23,19 @@ const GalleryTemplate = ({ data }) => {
       <SEO pagePath={slug} galleryNode={galleryNode} gallerySEO />
       <GalleryHead title={title} tags={tags} />
       <WrapperGallery>
-        <StackGrid
-          columnWidth={width <= 768 ? '100%' : '33.333%'}
-          gutterWidth={32}
-          gutterHeight={32}
-          duration={0}
-        >
-          {images &&
-            images.map((images, index) => (
-              <Img
-                key={index}
-                sizes={images.fluid}
-                alt={images.title}
-                title={images.title}
-              />
-            ))}
-        </StackGrid>
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+          <Masonry gutter="1rem">
+            {images &&
+              images.map((images, index) => (
+                <Img
+                  key={index}
+                  sizes={images.fluid}
+                  alt={images.title}
+                  title={images.title}
+                />
+              ))}
+          </Masonry>
+        </ResponsiveMasonry>
       </WrapperGallery>
     </Layout>
   )
@@ -94,4 +90,4 @@ export const query = graphql`
     }
   }
 `
-export default sizeMe()(GalleryTemplate)
+export default GalleryTemplate

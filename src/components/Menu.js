@@ -13,6 +13,8 @@ const Nav = styled.nav`
   top: 0;
   z-index: 998;
   transition: 0.5s ease;
+  opacity: 0.95;
+  backdrop-filter: blur(10px);
 `
 const Title = styled(Link)`
   text-decoration: none;

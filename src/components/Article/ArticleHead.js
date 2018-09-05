@@ -14,6 +14,8 @@ const Wrapper = styled.section`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  opacity: 0.95;
+  backdrop-filter: blur(10px);
 `
 const BackButton = styled(Link)`
   margin: 1rem 0 0.5rem;

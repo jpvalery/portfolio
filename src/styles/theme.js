@@ -11,7 +11,7 @@ const theme = {
   },
   responsive: {
     small: '35em',
-    medium: '50em',
+    medium: '55em',
     large: '75em',
   },
 }

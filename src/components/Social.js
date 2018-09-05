@@ -6,12 +6,17 @@ import { render } from 'react-dom'
 import Ionicon from 'react-ionicons'
 
 const Wrapper = styled.section`
-  grid-area: Social;
-  margin: 0;
+  margin: 0 auto 0;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    margin: 0 2rem;
+  }
 `
 const SocialIcon = styled(Link)`
   display: inline-block;
-  padding: 0 2rem;
+  padding: 0 1rem;
+  &:first-child {
+    padding-left: 0;
+  }
   &:last-child {
     padding-right: 0;
   }

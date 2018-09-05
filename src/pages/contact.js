@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
-import ContactForm from '../components/ContactForm'
+import ContactForm from '../components/Info/ContactForm'
 import SEO from '../components/SEO'
 
 const Contact = ({ data }) => {

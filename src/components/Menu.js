@@ -98,6 +98,7 @@ const MenuMobile = styled(SideMenu)`
     display: inline-block;
   }
   svg {
+    text-align: right;
     transition: all 0.2s;
     fill: ${props => props.theme.colors.base};
     &:hover {

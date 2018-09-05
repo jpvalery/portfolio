@@ -25,8 +25,6 @@ const ProjectLink = styled(Link)`
   }
 `
 const Cover = styled.div`
-  top: 3.5rem;
-  position: relative;
   div {
     height: 100% !important;
     width: 100%;
@@ -52,9 +50,19 @@ const Cover = styled.div`
 `
 const Title = styled.h1`
   text-transform: uppercase;
+  padding: 1rem 2rem 0.5rem;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     padding: 2rem;
     z-index: 3;
+  }
+`
+const Excerpt = styled.p`
+  margin-bottom: 2rem;
+  padding: 0.25rem 2rem 2rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  text-transform: none;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
   }
 `
 const Portfolio = props => {
@@ -64,6 +72,11 @@ const Portfolio = props => {
         <Img fluid={props.image.fluid} />
       </Cover>
       <Title>{props.title}</Title>
+      <Excerpt
+        dangerouslySetInnerHTML={{
+          __html: props.excerpt.childMarkdownRemark.excerpt,
+        }}
+      />
     </ProjectLink>
   )
 }

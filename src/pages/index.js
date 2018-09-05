@@ -7,7 +7,7 @@ import PortfolioBody from '../components/Portfolio/PortfolioBody'
 import PortfolioBodyTop from '../components/Portfolio/PortfolioBodyTop'
 import PortfolioBodyBottom from '../components/Portfolio/PortfolioBodyBottom'
 import PortfolioContent from '../components/Portfolio/PortfolioContent'
-import Social from '../components/Social'
+
 import SEO from '../components/SEO'
 
 const Index = ({ data }) => {
@@ -29,10 +29,10 @@ const Index = ({ data }) => {
                 image={gallery.heroImage}
                 title={gallery.title}
                 date={gallery.publishDate}
+                excerpt={gallery.body}
               />
             ))}
           </PortfolioBodyBottom>
-          <Social />
         </PortfolioBody>
       </WrapperPortfolio>
     </Layout>
@@ -60,7 +60,7 @@ export const query = graphql`
           body {
             childMarkdownRemark {
               html
-              excerpt(pruneLength: 80)
+              excerpt(pruneLength: 140)
             }
           }
         }

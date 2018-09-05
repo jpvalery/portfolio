@@ -25,7 +25,6 @@ const ProjectLink = styled(Link)`
   }
 `
 const Cover = styled.div`
-  top: 3.5rem;
   position: relative;
   div {
     height: 100% !important;
@@ -52,27 +51,29 @@ const Cover = styled.div`
 `
 const Title = styled.h1`
   text-transform: uppercase;
-  z-index: 3;
-  padding: 2rem 1rem 0.5rem;
+  padding: 1rem 2rem 0.25rem;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    z-index: 3;
+  }
 `
 const Date = styled.p`
-  padding: 0.25rem 1rem;
-  text-align: left;
+  margin-bottom: 0;
+  padding: 0.25rem 2rem;
   text-transform: uppercase;
-  text-transform: capitalize;
-  position: relative;
-  background: ${props => props.theme.colors.base};
+  font-weight: normal;
+  text-transform: none;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+  }
 `
 const Excerpt = styled.p`
-  padding: 0.25rem 1rem;
-  text-align: left;
+  margin-bottom: 2rem;
+  padding: 0.25rem 2rem 2rem;
   text-transform: uppercase;
-  text-transform: capitalize;
-  position: relative;
-  font-weight: 400;
-  background: ${props => props.theme.colors.base};
+  font-weight: normal;
+  text-transform: none;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+  }
 `
-
 const BlogList = props => {
   return (
     <ProjectLink key={props.id} to={`/blog/${props.slug}/`}>

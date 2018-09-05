@@ -1,14 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
 require('prismjs/themes/prism.css')
+import Social from '../../components/Social'
 
 const Wrapper = styled.section`
   grid-area: PortfolioBodyTop;
   margin: 0;
   padding: 0;
+  min-height: calc(75vh);
+  height: 100%;
+  display: grid;
+  grid-template-rows: repeat(auto);
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    height: 100%;
+    min-height: 0;
+  }
 `
 const Body = styled.div`
-  margin: 0;
+  margin: 3.5rem 0 0;
   padding: 2rem;
   h1,
   h2,
@@ -111,6 +120,7 @@ const Container = props => {
           __html: props.body.childMarkdownRemark.html,
         }}
       />
+      <Social />
     </Wrapper>
   )
 }

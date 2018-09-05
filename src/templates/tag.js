@@ -4,10 +4,10 @@ import sortBy from 'lodash/sortBy'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
-import WrapperTag from '../components/WrapperTag'
-import TagHero from '../components/TagHero'
-import TagList from '../components/TagList'
-import TagTitle from '../components/TagTitle'
+import WrapperTag from '../components/Tag/WrapperTag'
+import TagHero from '../components/Tag/TagHero'
+import TagList from '../components/Tag/TagList'
+import TagTitle from '../components/Tag/TagTitle'
 
 const TagTemplate = ({ data }) => {
   const { title, slug } = data.contentfulTag

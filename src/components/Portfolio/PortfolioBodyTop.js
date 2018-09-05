@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-require('prismjs/themes/prism.css')
 import Social from '../../components/Social'
+require('prismjs/themes/prism.css')
 
 const Wrapper = styled.section`
   grid-area: PortfolioBodyTop;

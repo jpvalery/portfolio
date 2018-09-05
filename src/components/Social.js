@@ -1,8 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Link from 'gatsby-link'
-require('prismjs/themes/prism.css')
-import { render } from 'react-dom'
 import Ionicon from 'react-ionicons'
 
 const Wrapper = styled.section`

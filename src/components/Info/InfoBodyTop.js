@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 require('prismjs/themes/prism.css')
-import Social from '../../components/Social'
 
 const Wrapper = styled.section`
   grid-area: InfoBodyTop;

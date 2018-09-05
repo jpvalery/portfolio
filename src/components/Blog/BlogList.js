@@ -59,20 +59,14 @@ const Title = styled.h1`
 const Date = styled.p`
   margin-bottom: 0;
   padding: 0.25rem 2rem;
-  text-transform: uppercase;
-  font-weight: normal;
+  font-weight: bold;
   text-transform: none;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-  }
 `
 const Excerpt = styled.p`
   margin-bottom: 2rem;
   padding: 0.25rem 2rem 2rem;
-  text-transform: uppercase;
   font-weight: normal;
   text-transform: none;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-  }
 `
 const BlogList = props => {
   return (

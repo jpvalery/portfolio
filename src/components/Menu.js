@@ -11,7 +11,7 @@ const Nav = styled.nav`
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 100;
+  z-index: 998;
   transition: 0.5s ease;
 `
 const Title = styled(Link)`
@@ -70,7 +70,7 @@ const Header = styled.header`
 
 const MenuMobile = styled(SideMenu)`
   padding: 4rem 0;
-  z-index: 110;
+  z-index: 999;
   text-align: right;
   ul {
     display: flex;

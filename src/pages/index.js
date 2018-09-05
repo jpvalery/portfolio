@@ -18,7 +18,7 @@ const Index = ({ data }) => {
     <Layout>
       <SEO />
       <WrapperPortfolio>
-        <PortfolioHero />
+        <PortfolioHero image={home.heroImage} />
         <PortfolioBody>
           <PortfolioBodyTop body={home.body} />
           <PortfolioBodyBottom>
@@ -69,6 +69,12 @@ export const query = graphql`
     contentfulHome {
       title
       id
+      heroImage {
+        title
+        fluid(maxWidth: 1800) {
+          ...GatsbyContentfulFluid_withWebp_noBase64
+        }
+      }
       body {
         childMarkdownRemark {
           html

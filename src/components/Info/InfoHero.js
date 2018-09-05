@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
 const Wrapper = styled.div`
-  grid-area: HomeLeft;
+  grid-area: InfoLeft;
   width: 100%;
 `
 
@@ -27,7 +27,7 @@ const Hero = styled.div`
   }
 `
 
-const PortfolioHero = props => {
+const InfoHero = props => {
   return (
     <Wrapper>
       <Hero>
@@ -37,4 +37,4 @@ const PortfolioHero = props => {
   )
 }
 
-export default PortfolioHero
+export default InfoHero

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.section`
   grid-area: BlogRight;
-  margin: 7.25rem 0 0;
+  margin: 3.25rem 0 0;
   padding: 0;
   display: grid;
   height: 100%;
@@ -11,6 +11,9 @@ const Wrapper = styled.section`
   grid-template-rows: auto;
   grid-gap: 0;
   grid-template-areas: 'BlogBody';
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    margin: 7.25rem 0 0;
+  }
 `
 
 const Container = props => {

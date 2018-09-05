@@ -7,9 +7,12 @@ const Wrapper = styled.section`
   grid-area: InfoBodyTop;
   margin: 0;
   padding: 0;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    margin: 3.5rem 0 0;
+  }
 `
 const Body = styled.div`
-  margin: 3.5rem 0 0;
+  margin: 0;
   padding: 2rem;
   h1,
   h2,

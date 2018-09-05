@@ -22,7 +22,7 @@ const Form = styled.form`
     border: 2px solid ${props => props.theme.colors.tertiary};
     outline: none;
     background: ${props => props.theme.colors.base};
-    color: ${props => props.theme.colors.base};
+    color: ${props => props.theme.colors.secondary};
     border-radius: 2px;
     padding: 1em;
     &::-webkit-input-placeholder {

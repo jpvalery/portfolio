@@ -192,10 +192,10 @@ class ContactForm extends React.Component {
   }
 
   render() {
+    const { name, email, message } = this.state
     return (
       <Form
         name="contact"
-        method="POST"
         onSubmit={this.handleSubmit}
         data-netlify="true"
         data-netlify-honeypot="bot"

@@ -128,7 +128,7 @@ const NextLink = styled(Link)`
   order: 2;
 `
 
-const PageBody = props => {
+const Article = props => {
   return (
     <Wrapper>
       <Body
@@ -150,4 +150,4 @@ const PageBody = props => {
   )
 }
 
-export default PageBody
+export default Article

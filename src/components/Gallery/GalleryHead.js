@@ -61,7 +61,7 @@ const Tag = styled.li`
   }
 `
 
-const Container = props => {
+const GalleryHead = props => {
   return (
     <Wrapper>
       <BackButton to="/">⬅ Back</BackButton>
@@ -77,4 +77,4 @@ const Container = props => {
   )
 }
 
-export default Container
+export default GalleryHead

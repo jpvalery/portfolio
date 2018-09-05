@@ -107,7 +107,7 @@ const Body = styled.div`
   }
 `
 
-const Container = props => {
+const InfoBodyTop = props => {
   return (
     <Wrapper>
       <Body
@@ -119,4 +119,4 @@ const Container = props => {
   )
 }
 
-export default Container
+export default InfoBodyTop

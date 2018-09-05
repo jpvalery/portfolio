@@ -6,8 +6,8 @@ const Wrapper = styled.section`
   height: 100vh;
 `
 
-const Container = props => {
+const PageWrapper = props => {
   return <Wrapper>{props.children}</Wrapper>
 }
 
-export default Container
+export default PageWrapper

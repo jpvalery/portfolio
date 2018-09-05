@@ -8,7 +8,7 @@ import config from '../utils/siteConfig'
 import Wrapper from '../components/Wrapper'
 import Menu from '../components/Menu'
 
-const Template = ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <div className="siteRoot">
       <Helmet>
@@ -34,4 +34,4 @@ const Template = ({ children }) => {
   )
 }
 
-export default Template
+export default Layout

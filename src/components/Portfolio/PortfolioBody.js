@@ -21,8 +21,8 @@ const Wrapper = styled.section`
   }
 `
 
-const Container = props => {
+const PortfolioBody = props => {
   return <Wrapper>{props.children}</Wrapper>
 }
 
-export default Container
+export default PortfolioBody

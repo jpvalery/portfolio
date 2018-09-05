@@ -27,7 +27,7 @@ const Hero = styled.div`
   }
 `
 
-const TagHero = props => {
+const ArticleHero = props => {
   return (
     <Wrapper>
       <Hero>
@@ -37,4 +37,4 @@ const TagHero = props => {
   )
 }
 
-export default TagHero
+export default ArticleHero

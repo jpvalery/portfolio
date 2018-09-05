@@ -9,8 +9,8 @@ const Wrapper = styled.section`
   grid-template-rows: repeat(auto);
 `
 
-const Container = props => {
+const InfoBodyBottom = props => {
   return <Wrapper>{props.children}</Wrapper>
 }
 
-export default Container
+export default InfoBodyBottom

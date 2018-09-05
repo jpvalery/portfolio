@@ -6,8 +6,8 @@ const Wrapper = styled.section`
   padding: 2rem;
 `
 
-const Container = props => {
+const WrapperGallery = props => {
   return <Wrapper>{props.children}</Wrapper>
 }
 
-export default Container
+export default WrapperGallery

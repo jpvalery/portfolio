@@ -16,8 +16,8 @@ const Wrapper = styled.section`
   }
 `
 
-const Container = props => {
+const BlogBody = props => {
   return <Wrapper>{props.children}</Wrapper>
 }
 
-export default Container
+export default BlogBody

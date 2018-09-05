@@ -65,7 +65,7 @@ const Excerpt = styled.p`
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
   }
 `
-const Portfolio = props => {
+const PortfolioContent = props => {
   return (
     <ProjectLink key={props.id} to={`/${props.slug}/`}>
       <Cover>
@@ -81,4 +81,4 @@ const Portfolio = props => {
   )
 }
 
-export default Portfolio
+export default PortfolioContent

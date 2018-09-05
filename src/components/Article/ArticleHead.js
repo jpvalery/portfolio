@@ -70,7 +70,7 @@ const Tag = styled.li`
   }
 `
 
-const Container = props => {
+const ArticleHead = props => {
   return (
     <Wrapper>
       <BackButton to="/blog/">⬅ Back</BackButton>
@@ -89,4 +89,4 @@ const Container = props => {
   )
 }
 
-export default Container
+export default ArticleHead

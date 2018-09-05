@@ -11,7 +11,7 @@ const Wrapper = styled.section`
     margin: 0 2rem;
   }
 `
-const SocialIcon = styled(Link)`
+const SocialIcon = styled.div`
   display: inline-block;
   padding: 0 1rem;
   &:first-child {
@@ -29,23 +29,36 @@ const SocialIcon = styled(Link)`
   }
 `
 
-const Container = props => {
+const Social = props => {
   return (
     <Wrapper>
-      <SocialIcon to="https://instagram.com/iammatthias/">
-        <Ionicon className="icon" fontSize="35px" icon="logo-instagram" />
+      <SocialIcon>
+        <a href="https://github.com/iammatthias/">
+          <Ionicon className="icon" fontSize="35px" icon="logo-github" />
+        </a>
       </SocialIcon>
-      <SocialIcon to="https://twitter.com/iamMatthias">
-        <Ionicon className="icon" fontSize="35px" icon="logo-twitter" />
+      <SocialIcon>
+        <a href="https://instagram.com/iammatthias/">
+          <Ionicon className="icon" fontSize="35px" icon="logo-instagram" />
+        </a>
       </SocialIcon>
-      <SocialIcon to="https://www.linkedin.com/in/iammatthias/">
-        <Ionicon className="icon" fontSize="35px" icon="logo-linkedin" />
+      <SocialIcon>
+        <a href="https://twitter.com/iamMatthias">
+          <Ionicon className="icon" fontSize="35px" icon="logo-twitter" />
+        </a>
       </SocialIcon>
-      <SocialIcon to="https://www.facebook.com/iammatthias">
-        <Ionicon className="icon" fontSize="35px" icon="logo-facebook" />
+      <SocialIcon>
+        <a href="https://www.linkedin.com/in/iammatthias/">
+          <Ionicon className="icon" fontSize="35px" icon="logo-linkedin" />
+        </a>
+      </SocialIcon>
+      <SocialIcon>
+        <a href="https://www.facebook.com/iammatthias">
+          <Ionicon className="icon" fontSize="35px" icon="logo-facebook" />
+        </a>
       </SocialIcon>
     </Wrapper>
   )
 }
 
-export default Container
+export default Social

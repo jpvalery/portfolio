@@ -99,6 +99,12 @@ const MenuMobile = styled(SideMenu)`
   img {
     display: inline-block;
   }
+  section {
+    margin: 0;
+    div {
+      padding: 0;
+    }
+  }
   svg {
     text-align: right;
     transition: all 0.2s;

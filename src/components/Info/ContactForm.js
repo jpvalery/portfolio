@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import 'whatwg-fetch' // Fetch Polyfill
 
 /*
   ⚠️ This is an example of a contact form powered with Netlify form handling.
@@ -22,7 +21,7 @@ const Form = styled.form`
     border: 2px solid ${props => props.theme.colors.tertiary};
     outline: none;
     background: ${props => props.theme.colors.base};
-    color: ${props => props.theme.colors.base};
+    color: ${props => props.theme.colors.secondary};
     border-radius: 2px;
     padding: 1em;
     &::-webkit-input-placeholder {
@@ -196,6 +195,7 @@ class ContactForm extends React.Component {
     return (
       <Form
         name="contact"
+        method="POST"
         onSubmit={this.handleSubmit}
         data-netlify="true"
         data-netlify-honeypot="bot"

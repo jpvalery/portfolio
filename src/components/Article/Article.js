@@ -6,7 +6,7 @@ require('prismjs/themes/prism.css')
 const Wrapper = styled.div`
   grid-area: ArticleRight;
   margin: 0;
-  padding: 11rem 0 0;
+  padding: 2rem;
 `
 
 const Body = styled.div`

@@ -9,8 +9,9 @@ const Wrapper = styled.div`
 `
 
 const Hero = styled.div`
-  position: relative;
+  display: none;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    display: block;
     grid-area: left;
     position: fixed !important;
     pointer-events: none;

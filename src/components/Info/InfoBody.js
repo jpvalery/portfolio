@@ -7,7 +7,7 @@ const Wrapper = styled.section`
   padding: 0;
   display: grid;
   height: 100%;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(auto);
   grid-gap: 0;
   grid-template-areas: 'InfoBodyTop' 'InfoBodyBottom';

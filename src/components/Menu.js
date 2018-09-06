@@ -14,7 +14,7 @@ const Nav = styled.nav`
   z-index: 998;
   transition: 0.5s ease;
   opacity: 0.95;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(50px);
 `
 const Title = styled(Link)`
   text-decoration: none;
@@ -37,7 +37,7 @@ const Header = styled.header`
   transition: 0.5s ease;
   div {
     .bm-overlay {
-      background: rgba(16, 11, 0, 0.9) !important;
+      background: rgba(16, 11, 0, 0.95) !important;
       backdrop-filter: blur(5px) !important;
       left: 0;
     }

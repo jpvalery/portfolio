@@ -6,14 +6,13 @@ import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
 import WrapperGallery from '../components/Gallery/WrapperGallery'
 import GalleryHead from '../components/Gallery/GalleryHead'
+import GalleryComposition from '../components/Gallery/GalleryComposition'
 import SEO from '../components/SEO'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
-import Lightbox from 'react-images'
 
 const GalleryTemplate = ({ data }) => {
   const { title, slug, tags, images } = data.contentfulGallery
   const galleryNode = data.contentfulGallery
-  const { width } = images
   console.log(images)
 
   return (
@@ -37,13 +36,6 @@ const GalleryTemplate = ({ data }) => {
               ))}
           </Masonry>
         </ResponsiveMasonry>
-        <Lightbox
-          images={images}
-          isOpen={this.state.lightboxIsOpen}
-          onClickPrev={this.gotoPrevLightboxImage}
-          onClickNext={this.gotoNextLightboxImage}
-          onClose={this.closeLightbox}
-        />
       </WrapperGallery>
     </Layout>
   )

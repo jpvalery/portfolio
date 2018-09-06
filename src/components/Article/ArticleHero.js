@@ -15,8 +15,8 @@ const Hero = styled.div`
     pointer-events: none;
     transition: opacity 0.3s, visibility 0.3s;
     width: calc(50% - 3rem);
-    height: calc(100vh - 13rem);
-    top: 11rem;
+    height: calc(100vh - 5.5rem);
+    top: 3.5rem;
     left: 2rem;
     z-index: -99;
     div {

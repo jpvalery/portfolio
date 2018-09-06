@@ -9,6 +9,7 @@ const Wrapper = styled.section`
     grid-template-rows: 1fr;
     grid-gap: 2rem;
     grid-template-areas: 'BlogLeft BlogRight';
+    margin-top: 3.5rem;
     padding: 0 2rem 2rem;
     align-items: center;
   }

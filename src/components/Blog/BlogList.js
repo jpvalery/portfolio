@@ -51,7 +51,7 @@ const Cover = styled.div`
 `
 const Title = styled.h1`
   text-transform: uppercase;
-  padding: 1rem 2rem 0.25rem;
+  padding: 0 2rem 0.25rem;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     z-index: 3;
   }
@@ -63,7 +63,7 @@ const Date = styled.p`
   text-transform: none;
 `
 const Excerpt = styled.p`
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   padding: 0.25rem 2rem 2rem;
   font-weight: normal;
   text-transform: none;

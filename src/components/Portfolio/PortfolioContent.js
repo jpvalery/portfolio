@@ -57,7 +57,7 @@ const Title = styled.h1`
   }
 `
 const Excerpt = styled.p`
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   padding: 0.25rem 2rem 2rem;
   font-weight: normal;
   text-transform: none;

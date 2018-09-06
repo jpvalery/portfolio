@@ -9,12 +9,13 @@ import SEO from '../components/SEO'
 
 const Blog = ({ data }) => {
   const posts = data.allContentfulPost.edges
+  const blog = data.contentfulBlog
 
   return (
     <Layout>
       <SEO />
       <WrapperBlog>
-        <BlogHero />
+        <BlogHero image={blog.heroImage} />
         <BlogBody>
           {posts.map(({ node: post }) => (
             <BlogList
@@ -56,6 +57,16 @@ export const query = graphql`
               excerpt(pruneLength: 80)
             }
           }
+        }
+      }
+    }
+    contentfulBlog {
+      title
+      id
+      heroImage {
+        title
+        fluid(maxWidth: 1800) {
+          ...GatsbyContentfulFluid_tracedSVG
         }
       }
     }

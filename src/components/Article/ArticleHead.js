@@ -5,8 +5,7 @@ import Headroom from 'react-headroom'
 
 const Wrapper = styled.section`
   background: ${props => props.theme.colors.base};
-  top: 3.5rem;
-  margin: 3.5rem auto 0;
+  margin: 1.5rem auto 0;
   padding: 0 2rem 2rem;
   width: 100%;
   display: flex;

@@ -23,7 +23,7 @@ const Form = styled.form`
     background: ${props => props.theme.colors.base};
     color: ${props => props.theme.colors.secondary};
     border-radius: 2px;
-    padding: 1em;
+    padding: 1rem;
     &::-webkit-input-placeholder {
       color: gray;
     }
@@ -59,24 +59,24 @@ const Form = styled.form`
 `
 
 const Name = styled.input`
-  margin: 0 0 1em 0;
+  margin: 0 0 2rem 0;
   width: 100%;
   @media (min-width: ${props => props.theme.responsive.small}) {
-    width: 49%;
+    width: 48%;
   }
 `
 
 const Email = styled.input`
-  margin: 0 0 1em 0;
+  margin: 0 0 2rem 0;
   width: 100%;
   @media (min-width: ${props => props.theme.responsive.small}) {
-    width: 49%;
+    width: 48%;
   }
 `
 
 const Message = styled.textarea`
   width: 100%;
-  margin: 0 0 1em 0;
+  margin: 0 0 2rem 0;
   line-height: 1.6;
   min-height: 250px;
   resize: vertical;
@@ -89,6 +89,10 @@ const Submit = styled.input`
   transition: 0.2s;
   &:hover {
     background: ${props => props.theme.colors.highlight} !important;
+  }
+  width: 100%;
+  @media (min-width: ${props => props.theme.responsive.medium}) {
+    width: 48%;
   }
 `
 

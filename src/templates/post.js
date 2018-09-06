@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
 import WrapperArticle from '../components/Article/WrapperArticle'
+import ArticleBody from '../components/Article/ArticleBody'
 import ArticleHead from '../components/Article/ArticleHead'
 import ArticleHero from '../components/Article/ArticleHero'
 import Article from '../components/Article/Article'
@@ -40,12 +41,14 @@ const PostTemplate = ({ data }) => {
           tags={tags}
           time={body.childMarkdownRemark.timeToRead}
         />
-        <ArticleHero image={heroImage} />
-        <Article
-          body={body}
-          previous={postIndex.previous}
-          next={postIndex.next}
-        />
+        <ArticleBody>
+          <ArticleHero image={heroImage} />
+          <Article
+            body={body}
+            previous={postIndex.previous}
+            next={postIndex.next}
+          />
+        </ArticleBody>
       </WrapperArticle>
     </Layout>
   )

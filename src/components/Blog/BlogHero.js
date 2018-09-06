@@ -1,34 +1,36 @@
 import React from 'react'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
 
 const Wrapper = styled.div`
-  grid-area: BlogLeft;
+  grid-area: InfoLeft;
   width: 100%;
 `
 
-const Hero = styled.img`
-  display: none;
+const Hero = styled.div`
+  position: relative;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    display: block;
-    visibility: visible;
+    grid-area: left;
     position: fixed !important;
     pointer-events: none;
+    transition: opacity 0.3s, visibility 0.3s;
     width: calc(50% - 3rem);
     height: calc(100vh - 5.5rem);
     top: 3.5rem;
     left: 2rem;
-    z-index: 1;
-    object-fit: cover !important;
+    z-index: -99;
+    div {
+      height: 100% !important;
+      object-fit: cover !important;
+    }
   }
 `
-
 const BlogHero = props => {
   return (
     <Wrapper>
-      <Hero
-        src="https://images.ctfassets.net/34j7b1jydvza/9JniDzvzIkUE48MKowk6s/d506346e5d4088f9ee9e46d9c51fe682/aerial-001.jpg"
-        alt=""
-      />
+      <Hero>
+        <Img fluid={props.image.fluid} backgroundColor={'#eeeeee'} />
+      </Hero>
     </Wrapper>
   )
 }

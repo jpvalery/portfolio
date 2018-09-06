@@ -93,6 +93,7 @@ const Submit = styled.input`
   transition: 0.2s;
   width: 100%;
   &:hover {
+    border: 2px solid ${props => props.theme.colors.highlight} !important;
     background: ${props => props.theme.colors.highlight} !important;
   }
   @media (min-width: ${props => props.theme.responsive.medium}) {
@@ -137,7 +138,7 @@ const Button = styled.div`
   cursor: pointer;
   color: white;
   padding: 1em;
-  border-radius: 2px;
+  border: 2px;
   text-decoration: none;
   transition: 0.2s;
   z-index: 99;
@@ -145,6 +146,7 @@ const Button = styled.div`
     outline: none;
   }
   &:hover {
+    border: 2px solid ${props => props.theme.colors.highlight};
     background: ${props => props.theme.colors.highlight};
   }
 `

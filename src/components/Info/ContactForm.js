@@ -204,7 +204,6 @@ class ContactForm extends React.Component {
       <Form
         name="contact"
         onSubmit={this.handleSubmit}
-        method="post"
         data-netlify="true"
         data-netlify-honeypot="bot"
         overlay={this.state.showModal}
@@ -217,8 +216,8 @@ class ContactForm extends React.Component {
             <input name="bot" onChange={this.handleInputChange} />
           </label>
         </p>
-
         <Name
+          id="name"
           name="name"
           type="text"
           placeholder="Full Name"
@@ -227,6 +226,7 @@ class ContactForm extends React.Component {
           required
         />
         <Email
+          id="email"
           name="email"
           type="email"
           placeholder="Email"
@@ -235,6 +235,7 @@ class ContactForm extends React.Component {
           required
         />
         <Message
+          id="message"
           name="message"
           type="text"
           placeholder="Message"
@@ -242,22 +243,23 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
+
         <Submit name="submit" type="submit" value="Send" />
 
         <Modal visible={this.state.showModal}>
-          <p>
-            Thank you for reaching out. I will get back to you as soon as
-            possible.
-          </p>
-          <Button onClick={this.closeModal}>Okay</Button>
+          <h2>We'll be in touch!</h2>
+          <Submit
+            name="okay"
+            type="submit"
+            onClick={this.closeModal}
+            value="Okay"
+          />
         </Modal>
       </Form>
     )
   }
 }
-
 ContactForm.propTypes = {
   data: PropTypes.object,
 }
-
 export default ContactForm

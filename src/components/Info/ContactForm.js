@@ -179,7 +179,7 @@ class ContactForm extends React.Component {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state }),
+      body: encode({ 'form-name': 'Contact', ...this.state }),
     })
       .then(this.handleSuccess)
       .catch(error => alert(error))
@@ -187,6 +187,7 @@ class ContactForm extends React.Component {
   }
 
   handleSuccess = () => {
+    // eslint-disable-next-line
     this.setState({
       name: '',
       email: '',
@@ -202,14 +203,14 @@ class ContactForm extends React.Component {
   render() {
     return (
       <Form
-        name="contact"
+        name="Contact"
         onSubmit={this.handleSubmit}
         data-netlify="true"
         data-netlify-honeypot="bot"
         overlay={this.state.showModal}
         onClick={this.closeModal}
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value="Contact" />
         <p hidden>
           <label>
             Don’t fill this out:{' '}
@@ -253,10 +254,6 @@ class ContactForm extends React.Component {
       </Form>
     )
   }
-}
-
-ContactForm.propTypes = {
-  data: PropTypes.object,
 }
 
 export default ContactForm

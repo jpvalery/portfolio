@@ -200,19 +200,16 @@ class ContactForm extends React.Component {
   }
 
   render() {
-    const { name, email, message } = this.state
     return (
       <Form
-        name="Contact"
+        name="contact"
         onSubmit={this.handleSubmit}
         data-netlify="true"
         data-netlify-honeypot="bot"
         overlay={this.state.showModal}
         onClick={this.closeModal}
-        method="POST"
-        netlify
       >
-        <input type="hidden" name="form-name" value="Contact" />
+        <input type="hidden" name="form-name" value="contact" />
         <p hidden>
           <label>
             Don’t fill this out:{' '}

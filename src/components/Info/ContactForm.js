@@ -204,6 +204,7 @@ class ContactForm extends React.Component {
       <Form
         name="contact"
         onSubmit={this.handleSubmit}
+        method="post"
         data-netlify="true"
         data-netlify-honeypot="bot"
         overlay={this.state.showModal}

@@ -44,8 +44,7 @@ const Form = styled.form`
       outline: none;
     }
     &:-webkit-autofill {
-      -webkit-box-shadow: inset 0 0 0px 9999px
-        ${props => props.theme.colors.base};
+      box-shadow: inset 0 0 0 9999px ${props => props.theme.colors.base};
     }
   }
   &::before {
@@ -92,10 +91,10 @@ const Submit = styled.input`
   color: ${props => props.theme.colors.base} !important;
   cursor: pointer;
   transition: 0.2s;
+  width: 100%;
   &:hover {
     background: ${props => props.theme.colors.highlight} !important;
   }
-  width: 100%;
   @media (min-width: ${props => props.theme.responsive.medium}) {
     width: 48%;
   }

@@ -6,7 +6,6 @@ import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
 import WrapperGallery from '../components/Gallery/WrapperGallery'
 import GalleryHead from '../components/Gallery/GalleryHead'
-import GalleryComposition from '../components/Gallery/GalleryComposition'
 import SEO from '../components/SEO'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 

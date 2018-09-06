@@ -146,8 +146,8 @@ const Button = styled.div`
     outline: none;
   }
   &:hover {
-    border: 2px solid ${props => props.theme.colors.highlight};
-    background: ${props => props.theme.colors.highlight};
+    border: 2px solid ${props => props.theme.colors.highlight} !important;
+    background: ${props => props.theme.colors.highlight} !important;
   }
 `
 

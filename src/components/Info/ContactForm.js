@@ -199,14 +199,14 @@ class ContactForm extends React.Component {
     const { name, email, message } = this.state
     return (
       <Form
-        name="contact"
+        name="Contact"
         onSubmit={this.handleSubmit}
         data-netlify="true"
         data-netlify-honeypot="bot"
         overlay={this.state.showModal}
         onClick={this.closeModal}
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value="Contact" />
         <p hidden>
           <label>
             Don’t fill this out:{' '}

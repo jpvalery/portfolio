@@ -42,6 +42,10 @@ const Form = styled.form`
     &:focus {
       outline: none;
     }
+    &:-webkit-autofill {
+      -webkit-box-shadow: inset 0 0 0px 9999px
+        ${props => props.theme.colors.base};
+    }
   }
   &::before {
     content: '';
@@ -205,6 +209,8 @@ class ContactForm extends React.Component {
         data-netlify-honeypot="bot"
         overlay={this.state.showModal}
         onClick={this.closeModal}
+        method="POST"
+        netlify
       >
         <input type="hidden" name="form-name" value="Contact" />
         <p hidden>

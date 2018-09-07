@@ -147,82 +147,18 @@ const Button = styled.div`
   }
 `
 
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
-
-class ContactForm extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      name: '',
-      email: '',
-      message: '',
-      showModal: false,
-    }
-  }
-
-  handleInputChange = event => {
-    const target = event.target
-    const value = target.value
-    const name = target.name
-    this.setState({
-      [name]: value,
-    })
-  }
-
-  handleSubmit = event => {
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state }),
-    })
-      .then(this.handleSuccess)
-      .catch(error => alert(error))
-    event.preventDefault()
-  }
-
-  handleSuccess = () => {
-    this.setState({
-      name: '',
-      email: '',
-      message: '',
-      showModal: true,
-    })
-  }
-
-  closeModal = () => {
-    this.setState({ showModal: false })
-  }
-
-  render() {
     return (
-      <NetlifyForm
-        name="Contact"
-        recaptcha={{
-          sitekey:
-            process.env.SITE_RECAPTCHA_KEY ||
-            '6LdK9G4UAAAAAOtiFibpaDHJKmrjwlzere3rTrdw',
-          size: 'invisible',
-        }}
-      >
-        {({ loading, error, recaptchaError, success, recaptcha }) => (
-          <>
-            {loading && <p>Loading...</p>}
+      <NetlifyForm name="Contact Form">
+        {({ loading, error, success }) => (
+          <Form>
+            {loading && <div>Loading...</div>}
             {error && (
-              <p>Your information was not sent. Please try again later.</p>
+              <div>Your information was not sent. Please try again later.</div>
             )}
-            {recaptchaError && (
-              <p>
-                Recaptcha did not match. Please make sure the box is checked.
-              </p>
-            )}
-            {success && <p>Thank you for contacting us!</p>}
+            {success && <div>Thank you for contacting us!</div>}
             {!loading &&
               !success && (
-                <Form>
+                <>
                   <Name
                     name="name"
                     type="text"
@@ -248,11 +184,9 @@ class ContactForm extends React.Component {
                     required
                   />
                   <Submit name="submit" type="submit" value="Send" />
-                </Form>
+                </>
               )}
-            {/* Invisible reCAPTCHA must be kept outside of conditionals */}
-            {recaptcha}
-          </>
+          </Form>
         )}
       </NetlifyForm>
     )

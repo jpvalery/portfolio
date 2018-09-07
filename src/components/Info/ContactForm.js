@@ -179,9 +179,7 @@ export default class Contact extends React.Component {
         'form-name': form.getAttribute('name'),
         ...this.state,
       }),
-    })
-      .then(() => navigateTo(form.getAttribute('action')))
-      .catch(error => alert(error))
+    }).catch(error => alert(error))
   }
 
   render() {

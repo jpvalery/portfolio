@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import 'whatwg-fetch' // Fetch Polyfill
-import ReCAPTCHA from 'react-google-recaptcha'
+import Recaptcha from 'react-google-recaptcha'
 
 /*
   ⚠️ This is an example of a contact form powered with Netlify form handling.
@@ -152,6 +152,10 @@ const Button = styled.div`
   }
 `
 
+const StyledRecaptcha = styled(Recaptcha)`
+  height: 80px;
+`
+
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -178,6 +182,13 @@ class ContactForm extends React.Component {
     })
   }
 
+  handleRecaptcha = value => {
+    this.setState({
+      'g-recaptcha-response': value,
+      disabledSubmit: false,
+    })
+  }
+
   handleSubmit = event => {
     fetch('/', {
       method: 'POST',
@@ -187,13 +198,6 @@ class ContactForm extends React.Component {
       .then(this.handleSuccess)
       .catch(error => alert(error))
     event.preventDefault()
-  }
-
-  handleRecaptcha = value => {
-    this.setState({
-      'g-recaptcha-response': value,
-      disabledSubmit: false,
-    })
   }
 
   handleSuccess = () => {
@@ -257,7 +261,10 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
-        <ReCAPTCHA sitekey={RECAPTCHA_KEY} onChange={this.handleRecaptcha} />
+        <StyledRecaptcha
+          sitekey={RECAPTCHA_KEY}
+          onChange={this.handleRecaptcha}
+        />
         <Submit name="submit" type="submit" value="Send" />
 
         <Modal visible={this.state.showModal}>

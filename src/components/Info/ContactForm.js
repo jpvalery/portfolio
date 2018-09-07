@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import 'whatwg-fetch' // Fetch Polyfill
+import { navigateTo } from 'gatsby-link'
 import Recaptcha from 'react-google-recaptcha'
 
 const RECAPTCHA_KEY =
@@ -179,7 +180,9 @@ export default class Contact extends React.Component {
         'form-name': form.getAttribute('name'),
         ...this.state,
       }),
-    }).catch(error => alert(error))
+    })
+      .then(() => navigateTo(form.getAttribute('action')))
+      .catch(error => alert(error))
   }
 
   render() {
@@ -189,7 +192,7 @@ export default class Contact extends React.Component {
         <form
           name="contact-recaptcha"
           method="post"
-          action="/thanks/"
+          action="/contact/"
           data-netlify="true"
           data-netlify-recaptcha="true"
           onSubmit={this.handleSubmit}

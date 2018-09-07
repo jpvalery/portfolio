@@ -150,7 +150,6 @@ const Button = styled.div`
     background: ${props => props.theme.colors.highlight} !important;
   }
 `
-
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -206,7 +205,6 @@ class ContactForm extends React.Component {
       <Form
         name="contact"
         onSubmit={this.handleSubmit}
-        method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot"
         overlay={this.state.showModal}

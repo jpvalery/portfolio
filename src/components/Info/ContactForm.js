@@ -55,8 +55,8 @@ const Form = styled.form`
     visibility: ${props => (props.overlay ? 'visible' : 'hidden')};
   }
   label {
-  display: none;
-}
+    display: none;
+  }
 `
 
 const Name = styled.input`
@@ -146,7 +146,8 @@ const Button = styled.div`
   &:hover {
     background: ${props => props.theme.colors.highlight} !important;
   }
-`const encode = data => {
+`
+const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')

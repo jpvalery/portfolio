@@ -228,6 +228,7 @@ class ContactForm extends React.Component {
                     type="text"
                     placeholder="Full Name"
                     value={this.state.name}
+                    onChange={this.handleInputChange}
                     required
                   />
                   <Email
@@ -235,6 +236,7 @@ class ContactForm extends React.Component {
                     type="email"
                     placeholder="Email"
                     value={this.state.email}
+                    onChange={this.handleInputChange}
                     required
                   />
                   <Message
@@ -242,6 +244,7 @@ class ContactForm extends React.Component {
                     type="text"
                     placeholder="Message"
                     value={this.state.message}
+                    onChange={this.handleInputChange}
                     required
                   />
                   <Submit name="submit" type="submit" value="Send" />

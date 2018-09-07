@@ -9612,6 +9612,13 @@ react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
+react-netlify-form@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-netlify-form/-/react-netlify-form-2.1.0.tgz#3d770801088cdcf426e55e54a4effb59cfe1569b"
+  dependencies:
+    babel-runtime "^6.26.0"
+    react-google-recaptcha "^1.0.2"
+
 react-prop-toggle@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/react-prop-toggle/-/react-prop-toggle-1.0.2.tgz#8b0b7e74653606b1427cfcf6c4eaa9198330568e"

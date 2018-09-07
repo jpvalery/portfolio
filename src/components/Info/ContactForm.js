@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import 'whatwg-fetch' // Fetch Polyfill
 import Recaptcha from 'react-google-recaptcha'
-
-const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY
+import NetlifyForm from 'react-netlify-form'
 
 const Form = styled.form`
   margin: 0 2rem;
@@ -200,56 +199,59 @@ class ContactForm extends React.Component {
 
   render() {
     return (
-      <Form
-        name="contact"
-        onSubmit={this.handleSubmit}
-        data-netlify="true"
-        data-netlify-honeypot="bot"
-        overlay={this.state.showModal}
-        onClick={this.closeModal}
+      <NetlifyForm
+        name="Contact"
+        recaptcha={{
+          sitekey:
+            process.env.SITE_RECAPTCHA_KEY ||
+            '6LdK9G4UAAAAAOtiFibpaDHJKmrjwlzere3rTrdw',
+          size: 'invisible',
+        }}
       >
-        <input type="hidden" name="form-name" value="contact" />
-        <p hidden>
-          <label>
-            Don’t fill this out:{' '}
-            <input name="bot" onChange={this.handleInputChange} />
-          </label>
-        </p>
-
-        <Name
-          name="name"
-          type="text"
-          placeholder="Full Name"
-          value={this.state.name}
-          onChange={this.handleInputChange}
-          required
-        />
-        <Email
-          name="email"
-          type="email"
-          placeholder="Email"
-          value={this.state.email}
-          onChange={this.handleInputChange}
-          required
-        />
-        <Message
-          name="message"
-          type="text"
-          placeholder="Message"
-          value={this.state.message}
-          onChange={this.handleInputChange}
-          required
-        />
-        <Submit name="submit" type="submit" value="Send" />
-
-        <Modal visible={this.state.showModal}>
-          <p>
-            Thank you for reaching out. I will get back to you as soon as
-            possible.
-          </p>
-          <Button onClick={this.closeModal}>Okay</Button>
-        </Modal>
-      </Form>
+        {({ loading, error, recaptchaError, success, recaptcha }) => (
+          <>
+            {loading && <p>Loading...</p>}
+            {error && (
+              <p>Your information was not sent. Please try again later.</p>
+            )}
+            {recaptchaError && (
+              <p>
+                Recaptcha did not match. Please make sure the box is checked.
+              </p>
+            )}
+            {success && <p>Thank you for contacting us!</p>}
+            {!loading &&
+              !success && (
+                <Form>
+                  <Name
+                    name="name"
+                    type="text"
+                    placeholder="Full Name"
+                    value={this.state.name}
+                    required
+                  />
+                  <Email
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    value={this.state.email}
+                    required
+                  />
+                  <Message
+                    name="message"
+                    type="text"
+                    placeholder="Message"
+                    value={this.state.message}
+                    required
+                  />
+                  <Submit name="submit" type="submit" value="Send" />
+                </Form>
+              )}
+            {/* Invisible reCAPTCHA must be kept outside of conditionals */}
+            {recaptcha}
+          </>
+        )}
+      </NetlifyForm>
     )
   }
 }

@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import 'whatwg-fetch' // Fetch Polyfill
-import Recaptcha from 'react-google-recaptcha'
 import NetlifyForm from 'react-netlify-form'
 
 const Form = styled.div`
@@ -147,6 +146,33 @@ const Button = styled.div`
   }
 `
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
+
+class ContactForm extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      name: '',
+      email: '',
+      message: '',
+      showModal: false,
+    }
+  }
+
+  handleInputChange = event => {
+    const target = event.target
+    const value = target.value
+    const name = target.name
+    this.setState({
+      [name]: value,
+    })
+  }
+
+  render() {
     return (
       <NetlifyForm name="Contact Form">
         {({ loading, error, success }) => (

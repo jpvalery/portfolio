@@ -5,7 +5,7 @@ import 'whatwg-fetch' // Fetch Polyfill
 import Recaptcha from 'react-google-recaptcha'
 import NetlifyForm from 'react-netlify-form'
 
-const Form = styled.form`
+const Form = styled.div`
   margin: 0 2rem;
   display: flex;
   flex-flow: row wrap;

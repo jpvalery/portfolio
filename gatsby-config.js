@@ -162,7 +162,7 @@ module.exports = {
         start_url: '/',
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
-        display: 'minimal-ui',
+        display: 'fullscreen',
         icon: `static${config.siteLogo}`,
       },
     },

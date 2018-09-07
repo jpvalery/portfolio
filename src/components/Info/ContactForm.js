@@ -256,11 +256,7 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
-        <ReCAPTCHA
-          ref={recaptchaRef}
-          size="invisible"
-          sitekey={RECAPTCHA_KEY}
-        />
+        <ReCAPTCHA sitekey={RECAPTCHA_KEY} onChange={this.handleRecaptcha} />
         <Submit name="submit" type="submit" value="Send" />
 
         <Modal visible={this.state.showModal}>

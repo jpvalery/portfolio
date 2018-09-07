@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import 'whatwg-fetch' // Fetch Polyfill
-import Recaptcha from 'react-google-recaptcha'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 /*
   ⚠️ This is an example of a contact form powered with Netlify form handling.
@@ -213,6 +213,7 @@ class ContactForm extends React.Component {
     const RECAPTCHA_KEY =
       process.env.SITE_RECAPTCHA_KEY ||
       '6LdK9G4UAAAAAOtiFibpaDHJKmrjwlzere3rTrdw'
+    const recaptchaRef = React.createRef()
     return (
       <Form
         name="Contact"
@@ -255,13 +256,12 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
-        <Submit
-          name="submit"
-          type="submit"
-          value="Send"
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          size="invisible"
           sitekey={RECAPTCHA_KEY}
-          onChange={this.handleRecaptcha}
         />
+        <Submit name="submit" type="submit" value="Send" />
 
         <Modal visible={this.state.showModal}>
           <p>

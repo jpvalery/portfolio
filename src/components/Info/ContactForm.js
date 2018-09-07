@@ -149,6 +149,7 @@ const encode = data => {
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
+console.log(encode)
 
 class ContactForm extends React.Component {
   constructor(props) {

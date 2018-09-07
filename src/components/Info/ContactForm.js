@@ -221,6 +221,7 @@ class ContactForm extends React.Component {
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot"
+        data-netlify-recaptcha="true"
         overlay={this.state.showModal}
         onClick={this.closeModal}
       >

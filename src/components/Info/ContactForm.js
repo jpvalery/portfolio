@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import 'whatwg-fetch' // Fetch Polyfill
-import Recaptcha from 'react-google-recaptcha'
 
 /*
   ⚠️ This is an example of a contact form powered with Netlify form handling.
@@ -152,10 +151,6 @@ const Button = styled.div`
   }
 `
 
-const StyledRecaptcha = styled(Recaptcha)`
-  height: 80px;
-`
-
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -182,18 +177,11 @@ class ContactForm extends React.Component {
     })
   }
 
-  handleRecaptcha = value => {
-    this.setState({
-      'g-recaptcha-response': value,
-      disabledSubmit: false,
-    })
-  }
-
   handleSubmit = event => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'Contact', ...this.state }),
+      body: encode({ 'form-name': 'contact', ...this.state }),
     })
       .then(this.handleSuccess)
       .catch(error => alert(error))
@@ -214,22 +202,17 @@ class ContactForm extends React.Component {
   }
 
   render() {
-    const RECAPTCHA_KEY =
-      process.env.SITE_RECAPTCHA_KEY ||
-      '6LdK9G4UAAAAAOtiFibpaDHJKmrjwlzere3rTrdw'
-    const recaptchaRef = React.createRef()
     return (
       <Form
-        name="Contact"
+        name="contact"
         onSubmit={this.handleSubmit}
-        method="POST"
-        netlify-recaptcha
-        netlify
+        method="post"
+        data-netlify="true"
         data-netlify-honeypot="bot"
         overlay={this.state.showModal}
         onClick={this.closeModal}
       >
-        <input type="hidden" name="form-name" value="Contact" />
+        <input type="hidden" name="form-name" value="contact" />
         <p hidden>
           <label>
             Don’t fill this out:{' '}
@@ -260,10 +243,6 @@ class ContactForm extends React.Component {
           value={this.state.message}
           onChange={this.handleInputChange}
           required
-        />
-        <StyledRecaptcha
-          sitekey={RECAPTCHA_KEY}
-          onChange={this.handleRecaptcha}
         />
         <Submit name="submit" type="submit" value="Send" />
 

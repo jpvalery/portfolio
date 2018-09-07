@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
 import WrapperGallery from '../components/Gallery/WrapperGallery'
+import GalleryComposition from '../components/Gallery/GalleryComposition'
 import GalleryHead from '../components/Gallery/GalleryHead'
 import SEO from '../components/SEO'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
@@ -22,19 +23,7 @@ const GalleryTemplate = ({ data }) => {
       <SEO pagePath={slug} galleryNode={galleryNode} gallerySEO />
       <GalleryHead title={title} tags={tags} />
       <WrapperGallery>
-        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
-          <Masonry gutter="1rem">
-            {images &&
-              images.map((images, index) => (
-                <Img
-                  key={index}
-                  sizes={images.fluid}
-                  alt={images.title}
-                  title={images.title}
-                />
-              ))}
-          </Masonry>
-        </ResponsiveMasonry>
+        <GalleryComposition photos={images} />
       </WrapperGallery>
     </Layout>
   )

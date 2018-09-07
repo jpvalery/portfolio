@@ -211,7 +211,7 @@ class ContactForm extends React.Component {
             <input name="bot" onChange={this.handleInputChange} />
           </label>
         </p>
-        <label for="name">Name</label>
+
         <Name
           id="name"
           name="name"
@@ -221,7 +221,7 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
-        <label for="email">Email</label>
+
         <Email
           id="email"
           name="email"
@@ -231,7 +231,7 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
-        <label for="message">Message</label>
+
         <Message
           id="message"
           name="message"
@@ -245,10 +245,10 @@ class ContactForm extends React.Component {
         <Submit name="submit" type="submit" value="Send" />
 
         <Modal visible={this.state.showModal}>
-          <h2>
+          <p>
             Thank you for reaching out. I will get back to you as soon as
             possible.
-          </h2>
+          </p>
           <Submit
             name="okay"
             type="submit"

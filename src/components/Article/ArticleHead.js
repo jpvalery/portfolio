@@ -5,15 +5,15 @@ import Headroom from 'react-headroom'
 
 const Wrapper = styled.section`
   background: ${props => props.theme.colors.base};
-  margin: 1.5rem auto 0;
-  padding: 0 2rem 2rem;
+  margin: 0 auto 0;
+  padding: 1.5rem 2rem 2rem;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  opacity: 0.95;
+  opacity: 0.975;
   backdrop-filter: blur(10px);
 `
 const BackButton = styled(Link)`

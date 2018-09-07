@@ -1,10 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import 'whatwg-fetch' // Fetch Polyfill
-import NetlifyForm from 'react-netlify-form'
+import 'whatwg-fetch'
 
-const Form = styled.div`
+const Form = styled.form`
   margin: 0 2rem;
   display: flex;
   flex-flow: row wrap;
@@ -145,7 +144,6 @@ const Button = styled.div`
     background: ${props => props.theme.colors.highlight} !important;
   }
 `
-
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -172,49 +170,82 @@ class ContactForm extends React.Component {
     })
   }
 
+  handleSubmit = event => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'Contact', ...this.state }),
+    })
+      .then(this.handleSuccess)
+      .catch(error => alert(error))
+    event.preventDefault()
+  }
+
+  handleSuccess = () => {
+    this.setState({
+      name: '',
+      email: '',
+      message: '',
+      showModal: true,
+    })
+  }
+
+  closeModal = () => {
+    this.setState({ showModal: false })
+  }
+
   render() {
     return (
-      <NetlifyForm name="Contact Form">
-        {({ loading, error, success }) => (
-          <Form>
-            {loading && <div>Loading...</div>}
-            {error && (
-              <div>Your information was not sent. Please try again later.</div>
-            )}
-            {success && <div>Thank you for contacting us!</div>}
-            {!loading &&
-              !success && (
-                <>
-                  <Name
-                    name="name"
-                    type="text"
-                    placeholder="Full Name"
-                    value={this.state.name}
-                    onChange={this.handleInputChange}
-                    required
-                  />
-                  <Email
-                    name="email"
-                    type="email"
-                    placeholder="Email"
-                    value={this.state.email}
-                    onChange={this.handleInputChange}
-                    required
-                  />
-                  <Message
-                    name="message"
-                    type="text"
-                    placeholder="Message"
-                    value={this.state.message}
-                    onChange={this.handleInputChange}
-                    required
-                  />
-                  <Submit name="submit" type="submit" value="Send" />
-                </>
-              )}
-          </Form>
-        )}
-      </NetlifyForm>
+      <Form
+        name="Contact"
+        onSubmit={this.handleSubmit}
+        data-netlify="true"
+        data-netlify-honeypot="bot"
+        overlay={this.state.showModal}
+        onClick={this.closeModal}
+      >
+        <input type="hidden" name="form-name" value="Contact" />
+        <p hidden>
+          <label>
+            Don’t fill this out:{' '}
+            <input name="bot" onChange={this.handleInputChange} />
+          </label>
+        </p>
+
+        <Name
+          name="name"
+          type="text"
+          placeholder="Full Name"
+          value={this.state.name}
+          onChange={this.handleInputChange}
+          required
+        />
+        <Email
+          name="email"
+          type="email"
+          placeholder="Email"
+          value={this.state.email}
+          onChange={this.handleInputChange}
+          required
+        />
+        <Message
+          name="message"
+          type="text"
+          placeholder="Message"
+          value={this.state.message}
+          onChange={this.handleInputChange}
+          required
+        />
+        <Submit name="submit" type="submit" value="Send" />
+
+        <Modal visible={this.state.showModal}>
+          <p>
+            Thank you for reaching out. I will get back to you as soon as
+            possible.
+          </p>
+          <Button onClick={this.closeModal}>Okay</Button>
+        </Modal>
+      </Form>
     )
   }
 }

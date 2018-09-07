@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import 'whatwg-fetch'
+import 'whatwg-fetch' // Fetch Polyfill
 
 const Form = styled.form`
   margin: 0 2rem;
@@ -53,9 +53,6 @@ const Form = styled.form`
     transition: 0.2s all;
     opacity: ${props => (props.overlay ? '.8' : '0')};
     visibility: ${props => (props.overlay ? 'visible' : 'hidden')};
-  }
-  label {
-    display: none;
   }
 `
 
@@ -177,7 +174,7 @@ class ContactForm extends React.Component {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state }),
+      body: encode({ 'form-name': 'ContactMe', ...this.state }),
     })
       .then(this.handleSuccess)
       .catch(error => alert(error))
@@ -200,23 +197,22 @@ class ContactForm extends React.Component {
   render() {
     return (
       <Form
-        name="contact"
+        name="ContactMe"
         onSubmit={this.handleSubmit}
         data-netlify="true"
         data-netlify-honeypot="bot"
         overlay={this.state.showModal}
         onClick={this.closeModal}
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value="ContactMe" />
         <p hidden>
           <label>
             Don’t fill this out:{' '}
             <input name="bot" onChange={this.handleInputChange} />
           </label>
         </p>
-        <label for="name">Name</label>
+
         <Name
-          id="name"
           name="name"
           type="text"
           placeholder="Full Name"
@@ -224,9 +220,7 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
-        <label for="email">Email</label>
         <Email
-          id="email"
           name="email"
           type="email"
           placeholder="Email"
@@ -234,9 +228,7 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
-        <label for="message">Message</label>
         <Message
-          id="message"
           name="message"
           type="text"
           placeholder="Message"
@@ -244,23 +236,22 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
-
         <Submit name="submit" type="submit" value="Send" />
 
         <Modal visible={this.state.showModal}>
-          <p>I will be in touch!</p>
-          <Submit
-            name="okay"
-            type="submit"
-            onClick={this.closeModal}
-            value="Okay"
-          />
+          <p>
+            Thank you for reaching out. I will get back to you as soon as
+            possible.
+          </p>
+          <Button onClick={this.closeModal}>Okay</Button>
         </Modal>
       </Form>
     )
   }
 }
+
 ContactForm.propTypes = {
   data: PropTypes.object,
 }
+
 export default ContactForm

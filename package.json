@@ -35,6 +35,7 @@
     "react": "^16.4.2",
     "react-burger-menu": "^2.5.2",
     "react-dom": "^16.4.2",
+    "react-google-recaptcha": "^1.0.2",
     "react-headroom": "^2.2.2",
     "react-helmet": "^5.2.0",
     "react-images": "^0.5.19",

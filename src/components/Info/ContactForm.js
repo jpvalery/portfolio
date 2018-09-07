@@ -196,6 +196,7 @@ class ContactForm extends React.Component {
   }
 
   render() {
+    const { name, email, message } = this.state
     return (
       <Form
         name="contact"

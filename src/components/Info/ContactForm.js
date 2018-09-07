@@ -114,7 +114,8 @@ const Modal = styled.div`
   z-index: 99;
   display: flex;
   flex-flow: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   transition: 0.2s all;
   opacity: ${props => (props.visible ? '1' : '0')};
   visibility: ${props => (props.visible ? 'visible' : 'hidden')};
@@ -146,7 +147,6 @@ const Button = styled.div`
     outline: none;
   }
   &:hover {
-    border: 2px solid ${props => props.theme.colors.highlight} !important;
     background: ${props => props.theme.colors.highlight} !important;
   }
 `
@@ -206,7 +206,7 @@ class ContactForm extends React.Component {
       <Form
         name="contact"
         onSubmit={this.handleSubmit}
-        method="post"
+        method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot"
         overlay={this.state.showModal}

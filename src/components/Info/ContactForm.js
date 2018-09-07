@@ -2,11 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import 'whatwg-fetch' // Fetch Polyfill
-import { navigateTo } from 'gatsby-link'
 import Recaptcha from 'react-google-recaptcha'
 
-const RECAPTCHA_KEY =
-  process.env.SITE_RECAPTCHA_KEY || '6LdK9G4UAAAAAOtiFibpaDHJKmrjwlzere3rTrdw'
+const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY
 
 const Form = styled.form`
   margin: 0 2rem;
@@ -150,87 +148,114 @@ const Button = styled.div`
   }
 `
 
-function encode(data) {
+const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
 
-export default class Contact extends React.Component {
+class ContactForm extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      name: '',
+      email: '',
+      message: '',
+      showModal: false,
+    }
   }
 
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value })
+  handleInputChange = event => {
+    const target = event.target
+    const value = target.value
+    const name = target.name
+    this.setState({
+      [name]: value,
+    })
   }
 
-  handleRecaptcha = value => {
-    this.setState({ 'g-recaptcha-response': value })
-  }
-
-  handleSubmit = e => {
-    e.preventDefault()
-    const form = e.target
+  handleSubmit = event => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
+      body: encode({ 'form-name': 'contact', ...this.state }),
     })
-      .then(() => navigateTo(form.getAttribute('action')))
+      .then(this.handleSuccess)
       .catch(error => alert(error))
+    event.preventDefault()
+  }
+
+  handleSuccess = () => {
+    this.setState({
+      name: '',
+      email: '',
+      message: '',
+      showModal: true,
+    })
+  }
+
+  closeModal = () => {
+    this.setState({ showModal: false })
   }
 
   render() {
     return (
-      <div>
-        <h1>reCAPTCHA 2</h1>
-        <form
-          name="contact-recaptcha"
-          method="post"
-          action="/contact/"
-          data-netlify="true"
-          data-netlify-recaptcha="true"
-          onSubmit={this.handleSubmit}
-        >
-          <noscript>
-            <p>This form won’t work with Javascript disabled</p>
-          </noscript>
+      <Form
+        name="contact"
+        onSubmit={this.handleSubmit}
+        data-netlify="true"
+        data-netlify-honeypot="bot"
+        overlay={this.state.showModal}
+        onClick={this.closeModal}
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+          <label>
+            Don’t fill this out:{' '}
+            <input name="bot" onChange={this.handleInputChange} />
+          </label>
+        </p>
+
+        <Name
+          name="name"
+          type="text"
+          placeholder="Full Name"
+          value={this.state.name}
+          onChange={this.handleInputChange}
+          required
+        />
+        <Email
+          name="email"
+          type="email"
+          placeholder="Email"
+          value={this.state.email}
+          onChange={this.handleInputChange}
+          required
+        />
+        <Message
+          name="message"
+          type="text"
+          placeholder="Message"
+          value={this.state.message}
+          onChange={this.handleInputChange}
+          required
+        />
+        <Submit name="submit" type="submit" value="Send" />
+
+        <Modal visible={this.state.showModal}>
           <p>
-            <label>
-              Your name:
-              <br />
-              <input type="text" name="name" onChange={this.handleChange} />
-            </label>
+            Thank you for reaching out. I will get back to you as soon as
+            possible.
           </p>
-          <p>
-            <label>
-              Your email:
-              <br />
-              <input type="email" name="email" onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Message:
-              <br />
-              <textarea name="message" onChange={this.handleChange} />
-            </label>
-          </p>
-          <Recaptcha
-            ref="recaptcha"
-            sitekey={RECAPTCHA_KEY}
-            onChange={this.handleRecaptcha}
-          />
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
-      </div>
+          <Button onClick={this.closeModal}>Okay</Button>
+        </Modal>
+      </Form>
     )
   }
 }
+
+ContactForm.propTypes = {
+  data: PropTypes.object,
+}
+
+export default ContactForm

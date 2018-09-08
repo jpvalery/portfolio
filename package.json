@@ -52,7 +52,7 @@
   "license": "MIT",
   "main": "n/a",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby info && gatsby build",
     "develop": "gatsby develop",
     "test": "npm run lint:css && npm run lint:js && npm run check-pretty",
     "setup": "node ./bin/setup.js",

@@ -40,7 +40,6 @@ const TagTemplate = ({ data }) => {
               image={post.heroImage}
               title={post.title}
               date={post.publishDate}
-              excerpt={post.body}
             />
           ))}
         </>

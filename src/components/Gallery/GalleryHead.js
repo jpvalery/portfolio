@@ -57,14 +57,17 @@ const List = styled.ul`
 
 const Tag = styled.li`
   display: inline-block;
-  a {
+  span {
     transition: 0.2s;
     background: ${props => props.theme.colors.tertiary};
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     text-transform: capitalize;
-    margin: 0 0.5em 0 0;
+    margin: 0 0.5rem;
     text-decoration: none;
     color: ${props => props.theme.colors.base};
+    &:last-child {
+      margin: 0 0.5rem;
+    }
     &:hover {
       background: ${props => props.theme.colors.secondary};
     }
@@ -84,7 +87,7 @@ const GalleryHead = props => {
         <List>
           {props.tags.map(tag => (
             <Tag key={tag.id}>
-              <Link to={`/tag/${tag.slug}/`}>{tag.title}</Link>
+              <span>{tag.title}</span>
             </Tag>
           ))}
         </List>

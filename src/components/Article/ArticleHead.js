@@ -5,15 +5,16 @@ import Headroom from 'react-headroom'
 
 const Wrapper = styled.section`
   background: ${props => props.theme.colors.base};
-  margin: 0 auto 0;
-  padding: 1.5rem 2rem 2rem;
+  top: 3.5rem;
+  margin: 3.5rem auto 0;
+  padding: 0 2rem 2rem;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  opacity: 0.975;
+  opacity: 0.95;
   backdrop-filter: blur(10px);
 `
 const BackButton = styled(Link)`
@@ -70,11 +71,11 @@ const Tag = styled.li`
     background: ${props => props.theme.colors.tertiary};
     padding: 0.5rem 1rem 0.5rem 1rem;
     text-transform: capitalize;
-    margin: 0 0.5em 0 0;
+    margin: 0 0.5rem;
     text-decoration: none;
     color: ${props => props.theme.colors.base};
     &:last-child {
-      margin: 0;
+      margin: 0 0.5rem;
     }
     &:hover {
       background: ${props => props.theme.colors.secondary};

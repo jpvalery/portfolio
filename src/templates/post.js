@@ -34,13 +34,13 @@ const PostTemplate = ({ data }) => {
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} postSEO />
+      <ArticleHead
+        title={title}
+        date={publishDate}
+        tags={tags}
+        time={body.childMarkdownRemark.timeToRead}
+      />
       <WrapperArticle>
-        <ArticleHead
-          title={title}
-          date={publishDate}
-          tags={tags}
-          time={body.childMarkdownRemark.timeToRead}
-        />
         <ArticleBody>
           <ArticleHero image={heroImage} />
           <Article

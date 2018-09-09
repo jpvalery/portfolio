@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 const Title = styled.h1`
   flex-grow: 1;
+  align-self: flex-start;
   width: 100%;
   text-transform: capitalize;
   text-align: center;

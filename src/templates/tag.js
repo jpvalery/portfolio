@@ -5,7 +5,6 @@ import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
 import WrapperTag from '../components/Tag/WrapperTag'
-import TagHero from '../components/Tag/TagHero'
 import TagList from '../components/Tag/TagList'
 import TagTitle from '../components/Tag/TagTitle'
 
@@ -24,8 +23,6 @@ const TagTemplate = ({ data }) => {
         />
         <meta property="og:url" content={`${config.siteUrl}/tag/${slug}/`} />
       </Helmet>
-      <TagHero />
-
       <WrapperTag>
         <TagTitle small>
           Tag: &ldquo;

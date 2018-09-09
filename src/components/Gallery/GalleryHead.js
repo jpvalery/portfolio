@@ -57,7 +57,7 @@ const List = styled.ul`
 
 const Tag = styled.li`
   display: inline-block;
-  span {
+  a {
     transition: 0.2s;
     background: ${props => props.theme.colors.tertiary};
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -87,7 +87,7 @@ const GalleryHead = props => {
         <List>
           {props.tags.map(tag => (
             <Tag key={tag.id}>
-              <span>{tag.title}</span>
+              <Link to={`/tag/${tag.slug}/`}>{tag.title}</Link>
             </Tag>
           ))}
         </List>

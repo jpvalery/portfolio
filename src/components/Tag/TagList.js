@@ -45,7 +45,7 @@ const Date = styled.p`
 
 const TagList = props => {
   return (
-    <ProjectLink key={props.id} to={`/blog/${props.slug}/`}>
+    <ProjectLink key={props.id} to={`${props.slug}/`}>
       <Title>{props.title}</Title>
       <Date>{props.date}</Date>
     </ProjectLink>

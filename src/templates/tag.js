@@ -12,6 +12,7 @@ const TagTemplate = ({ data }) => {
   const { title, slug } = data.contentfulTag
 
   const posts = sortBy(data.contentfulTag.post, 'publishDate').reverse()
+  const galleries = sortBy(data.contentfulTag.gallery, 'publishDate').reverse()
 
   return (
     <Layout>
@@ -33,10 +34,19 @@ const TagTemplate = ({ data }) => {
           {posts.map(post => (
             <TagList
               key={post.id}
-              slug={post.slug}
+              slug={`/blog/${post.slug}/`}
               image={post.heroImage}
               title={post.title}
               date={post.publishDate}
+            />
+          ))}
+          {galleries.map(gallery => (
+            <TagList
+              key={gallery.id}
+              slug={gallery.slug}
+              image={gallery.heroImage}
+              title={gallery.title}
+              date={gallery.publishDate}
             />
           ))}
         </>
@@ -51,6 +61,12 @@ export const query = graphql`
       title
       id
       slug
+      gallery {
+        id
+        title
+        slug
+        publishDate(formatString: "MMMM DD, YYYY")
+      }
       post {
         id
         title
@@ -60,12 +76,6 @@ export const query = graphql`
           title
           fluid(maxWidth: 1800) {
             ...GatsbyContentfulFluid_noBase64
-          }
-        }
-        body {
-          childMarkdownRemark {
-            html
-            excerpt(pruneLength: 80)
           }
         }
       }

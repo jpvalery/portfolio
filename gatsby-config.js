@@ -151,7 +151,6 @@ module.exports = {
         color: config.themeColor,
       },
     },
-    'gatsby-plugin-netlify',
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
@@ -167,5 +166,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+ 'gatsby-plugin-netlify',
   ],
 }

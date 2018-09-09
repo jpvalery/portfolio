@@ -144,6 +144,7 @@ const Button = styled.div`
     background: ${props => props.theme.colors.highlight} !important;
   }
 `
+
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
@@ -179,7 +180,6 @@ class ContactForm extends React.Component {
       .then(this.handleSuccess)
       .catch(error => alert(error))
     event.preventDefault()
-    console.log(encode({ 'form-name': 'contact', ...this.state }))
   }
 
   handleSuccess = () => {
@@ -196,7 +196,6 @@ class ContactForm extends React.Component {
   }
 
   render() {
-    const { name, email, message } = this.state
     return (
       <Form
         name="contact"
@@ -215,7 +214,6 @@ class ContactForm extends React.Component {
         </p>
 
         <Name
-          id="name"
           name="name"
           type="text"
           placeholder="Full Name"
@@ -223,9 +221,7 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
-
         <Email
-          id="email"
           name="email"
           type="email"
           placeholder="Email"
@@ -233,9 +229,7 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
-
         <Message
-          id="message"
           name="message"
           type="text"
           placeholder="Message"
@@ -243,7 +237,6 @@ class ContactForm extends React.Component {
           onChange={this.handleInputChange}
           required
         />
-
         <Submit name="submit" type="submit" value="Send" />
 
         <Modal visible={this.state.showModal}>
@@ -251,18 +244,15 @@ class ContactForm extends React.Component {
             Thank you for reaching out. I will get back to you as soon as
             possible.
           </p>
-          <Submit
-            name="okay"
-            type="submit"
-            onClick={this.closeModal}
-            value="Okay"
-          />
+          <Button onClick={this.closeModal}>Okay</Button>
         </Modal>
       </Form>
     )
   }
 }
+
 ContactForm.propTypes = {
   data: PropTypes.object,
 }
+
 export default ContactForm

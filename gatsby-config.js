@@ -77,6 +77,21 @@ module.exports = {
         head: true,
       },
     },
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: config.siteTitle,
+        short_name: config.shortTitle,
+        description: config.siteDescription,
+        start_url: '/',
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
+        display: 'fullscreen',
+        icon: `static${config.siteLogo}`,
+      },
+    },
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-feed',
       options: {
@@ -151,21 +166,6 @@ module.exports = {
         color: config.themeColor,
       },
     },
-    'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: config.siteTitle,
-        short_name: config.shortTitle,
-        description: config.siteDescription,
-        start_url: '/',
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
-        display: 'fullscreen',
-        icon: `static${config.siteLogo}`,
-      },
-    },
-    'gatsby-plugin-offline',
- 'gatsby-plugin-netlify',
+    'gatsby-plugin-netlify',
   ],
 }

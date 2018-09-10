@@ -1,123 +1,76 @@
-import React from "react";
-import Link from "gatsby-link";
-import Img from "gatsby-image";
-import styled from "styled-components";
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import WrapperBlog from '../components/Blog/WrapperBlog'
+import BlogHero from '../components/Blog/BlogHero'
+import BlogBody from '../components/Blog/BlogBody'
+import BlogList from '../components/Blog/BlogList'
+import SEO from '../components/SEO'
 
-import * as palette from "../utils/styles";
-
-const IndexPage = ({ data }) => {
-  const posts = data.allContentfulBlog.edges;
-
-  const Grid = styled.div`
-    margin: 1rem 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 1rem;
-  `;
-
-  const GridItem = styled(Link)`
-
-  background: ${palette.POST_COLOR};
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-    align-items: center;
-    justify-content: center;
-    grid-gap: 1rem;
-    .gatsby-image-outer-wrapper,
-    .gatsby-image-wrapper {
-      position: static !important;
-    }
-    @media (max-width: 991px) {
-      grid-template-columns: 1fr;
-    }
-  `;
-
-  const Card = styled.div`
-    height: 33vh;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: left;
-    justify-content: top;
-    flex-direction: column;
-  `;
-  const Cover = styled.div`
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  `;
-  const Data = styled.div`
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 1rem;
-    @media (max-width: 991px) {
-      text-align: center;
-      grid-template-columns: 1fr;
-      grid-gap: 0;
-    }
-  `;
-  const Title = styled.div`
-    padding: 1rem;
-    @media (max-width: 991px) {
-      text-align: center;
-    }
-  `;
-  const Name = styled.h1`
-    text-transform: uppercase;
-  `;
-  const Date = styled.h4`
-    text-transform: uppercase;
-    margin-bottom: 0;
-  `;
-  const Slug = styled.p`
-
-  `;
-
+const Blog = ({ data }) => {
+  const posts = data.allContentfulPost.edges
+  const blog = data.contentfulBlog
 
   return (
-    <Grid>
-
-        {posts.slice(0).map(({ node: posts }) => (
-          <GridItem key={posts.id} to={ "/blog/" + posts.slug + "/"}>
-            <Card>
-              <Cover>
-                <Img sizes={posts.featuredImage.sizes} />
-              </Cover>
-            </Card>
-            <Data>
-              <Title>
-              <Name>{posts.title}</Name>
-              <Date>{posts.createdAt}</Date>
-              </Title>
-              <Slug>{posts.blurb}</Slug>
-            </Data>
-          </GridItem>
-        ))}
-
-    </Grid>
-  );
-};
+    <Layout>
+      <SEO />
+      <WrapperBlog>
+        <BlogHero image={blog.heroImage} />
+        <BlogBody>
+          {posts.map(({ node: post }) => (
+            <BlogList
+              key={post.id}
+              slug={post.slug}
+              image={post.heroImage}
+              title={post.title}
+              date={post.publishDate}
+              excerpt={post.body}
+            />
+          ))}
+        </BlogBody>
+      </WrapperBlog>
+    </Layout>
+  )
+}
 
 export const query = graphql`
-  query BlogQuery {
-    allContentfulBlog {
+  query {
+    allContentfulPost(
+      limit: 1000
+      sort: { fields: [publishDate], order: DESC }
+    ) {
       edges {
         node {
           title
           id
           slug
-          blurb
-          createdAt(formatString: "MMMM DD, YYYY")
-          featuredImage {
+          publishDate(formatString: "MMMM DD, YYYY")
+          heroImage {
             title
-            sizes(maxWidth: 1200) {
-              ...GatsbyContentfulSizes_noBase64
+            fluid(maxWidth: 1800) {
+              ...GatsbyContentfulFluid_noBase64
+            }
+          }
+          body {
+            childMarkdownRemark {
+              html
+              excerpt(pruneLength: 80)
             }
           }
         }
       }
     }
+    contentfulBlog {
+      title
+      id
+      heroImage {
+        title
+        fluid(maxWidth: 1800) {
+          ...GatsbyContentfulFluid_noBase64
+        }
+      }
+    }
   }
-`;
-export default IndexPage;
+`
+
+export default Blog

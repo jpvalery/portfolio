@@ -1,18 +1,18 @@
-#### iammatthias.com
+# I Am Matthias
 
+Personal portfolio. Built with Netlify, Contentful, and Gatsby v2.
 
-![I Am Matthias](/iammatthias.gif)
+## Features
 
-Built on the default Gatsby starter. Powered by Contentful. Hosted by Netlify.
-Made with ♡ in Santa Monica, California, USA
+- Netlify integration
+- Styled components
+- Google Analytics
+- Progressive Web app
+- Offline Support
+- RSS Feed
 
-#### Built Using:
-- [GatsbyJS](https://www.gatsbyjs.org)
-- [Contentful](https://www.contentful.com)
-- [Styled Components](https://www.styled-components.com)
+## View
 
-#### Hosted With:
-- [Netlify](https://www.netlify.com)
+https://iamv2.netlify.com
 
-##### License
-© [iammatthias](https://iammatthias.com)
+![](https://353a23c500dde3b2ad58-c49fe7e7355d384845270f4a7a0a7aa1.ssl.cf2.rackcdn.com/5b91a316b13fb16d2bdc675c/screenshot.png)

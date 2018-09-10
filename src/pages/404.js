@@ -1,37 +1,40 @@
-import React from "react";
-import Img from "gatsby-image";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
+import Helmet from 'react-helmet'
+import Layout from '../components/Layout'
 
-import * as palette from "../utils/styles";
+const Box = styled.div`
+  margin: 0 auto;
+  padding: 3em 1.5em 2em;
+  text-align: center;
+`
 
-const NotFoundPage = () => {
-  const Wrapper = styled.div``;
-  const Grid = styled.div`
-    margin: 1rem 0;
-    display: grid;
-    grid-template-columns: repeat(1fr);
-    grid-auto-flow: row dense;
-    grid-gap: 1rem;
-    @media (max-width: 991px) {
-      grid-template-columns: 1fr;
-    }
-  `;
-  const GridItem = styled.div`
-    height: ${palette.HEIGHT};
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  `;
+const Text = styled.p`
+  text-align: center;
+  line-height: 1.6;
+  margin: 0 0 1em 0;
+`
 
-  return (
-    <Wrapper>
-      <GridItem>
-        <h1>404 NOT FOUND</h1>
-        <p>You just hit a route that doesn't exist</p>
-      </GridItem>
-    </Wrapper>
-  );
-};
-export default NotFoundPage;
+const Title = styled.h1`
+  font-size: 3em;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin: 0 0 3rem 0;
+  line-height: 1.2;
+`
+
+const NotFoundPage = () => (
+  <Layout>
+    <Helmet>
+      <title>404 - Page Not Found</title>
+      <meta name="description" content="Page not found" />
+    </Helmet>
+
+    <Box>
+      <Title>Error 404</Title>
+      <Text>Sorry, that page can't be found</Text>
+    </Box>
+  </Layout>
+)
+
+export default NotFoundPage

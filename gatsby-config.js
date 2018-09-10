@@ -1,111 +1,171 @@
-require("dotenv").config();
+const config = require('./src/utils/siteConfig')
+let contentfulConfig
+
+try {
+  contentfulConfig = require('./.contentful')
+} catch (e) {
+  contentfulConfig = {
+    production: {
+      spaceId: process.env.SPACE_ID,
+      accessToken: process.env.ACCESS_TOKEN,
+    },
+  }
+} finally {
+  const { spaceId, accessToken } = contentfulConfig.production
+  if (!spaceId || !accessToken) {
+    throw new Error('Contentful space ID and access token need to be provided.')
+  }
+}
 
 module.exports = {
-  pathPrefix: "/", // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
-
   siteMetadata: {
-    title: "I Am Matthias"
+    siteUrl: config.siteUrl,
+    rssMetadata: {
+      site_url: config.siteUrl,
+      feed_url: `${config.siteUrl}/rss.xml`,
+      title: config.siteTitle,
+      description: config.siteDescription,
+      image_url: `${config.siteUrl}${config.siteLogo}`,
+      author: config.author,
+      copyright: config.copyright,
+    },
   },
   plugins: [
-    "gatsby-plugin-react-helmet",
-    `gatsby-plugin-netlify`,
-    "gatsby-plugin-catch-links",
-    "gatsby-image",
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-nprogress`,
+      resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        // Setting a color is optional.
-        color: `#FE5F55`,
-        // Disable the loading spinner.
-        showSpinner: false
-      }
+        siteUrl: config.siteUrl,
+      },
     },
+    'gatsby-plugin-styled-components',
     {
       resolve: `gatsby-plugin-typography`,
       options: {
-        pathToConfigModule: `src/utils/typography.js`
-      }
+        pathToConfigModule: `src/utils/typography`,
+      },
     },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID || "",
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN || ""
-      }
-    },
+    'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
             resolve: `gatsby-remark-prismjs`,
-            options: {
-              // Class prefix for <pre> tags containing syntax highlighting;
-              // defaults to 'language-' (eg <pre class="language-js">).
-              // If your site loads Prism into the browser at runtime,
-              // (eg for use with libraries like react-live),
-              // you may use this to prevent Prism from re-processing syntax.
-              // This is an uncommon use-case though;
-              // If you're unsure, it's best to use the default value.
-              classPrefix: "language-",
-              // This is used to allow setting a language for inline code
-              // (i.e. single backticks) by creating a separator.
-              // This separator is a string and will do no white-space
-              // stripping.
-              // A suggested value for English speakers is the non-ascii
-              // character '›'.
-              inlineCodeMarker: null,
-              // This lets you set up language aliases.  For example,
-              // setting this to '{ sh: "bash" }' will let you use
-              // the language "sh" which will highlight using the
-              // bash highlighter.
-              aliases: {}
-            }
           },
           {
-            resolve: `gatsby-remark-images`,
+            resolve: `gatsby-remark-images-contentful`,
             options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 740
-            }
+              maxWidth: 650,
+              backgroundColor: 'white',
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options:
+        process.env.NODE_ENV === 'development'
+          ? contentfulConfig.development
+          : contentfulConfig.production,
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS,
+        head: true,
+      },
+    },
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: config.siteTitle,
+        short_name: config.shortTitle,
+        description: config.siteDescription,
+        start_url: '/',
+        background_color: config.backgroundColor,
+        theme_color: config.themeColor,
+        display: 'fullscreen',
+        icon: `static${config.siteLogo}`,
+      },
+    },
+    'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        setup(ref) {
+          const ret = ref.query.site.siteMetadata.rssMetadata
+          ret.allMarkdownRemark = ref.query.allMarkdownRemark
+          ret.generator = 'I Am Matthias'
+          return ret
+        },
+        query: `
+    {
+      site {
+        siteMetadata {
+          rssMetadata {
+            site_url
+            feed_url
+            title
+            description
+            image_url
+            author
+            copyright
           }
-        ]
-      }
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-22618780-6",
-        // Puts tracking script in the head instead of the body
-        head: false,
-        // Setting this parameter is optional
-        anonymize: true,
-        // Setting this parameter is also optional
-        respectDNT: true
-      }
-    },
-    {
-      resolve: `gatsby-plugin-favicon`,
-      options: {
-        logo: "./src/favicon.png",
-        injectHTML: true,
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          twitter: false,
-          yandex: false,
-          windows: false
         }
       }
     }
-  ]
-};
+  `,
+        feeds: [
+          {
+            serialize(ctx) {
+              const rssMetadata = ctx.query.site.siteMetadata.rssMetadata
+              return ctx.query.allContentfulPost.edges.map(edge => ({
+                date: edge.node.publishDate,
+                title: edge.node.title,
+                description: edge.node.body.childMarkdownRemark.excerpt,
+
+                url: rssMetadata.site_url + '/' + edge.node.slug,
+                guid: rssMetadata.site_url + '/' + edge.node.slug,
+                custom_elements: [
+                  {
+                    'content:encoded': edge.node.body.childMarkdownRemark.html,
+                  },
+                ],
+              }))
+            },
+            query: `
+              {
+            allContentfulPost(limit: 1000, sort: {fields: [publishDate], order: DESC}) {
+               edges {
+                 node {
+                   title
+                   slug
+                   publishDate(formatString: "MMMM DD, YYYY")
+                   body {
+                     childMarkdownRemark {
+                       html
+                       excerpt(pruneLength: 80)
+                     }
+                   }
+                 }
+               }
+             }
+           }
+      `,
+            output: '/rss.xml',
+          },
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-nprogress',
+      options: {
+        color: config.themeColor,
+      },
+    },
+    'gatsby-plugin-netlify',
+  ],
+}

@@ -48,8 +48,8 @@ const Date = styled.p`
   margin-bottom: 1rem;
   padding: 0.25rem 1rem;
   text-align: left;
+  text-align: center;
   text-transform: uppercase;
-  text-transform: capitalize;
   position: relative;
   background: ${props => props.theme.colors.base};
 `

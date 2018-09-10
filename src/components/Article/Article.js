@@ -85,7 +85,8 @@ const Body = styled.div`
   pre {
     margin: 0 0 2em 0;
     border-radius: 2px;
-
+    overflow-x: scroll !important;
+    width: calc(100vw - 4rem);
     span {
       background: inherit !important;
     }

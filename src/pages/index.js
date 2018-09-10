@@ -71,7 +71,7 @@ export const query = graphql`
       id
       heroImage {
         title
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth: 1800) {
           ...GatsbyContentfulFluid_noBase64
         }
       }

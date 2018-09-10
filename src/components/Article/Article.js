@@ -78,14 +78,14 @@ const Body = styled.div`
 
   blockquote {
     font-style: italic;
-    border-left: 4px solid ${props => props.theme.colors.secondary};
+    border-left: 4px solid ${props => props.theme.colors.highlight};
     padding: 0 0 0 0.5em;
   }
 
   pre {
     margin: 0 0 2em 0;
     border-radius: 2px;
-    background: ${props => props.theme.colors.secondary} !important;
+
     span {
       background: inherit !important;
     }

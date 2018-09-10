@@ -17,12 +17,12 @@ const Body = styled.div`
     font-weight: 800;
     line-height: 1.25;
     text-transform: capitalize;
-    margin: 0 0 1rem 0;
+    margin: 0.5rem 0 1rem 0;
   }
 
   p {
     line-height: 1.6;
-    margin: 0 0 1rem 0;
+    margin: 1rem 0;
   }
 
   a {
@@ -88,6 +88,11 @@ const Body = styled.div`
     background: ${props => props.theme.colors.secondary} !important;
     span {
       background: inherit !important;
+    }
+
+    img {
+      box-shadow: 10px 5px 5px red;
+      padding: 0.5rem;
     }
   }
 `

@@ -10,7 +10,7 @@ module.exports = {
   shortTitle: 'iammatthias', // Used for App manifest e.g. Mobile Home Screen
   shareImage: '/logos/share.jpg', // Open Graph Default Share Image. 1200x1200 is recommended
   shareImageWidth: 900, // Change to the width of your default share image
-  shareImageHeight: 600, // Change to the height of your default share image
+  shareImageHeight: 504, // Change to the height of your default share image
   siteLogo: '/logos/logo-512.png', // Logo used for SEO, RSS, and App manifest
   backgroundColor: '#E6E3E1', // Used for Offline Manifest
   themeColor: '#100B00', // Used for Offline Manifest

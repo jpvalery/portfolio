@@ -50,7 +50,7 @@ export const query = graphql`
       heroImage {
         title
         fluid(maxWidth: 1800) {
-          ...GatsbyContentfulFluid_noBase64
+          ...GatsbyContentfulFluid_tracedSVG
         }
         ogimg: resize(width: 900) {
           src
@@ -62,7 +62,7 @@ export const query = graphql`
       images {
         title
         fluid(maxWidth: 1800) {
-          ...GatsbyContentfulFluid_noBase64
+          ...GatsbyContentfulFluid_tracedSVG
         }
       }
     }

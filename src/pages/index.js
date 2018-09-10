@@ -53,7 +53,7 @@ export const query = graphql`
           publishDate(formatString: "MMMM DD, YYYY")
           heroImage {
             title
-            fluid(maxWidth: 1800) {
+            fluid(maxWidth: 1000) {
               ...GatsbyContentfulFluid_noBase64
             }
           }
@@ -71,7 +71,7 @@ export const query = graphql`
       id
       heroImage {
         title
-        fluid(maxWidth: 1800) {
+        fluid(maxWidth: 1000) {
           ...GatsbyContentfulFluid_noBase64
         }
       }

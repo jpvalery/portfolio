@@ -72,12 +72,6 @@ export const query = graphql`
         title
         slug
         publishDate(formatString: "MMMM DD, YYYY")
-        heroImage {
-          title
-          fluid(maxWidth: 1800) {
-            ...GatsbyContentfulFluid_noBase64
-          }
-        }
       }
     }
   }

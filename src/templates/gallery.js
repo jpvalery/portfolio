@@ -1,14 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
-import Img from 'gatsby-image'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
 import WrapperGallery from '../components/Gallery/WrapperGallery'
 import GalleryComposition from '../components/Gallery/GalleryComposition'
 import GalleryHead from '../components/Gallery/GalleryHead'
 import SEO from '../components/SEO'
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
 const GalleryTemplate = ({ data }) => {
   const { title, slug, tags, images } = data.contentfulGallery

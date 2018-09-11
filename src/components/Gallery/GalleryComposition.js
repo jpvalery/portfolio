@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+
 import Img from 'gatsby-image'
 import Lightbox from 'react-images'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'

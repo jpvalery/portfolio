@@ -133,7 +133,6 @@ const Button = styled.div`
   cursor: pointer;
   color: white;
   padding: 1em;
-  border: 2px;
   text-decoration: none;
   transition: 0.2s;
   z-index: 99;

@@ -90,10 +90,14 @@ const Body = styled.div`
     span {
       background: inherit !important;
     }
-
     img {
       box-shadow: 10px 5px 5px red;
       padding: 0.5rem;
+    }
+    @media (min-width: ${props => props.theme.responsive.medium}) {
+      overflow-x: auto;
+      width: auto;
+      max-width: 45vw;
     }
   }
 `

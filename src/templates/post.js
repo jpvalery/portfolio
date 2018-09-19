@@ -4,11 +4,11 @@ import find from 'lodash/find'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
-import WrapperArticle from '../components/Article/WrapperArticle'
-import ArticleBody from '../components/Article/ArticleBody'
-import ArticleHead from '../components/Article/ArticleHead'
-import ArticleHero from '../components/Article/ArticleHero'
-import Article from '../components/Article/Article'
+import WrapperPost from '../components/Post/WrapperPost'
+import PostBody from '../components/Post/PostBody'
+import PostHead from '../components/Post/PostHead'
+import PostHero from '../components/Post/PostHero'
+import PostArticle from '../components/Post/PostArticle'
 import SEO from '../components/SEO'
 
 const PostTemplate = ({ data }) => {
@@ -34,22 +34,22 @@ const PostTemplate = ({ data }) => {
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} postSEO />
-      <ArticleHead
+      <PostHead
         title={title}
         date={publishDate}
         tags={tags}
         time={body.childMarkdownRemark.timeToRead}
       />
-      <WrapperArticle>
-        <ArticleBody>
-          <ArticleHero image={heroImage} />
-          <Article
+      <WrapperPost>
+        <PostBody>
+          <PostHero image={heroImage} />
+          <PostArticle
             body={body}
             previous={postIndex.previous}
             next={postIndex.next}
           />
-        </ArticleBody>
-      </WrapperArticle>
+        </PostBody>
+      </WrapperPost>
     </Layout>
   )
 }

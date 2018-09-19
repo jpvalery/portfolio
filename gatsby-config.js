@@ -77,6 +77,7 @@ module.exports = {
         head: true,
       },
     },
+    'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',

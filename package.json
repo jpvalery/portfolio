@@ -12,6 +12,7 @@
     "gatsby": "^2.0.0-rc.13",
     "gatsby-image": "^2.0.0-rc.4",
     "gatsby-plugin-canonical-urls": "^2.0.0-rc.2",
+    "gatsby-plugin-catch-links": "^2.0.2",
     "gatsby-plugin-feed": "next",
     "gatsby-plugin-google-analytics": "^2.0.0-rc.2",
     "gatsby-plugin-manifest": "next",

@@ -5028,6 +5028,12 @@ gatsby-plugin-canonical-urls@^2.0.0-rc.2:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+gatsby-plugin-catch-links@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.0.2.tgz#896aaf113ec57b840929b69bdfcf6507e6ce681a"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
 gatsby-plugin-feed@next:
   version "2.0.0-rc.2"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.0.0-rc.2.tgz#12661c6e2e3201f44fa7b194624ff3306fe5dbcb"

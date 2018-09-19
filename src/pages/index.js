@@ -1,12 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import WrapperPortfolio from '../components/Portfolio/WrapperPortfolio'
+import WrapperGrid from '../components/WrapperGrid'
 import PortfolioHero from '../components/Portfolio/PortfolioHero'
 import PortfolioBody from '../components/Portfolio/PortfolioBody'
 import PortfolioBodyTop from '../components/Portfolio/PortfolioBodyTop'
 import PortfolioBodyBottom from '../components/Portfolio/PortfolioBodyBottom'
-import PortfolioContent from '../components/Portfolio/PortfolioContent'
+import PortfolioLink from '../components/Portfolio/PortfolioLink'
 
 import SEO from '../components/SEO'
 
@@ -17,13 +17,13 @@ const Index = ({ data }) => {
   return (
     <Layout>
       <SEO />
-      <WrapperPortfolio>
+      <WrapperGrid>
         <PortfolioHero image={home.heroImage} />
         <PortfolioBody>
           <PortfolioBodyTop body={home.body} />
           <PortfolioBodyBottom>
             {galleries.map(({ node: gallery }) => (
-              <PortfolioContent
+              <PortfolioLink
                 key={gallery.id}
                 slug={gallery.slug}
                 image={gallery.heroImage}
@@ -34,7 +34,7 @@ const Index = ({ data }) => {
             ))}
           </PortfolioBodyBottom>
         </PortfolioBody>
-      </WrapperPortfolio>
+      </WrapperGrid>
     </Layout>
   )
 }

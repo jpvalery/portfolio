@@ -5,8 +5,6 @@ import Img from 'gatsby-image'
 
 const ProjectLink = styled(Link)`
   text-decoration: none;
-  padding: 0;
-  margin: 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     transition: all 0.5s;
     display: inline-block;

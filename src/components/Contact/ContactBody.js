@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.section`
-  grid-area: InfoRight;
+  grid-area: Right;
   margin: 0;
   padding: 0;
   display: grid;
@@ -10,20 +10,19 @@ const Wrapper = styled.section`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto);
   grid-gap: 0;
-  grid-template-areas: 'InfoBodyTop' 'InfoBodyBottom';
+  grid-template-areas: 'ContactBodyTop' 'ContactBodyBottom';
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    margin: 0;
     display: grid;
     height: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto);
-    grid-gap: 0;
-    grid-template-areas: 'InfoBodyTop' 'InfoBodyBottom';
+    grid-gap: 2.5rem;
+    grid-template-areas: 'ContactBodyTop' 'ContactBodyBottom';
   }
 `
 
-const InfoBody = props => {
+const ContactBody = props => {
   return <Wrapper>{props.children}</Wrapper>
 }
 
-export default InfoBody
+export default ContactBody

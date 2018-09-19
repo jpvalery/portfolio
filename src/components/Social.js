@@ -5,12 +5,15 @@ import Ionicon from 'react-ionicons'
 const Wrapper = styled.section`
   margin: 0 auto 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    margin: 0 2rem;
+    margin: 0;
   }
 `
 const SocialIcon = styled.div`
   display: inline-block;
   padding: 0 0.5rem;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    padding: 0 1rem;
+  }
   &:first-child {
     padding-left: 0;
   }

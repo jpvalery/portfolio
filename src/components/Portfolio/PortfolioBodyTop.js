@@ -5,10 +5,8 @@ require('prismjs/themes/prism.css')
 
 const Wrapper = styled.section`
   grid-area: PortfolioBodyTop;
-  margin: 0;
-  padding: 0;
-  min-height: calc(75vh);
-  height: 100%;
+  margin: 3.5rem 0 0;
+  padding: 2rem;
   display: grid;
   grid-template-rows: repeat(auto);
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
@@ -17,8 +15,8 @@ const Wrapper = styled.section`
   }
 `
 const Body = styled.div`
-  margin: 3.5rem 0 0;
-  padding: 2rem;
+  margin: 0;
+  padding: 0;
   h1,
   h2,
   h3 {

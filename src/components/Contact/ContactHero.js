@@ -3,8 +3,12 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 const Wrapper = styled.div`
-  grid-area: InfoLeft;
+  grid-area: Left;
   width: 100%;
+  margin: 3.5rem 0 0;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    margin: 0;
+  }
 `
 
 const Hero = styled.div`
@@ -26,7 +30,7 @@ const Hero = styled.div`
   }
 `
 
-const InfoHero = props => {
+const ContactHero = props => {
   return (
     <Wrapper>
       <Hero>
@@ -36,4 +40,4 @@ const InfoHero = props => {
   )
 }
 
-export default InfoHero
+export default ContactHero

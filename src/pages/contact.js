@@ -3,12 +3,12 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
-import WrapperInfo from '../components/Info/WrapperInfo'
-import InfoHero from '../components/Info/InfoHero'
-import InfoBody from '../components/Info/InfoBody'
-import InfoBodyTop from '../components/Info/InfoBodyTop'
-import InfoBodyBottom from '../components/Info/InfoBodyBottom'
-import ContactForm from '../components/Info/ContactForm'
+import WrapperGrid from '../components/WrapperGrid'
+import ContactHero from '../components/Contact/ContactHero'
+import ContactBody from '../components/Contact/ContactBody'
+import ContactBodyTop from '../components/Contact/ContactBodyTop'
+import ContactBodyBottom from '../components/Contact/ContactBodyBottom'
+import ContactForm from '../components/Contact/ContactForm'
 import SEO from '../components/SEO'
 
 const Contact = ({ data }) => {
@@ -23,15 +23,15 @@ const Contact = ({ data }) => {
         <title>{`Contact - ${config.siteTitle}`}</title>
       </Helmet>
       <SEO postNode={postNode} pagePath="contact" customTitle />
-      <WrapperInfo>
-        <InfoHero image={info.heroImage} />
-        <InfoBody>
-          <InfoBodyTop body={info.body} />
-          <InfoBodyBottom>
+      <WrapperGrid>
+        <ContactHero image={info.heroImage} />
+        <ContactBody>
+          <ContactBodyTop body={info.body} />
+          <ContactBodyBottom>
             <ContactForm />
-          </InfoBodyBottom>
-        </InfoBody>
-      </WrapperInfo>
+          </ContactBodyBottom>
+        </ContactBody>
+      </WrapperGrid>
     </Layout>
   )
 }

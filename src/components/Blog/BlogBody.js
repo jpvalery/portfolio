@@ -2,11 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.section`
-  grid-area: BlogRight;
-  margin: 2rem 0;
+  grid-area: Right;
+  margin: 3.5rem 0;
   padding: 2rem;
   display: grid;
-  height: 100%;
+  grid-template-rows: repeat(auto);
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    margin: 7rem 0 0;
+    height: 100%;
+    min-height: 0;
+  }
 `
 
 const BlogBody = props => {

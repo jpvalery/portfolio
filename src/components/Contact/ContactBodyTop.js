@@ -3,7 +3,7 @@ import styled from 'styled-components'
 require('prismjs/themes/prism.css')
 
 const Wrapper = styled.section`
-  grid-area: InfoBodyTop;
+  grid-area: ContactBodyTop;
   margin: 0;
   padding: 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
@@ -93,7 +93,7 @@ const Body = styled.div`
   }
 `
 
-const InfoBodyTop = props => {
+const ContactBodyTop = props => {
   return (
     <Wrapper>
       <Body
@@ -105,4 +105,4 @@ const InfoBodyTop = props => {
   )
 }
 
-export default InfoBodyTop
+export default ContactBodyTop

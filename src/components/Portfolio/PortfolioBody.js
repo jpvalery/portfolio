@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Wrapper = styled.section`
-  grid-area: HomeRight;
-  margin: 2rem 0;
+  grid-area: Right;
+  margin: 0;
   padding: 0;
   display: grid;
   height: 100%;
@@ -16,7 +16,7 @@ const Wrapper = styled.section`
     height: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto);
-    grid-gap: 0;
+    grid-gap: 2.5rem;
     grid-template-areas: 'PortfolioBodyTop' 'PortfolioBodyBottom';
   }
 `

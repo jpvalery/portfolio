@@ -3,14 +3,16 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 const Wrapper = styled.div`
-  grid-area: HomeLeft;
-  width: 100%;
-`
-
-const Hero = styled.div`
   display: none;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     display: block;
+    grid-area: Left;
+    width: 100%;
+  }
+`
+
+const Hero = styled.div`
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     grid-area: left;
     position: fixed !important;
     pointer-events: none;

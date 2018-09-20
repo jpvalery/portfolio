@@ -64,7 +64,6 @@ const typography = new Typography({
       },
     },
     'h1,h2,h3,h4,h5,h6': {
-      marginTop: rhythm(2),
       color: '#100B00',
       fontFamily: ['IBM Plex Sans', 'sans-serif'].join(','),
       fontWeight: options.headerWeight,

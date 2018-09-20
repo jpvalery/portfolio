@@ -2,30 +2,30 @@ import Typography from 'typography'
 import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
 
 const typography = new Typography({
-  title: 'Wordpress Theme 2016',
+  title: 'Montserrat + Lora',
   baseFontSize: '16px',
-  baseLineHeight: 1.75,
+  baseLineHeight: 1.618,
   scaleRatio: 5 / 2,
   googleFonts: [
     {
-      name: 'IBM Plex Sans',
-      styles: ['700'],
+      name: 'Montserrat',
+      styles: ['900', '900i'],
     },
     {
-      name: 'IBM Plex Serif',
-      styles: ['400', '400i', '700', '700i'],
+      name: 'Source Code Pro',
+      styles: ['400', '900'],
     },
     {
       name: 'IBM Plex Mono',
       styles: ['400'],
     },
   ],
-  headerFontFamily: ['IBM Plex Sans', 'Helvetica', 'serif'],
-  bodyFontFamily: ['IBM Plex Serif', 'Georgia', 'serif'],
+  headerFontFamily: ['Montserrat', 'Helvetica', 'sans-serif'],
+  bodyFontFamily: ['Source Code Pro', 'Helvetica', 'sans-serif'],
   bodyColor: '#223843',
-  headerWeight: 700,
+  headerWeight: 900,
   bodyWeight: 400,
-  boldWeight: 700,
+  boldWeight: 900,
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
     blockquote: {
       ...scale(1 / 5),
@@ -65,7 +65,7 @@ const typography = new Typography({
     },
     'h1,h2,h3,h4,h5,h6': {
       color: '#100B00',
-      fontFamily: ['IBM Plex Sans', 'sans-serif'].join(','),
+      fontFamily: ['Montserrat', 'Helvetica', 'serif'].join(','),
       fontWeight: options.headerWeight,
     },
     h4: {

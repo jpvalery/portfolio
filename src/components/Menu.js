@@ -6,15 +6,16 @@ import Social from '../components/Social'
 
 const Nav = styled.nav`
   background: ${props => props.theme.colors.base};
+  opacity: 0.95;
+  backdrop-filter: blur(50px);
   width: 100%;
   height: 3.5rem;
   position: fixed;
+  border-bottom: 1px ${props => props.theme.colors.tertiary};
   left: 0;
   top: 0;
   z-index: 998;
   transition: 0.5s ease;
-  opacity: 0.95;
-  backdrop-filter: blur(50px);
 `
 const Title = styled(Link)`
   text-decoration: none;
@@ -36,8 +37,9 @@ const Header = styled.header`
   transition: 0.5s ease;
   div {
     .bm-overlay {
-      background: rgba(16, 11, 0, 0.95) !important;
-      backdrop-filter: blur(5px) !important;
+      background: ${props => props.theme.colors.tertiary} !important;
+      opacity: 0.95;
+      backdrop-filter: blur(50px);
       left: 0;
     }
     .bm-menu {
@@ -56,8 +58,9 @@ const Header = styled.header`
       right: 2rem !important;
     }
     .bm-burger-bars {
-      background: #100b00;
+      background: ${props => props.theme.colors.tertiary};
       height: 0.35rem;
+      opacity: ${props => (props.isOpen ? '0' : '1')};
     }
     .bm-burger-button {
       position: relative;
@@ -133,7 +136,7 @@ const Menu = () => {
             </li>
             <li>
               <h2>
-                <Link to="/contact">Info</Link>
+                <Link to="/contact">Contact</Link>
               </h2>
             </li>
             <li>

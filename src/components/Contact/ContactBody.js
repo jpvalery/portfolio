@@ -16,7 +16,7 @@ const Wrapper = styled.section`
     height: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto);
-    grid-gap: 2.5rem;
+    grid-gap: 0;
     grid-template-areas: 'ContactBodyTop' 'ContactBodyBottom';
   }
 `

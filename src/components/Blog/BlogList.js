@@ -5,6 +5,8 @@ import Img from 'gatsby-image'
 
 const ProjectLink = styled(Link)`
   text-decoration: none;
+  margin: 0.25rem 1rem 2rem;
+  padding: 0.25rem 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     transition: all 0.5s;
     display: inline-block;
@@ -21,6 +23,7 @@ const ProjectLink = styled(Link)`
 `
 const Cover = styled.div`
   position: relative;
+  box-shadow: 0 0 10px -2px ${props => props.theme.colors.tertiary};
   div {
     height: 100% !important;
     width: 100%;
@@ -28,6 +31,7 @@ const Cover = styled.div`
     display: block;
   }
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    box-shadow: 0 0 0 0 ${props => props.theme.colors.tertiary};
     position: fixed !important;
     pointer-events: none;
     transition: opacity 0.3s, visibility 0.3s;
@@ -46,20 +50,18 @@ const Cover = styled.div`
 `
 const Title = styled.h1`
   text-transform: uppercase;
-  padding: 1rem 1rem 0;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    padding: 0 2rem 0.25rem;
-    z-index: 3;
-  }
+  margin: 0;
+  padding: 1rem 1rem 0.25rem;
+  z-index: 3;
 `
 const Date = styled.h4`
-  margin-bottom: 0;
-  padding: 0.25rem 2rem;
+  margin: 0;
+  padding: 0.25rem 1rem;
   text-transform: none;
 `
 const Excerpt = styled.p`
-  margin-bottom: 0;
-  padding: 0.25rem 2rem 2rem;
+  margin: 0;
+  padding: 0.25rem 1rem;
   font-weight: normal;
   text-transform: none;
 `

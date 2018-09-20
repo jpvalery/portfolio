@@ -22,6 +22,10 @@ injectGlobal`
     padding: 0;
     border: 0;
     vertical-align: baseline;
+    &::selection {
+      background: #100B00;
+      color: #E6E3E1;
+}
   }
 
   /* Added to Fix Footer to bottom of viewport */

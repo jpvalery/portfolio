@@ -28,8 +28,19 @@ const Body = styled.div`
   a {
     transition: 0.2s;
     color: ${props => props.theme.colors.tertiary};
+    font-weight: 700;
+    font-style: italic;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 ${props => props.theme.colors.base},
+      -1px 1px 0 ${props => props.theme.colors.base},
+      2px 0 0 ${props => props.theme.colors.base},
+      -2px 0 0 ${props => props.theme.colors.base};
+    box-shadow: inset 0 -1px 0 0 ${props => props.theme.colors.base},
+      inset 0 -2px 0 0 ${props => props.theme.colors.tertiary};
     &:hover {
       color: ${props => props.theme.colors.highlight};
+      box-shadow: inset 0 -1px 0 0 ${props => props.theme.colors.base},
+        inset 0 -2px 0 0 ${props => props.theme.colors.highlight};
     }
   }
 

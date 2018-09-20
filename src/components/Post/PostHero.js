@@ -6,19 +6,21 @@ const Wrapper = styled.div`
   width: 100%;
   padding: 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    padding: 0 2rem;
+    padding: 2rem;
   }
 `
 
 const Hero = styled.div`
   position: relative;
+  width: calc(100%);
+  margin: 0 auto;
+  box-shadow: 0 0 10px -2px grey;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    width: calc(100% - 1rem);
     grid-area: left;
     pointer-events: none;
     transition: opacity 0.3s, visibility 0.3s;
-    width: 100%;
-    height: 50vh;
-    z-index: -99;
+    height: 55vh;
     div {
       height: 100% !important;
       object-fit: cover !important;

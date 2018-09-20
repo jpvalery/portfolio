@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Ionicon from 'react-ionicons'
 
 const Wrapper = styled.section`
-  margin: 0 auto 0;
+  margin: 1rem auto 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     margin: 0;
   }

@@ -4,20 +4,23 @@ import { Link } from 'gatsby'
 import Headroom from 'react-headroom'
 
 const Wrapper = styled.section`
-  background: ${props => props.theme.colors.base};
+  background: ${props => props.theme.colors.tertiary};
+  opacity: 0.95;
+  backdrop-filter: blur(50px);
   top: 3.5rem;
   margin: 3.5rem auto 0;
-  padding: 0 2rem 2rem;
+  padding: 2rem;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  opacity: 0.95;
-  backdrop-filter: blur(10px);
 `
 const BackButton = styled(Link)`
+  h4 {
+    color: ${props => props.theme.colors.base} !important;
+  }
   margin: 1rem 0 0.5rem;
   flex-grow: 1;
   width: 100%;
@@ -34,22 +37,19 @@ const BackButton = styled(Link)`
   }
 `
 const Title = styled.h1`
-  margin: 0.5rem 0 1rem;
+  color: ${props => props.theme.colors.base};
+  padding: 0 1rem 1rem;
   flex-grow: 1;
   width: 100%;
   text-transform: uppercase;
   text-align: center;
-  @media screen and (min-width: ${props => props.theme.responsive.small}) {
-    margin: 0 0 2rem;
-    line-height: 1.2;
-  }
 `
 const List = styled.ul`
   text-transform: capitalize;
-  flex-grow: 1;
   font-weight: 600;
   width: 100%;
   padding: 0 1rem;
+  margin: 0 auto;
   text-align: center;
   display: block;
   position: relative;
@@ -59,14 +59,14 @@ const Tag = styled.li`
   display: inline-block;
   a {
     transition: 0.2s;
-    background: ${props => props.theme.colors.tertiary};
+    background: ${props => props.theme.colors.base};
     padding: 0.5rem 1rem 0.5rem 1rem;
     text-transform: capitalize;
-    margin: 0 0.5rem;
+    margin: 0.5rem;
     text-decoration: none;
-    color: ${props => props.theme.colors.base};
+    color: ${props => props.theme.colors.tertiary};
     &:last-child {
-      margin: 0 0.5rem;
+      margin: 0.5rem;
     }
     &:hover {
       background: ${props => props.theme.colors.secondary};

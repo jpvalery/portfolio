@@ -82,6 +82,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-catch-links',
+    'gatsby-plugin-page-transitions',
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',

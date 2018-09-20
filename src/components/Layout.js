@@ -6,6 +6,7 @@ import theme from '../styles/theme'
 import config from '../utils/siteConfig'
 import Wrapper from '../components/Wrapper'
 import Menu from '../components/Menu'
+import PageTransition from 'gatsby-plugin-page-transitions'
 
 const Layout = ({ children }) => {
   return (
@@ -28,7 +29,9 @@ const Layout = ({ children }) => {
       <ThemeProvider theme={theme}>
         <Wrapper>
           <Menu />
-          <div className="siteContent">{children}</div>
+          <PageTransition>
+            <div className="siteContent">{children}</div>
+          </PageTransition>
         </Wrapper>
       </ThemeProvider>
     </div>

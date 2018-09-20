@@ -85,6 +85,7 @@ const Tag = styled.li`
 const ArticleHead = props => {
   return (
     <Headroom
+      upTolerance={56}
       style={{
         zIndex: '899',
       }}

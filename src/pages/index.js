@@ -54,7 +54,7 @@ export const query = graphql`
           heroImage {
             title
             fluid(maxWidth: 1000) {
-              ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid_withWebp
             }
           }
           body {
@@ -72,7 +72,7 @@ export const query = graphql`
       heroImage {
         title
         fluid(maxWidth: 1800) {
-          ...GatsbyContentfulFluid_tracedSVG
+          ...GatsbyContentfulFluid_withWebp
         }
       }
       body {

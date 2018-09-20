@@ -26,14 +26,20 @@ const Body = styled.div`
     margin: 1rem 0;
   }
 
-  a {
+   a {
     transition: 0.2s;
-text-decoration: underline;
     color: ${props => props.theme.colors.tertiary};
+font-weight: 700;
+font-style: italic;
+text-decoration: none;
+  text-shadow: 1px 1px 0 ${props => props.theme.colors.base}, -1px 1px 0 ${props => props.theme.colors.base}, 2px 0 0 ${props => props.theme.colors.base}, -2px 0 0 ${props => props.theme.colors.base};
+  box-shadow: inset 0 -1px 0 0 ${props => props.theme.colors.base}, inset 0 -3px 0 0 ${props => props.theme.colors.tertiary};
     &:hover {
       color: ${props => props.theme.colors.highlight};
+box-shadow: inset 0 -1px 0 0 ${props => props.theme.colors.base}, inset 0 -3px 0 0 ${props => props.theme.colors.highlight};
     }
   }
+
 
   del {
     text-decoration: line-through;

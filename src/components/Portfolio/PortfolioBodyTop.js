@@ -45,6 +45,7 @@ const Body = styled.div`
   a {
     transition: 0.2s;
     color: ${props => props.theme.colors.tertiary};
+text-decoration: underline;
     &:hover {
       color: ${props => props.theme.colors.highlight};
     }

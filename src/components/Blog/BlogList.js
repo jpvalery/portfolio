@@ -8,9 +8,6 @@ const ProjectLink = styled(Link)`
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     transition: all 0.5s;
     display: inline-block;
-    h1 {
-      color: ${props => props.theme.colors.secondary};
-    }
     &:hover div {
       @supports (object-fit: cover) {
         opacity: 1;
@@ -55,10 +52,9 @@ const Title = styled.h1`
     z-index: 3;
   }
 `
-const Date = styled.p`
+const Date = styled.h4`
   margin-bottom: 0;
   padding: 0.25rem 2rem;
-  font-weight: bold;
   text-transform: none;
 `
 const Excerpt = styled.p`
@@ -74,7 +70,9 @@ const BlogList = props => {
         <Img fluid={props.image.fluid} backgroundColor={'#eeeeee'} />
       </Cover>
       <Title>{props.title}</Title>
-      <Date>{props.date}</Date>
+      <Date>
+        Publish: {props.date} | Reading time: {props.time} min
+      </Date>
       <Excerpt
         dangerouslySetInnerHTML={{
           __html: props.excerpt.childMarkdownRemark.excerpt,

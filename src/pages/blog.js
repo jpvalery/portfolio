@@ -24,6 +24,7 @@ const Blog = ({ data }) => {
               image={post.heroImage}
               title={post.title}
               date={post.publishDate}
+              time={post.body.childMarkdownRemark.timeToRead}
               excerpt={post.body}
             />
           ))}
@@ -54,7 +55,8 @@ export const query = graphql`
           body {
             childMarkdownRemark {
               html
-              excerpt(pruneLength: 80)
+              excerpt(pruneLength: 240)
+              timeToRead
             }
           }
         }

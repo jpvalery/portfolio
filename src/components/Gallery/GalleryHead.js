@@ -77,8 +77,11 @@ const Tag = styled.li`
 const GalleryHead = props => {
   return (
     <Headroom
+      upTolerance={108}
+      downTolerance={54}
       style={{
         zIndex: '899',
+        transition: 'all .5s ease-in-out',
       }}
     >
       <Wrapper>

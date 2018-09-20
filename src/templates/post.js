@@ -11,7 +11,7 @@ import PostHero from '../components/Post/PostHero'
 import PostArticle from '../components/Post/PostArticle'
 import SEO from '../components/SEO'
 
-const PostTemplate = ({ data }) => {
+const PostTemplate = ({ data, location }) => {
   const {
     title,
     slug,
@@ -27,6 +27,7 @@ const PostTemplate = ({ data }) => {
     data.allContentfulPost.edges,
     ({ node: post }) => post.id === id
   )
+  console.log(location)
 
   return (
     <Layout>

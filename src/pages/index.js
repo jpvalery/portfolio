@@ -10,10 +10,10 @@ import PortfolioLink from '../components/Portfolio/PortfolioLink'
 
 import SEO from '../components/SEO'
 
-const Index = ({ data }) => {
+const Index = ({ data, location }) => {
   const galleries = data.allContentfulGallery.edges
   const home = data.contentfulHome
-
+  console.log(location)
   return (
     <Layout>
       <SEO />

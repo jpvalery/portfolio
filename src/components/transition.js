@@ -39,7 +39,7 @@ class TransitionHandler extends React.Component {
   }
 }
 
-const Transition = ({ children, location }) => (
+const Transition = ({ children }) => (
   <TransitionGroup>
     <CSSTransition
       classNames={{ enter, enterActive, exit, exitActive }}

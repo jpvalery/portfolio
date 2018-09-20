@@ -11,11 +11,12 @@ import ContactBodyBottom from '../components/Contact/ContactBodyBottom'
 import ContactForm from '../components/Contact/ContactForm'
 import SEO from '../components/SEO'
 
-const Contact = ({ data }) => {
+const Contact = ({ data, location }) => {
   const postNode = {
     title: `Contact - ${config.siteTitle}`,
   }
   const info = data.contentfulAbout
+  console.log(location)
 
   return (
     <Layout>

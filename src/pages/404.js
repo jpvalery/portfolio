@@ -23,18 +23,19 @@ const Title = styled.h1`
   line-height: 1.2;
 `
 
-const NotFoundPage = () => (
-  <Layout>
-    <Helmet>
-      <title>404 - Page Not Found</title>
-      <meta name="description" content="Page not found" />
-    </Helmet>
+const NotFoundPage = ({ location }) =>
+  console.log(location)(
+    <Layout>
+      <Helmet>
+        <title>404 - Page Not Found</title>
+        <meta name="description" content="Page not found" />
+      </Helmet>
 
-    <Box>
-      <Title>Error 404</Title>
-      <Text>Sorry, that page can't be found</Text>
-    </Box>
-  </Layout>
-)
+      <Box>
+        <Title>Error 404</Title>
+        <Text>Sorry, that page can't be found</Text>
+      </Box>
+    </Layout>
+  )
 
 export default NotFoundPage

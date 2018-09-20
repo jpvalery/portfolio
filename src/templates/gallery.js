@@ -8,9 +8,10 @@ import GalleryComposition from '../components/Gallery/GalleryComposition'
 import GalleryHead from '../components/Gallery/GalleryHead'
 import SEO from '../components/SEO'
 
-const GalleryTemplate = ({ data }) => {
+const GalleryTemplate = ({ data, location }) => {
   const { title, slug, tags, images } = data.contentfulGallery
   const galleryNode = data.contentfulGallery
+  console.log(location)
   console.log(images)
 
   return (

@@ -8,11 +8,13 @@ import WrapperTag from '../components/Tag/WrapperTag'
 import TagList from '../components/Tag/TagList'
 import TagTitle from '../components/Tag/TagTitle'
 
-const TagTemplate = ({ data }) => {
+const TagTemplate = ({ data, location }) => {
   const { title, slug } = data.contentfulTag
 
   const posts = sortBy(data.contentfulTag.post, 'publishDate').reverse()
   const galleries = sortBy(data.contentfulTag.gallery, 'publishDate').reverse()
+
+  console.log(location)
 
   return (
     <Layout>

@@ -8,7 +8,7 @@ import Wrapper from '../components/Wrapper'
 import Menu from '../components/Menu'
 import Transition from '../components/transition'
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   return (
     <div className="siteRoot">
       <Helmet>

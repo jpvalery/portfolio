@@ -7,9 +7,10 @@ import BlogBody from '../components/Blog/BlogBody'
 import BlogList from '../components/Blog/BlogList'
 import SEO from '../components/SEO'
 
-const Blog = ({ data }) => {
+const Blog = ({ data, location }) => {
   const posts = data.allContentfulPost.edges
   const blog = data.contentfulBlog
+  console.log(location)
 
   return (
     <Layout>

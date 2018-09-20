@@ -6,7 +6,7 @@ import theme from '../styles/theme'
 import config from '../utils/siteConfig'
 import Wrapper from '../components/Wrapper'
 import Menu from '../components/Menu'
-import Transition from '../components/transition'
+import Transition from '../components/Transition'
 
 const Layout = ({ children, location }) => {
   return (

@@ -13,16 +13,17 @@ const enterActive = css`
 `
 
 const exit = css`
-  left: 50%;
   position: absolute;
+  left: 50%;
+
   top: 278px;
   transform: translateX(-50%);
   opacity: 1;
 `
 
 const exitActive = css`
-  left: 50%;
   position: absolute;
+  left: 50%;
   top: 278px;
   transform: translateX(-50%);
   opacity: 0.01;

@@ -1,12 +1,12 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
+import { ThemeProvider } from 'emotion-theming'
 import Helmet from 'react-helmet'
 import '../styles/global'
 import theme from '../styles/theme'
 import config from '../utils/siteConfig'
 import Wrapper from '../components/Wrapper'
 import Menu from '../components/Menu'
-import PageTransition from 'gatsby-plugin-page-transitions'
+import Transition from '../components/transition'
 
 const Layout = ({ children }) => {
   return (
@@ -29,9 +29,9 @@ const Layout = ({ children }) => {
       <ThemeProvider theme={theme}>
         <Wrapper>
           <Menu />
-          <PageTransition>
+          <Transition location={location}>
             <div className="siteContent">{children}</div>
-          </PageTransition>
+          </Transition>
         </Wrapper>
       </ThemeProvider>
     </div>

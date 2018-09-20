@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'react-emotion'
 import 'whatwg-fetch'
 
 const Form = styled.form`

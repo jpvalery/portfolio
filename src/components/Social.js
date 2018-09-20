@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'react-emotion'
 import Ionicon from 'react-ionicons'
 
 const Wrapper = styled.section`

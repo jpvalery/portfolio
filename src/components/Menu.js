@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import styled from 'styled-components'
+import styled, { css } from 'react-emotion'
 import { slide as SideMenu } from 'react-burger-menu'
 import Social from '../components/Social'
 

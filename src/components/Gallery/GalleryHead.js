@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'react-emotion'
 import { Link } from 'gatsby'
 import Headroom from 'react-headroom'
 

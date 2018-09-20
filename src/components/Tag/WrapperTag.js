@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'react-emotion'
 
 const Wrapper = styled.section`
   padding-top: 3.5rem;

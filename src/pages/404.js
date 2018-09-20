@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'react-emotion'
 import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 

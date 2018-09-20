@@ -43,7 +43,6 @@ const Header = styled.header`
     }
     .bm-menu {
       padding: 2rem 0;
-      font-size: 2rem;
       color: ${props => props.theme.colors.base};
     }
     .bm-cross {
@@ -82,13 +81,12 @@ const MenuMobile = styled(SideMenu)`
   li {
     display: block;
     margin: 0 2rem;
-    padding: 0.8rem 0;
+    padding: 0.618rem 0;
     text-align: right;
   }
   a {
     text-decoration: none;
     padding: 1rem;
-    font-weight: 800;
     transition: all 0.5s;
     color: ${props => props.theme.colors.base};
     text-transform: uppercase;
@@ -125,13 +123,19 @@ const Menu = () => {
         <MenuMobile right width={'100%'} isOpen={false}>
           <ul>
             <li>
-              <Link to="/">Portfolio</Link>
+              <h2>
+                <Link to="/">Portfolio</Link>
+              </h2>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
+              <h2>
+                <Link to="/blog">Blog</Link>
+              </h2>
             </li>
             <li>
-              <Link to="/contact">Info</Link>
+              <h2>
+                <Link to="/contact">Info</Link>
+              </h2>
             </li>
             <li>
               <Social />

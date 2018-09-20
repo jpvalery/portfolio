@@ -4,10 +4,10 @@ import styled from 'styled-components'
 const Wrapper = styled.section`
   grid-area: Right;
   margin: 3.5rem 0;
-  padding: 2rem;
   display: grid;
   grid-template-rows: repeat(auto);
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    padding: 2rem;
     margin: 7rem 0 0;
     height: 100%;
     min-height: 0;

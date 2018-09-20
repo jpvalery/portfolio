@@ -2,64 +2,91 @@ import Typography from 'typography'
 import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
 
 const typography = new Typography({
-  title: 'Plex',
+  title: 'Wordpress Theme 2016',
   baseFontSize: '16px',
-  baseLineHeight: 1.45,
-  blockMarginBottom: 0.8,
+  baseLineHeight: 1.75,
+  scaleRatio: 5 / 2,
   googleFonts: [
     {
-      name: 'Open Sans',
-      styles: ['400', '700', '800'],
+      name: 'IBM Plex Sans',
+      styles: ['700'],
+    },
+    {
+      name: 'IBM Plex Serif',
+      styles: ['400', '400i', '700', '700i'],
+    },
+    {
+      name: 'IBM Plex Mono',
+      styles: ['400'],
     },
   ],
-  headerFontFamily: ['Open Sans', 'sans-serif'],
-  bodyFontFamily: ['Open Sans', 'sans-serif'],
+  headerFontFamily: ['IBM Plex Sans', 'Helvetica', 'serif'],
+  bodyFontFamily: ['IBM Plex Serif', 'Georgia', 'serif'],
   bodyColor: '#223843',
-  headerWeight: 800,
+  headerWeight: 700,
   bodyWeight: 400,
   boldWeight: 700,
-  scaleRatio: 2,
   overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
-    'h1,h2,h3,h4,h5,h6': {
-      lineHeight: 1.1,
-      fontWeight: options.boldWeight,
-    },
-    a: {
-      color: '#100B00',
-      textDecoration: 'underline',
-      fontWeight: options.boldWeight,
-    },
-    'a:hover,a:active': {
-      color: '#E94F37',
-    },
     blockquote: {
       ...scale(1 / 5),
-      color: '#100B00',
       fontStyle: 'italic',
       paddingLeft: rhythm(13 / 16),
-      marginLeft: 0,
-      borderLeft: `${rhythm(3 / 16)} solid '#E94F37'`,
+      marginLeft: rhythm(-1),
     },
     'blockquote > :last-child': {
       marginBottom: 0,
     },
     'blockquote cite': {
       ...adjustFontSizeTo(options.baseFontSize),
-      color: '#100B00',
+      color: options.bodyColor,
       fontWeight: options.bodyWeight,
     },
     'blockquote cite:before': {
       content: '"— "',
     },
+    'pre[class*="language-"],code[class*="language-"]': {
+      fontFamily: ['IBM Plex Mono', 'monospace'].join(','),
+    },
+    ul: {
+      listStyle: 'disc',
+    },
+    'ul,ol': {
+      marginLeft: 0,
+    },
     [MOBILE_MEDIA_QUERY]: {
-      html: {
-        fontSize: `${(16 / 16) * 100}%`,
+      'ul,ol': {
+        marginLeft: rhythm(1),
       },
       blockquote: {
         marginLeft: rhythm(-3 / 4),
         marginRight: 0,
         paddingLeft: rhythm(9 / 16),
       },
+    },
+    'h1,h2,h3,h4,h5,h6': {
+      marginTop: rhythm(2),
+      color: '#100B00',
+      fontFamily: ['IBM Plex Sans', 'sans-serif'].join(','),
+      fontWeight: options.headerWeight,
+    },
+    h4: {
+      letterSpacing: '0.140625em',
+      textTransform: 'uppercase',
+    },
+    h6: {
+      fontStyle: 'italic',
+    },
+    a: {
+      color: '#100B00',
+      textDecoration: 'none',
+    },
+    'a:hover,a:active': {
+      boxShadow: 'none',
+    },
+    'mark,ins': {
+      color: 'white',
+      padding: `${rhythm(1 / 16)} ${rhythm(1 / 8)}`,
+      textDecoration: 'none',
     },
   }),
 })

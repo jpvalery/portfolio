@@ -10,9 +10,6 @@ const ProjectLink = styled(Link)`
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     transition: all 0.5s;
     display: inline-block;
-    h1 {
-      color: ${props => props.theme.colors.secondary};
-    }
     &:hover div {
       @supports (object-fit: cover) {
         opacity: 1;
@@ -61,6 +58,7 @@ const Excerpt = styled.p`
   padding: 0.25rem 2rem 2rem;
   font-weight: normal;
   text-transform: none;
+  color: ${props => props.theme.colors.secondary};
 `
 const PortfolioContent = props => {
   return (

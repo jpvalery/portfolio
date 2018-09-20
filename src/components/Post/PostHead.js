@@ -44,7 +44,7 @@ const Title = styled.h1`
     line-height: 1.2;
   }
 `
-const Date = styled.p`
+const Date = styled.h4`
   margin-bottom: 1rem;
   padding: 0.25rem 1rem;
   text-align: left;
@@ -94,7 +94,7 @@ const ArticleHead = props => {
         <BackButton to="/blog/">⬅ Back</BackButton>
         <Title>{props.title}</Title>
         <Date>
-          {props.date} | Reading time: {props.time} min
+          Publish: {props.date} <br /> Reading time: {props.time} min
         </Date>
         <List>
           {props.tags.map(tag => (

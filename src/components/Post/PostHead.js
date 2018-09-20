@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { css } from 'react-emotion'
+import styled from 'react-emotion'
 import { Link } from 'gatsby'
 import Headroom from 'react-headroom'
 
@@ -18,9 +18,6 @@ const Wrapper = styled.section`
   flex-wrap: wrap;
 `
 const BackButton = styled(Link)`
-  h4 {
-    color: ${props => props.theme.colors.base} !important;
-  }
   margin: 1rem 0 0.5rem;
   flex-grow: 1;
   width: 100%;
@@ -28,6 +25,9 @@ const BackButton = styled(Link)`
   justify-self: center;
   text-align: center;
   text-decoration: none;
+  h4 {
+    color: ${props => props.theme.colors.base} !important;
+  }
   @media screen and (min-width: ${props => props.theme.responsive.small}) {
     position: fixed;
     left: 2rem;

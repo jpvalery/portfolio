@@ -1,7 +1,6 @@
 import React from 'react'
-import styled, { css } from 'react-emotion'
+import styled from 'react-emotion'
 import { Link } from 'gatsby'
-import Prism from 'prismjs'
 require('../../styles/prism.css')
 
 const Wrapper = styled.div`
@@ -113,7 +112,7 @@ const Body = styled.div`
       width: auto;
       max-width: 45vw;
     }
-  }
+  
 `
 const LinkWrapper = styled.div`
   display: flex;

@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { css } from 'react-emotion'
+import styled from 'react-emotion'
 import Img from 'gatsby-image'
 
 const Wrapper = styled.div`

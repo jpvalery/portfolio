@@ -96,7 +96,7 @@ const ArticleHead = props => {
         </BackButton>
         <Title>{props.title}</Title>
         <Date>
-          Publish: {props.date} <br /> Reading time: {props.time} min
+          Published: {props.date} <br /> Reading time: {props.time} min
         </Date>
         <List>
           {props.tags.map(tag => (

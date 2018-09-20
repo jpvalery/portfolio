@@ -71,7 +71,7 @@ const BlogList = props => {
       </Cover>
       <Title>{props.title}</Title>
       <Date>
-        Publish: {props.date} | Reading time: {props.time} min
+        Published: {props.date} | Reading time: {props.time} min
       </Date>
       <Excerpt
         dangerouslySetInnerHTML={{

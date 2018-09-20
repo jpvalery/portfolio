@@ -47,6 +47,7 @@ const Cover = styled.div`
 `
 const Title = styled.h1`
   text-transform: uppercase;
+  margin: 0;
   padding: 1rem 2rem 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     padding: 0 2rem;

@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { css } from 'react-emotion'
+import styled, { css } from 'react-emotion'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 const enter = css`
@@ -9,25 +9,26 @@ const enter = css`
 
 const enterActive = css`
   opacity: 1;
-  transition: opacity 5000ms ease-in;
+  transition: opacity 500ms ease-in;
 `
 
 const exit = css`
-  position: absolute;
-  left: 50%;
-
-  top: 278px;
-  transform: translateX(-50%);
   opacity: 1;
 `
 
 const exitActive = css`
-  position: absolute;
   left: 50%;
-  top: 278px;
+  position: absolute;
   transform: translateX(-50%);
-  opacity: 0.01;
-  transition: opacity 250ms ease-out;
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+`
+
+const OuterHelper = styled.div`
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  position: relative;
 `
 
 class TransitionHandler extends React.Component {
@@ -41,10 +42,10 @@ class TransitionHandler extends React.Component {
 }
 
 const Transition = ({ children, location }) => (
-  <TransitionGroup>
+  <TransitionGroup component={OuterHelper}>
     <CSSTransition
       classNames={{ enter, enterActive, exit, exitActive }}
-      timeout={{ enter: 2000, exit: 2000 }}
+      timeout={{ enter: 500, exit: 500 }}
       key={location.pathname}
     >
       <TransitionHandler location={location}>{children}</TransitionHandler>

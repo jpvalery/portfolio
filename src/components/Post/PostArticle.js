@@ -5,13 +5,13 @@ import Prism from 'prismjs'
 require('../../styles/prism.css')
 
 const Wrapper = styled.div`
-  grid-area: ArticleRight;
-  margin: 0;
+  margin: 0 auto;
   padding: 0 2rem 2rem;
 `
 
 const Body = styled.div`
-  margin: 0;
+  margin: 0 auto;
+  padding: 1rem 0 2rem;
   h1,
   h2,
   h3 {

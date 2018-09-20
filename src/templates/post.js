@@ -41,14 +41,12 @@ const PostTemplate = ({ data }) => {
         time={body.childMarkdownRemark.timeToRead}
       />
       <WrapperPost>
-        <PostBody>
-          <PostHero image={heroImage} />
-          <PostArticle
-            body={body}
-            previous={postIndex.previous}
-            next={postIndex.next}
-          />
-        </PostBody>
+        <PostHero image={heroImage} />
+        <PostArticle
+          body={body}
+          previous={postIndex.previous}
+          next={postIndex.next}
+        />
       </WrapperPost>
     </Layout>
   )

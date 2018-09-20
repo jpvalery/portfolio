@@ -3,21 +3,21 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 
 const Wrapper = styled.div`
-  grid-area: ArticleLeft;
   width: 100%;
+  padding: 0;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    padding: 0 2rem;
+  }
 `
 
 const Hero = styled.div`
   position: relative;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     grid-area: left;
-    position: fixed !important;
     pointer-events: none;
     transition: opacity 0.3s, visibility 0.3s;
-    width: calc(50% - 3rem);
-    height: calc(100vh - 5.5rem);
-    top: 3.5rem;
-    left: 2rem;
+    width: 100%;
+    height: 50vh;
     z-index: -99;
     div {
       height: 100% !important;

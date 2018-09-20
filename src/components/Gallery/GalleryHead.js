@@ -82,7 +82,9 @@ const GalleryHead = props => {
       }}
     >
       <Wrapper>
-        <BackButton to="/">⬅ Back</BackButton>
+        <BackButton to="/">
+          <h4>⬅ Back</h4>
+        </BackButton>
         <Title>{props.title}</Title>
         <List>
           {props.tags.map(tag => (

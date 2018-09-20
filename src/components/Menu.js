@@ -23,7 +23,6 @@ const Title = styled(Link)`
     text-transform: uppercase;
     font-size: 1rem;
     padding: 1.25rem 2rem;
-    color: ${props => props.theme.colors.secondary};
   }
 `
 const Header = styled.header`

@@ -91,7 +91,9 @@ const ArticleHead = props => {
       }}
     >
       <Wrapper>
-        <BackButton to="/blog/">⬅ Back</BackButton>
+        <BackButton to="/blog/">
+          <h4>⬅ Back</h4>
+        </BackButton>
         <Title>{props.title}</Title>
         <Date>
           Publish: {props.date} <br /> Reading time: {props.time} min

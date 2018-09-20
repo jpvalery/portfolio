@@ -15,7 +15,7 @@ const GalleryTemplate = ({ data, location }) => {
   console.log(images)
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Helmet>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>

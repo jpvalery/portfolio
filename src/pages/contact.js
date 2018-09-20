@@ -19,7 +19,7 @@ const Contact = ({ data, location }) => {
   console.log(location)
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Helmet>
         <title>{`Contact - ${config.siteTitle}`}</title>
       </Helmet>

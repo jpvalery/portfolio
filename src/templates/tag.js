@@ -17,7 +17,7 @@ const TagTemplate = ({ data, location }) => {
   console.log(location)
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Helmet>
         <title>{`Tag: ${title} - ${config.siteTitle}`}</title>
         <meta

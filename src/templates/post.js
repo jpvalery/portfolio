@@ -30,7 +30,7 @@ const PostTemplate = ({ data, location }) => {
   console.log(location)
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Helmet>
         <title>{`${title} - ${config.siteTitle}`}</title>
       </Helmet>

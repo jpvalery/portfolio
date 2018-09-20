@@ -25,7 +25,7 @@ const Title = styled.h1`
 
 const NotFoundPage = ({ location }) =>
   console.log(location)(
-    <Layout>
+    <Layout location={location}>
       <Helmet>
         <title>404 - Page Not Found</title>
         <meta name="description" content="Page not found" />

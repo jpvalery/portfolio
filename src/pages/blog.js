@@ -13,7 +13,7 @@ const Blog = ({ data, location }) => {
   console.log(location)
 
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO />
       <WrapperGrid>
         <BlogHero image={blog.heroImage} />

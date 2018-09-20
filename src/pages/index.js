@@ -15,7 +15,7 @@ const Index = ({ data, location }) => {
   const home = data.contentfulHome
   console.log(location)
   return (
-    <Layout>
+    <Layout location={location}>
       <SEO />
       <WrapperGrid>
         <PortfolioHero image={home.heroImage} />

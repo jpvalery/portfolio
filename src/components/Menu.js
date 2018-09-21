@@ -108,7 +108,7 @@ const MenuMobile = styled(SideMenu)`
   svg {
     text-align: right;
     transition: all 0.2s;
-    fill: ${props => props.theme.colors.base};
+    fill: ${props => props.theme.colors.base} !important;
     &:hover {
       fill: ${props => props.theme.colors.highlight};
     }

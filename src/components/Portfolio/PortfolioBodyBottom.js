@@ -8,7 +8,7 @@ const Wrapper = styled.section`
   display: grid;
   grid-gap: 0;
   grid-template-columns: repeat(1, 1fr);
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+  @media screen and (min-width: ${props => props.theme.responsive.large}) {
     grid-template-columns: repeat(2, 1fr);
   }
 `

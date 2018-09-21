@@ -25,62 +25,34 @@ injectGlobal`
     &::selection {
       background: #100B00;
       color: #E6E3E1;
+      text-shadow: 0 0 0 #E6E3E1,
+          0 0 0 #E6E3E1,
+          0 0 0 #E6E3E1,
+          0 0 0 #E6E3E1 !important;
 }
   }
-
-  /* Added to Fix Footer to bottom of viewport */
-  html, body {
-    height: 100%;
-  }
-  .siteRoot {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  .siteContent {
-    flex: 1 0 auto;
-  }
-  footer {
-    width: 100%;
-  }
-
-  /* End Fix to Place Footer on Bottom of Viewport */
-
   article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {
     display: block;
   }
-
-  @media screen and (min-width: 35em) {
-    html {
-      margin-right: calc(-100vw + 100%);
-      overflow-x: hidden;
-    }
-  }
-
   ol, ul {
     list-style: none;
   }
-
   blockquote, q {
     quotes: none;
   }
-
   blockquote::before, blockquote::after,
   q::before, q::after {
     content: '';
     content: none;
   }
-
   table {
     border-collapse: collapse;
     border-spacing: 0;
   }
-
   * {
     box-sizing: border-box;
   }
-
   body {
     background: #E6E3E1;
     font-variant-ligatures: none;
@@ -89,13 +61,11 @@ injectGlobal`
     -moz-osx-font-smoothing: grayscale;
     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
   }
-
   img {
     display: block;
   	width: 100%;
   	height: auto;
   }
-
   #lightboxBackdrop img {
     width: auto !important;
   }

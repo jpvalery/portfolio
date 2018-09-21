@@ -28,7 +28,7 @@ const BackButton = styled(Link)`
   h4 {
     color: ${props => props.theme.colors.base} !important;
   }
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+  @media screen and (min-width: ${props => props.theme.responsive.large}) {
     position: fixed;
     left: 2rem;
     align-self: flex-start;

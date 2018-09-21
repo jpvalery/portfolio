@@ -17,4 +17,10 @@ const theme = {
   },
 }
 
+export const BASE = '#100B00'
+export const SECONDARY = '#E6E3E1'
+export const TERTIARY = '#FCFCFC'
+export const HIGHLIGHT = '#E94F37'
+export const WHITE = '#223843'
+
 export default theme

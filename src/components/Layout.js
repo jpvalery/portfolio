@@ -2,12 +2,24 @@ import React from 'react'
 import { ThemeProvider } from 'emotion-theming'
 import Helmet from 'react-helmet'
 import '../styles/global'
-import themeLight from '../styles/themeLight'
-import theme from '../styles/themeLight'
+import theme, * as palette from '../styles/themeDark'
 import config from '../utils/siteConfig'
 import Wrapper from '../components/Wrapper'
 import Menu from '../components/Menu'
 import Transition from '../components/Transition'
+
+import { injectGlobal } from 'emotion'
+
+injectGlobal`
+body {
+  background: ${palette.BASE} !important;
+  color: ${palette.SECONDARY}
+
+}
+h1,h2,h3,h4,h5,h6,a {
+  color: ${palette.TERTIARY};
+}
+`
 
 const Layout = ({ children, location }) => {
   return (

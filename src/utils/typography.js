@@ -2,7 +2,7 @@ import Typography from 'typography'
 import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
 
 const typography = new Typography({
-  title: 'Montserrat + Lora',
+  title: 'Montserrat + Source Code',
   baseFontSize: '16px',
   baseLineHeight: 1.618,
   scaleRatio: 5 / 2,
@@ -64,7 +64,6 @@ const typography = new Typography({
       },
     },
     'h1,h2,h3,h4,h5,h6': {
-      color: '#100B00',
       fontFamily: ['Montserrat', 'Helvetica', 'serif'].join(','),
       fontWeight: options.headerWeight,
     },
@@ -76,7 +75,6 @@ const typography = new Typography({
       fontStyle: 'italic',
     },
     a: {
-      color: '#100B00',
       textDecoration: 'none',
     },
     'a:hover,a:active': {

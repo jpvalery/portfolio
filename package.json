@@ -5,6 +5,7 @@
   "repository": "https://github.com/iammatthias/net/tree/v2",
   "author": "Matthias Jordan <me@iammatthias.com>",
   "dependencies": {
+    "babel-plugin-emotion": "^9.2.10",
     "babel-plugin-styled-components": "^1.5.1",
     "chalk": "^2.4.1",
     "compass-vertical-rhythm": "^1.4.5",

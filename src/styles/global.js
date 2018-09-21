@@ -54,7 +54,7 @@ injectGlobal`
     box-sizing: border-box;
   }
   body {
-    background: #E6E3E1;
+
     font-variant-ligatures: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;

@@ -17,7 +17,7 @@ const ProjectLink = styled(Link)`
       }
     }
     &:hover h1 {
-      color: ${props => props.theme.colors.highlight};
+      color: ${props => props.theme.colors.highlight} !important;
     }
   }
 `

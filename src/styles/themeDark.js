@@ -2,9 +2,9 @@ const theme = {
   colors: {
     base: '#100B00', // White Smoke — Site background
     secondary: '#E6E3E1', // JAPANESE INDIGO — Default text color
-    tertiary: '#FCFCFC', // SMOKY BLACK — Bold text color, header color, etc
-    highlight: '#E94F37', // CARMINE PINK — Accent, use for underlines, highlights, etc
-    white: '#223843', // White
+    tertiary: '#f0e3e1', // SMOKY BLACK — Bold text color, header color, etc
+    highlight: '#D77A61', // CARMINE PINK — Accent, use for underlines, highlights, etc
+    white: '#FCFCFC', // White
   },
   sizes: {
     maxWidth: '1200px',
@@ -18,9 +18,9 @@ const theme = {
 }
 
 export const BASE = '#100B00'
-export const SECONDARY = '#E6E3E1'
-export const TERTIARY = '#FCFCFC'
-export const HIGHLIGHT = '#E94F37'
+export const SECONDARY = '#FBF2F0'
+export const TERTIARY = '#F4DAD3'
+export const HIGHLIGHT = '#D77A61'
 export const WHITE = '#223843'
 
 export default theme

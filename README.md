@@ -4,7 +4,7 @@
 
 ## Overview
 
-Codebase for [https://iammatthias.com](https://iammatthias.com) — my photography portfolio. Current iteration is built using Contentful, Netlify, and Gatsby V2; and was launched in September 2018. This site makes heavy use of the [`gatsby-image`](https://next.gatsbyjs.org/packages/gatsby-image/) plugin, pulling optimized fluid assets from Contentful along with traced SVG placeholders.
+Codebase for [https://iammatthias.com](https://iammatthias.com) — my photography portfolio. Current iteration is built using Contentful, Netlify, and Gatsby V2; and was launched in September 2018. This site makes heavy use of the [`gatsby-image`](https://next.gatsbyjs.org/packages/gatsby-image/) plugin, pulling optimized fluid assets from Contentful.
 
 ### Features
 
@@ -15,8 +15,8 @@ Codebase for [https://iammatthias.com](https://iammatthias.com) — my photogra
 - Offline Support
 - RSS Feed
 
-##### Note
+##### Notes
 
-> Code can be used as a reference for other Gatsby projects, but this repo will not work out-of-the-box without replicating the Contentful data structure. If you would like to quickly bootstrap a Gatsby + Contentful + Netlify project, I recomend checking out the fantastic [GCN](https://github.com/ryanwiemer/gatsby-starter-gcn) starter.
+> Code can be used as a reference for other Gatsby projects, but this repo will not work out-of-the-box without replicating the Contentful data structure. If you would like to quickly bootstrap a Gatsby + Contentful + Netlify project, I recommend checking out the fantastic [GCN](https://github.com/ryanwiemer/gatsby-starter-gcn) starter.
 
 > This repo uses Yarn, over NPM.

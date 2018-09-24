@@ -57,6 +57,7 @@ const List = styled.ul`
 
 const Tag = styled.li`
   display: inline-block;
+  margin: 1rem 0.25rem;
   a {
     transition: 0.2s;
     background: ${props => props.theme.colors.base};
@@ -69,7 +70,7 @@ const Tag = styled.li`
       margin: 0.5rem;
     }
     &:hover {
-      background: ${props => props.theme.colors.secondary};
+      background: ${props => props.theme.colors.highlight};
     }
   }
 `

@@ -33,7 +33,7 @@ const PortfolioHero = props => {
   return (
     <Wrapper>
       <Hero>
-        <Img fluid={props.image.fluid} backgroundColor={'#eeeeee'} />
+        <Img fluid={props.image.fluid} />
       </Hero>
     </Wrapper>
   )

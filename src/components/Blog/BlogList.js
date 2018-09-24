@@ -69,7 +69,7 @@ const BlogList = props => {
   return (
     <ProjectLink key={props.id} to={`/blog/${props.slug}/`}>
       <Cover>
-        <Img fluid={props.image.fluid} backgroundColor={'#eeeeee'} />
+        <Img fluid={props.image.fluid} />
       </Cover>
       <Title>{props.title}</Title>
       <Date>

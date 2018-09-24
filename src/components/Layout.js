@@ -17,9 +17,20 @@ body {
 }
 h1,h2,h3,h4,h5,h6,a {
   color: ${palette.TERTIARY};
+
 }
 a{
+  transition: all 0.5s;
   &:hover {
+    color: ${palette.HIGHLIGHT};
+  }
+}
+.bm-item a,svg {
+  transition: all 0.5s;
+  color: ${palette.BASE} !important;
+  fill: ${palette.BASE} !important;
+  &:hover {
+    fill: ${palette.HIGHLIGHT} !important;
     color: ${palette.HIGHLIGHT} !important;
   }
 }

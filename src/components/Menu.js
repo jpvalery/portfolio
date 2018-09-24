@@ -89,12 +89,6 @@ const MenuMobile = styled(SideMenu)`
   a {
     text-decoration: none;
     padding: 1rem;
-    transition: all 0.5s;
-    color: ${props => props.theme.colors.base};
-    text-transform: uppercase;
-    &:hover {
-      color: ${props => props.theme.colors.highlight};
-    }
   }
   img {
     display: inline-block;
@@ -108,10 +102,6 @@ const MenuMobile = styled(SideMenu)`
   svg {
     text-align: right;
     transition: all 0.2s;
-    fill: ${props => props.theme.colors.base} !important;
-    &:hover {
-      fill: ${props => props.theme.colors.highlight};
-    }
   }
 `
 

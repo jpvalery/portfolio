@@ -24,16 +24,6 @@ const Body = styled.div`
     text-transform: capitalize;
   }
 
-  h1 {
-    font-size: 1.5em;
-  }
-  h2 {
-    font-size: 1.25em;
-  }
-  h3 {
-    font-size: 1em;
-  }
-
   p {
     line-height: 1.6;
     margin: 0 0 1em 0;
@@ -44,7 +34,6 @@ const Body = styled.div`
 
   a {
     transition: 0.2s;
-    color: ${props => props.theme.colors.tertiary};
     font-weight: 700;
     font-style: italic;
     text-decoration: none;

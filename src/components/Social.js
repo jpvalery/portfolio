@@ -20,13 +20,6 @@ const SocialIcon = styled.div`
   &:last-child {
     padding-right: 0;
   }
-  svg {
-    transition: all 0.2s;
-    fill: ${props => props.theme.colors.tertiary};
-    &:hover {
-      fill: ${props => props.theme.colors.highlight};
-    }
-  }
 `
 
 const Social = props => {

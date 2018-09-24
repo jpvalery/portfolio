@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'react-emotion'
+import { css } from 'react-emotion'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
 const enter = css`

@@ -11,7 +11,6 @@ const Nav = styled.nav`
   width: 100%;
   height: 3.5rem;
   position: fixed;
-  border-bottom: 1px ${props => props.theme.colors.tertiary};
   left: 0;
   top: 0;
   z-index: 998;
@@ -27,7 +26,6 @@ const Title = styled(Link)`
   }
 `
 const Header = styled.header`
-  background: ${props => props.theme.colors.base};
   width: 3.5rem;
   height: 3.5rem;
   position: fixed;
@@ -36,18 +34,10 @@ const Header = styled.header`
   z-index: 10;
   transition: 0.5s ease;
   div {
-    .bm-overlay {
-      background: ${props => props.theme.colors.tertiary} !important;
-      opacity: 0.95;
-      backdrop-filter: blur(50px);
-      left: 0;
-    }
     .bm-menu {
       padding: 2rem 0;
-      color: ${props => props.theme.colors.base};
     }
     .bm-cross {
-      background: ${props => props.theme.colors.base} !important;
       height: 2rem !important;
       width: 0.35rem !important;
     }
@@ -58,15 +48,14 @@ const Header = styled.header`
       right: 2rem !important;
     }
     .bm-burger-bars {
-      background: ${props => props.theme.colors.tertiary};
       height: 0.35rem;
-      opacity: ${props => (props.isOpen ? '0' : '1')};
     }
     .bm-burger-button {
       position: relative;
       width: 1.5rem;
       height: 1.5rem;
       top: 1rem;
+      opacity: ${props => (props.isOpen ? '0' : '1')};
     }
   }
 `

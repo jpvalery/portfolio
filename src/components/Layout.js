@@ -1,8 +1,8 @@
 import React from 'react'
 import { ThemeProvider } from 'emotion-theming'
 import Helmet from 'react-helmet'
-import '../styles/global'
-import theme, * as palette from '../styles/themeLight'
+import '../styles/reset'
+import theme, * as palette from '../styles/themeDark'
 import config from '../utils/siteConfig'
 import Wrapper from '../components/Wrapper'
 import Menu from '../components/Menu'
@@ -17,23 +17,35 @@ body {
 }
 h1,h2,h3,h4,h5,h6,a {
   color: ${palette.TERTIARY};
-
 }
 a{
   transition: all 0.5s;
+  color: ${palette.TERTIARY};
   &:hover {
-    color: ${palette.HIGHLIGHT};
+  color: ${palette.HIGHLIGHT};
   }
 }
-.bm-item a,svg {
+svg {
   transition: all 0.5s;
-  color: ${palette.BASE} !important;
-  fill: ${palette.BASE} !important;
+  fill: ${palette.TERTIARY};
   &:hover {
-    fill: ${palette.HIGHLIGHT} !important;
-    color: ${palette.HIGHLIGHT} !important;
+    fill: ${palette.HIGHLIGHT};
   }
 }
+.bm-overlay {
+  background: ${palette.BASE};
+  opacity: 0.75;
+  backdrop-filter: blur(50px);
+  left: 0;
+}
+.bm-cross {
+  background: ${palette.TERTIARY};
+}
+.bm-burger-bars {
+  background: ${palette.TERTIARY};
+}
+
+
 `
 
 const Layout = ({ children, location }) => {

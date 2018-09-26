@@ -1,8 +1,14 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'react-emotion'
-import { slide as SideMenu } from 'react-burger-menu'
+import { scaleDown as Menu } from 'react-burger-menu'
 import Social from '../components/Social'
+
+var isMenuOpen = function(state) {
+  return state.isOpen
+}
+
+console.log(isMenuOpen)
 
 const Nav = styled.nav`
   background: ${props => props.theme.colors.base};
@@ -13,7 +19,7 @@ const Nav = styled.nav`
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 998;
+  z-index: 997;
   transition: 0.5s ease;
 `
 const Title = styled(Link)`
@@ -33,6 +39,7 @@ const Header = styled.header`
   top: 0;
   z-index: 10;
   transition: 0.5s ease;
+  opacity: ${props => (props.isOpen ? '0' : '1')};
   div {
     .bm-menu {
       padding: 2rem 0;
@@ -55,12 +62,12 @@ const Header = styled.header`
       width: 1.5rem;
       height: 1.5rem;
       top: 1rem;
-      opacity: ${props => (props.isOpen ? '0' : '1')};
+      z-index: 1 !important;
     }
   }
 `
 
-const MenuMobile = styled(SideMenu)`
+const MenuMobile = styled(Menu)`
   padding: 4rem 0;
   z-index: 999;
   text-align: right;
@@ -94,14 +101,21 @@ const MenuMobile = styled(SideMenu)`
   }
 `
 
-const Menu = () => {
+const Navigation = () => {
   return (
     <Nav>
       <Title to="/">
         <h1>I Am Matthias</h1>
       </Title>
       <Header>
-        <MenuMobile right width={'100%'} isOpen={false}>
+        <MenuMobile
+          right
+          width={'100%'}
+          isOpen={false}
+          onStateChange={isMenuOpen}
+          pageWrapId={'page-wrap'}
+          outerContainerId={'outer-container'}
+        >
           <ul>
             <li>
               <h2>
@@ -152,4 +166,4 @@ const Menu = () => {
   )
 }
 
-export default Menu
+export default Navigation

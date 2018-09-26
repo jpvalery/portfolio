@@ -6,7 +6,6 @@ import theme, * as palette from '../styles/themeDark'
 import config from '../utils/siteConfig'
 import Wrapper from '../components/Wrapper'
 import Menu from '../components/Menu'
-import Transition from '../components/Transition'
 
 import { injectGlobal } from 'emotion'
 
@@ -33,9 +32,7 @@ svg {
   }
 }
 .bm-overlay {
-  background: ${palette.BASE};
-  opacity: 0.75;
-  backdrop-filter: blur(50px);
+  background: ${palette.BASE} !important;
   left: 0;
 }
 .bm-cross {
@@ -44,8 +41,6 @@ svg {
 .bm-burger-bars {
   background: ${palette.TERTIARY};
 }
-
-
 `
 
 const Layout = ({ children, location }) => {
@@ -68,10 +63,12 @@ const Layout = ({ children, location }) => {
 
       <ThemeProvider theme={theme}>
         <Wrapper>
-          <Menu />
-          <Transition location={location}>
-            <div className="siteContent">{children}</div>
-          </Transition>
+          <div id="outer-container">
+            <Menu />
+            <div className="siteContent" id="page-wrap">
+              {children}
+            </div>
+          </div>
         </Wrapper>
       </ThemeProvider>
     </div>

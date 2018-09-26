@@ -59,7 +59,6 @@ const Excerpt = styled.p`
   padding: 0.25rem 2rem 2rem;
   font-weight: normal;
   text-transform: none;
-  color: ${props => props.theme.colors.secondary};
 `
 const PortfolioContent = props => {
   return (

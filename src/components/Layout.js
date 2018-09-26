@@ -6,7 +6,6 @@ import theme, * as palette from '../styles/themeDark'
 import config from '../utils/siteConfig'
 import Wrapper from '../components/Wrapper'
 import Menu from '../components/Menu'
-
 import { injectGlobal } from 'emotion'
 
 injectGlobal`
@@ -16,6 +15,9 @@ body {
 }
 h1,h2,h3,h4,h5,h6,a {
   color: ${palette.TERTIARY};
+}
+p {
+  color: ${palette.SECONDARY};
 }
 a{
   transition: all 0.5s;
@@ -31,9 +33,8 @@ svg {
     fill: ${palette.HIGHLIGHT};
   }
 }
-.bm-overlay {
+.bm-overlay, .bm-menu-wrap {
   background: ${palette.BASE} !important;
-  left: 0;
 }
 .bm-cross {
   background: ${palette.TERTIARY};
@@ -63,12 +64,8 @@ const Layout = ({ children, location }) => {
 
       <ThemeProvider theme={theme}>
         <Wrapper>
-          <div id="outer-container">
-            <Menu />
-            <div className="siteContent" id="page-wrap">
-              {children}
-            </div>
-          </div>
+          <Menu />
+          <div className="siteContent">{children}</div>
         </Wrapper>
       </ThemeProvider>
     </div>

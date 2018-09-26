@@ -16,7 +16,6 @@ const Contact = ({ data, location }) => {
     title: `Contact - ${config.siteTitle}`,
   }
   const info = data.contentfulAbout
-  console.log(location)
 
   return (
     <Layout location={location}>

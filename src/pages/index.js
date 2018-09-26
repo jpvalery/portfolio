@@ -10,10 +10,24 @@ import PortfolioLink from '../components/Portfolio/PortfolioLink'
 
 import SEO from '../components/SEO'
 
+console.log(
+  `______________________________________
+|                                                           |
+|                        Built by                      |
+|                Matthias Jordan                |
+|                                                           |
+|        (•_•) ( •_•)>⌐■-■ (⌐■_■)        |
+|                                                           |
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+                    (\\__/)  ||
+                    (•ㅅ•) ||
+                    / 　 づ
+      `
+)
+
 const Index = ({ data, location }) => {
   const galleries = data.allContentfulGallery.edges
   const home = data.contentfulHome
-  console.log(location)
   return (
     <Layout location={location}>
       <SEO />

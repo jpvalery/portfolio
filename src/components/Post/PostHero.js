@@ -14,7 +14,6 @@ const Hero = styled.div`
   position: relative;
   width: calc(100%);
   margin: 0 auto;
-  box-shadow: 0 0 10px -2px grey;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     width: calc(100% - 1rem);
     grid-area: left;

@@ -23,7 +23,6 @@ const ProjectLink = styled(Link)`
 `
 const Cover = styled.div`
   position: relative;
-  box-shadow: 0 0 10px -2px ${props => props.theme.colors.tertiary};
   div {
     height: 100% !important;
     width: 100%;
@@ -31,7 +30,6 @@ const Cover = styled.div`
     display: block;
   }
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    box-shadow: 0 0 0 0 ${props => props.theme.colors.tertiary};
     position: fixed !important;
     pointer-events: none;
     transition: opacity 0.3s, visibility 0.3s;

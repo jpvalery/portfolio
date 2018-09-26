@@ -10,7 +10,6 @@ import SEO from '../components/SEO'
 const Blog = ({ data, location }) => {
   const posts = data.allContentfulPost.edges
   const blog = data.contentfulBlog
-  console.log(location)
 
   return (
     <Layout location={location}>

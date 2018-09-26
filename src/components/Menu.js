@@ -1,14 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'react-emotion'
-import { scaleDown as Menu } from 'react-burger-menu'
+import { slide as Menu } from 'react-burger-menu'
 import Social from '../components/Social'
-
-var isMenuOpen = function(state) {
-  return state.isOpen
-}
-
-console.log(isMenuOpen)
 
 const Nav = styled.nav`
   background: ${props => props.theme.colors.base};
@@ -19,7 +13,7 @@ const Nav = styled.nav`
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 997;
+  z-index: 901;
   transition: 0.5s ease;
 `
 const Title = styled(Link)`
@@ -62,14 +56,13 @@ const Header = styled.header`
       width: 1.5rem;
       height: 1.5rem;
       top: 1rem;
-      z-index: 1 !important;
     }
   }
 `
 
 const MenuMobile = styled(Menu)`
   padding: 4rem 0;
-  z-index: 999;
+  z-index: 902;
   text-align: right;
   ul {
     display: flex;
@@ -108,14 +101,7 @@ const Navigation = () => {
         <h1>I Am Matthias</h1>
       </Title>
       <Header>
-        <MenuMobile
-          right
-          width={'100%'}
-          isOpen={false}
-          onStateChange={isMenuOpen}
-          pageWrapId={'page-wrap'}
-          outerContainerId={'outer-container'}
-        >
+        <MenuMobile right width={'100%'} isOpen={false}>
           <ul>
             <li>
               <h2>

@@ -11,9 +11,6 @@ import SEO from '../components/SEO'
 const GalleryTemplate = ({ data, location }) => {
   const { title, slug, tags, images } = data.contentfulGallery
   const galleryNode = data.contentfulGallery
-  console.log(location)
-  console.log(images)
-
   return (
     <Layout location={location}>
       <Helmet>

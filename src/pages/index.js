@@ -9,7 +9,6 @@ import PortfolioBodyBottom from '../components/Portfolio/PortfolioBodyBottom'
 import PortfolioLink from '../components/Portfolio/PortfolioLink'
 
 import SEO from '../components/SEO'
-
 console.log(
   `______________________________________
 |                                                           |
@@ -21,10 +20,8 @@ console.log(
 ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
                     (\\__/)  ||
                     (•ㅅ•) ||
-                    / 　 づ
-      `
+                    / 　 づ`
 )
-
 const Index = ({ data, location }) => {
   const galleries = data.allContentfulGallery.edges
   const home = data.contentfulHome

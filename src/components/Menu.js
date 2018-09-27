@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'react-emotion'
-import { slide as Menu } from 'react-burger-menu'
+import { push as Menu } from 'react-burger-menu'
 import Social from '../components/Social'
 
 const Nav = styled.nav`
@@ -63,7 +63,7 @@ const Header = styled.header`
 const MenuMobile = styled(Menu)`
   padding: 4rem 0;
   z-index: 902;
-  text-align: right;
+  text-align: left;
   ul {
     display: flex;
     justify-content: space-between;
@@ -71,13 +71,15 @@ const MenuMobile = styled(Menu)`
   }
   li {
     display: block;
-    margin: 0 2rem;
+    margin: 0;
     padding: 0.618rem 0;
-    text-align: right;
   }
   a {
     text-decoration: none;
-    padding: 1rem;
+    padding: 0.25rem;
+    @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+      padding: 1rem;
+    }
   }
   img {
     display: inline-block;
@@ -89,7 +91,6 @@ const MenuMobile = styled(Menu)`
     }
   }
   svg {
-    text-align: right;
     transition: all 0.2s;
   }
 `
@@ -101,7 +102,12 @@ const Navigation = () => {
         <h1>I Am Matthias</h1>
       </Title>
       <Header>
-        <MenuMobile right width={'100%'} isOpen={false}>
+        <MenuMobile
+          right
+          isOpen={false}
+          pageWrapId={'page-wrap'}
+          outerContainerId={'outer-container'}
+        >
           <ul>
             <li>
               <h2>

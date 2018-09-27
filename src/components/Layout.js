@@ -64,8 +64,12 @@ const Layout = ({ children, location }) => {
 
       <ThemeProvider theme={theme}>
         <Wrapper>
-          <Menu />
-          <div className="siteContent">{children}</div>
+          <div id="outer-container">
+            <Menu />
+            <div className="siteContent" id="page-wrap">
+              {children}
+            </div>
+          </div>
         </Wrapper>
       </ThemeProvider>
     </div>

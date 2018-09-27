@@ -5,8 +5,8 @@ import Img from 'gatsby-image'
 
 const ProjectLink = styled(Link)`
   text-decoration: none;
-  margin: 0.25rem 1rem 2rem;
-  padding: 0.25rem 0;
+  padding: 0;
+  margin: 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     transition: all 0.5s;
     display: inline-block;
@@ -17,12 +17,11 @@ const ProjectLink = styled(Link)`
       }
     }
     &:hover h1 {
-      color: ${props => props.theme.colors.highlight};
+      color: ${props => props.theme.colors.highlight} !important;
     }
   }
 `
 const Cover = styled.div`
-  position: relative;
   div {
     height: 100% !important;
     width: 100%;
@@ -49,19 +48,27 @@ const Cover = styled.div`
 const Title = styled.h1`
   text-transform: uppercase;
   margin: 0;
-  padding: 1rem 1rem 0.25rem;
-  z-index: 3;
+  padding: 1rem 2rem 0;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    padding: 0;
+  }
 `
 const Date = styled.h4`
   margin: 0;
-  padding: 0.25rem 1rem;
   text-transform: none;
+  padding: 0.25rem 2rem;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    padding: 0.25rem 0;
+  }
 `
 const Excerpt = styled.p`
   margin: 0;
-  padding: 0.25rem 1rem;
   font-weight: normal;
   text-transform: none;
+  padding: 0.25rem 2rem 2rem;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    padding: 0.25rem 0 0;
+  }
 `
 const BlogList = props => {
   return (

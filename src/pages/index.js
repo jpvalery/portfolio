@@ -6,7 +6,7 @@ import PortfolioHero from '../components/Portfolio/PortfolioHero'
 import PortfolioBody from '../components/Portfolio/PortfolioBody'
 import PortfolioBodyTop from '../components/Portfolio/PortfolioBodyTop'
 import PortfolioBodyBottom from '../components/Portfolio/PortfolioBodyBottom'
-import PortfolioLink from '../components/Portfolio/PortfolioLink'
+import PortfolioList from '../components/Portfolio/PortfolioList'
 
 import SEO from '../components/SEO'
 console.log(
@@ -34,7 +34,7 @@ const Index = ({ data, location }) => {
           <PortfolioBodyTop body={home.body} />
           <PortfolioBodyBottom>
             {galleries.map(({ node: gallery }) => (
-              <PortfolioLink
+              <PortfolioList
                 key={gallery.id}
                 slug={gallery.slug}
                 image={gallery.heroImage}

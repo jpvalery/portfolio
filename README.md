@@ -1,6 +1,6 @@
 # [IAMMATTHIAS](https://iammatthias.com)
 
-![](https://gfycat.com/JovialDopeyErmine)
+![](https://thumbs.gfycat.com/PitifulNeatIguanodon-size_restricted.gif)
 
 ## Overview
 

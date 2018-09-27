@@ -54,7 +54,7 @@ export const query = graphql`
   query {
     allContentfulGallery(
       limit: 1000
-      sort: { fields: [publishDate], order: DESC }
+      sort: { fields: [publishDate], order: ASC }
     ) {
       edges {
         node {

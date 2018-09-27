@@ -23,8 +23,8 @@ console.log(
                     / 　 づ`
 )
 const Index = ({ data, location }) => {
-  const galleries = data.allContentfulGallery.edges
   const home = data.contentfulHome
+  const galleries = data.allContentfulGallery.edges
   return (
     <Layout location={location}>
       <SEO />
@@ -70,7 +70,6 @@ export const query = graphql`
           }
           body {
             childMarkdownRemark {
-              html
               excerpt(pruneLength: 140)
             }
           }

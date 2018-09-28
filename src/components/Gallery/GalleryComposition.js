@@ -54,7 +54,11 @@ class GalleryComposition extends Component {
         </ResponsiveMasonry>
         <Lightbox
           backdropClosesModal
+          enableKeyboardInput
+          showImageCount
+          imageCountSeparator={'/'}
           images={this.state.photos}
+          preloadNextImage
           currentImage={this.state.photo}
           isOpen={this.state.lightbox}
           onClickPrev={() => this.gotoPrevLightboxImage()}

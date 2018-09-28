@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import Headroom from 'react-headroom'
 
 const Wrapper = styled.section`
-  background: ${props => props.theme.colors.tertiary};
+  background: ${props => props.theme.colors.secondary};
   opacity: 0.95;
   backdrop-filter: blur(50px);
   top: 3.5rem;

@@ -13,7 +13,7 @@ body {
   background: ${palette.BASE} !important;
   color: ${palette.SECONDARY} !important;
 }
-h1,h2,h3,h4,h5,h6,a {
+h1,h2,h3,h4,h5,h6,a,strong {
   color: ${palette.TERTIARY};
 }
 p {

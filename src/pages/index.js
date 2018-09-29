@@ -81,7 +81,7 @@ export const query = graphql`
       id
       heroImage {
         title
-        fluid(maxWidth: 1800) {
+        fluid(maxWidth: 1000) {
           ...GatsbyContentfulFluid_withWebp
         }
       }

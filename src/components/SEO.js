@@ -122,6 +122,7 @@ class SEO extends Component {
         {/* General tags */}
         <meta name="image" content={image} />
         <meta name="description" content={description} />
+        <meta name="pinterest" content="nopin" />
 
         {/* Schema.org tags */}
         <script type="application/ld+json">

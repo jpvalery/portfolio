@@ -11,9 +11,6 @@ const Wrapper = styled.section`
 const SocialIcon = styled.div`
   display: inline-block;
   padding: 0 0.5rem;
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    padding: 0 1rem;
-  }
   &:first-child {
     padding-left: 0;
   }

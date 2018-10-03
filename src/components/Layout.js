@@ -67,6 +67,7 @@ const Layout = ({ children, location }) => {
           <div id="outer-container">
             <Menu />
             <div className="siteContent" id="page-wrap">
+            <div className="siteContent" id="page-wrap">
               {children}
             </div>
           </div>

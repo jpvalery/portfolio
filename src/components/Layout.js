@@ -64,13 +64,9 @@ const Layout = ({ children, location }) => {
 
       <ThemeProvider theme={theme}>
         <Wrapper>
-          <div id="outer-container" style={{ height: '100vh' }}>
+          <div id="outer-container">
             <Menu />
-            <div
-              className="siteContent"
-              id="page-wrap"
-              style={{ height: '100%', overflow: 'auto' }}
-            >
+            <div className="siteContent" id="page-wrap">
               {children}
             </div>
           </div>

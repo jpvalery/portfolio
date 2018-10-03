@@ -10,6 +10,7 @@ class GalleryComposition extends Component {
       shareOpen: false,
       anchorEl: null,
       lightbox: false,
+      currentImage: 0,
       photos: props.photos.map(photo =>
         Object.assign({ srcSet: photo.fluid.srcSet })
       ),
@@ -32,7 +33,7 @@ class GalleryComposition extends Component {
   }
 
   closeLightbox() {
-    this.setState({ lightbox: false })
+    this.setState({ lightbox: false, currentImage: 0 })
   }
 
   render() {

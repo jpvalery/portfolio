@@ -23,6 +23,7 @@ const ProjectLink = styled(Link)`
 `
 const Cover = styled.div`
   div {
+    background: ${props => props.theme.colors.base};
     height: 100% !important;
     width: 100%;
     object-fit: cover !important;

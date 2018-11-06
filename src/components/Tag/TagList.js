@@ -8,7 +8,7 @@ const ProjectLink = styled(Link)`
     width: 25%;
     transition: all 0.5s;
     h1 {
-      color: ${props => props.theme.colors.secondary};
+      color: var(--color-secondary);
     }
     &:hover div {
       @supports (object-fit: cover) {
@@ -17,7 +17,7 @@ const ProjectLink = styled(Link)`
       }
     }
     &:hover h1 {
-      color: ${props => props.theme.colors.highlight};
+      color: var(--color-highlight);
     }
   }
 `

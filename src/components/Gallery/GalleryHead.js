@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import Headroom from 'react-headroom'
 
 const Wrapper = styled.section`
-  background: ${props => props.theme.colors.secondary};
+  background: var(--color-secondary);
   opacity: 0.95;
   backdrop-filter: blur(50px);
   top: 3.5rem;
@@ -26,7 +26,7 @@ const BackButton = styled(Link)`
   text-align: center;
   text-decoration: none;
   h4 {
-    color: ${props => props.theme.colors.base} !important;
+    color: var(--color-base) !important;
   }
   @media screen and (min-width: ${props => props.theme.responsive.large}) {
     position: fixed;
@@ -37,7 +37,7 @@ const BackButton = styled(Link)`
   }
 `
 const Title = styled.h1`
-  color: ${props => props.theme.colors.base};
+  color: var(--color-base);
   padding: 0 1rem 1rem;
   flex-grow: 1;
   width: 100%;
@@ -60,17 +60,17 @@ const Tag = styled.li`
   margin: 1rem 0.25rem;
   a {
     transition: 0.2s;
-    background: ${props => props.theme.colors.base};
+    background: var(--color-base);
     padding: 0.5rem 1rem 0.5rem 1rem;
     text-transform: capitalize;
     margin: 0.5rem;
     text-decoration: none;
-    color: ${props => props.theme.colors.tertiary};
+    color: var(--color-tertiary);
     &:last-child {
       margin: 0.5rem;
     }
     &:hover {
-      background: ${props => props.theme.colors.highlight};
+      background: var(--color-highlight);
     }
   }
 `

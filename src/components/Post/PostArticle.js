@@ -27,23 +27,20 @@ const Body = styled.div`
 
   a {
     transition: 0.2s;
-    color: ${props => props.theme.colors.tertiary};
+    color: var(--color-tertiary);
     font-weight: 700;
     font-style: italic;
     text-decoration: none;
-    text-shadow: 1px 1px 0 ${props => props.theme.colors.base},
-      -1px 1px 0 ${props => props.theme.colors.base},
-      2px 0 0 ${props => props.theme.colors.base},
-      -2px 0 0 ${props => props.theme.colors.base};
-    box-shadow: inset 0 -1px 0 0 ${props => props.theme.colors.base},
-      inset 0 -2px 0 0 ${props => props.theme.colors.tertiary};
+    text-shadow: 1px 1px 0 var(--color-base), -1px 1px 0 var(--color-base),
+      2px 0 0 var(--color-base), -2px 0 0 var(--color-base);
+    box-shadow: inset 0 -1px 0 0 var(--color-base),
+      inset 0 -2px 0 0 var(--color-tertiary);
     &:hover {
-      color: ${props => props.theme.colors.highlight};
-      box-shadow: inset 0 -1px 0 0 ${props => props.theme.colors.base},
-        inset 0 -2px 0 0 ${props => props.theme.colors.highlight};
+      color: var(--color-highlight);
+      box-shadow: inset 0 -1px 0 0 var(--color-base),
+        inset 0 -2px 0 0 var(--color-highlight);
     }
   }
-
 
   del {
     text-decoration: line-through;
@@ -84,35 +81,35 @@ const Body = styled.div`
 
   hr {
     border-style: solid;
-    border-color: ${props => props.theme.colors.secondary};
+    border-color: var(--color-secondary);
     margin: 0 0 2em 0;
   }
 
   blockquote {
     font-style: italic;
-    border-left: 4px solid ${props => props.theme.colors.highlight};
+    border-left: 4px solid var(--color-highlight);
     padding: 0 0 0 0.5em;
     width: calc(100vw - 4rem);
     @media (min-width: ${props => props.theme.responsive.medium}) {
       width: 100%;
     }
   }
-  pre, code {
+  pre,
+  code {
     width: calc(100vw - 4rem);
     @media (min-width: ${props => props.theme.responsive.medium}) {
       width: 100%;
     }
   }
-    img {
-      box-shadow: 10px 5px 5px red;
-      padding: 0.5rem;
-    }
-    @media (min-width: ${props => props.theme.responsive.medium}) {
-      overflow-x: auto;
-      width: auto;
-      max-width: 45vw;
-    }
-  
+  img {
+    box-shadow: 10px 5px 5px red;
+    padding: 0.5rem;
+  }
+  @media (min-width: ${props => props.theme.responsive.medium}) {
+    overflow-x: auto;
+    width: auto;
+    max-width: 45vw;
+  }
 `
 const LinkWrapper = styled.div`
   display: flex;
@@ -121,14 +118,14 @@ const LinkWrapper = styled.div`
   margin: 0 auto;
   max-width: ${props => props.theme.sizes.maxWidthCentered};
   a {
-    background: ${props => props.theme.colors.tertiary};
-    color: ${props => props.theme.colors.base};
+    background: var(--color-tertiary);
+    color: var(--color-base);
     padding: 1em;
     border-radius: 2px;
     text-decoration: none;
     transition: 0.2s;
     &:hover {
-      background: ${props => props.theme.colors.highlight};
+      background: var(--color-highlight);
     }
   }
 `

@@ -2,45 +2,62 @@ import React from 'react'
 import { ThemeProvider } from 'emotion-theming'
 import Helmet from 'react-helmet'
 import '../styles/reset'
-import theme, * as palette from '../styles/themeDark'
+import theme from '../styles/theme'
 import config from '../utils/siteConfig'
 import Wrapper from '../components/Wrapper'
 import Menu from '../components/Menu'
 import { injectGlobal } from 'emotion'
 
 injectGlobal`
+:root {
+--color-base: #E6E3E1 ;
+--color-secondary: #100B00 ;
+--color-tertiary: #223843 ;
+--color-highlight: #FE5F55 ;
+--color-accent: #FBF2F0 ;
+}
+@media (prefers-color-scheme: dark) {
+:root {
+--color-base: #100B00;
+--color-secondary: #E6E3E1;
+--color-tertiary: #F4DAD3;
+--color-highlight: #FE5F55;
+--color-accent: #FCFCFC; 
+ }
+}
+
 body {
-  background: ${palette.BASE} !important;
-  color: ${palette.SECONDARY} !important;
+  background: var(--color-base);
+  color: var(--color-secondary);
 }
 h1,h2,h3,h4,h5,h6,a,strong {
-  color: ${palette.TERTIARY};
+  color: var(--color-secondary);
 }
 p {
-  color: ${palette.SECONDARY};
+  color: var(--color-secondary);
 }
 a{
   transition: all 0.5s;
-  color: ${palette.TERTIARY};
+  color: var(--color-secondary);
   &:hover {
-  color: ${palette.HIGHLIGHT};
+  color: var(--color-highlight);
   }
 }
 svg {
   transition: all 0.5s;
-  fill: ${palette.TERTIARY};
+  fill: var(--color-tertiary);
   &:hover {
-    fill: ${palette.HIGHLIGHT};
+    fill: var(--color-highlight);
   }
 }
 .bm-overlay, .bm-menu-wrap {
-  background: ${palette.BASE} !important;
+  background: var(--color-base);
 }
 .bm-cross {
-  background: ${palette.TERTIARY};
+  background: var(--color-tertiary);
 }
 .bm-burger-bars {
-  background: ${palette.TERTIARY};
+  background: var(--color-tertiary);
 }
 `
 

@@ -17,13 +17,13 @@ const ProjectLink = styled(Link)`
       }
     }
     &:hover h1 {
-      color: ${props => props.theme.colors.highlight} !important;
+      color: var(--color-highlight) !important;
     }
   }
 `
 const Cover = styled.div`
   div {
-    background: ${props => props.theme.colors.base};
+    background: var(--color-base);
     height: 100% !important;
     width: 100%;
     object-fit: cover !important;

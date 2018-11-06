@@ -13,10 +13,10 @@ const Form = styled.form`
   textarea {
     font-family: inherit;
     font-size: inherit;
-    border: 2px solid ${props => props.theme.colors.tertiary};
+    border: 2px solid var(--color-tertiary);
     outline: none;
-    background: ${props => props.theme.colors.base};
-    color: ${props => props.theme.colors.secondary};
+    background: var(--color-base);
+    color: var(--color-secondary);
     border-radius: 2px;
     padding: 1rem;
     &::-webkit-input-placeholder {
@@ -38,12 +38,12 @@ const Form = styled.form`
       outline: none;
     }
     &:-webkit-autofill {
-      box-shadow: inset 0 0 0 9999px ${props => props.theme.colors.base};
+      box-shadow: inset 0 0 0 9999px var(--color-base);
     }
   }
   &::before {
     content: '';
-    background: black;
+    background: var(--color-secondary);
     height: 100%;
     width: 100%;
     position: fixed;
@@ -81,14 +81,14 @@ const Message = styled.textarea`
 `
 
 const Submit = styled.input`
-  background: ${props => props.theme.colors.tertiary} !important;
-  color: ${props => props.theme.colors.base} !important;
+  background: var(--color-tertiary) !important;
+  color: var(--color-base) !important;
   cursor: pointer;
   transition: 0.2s;
   width: 100%;
   &:hover {
-    border: 2px solid ${props => props.theme.colors.highlight} !important;
-    background: ${props => props.theme.colors.highlight} !important;
+    border: 2px solid var(--color-highlight) !important;
+    background: var(--color-highlight) !important;
   }
   @media (min-width: ${props => props.theme.responsive.medium}) {
     width: 48%;
@@ -96,7 +96,7 @@ const Submit = styled.input`
 `
 
 const Modal = styled.div`
-  background: white;
+  background: var(--color-base);
   padding: 2em;
   border-radius: 2px;
   position: fixed;
@@ -124,7 +124,7 @@ const Modal = styled.div`
 `
 
 const Button = styled.div`
-  background: ${props => props.theme.colors.tertiary} !important;
+  background: var(--color-tertiary) !important;
   font-size: 1em;
   display: inline-block;
   margin: 0 auto;
@@ -140,7 +140,7 @@ const Button = styled.div`
     outline: none;
   }
   &:hover {
-    background: ${props => props.theme.colors.highlight} !important;
+    background: var(--color-tertiary) !important;
   }
 `
 

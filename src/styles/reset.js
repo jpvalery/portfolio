@@ -22,14 +22,6 @@ injectGlobal`
     padding: 0;
     border: 0;
     vertical-align: baseline;
-    &::selection {
-      background: #100B00;
-      color: #E6E3E1;
-      text-shadow: 0 0 0 #E6E3E1,
-          0 0 0 #E6E3E1,
-          0 0 0 #E6E3E1,
-          0 0 0 #E6E3E1 !important;
-}
   }
   article, aside, details, figcaption, figure,
   footer, header, hgroup, menu, nav, section {

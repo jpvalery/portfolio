@@ -37,16 +37,14 @@ const Body = styled.div`
     font-weight: 700;
     font-style: italic;
     text-decoration: none;
-    text-shadow: 1px 1px 0 ${props => props.theme.colors.base},
-      -1px 1px 0 ${props => props.theme.colors.base},
-      2px 0 0 ${props => props.theme.colors.base},
-      -2px 0 0 ${props => props.theme.colors.base};
-    box-shadow: inset 0 -1px 0 0 ${props => props.theme.colors.base},
-      inset 0 -2px 0 0 ${props => props.theme.colors.tertiary};
+    text-shadow: 1px 1px 0 var(--color-base), -1px 1px 0 $var(--color-base),
+      2px 0 0 var(--color-base), -2px 0 0 var(--color-base);
+    box-shadow: inset 0 -1px 0 0 var(--color-base),
+      inset 0 -2px 0 0 var(--color-tertiary);
     &:hover {
-      color: ${props => props.theme.colors.highlight};
-      box-shadow: inset 0 -1px 0 0 ${props => props.theme.colors.base},
-        inset 0 -2px 0 0 ${props => props.theme.colors.highlight};
+      color: var(--color-highlight);
+      box-shadow: inset 0 -1px 0 0 var(--color-base),
+        inset 0 -2px 0 0 var(--color-highlight);
     }
   }
 
@@ -89,20 +87,20 @@ const Body = styled.div`
 
   hr {
     border-style: solid;
-    border-color: ${props => props.theme.colors.secondary};
+    border-color: var(--color-secondary);
     margin: 0 0 2em 0;
   }
 
   blockquote {
     font-style: italic;
-    border-left: 4px solid ${props => props.theme.colors.secondary};
+    border-left: 4px solid var(--color-secondary);
     padding: 0 0 0 0.5em;
   }
 
   pre {
     margin: 0 0 2em 0;
     border-radius: 2px;
-    background: ${props => props.theme.colors.secondary} !important;
+    background: var(--color-secondary) !important;
     span {
       background: inherit !important;
     }

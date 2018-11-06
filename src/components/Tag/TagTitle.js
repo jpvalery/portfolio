@@ -11,9 +11,9 @@ const Title = styled.h1`
   line-height: 1.2;
   a {
     transition: all 0.2s;
-    color: ${props => props.theme.colors.base};
+    color: var(--color-base);
     &:hover {
-      color: ${props => props.theme.colors.highlight};
+      color: var(--color-highlight);
     }
   }
 `

@@ -1,7 +1,7 @@
 {
   "name": "iam-v2",
   "description": "VERSION 2",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "repository": "https://github.com/iammatthias/net/tree/v2",
   "author": "Matthias Jordan <me@iammatthias.com>",
   "dependencies": {

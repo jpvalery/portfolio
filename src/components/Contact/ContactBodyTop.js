@@ -41,12 +41,11 @@ const Body = styled.div`
     }
   }
 
-
-  del {
+    del {
     text-decoration: line-through;
   }
   strong {
-    font-weight: 800;
+    font-weight: 600;
   }
   em {
     font-style: italic;
@@ -81,20 +80,20 @@ const Body = styled.div`
 
   hr {
     border-style: solid;
-    border-color: ${props => props.theme.colors.secondary};
+    border-color: var(--color-secondary);
     margin: 0 0 2em 0;
   }
 
   blockquote {
     font-style: italic;
-    border-left: 4px solid ${props => props.theme.colors.secondary};
+    border-left: 4px solid var(--color-secondary);
     padding: 0 0 0 0.5em;
   }
 
   pre {
     margin: 0 0 2em 0;
     border-radius: 2px;
-    background: ${props => props.theme.colors.secondary} !important;
+    background: var(--color-secondary) !important;
     span {
       background: inherit !important;
     }

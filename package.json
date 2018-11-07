@@ -54,7 +54,7 @@
     "react-typography": "^0.16.13",
     "typography": "^0.16.17",
     "typography-breakpoint-constants": "^0.15.10",
-    "whatwg-fetch": "^3.0.0"
+    "whatwg-fetch": "^2.0.4"
   },
   "keywords": [
     "gatsby"

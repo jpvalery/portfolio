@@ -36,7 +36,7 @@ const BackButton = styled(Link)`
     text-align: left;
   }
 `
-const Title = styled.h1`
+const Title = styled.h2`
   color: var(--color-base);
   padding: 0 1rem 1rem;
   flex-grow: 1;

@@ -6,7 +6,7 @@ import Social from '../components/Social'
 
 const Nav = styled.nav`
   background: inherit;
-  opacity: 0.95;
+  opacity: 0.975;
   backdrop-filter: blur(50px);
   width: 100%;
   height: 3.5rem;

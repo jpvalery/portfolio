@@ -46,7 +46,7 @@ const Cover = styled.div`
     }
   }
 `
-const Title = styled.h1`
+const Title = styled.h2`
   text-transform: uppercase;
   margin: 0;
   padding: 1rem 2rem 0;

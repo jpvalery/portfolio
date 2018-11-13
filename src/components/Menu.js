@@ -5,7 +5,7 @@ import { push as Menu } from 'react-burger-menu'
 import Social from '../components/Social'
 
 const Nav = styled.nav`
-  background: inherit;
+  background: var(--color-base);
   opacity: 0.975;
   backdrop-filter: blur(50px);
   width: 100%;

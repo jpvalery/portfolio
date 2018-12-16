@@ -9,19 +9,7 @@ import PortfolioBodyBottom from '../components/Portfolio/PortfolioBodyBottom'
 import PortfolioList from '../components/Portfolio/PortfolioList'
 
 import SEO from '../components/SEO'
-console.log(
-  `______________________________________
-|                                                           |
-|                        Built by                      |
-|                Matthias Jordan                |
-|                                                           |
-|        (•_•) ( •_•)>⌐■-■ (⌐■_■)        |
-|                                                           |
-‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
-                    (\\__/)  ||
-                    (•ㅅ•) ||
-                    / 　 づ`
-)
+
 const Index = ({ data, location }) => {
   const home = data.contentfulHome
   const galleries = data.allContentfulGallery.edges
@@ -51,7 +39,7 @@ const Index = ({ data, location }) => {
 }
 
 export const query = graphql`
-  query {
+  query Index {
     allContentfulGallery(
       limit: 1000
       sort: { fields: [publishDate], order: ASC }

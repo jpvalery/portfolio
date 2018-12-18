@@ -6,7 +6,6 @@ class SEO extends Component {
   render() {
     const {
       postNode,
-      galleryNode,
       pagePath,
       postSEO,
       pageSEO,
@@ -124,7 +123,7 @@ class SEO extends Component {
         name: title,
         image: {
           '@type': 'ImageObject',
-          url: 'https:' + galleryNode.heroImage.ogimg.src,
+          url: 'https:' + postNode.heroImage.ogimg.src,
           width: imgWidth,
           height: imgHeight,
         },

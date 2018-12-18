@@ -31,7 +31,7 @@ exports.createPages = ({ graphql, actions }) => {
   const loadGalleries = new Promise((resolve, reject) => {
     graphql(`
       {
-        allContentfulGallery {
+        allContentfulExtendedGallery {
           edges {
             node {
               slug
@@ -40,7 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(result => {
-      result.data.allContentfulGallery.edges.map(({ node }) => {
+      result.data.allContentfulExtendedGallery.edges.map(({ node }) => {
         createPage({
           path: `${node.slug}/`,
           component: path.resolve(`./src/templates/gallery.js`),

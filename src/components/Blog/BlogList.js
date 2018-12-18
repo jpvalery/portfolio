@@ -5,9 +5,10 @@ import Img from 'gatsby-image'
 
 const ProjectLink = styled(Link)`
   text-decoration: none;
-  padding: 0;
   margin: 0;
+  padding: 2rem;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    padding: 0rem;
     transition: all 0.5s;
     display: inline-block;
     &:hover div {
@@ -23,7 +24,6 @@ const ProjectLink = styled(Link)`
 `
 const Cover = styled.div`
   div {
-    background: var(--color-base);
     height: 100% !important;
     width: 100%;
     object-fit: cover !important;
@@ -49,26 +49,27 @@ const Cover = styled.div`
 const Title = styled.h2`
   text-transform: uppercase;
   margin: 0;
-  padding: 1rem 2rem 0;
+  padding: 1rem;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    padding: 0;
+    padding: 1rem 0;
   }
 `
 const Date = styled.h4`
-  margin: 0;
+  margin-bottom: 0;
+  font-weight: normal;
   text-transform: none;
-  padding: 0.25rem 2rem;
+  padding: 1rem;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    padding: 0.25rem 0;
+    padding: 1rem 0;
   }
 `
 const Excerpt = styled.p`
-  margin: 0;
+  margin-bottom: 0;
   font-weight: normal;
   text-transform: none;
-  padding: 0.25rem 2rem 2rem;
+  padding: 1rem;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    padding: 0.25rem 0 0;
+    padding: 1rem 0;
   }
 `
 const BlogList = props => {

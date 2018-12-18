@@ -10,13 +10,14 @@ import SEO from '../components/SEO'
 
 const GalleryTemplate = ({ data, location }) => {
   const gallery = data.contentfulExtendedGallery
+  const postNode = data.contentfulExtendedGallery
   const subGalleries = data.contentfulExtendedGallery.galleries
   return (
     <Layout location={location}>
       <Helmet>
         <title>{`${gallery.title} - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO pagePath={gallery.slug} gallerySEO />
+      <SEO pagePath={gallery.slug} postNode={postNode} gallerySEO />
       <GalleryHead title={gallery.title} tags={gallery.tags} />
       <WrapperGallery>
         {subGalleries.map((subGallery, index) => (
@@ -52,6 +53,17 @@ export const query = graphql`
         title
         id
         slug
+      }
+      heroImage {
+        title
+        fluid(maxWidth: 1000) {
+          ...GatsbyContentfulFluid_withWebp
+        }
+        ogimg: resize(width: 900) {
+          src
+          width
+          height
+        }
       }
       galleries {
         __typename

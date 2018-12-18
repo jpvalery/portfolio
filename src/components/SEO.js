@@ -4,7 +4,14 @@ import config from '../utils/siteConfig'
 
 class SEO extends Component {
   render() {
-    const { postNode, pagePath, postSEO, pageSEO, customTitle } = this.props
+    const {
+      postNode,
+      pagePath,
+      postSEO,
+      pageSEO,
+      gallerySEO,
+      customTitle,
+    } = this.props
     let title
     let description
     let image
@@ -105,6 +112,22 @@ class SEO extends Component {
           mainEntityOfPage: pageUrl,
         }
       )
+    }
+
+    // Gallery Schema
+    if (gallerySEO) {
+      schemaOrgJSONLD.push({
+        '@context': 'http://schema.org',
+        '@type': 'ImageGallery',
+        url: pageUrl,
+        name: title,
+        image: {
+          '@type': 'ImageObject',
+          url: 'https:' + postNode.heroImage.ogimg.src,
+          width: imgWidth,
+          height: imgHeight,
+        },
+      })
     }
 
     // Page SEO Schema

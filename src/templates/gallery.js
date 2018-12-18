@@ -10,14 +10,14 @@ import SEO from '../components/SEO'
 
 const GalleryTemplate = ({ data, location }) => {
   const gallery = data.contentfulExtendedGallery
-  const postNode = data.contentfulExtendedGallery
+  const galleryNode = data.contentfulExtendedGallery
   const subGalleries = data.contentfulExtendedGallery.galleries
   return (
     <Layout location={location}>
       <Helmet>
         <title>{`${gallery.title} - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO pagePath={gallery.slug} postNode={postNode} gallerySEO />
+      <SEO pagePath={gallery.slug} galleryNode={galleryNode} gallerySEO />
       <GalleryHead title={gallery.title} tags={gallery.tags} />
       <WrapperGallery>
         {subGalleries.map((subGallery, index) => (

@@ -12,7 +12,10 @@ const TagTemplate = ({ data, location }) => {
   const { title, slug } = data.contentfulTag
 
   const posts = sortBy(data.contentfulTag.post, 'publishDate').reverse()
-  const galleries = sortBy(data.contentfulTag.gallery, 'publishDate').reverse()
+  const galleries = sortBy(
+    data.contentfulTag.extendedgallery,
+    'publishDate'
+  ).reverse()
 
   return (
     <Layout location={location}>
@@ -61,7 +64,7 @@ export const query = graphql`
       title
       id
       slug
-      gallery {
+      extendedgallery {
         id
         title
         slug

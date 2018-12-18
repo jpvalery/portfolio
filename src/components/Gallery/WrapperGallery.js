@@ -3,7 +3,7 @@ import styled from 'react-emotion'
 
 const Wrapper = styled.section`
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
 `
 
 const WrapperGallery = props => {

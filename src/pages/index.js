@@ -9,22 +9,10 @@ import PortfolioBodyBottom from '../components/Portfolio/PortfolioBodyBottom'
 import PortfolioList from '../components/Portfolio/PortfolioList'
 
 import SEO from '../components/SEO'
-console.log(
-  `______________________________________
-|                                                           |
-|                        Built by                      |
-|                Matthias Jordan                |
-|                                                           |
-|        (•_•) ( •_•)>⌐■-■ (⌐■_■)        |
-|                                                           |
-‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
-                    (\\__/)  ||
-                    (•ㅅ•) ||
-                    / 　 づ`
-)
+
 const Index = ({ data, location }) => {
   const home = data.contentfulHome
-  const galleries = data.allContentfulGallery.edges
+  const galleries = data.allContentfulExtendedGallery.edges
   return (
     <Layout location={location}>
       <SEO />
@@ -51,17 +39,17 @@ const Index = ({ data, location }) => {
 }
 
 export const query = graphql`
-  query {
-    allContentfulGallery(
+  query Index {
+    allContentfulExtendedGallery(
       limit: 1000
-      sort: { fields: [publishDate], order: ASC }
+      sort: { fields: [publishDate], order: DESC }
     ) {
       edges {
         node {
           title
           id
           slug
-          publishDate(formatString: "DD MMM YYYY")
+          publishDate(formatString: "DD MMM YYYY h:mm a")
           heroImage {
             title
             fluid(maxWidth: 1000) {

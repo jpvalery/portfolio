@@ -4,22 +4,32 @@ import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
 import WrapperGallery from '../components/Gallery/WrapperGallery'
-import GalleryComposition from '../components/Gallery/GalleryComposition'
 import GalleryHead from '../components/Gallery/GalleryHead'
+import GalleryComposition from '../components/Gallery/GalleryComposition'
 import SEO from '../components/SEO'
 
 const GalleryTemplate = ({ data, location }) => {
-  const { title, slug, tags, images } = data.contentfulGallery
-  const galleryNode = data.contentfulGallery
+  const gallery = data.contentfulExtendedGallery
+  const subGalleries = data.contentfulExtendedGallery.galleries
   return (
     <Layout location={location}>
       <Helmet>
-        <title>{`${title} - ${config.siteTitle}`}</title>
+        <title>{`${gallery.title} - ${config.siteTitle}`}</title>
       </Helmet>
-      <SEO pagePath={slug} galleryNode={galleryNode} gallerySEO />
-      <GalleryHead title={title} tags={tags} />
+      <SEO pagePath={gallery.slug} gallerySEO />
+      <GalleryHead title={gallery.title} tags={gallery.tags} />
       <WrapperGallery>
-        <GalleryComposition photos={images} />
+        {subGalleries.map((subGallery, index) => (
+          <div key={index}>
+            {subGallery.__typename === 'ContentfulSubGallery' && (
+              <GalleryComposition
+                key={subGallery.id}
+                title={subGallery.title}
+                images={subGallery.images}
+              />
+            )}
+          </div>
+        ))}
       </WrapperGallery>
     </Layout>
   )
@@ -27,7 +37,7 @@ const GalleryTemplate = ({ data, location }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    contentfulGallery(slug: { eq: $slug }) {
+    contentfulExtendedGallery(slug: { eq: $slug }) {
       title
       id
       slug
@@ -43,18 +53,18 @@ export const query = graphql`
         id
         slug
       }
-      heroImage {
-        ogimg: resize(width: 900) {
-          src
-          width
-          height
-        }
-      }
-
-      images {
-        title
-        fluid(maxWidth: 1000) {
-          ...GatsbyContentfulFluid_withWebp
+      galleries {
+        __typename
+        ... on ContentfulSubGallery {
+          id
+          title
+          images {
+            title
+            fluid(maxWidth: 1800, quality: 90) {
+              ...GatsbyContentfulFluid_withWebp
+              src
+            }
+          }
         }
       }
     }

@@ -5,8 +5,8 @@ import Img from 'gatsby-image'
 
 const ProjectLink = styled(Link)`
   text-decoration: none;
-  padding: 0;
   margin: 0;
+  padding: 2rem;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     transition: all 0.5s;
     display: inline-block;
@@ -48,17 +48,20 @@ const Cover = styled.div`
 const Title = styled.h2`
   text-transform: uppercase;
   margin: 0;
-  padding: 1rem 2rem 0;
+  padding: 1rem 1rem 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    padding: 0 2rem;
+    padding: 0;
     z-index: 3;
   }
 `
 const Excerpt = styled.p`
   margin-bottom: 0;
-  padding: 0.25rem 2rem 2rem;
   font-weight: normal;
   text-transform: none;
+  padding: 1rem 1rem 0;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    padding: 0;
+  }
 `
 const PortfolioContent = props => {
   return (

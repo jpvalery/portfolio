@@ -33,17 +33,14 @@ class SEO extends Component {
     }
 
     // Replace with Page Parameters if post or page
-    if (postSEO || pageSEO) {
-      title = postNode.title
-      description =
-        postNode.metaDescription === null
-          ? postNode.body.childMarkdownRemark.excerpt
-          : postNode.metaDescription.internal.content
+    if (postSEO || pageSEO || gallerySEO) {
+      title = 'I AM MATTHIAS' + ' ' + '-' + ' ' + postNode.title
+      description = postNode.body.childMarkdownRemark.excerpt
 
       pageUrl = config.siteUrl + '/' + pagePath + '/'
     }
     // Use Hero Image for OpenGraph
-    if (postSEO) {
+    if (postSEO || pageSEO || gallerySEO) {
       image = 'https:' + postNode.heroImage.ogimg.src
       imgWidth = postNode.heroImage.ogimg.width
       imgHeight = postNode.heroImage.ogimg.height
@@ -70,18 +67,12 @@ class SEO extends Component {
             {
               '@type': 'ListItem',
               position: 1,
-              item: {
-                '@id': config.siteUrl,
-                name: config.siteTitle,
-              },
+              item: { '@id': config.siteUrl, name: config.siteTitle },
             },
             {
               '@type': 'ListItem',
               position: 2,
-              item: {
-                '@id': pageUrl,
-                name: title,
-              },
+              item: { '@id': pageUrl, name: title },
             },
           ],
         },
@@ -121,12 +112,25 @@ class SEO extends Component {
         '@type': 'ImageGallery',
         url: pageUrl,
         name: title,
+        alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+        headline: title,
         image: {
           '@type': 'ImageObject',
-          url: 'https:' + postNode.heroImage.ogimg.src,
+          url: image,
           width: imgWidth,
           height: imgHeight,
         },
+        author: {
+          '@type': 'Person',
+          name: config.author,
+          url: config.authorUrl,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: config.publisher,
+          url: config.siteUrl,
+        },
+        mainEntityOfPage: pageUrl,
       })
     }
 
@@ -137,6 +141,12 @@ class SEO extends Component {
         '@type': 'WebPage',
         url: pageUrl,
         name: title,
+        image: {
+          '@type': 'ImageObject',
+          url: image,
+          width: imgWidth,
+          height: imgHeight,
+        },
       })
     }
 

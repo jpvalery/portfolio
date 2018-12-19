@@ -1,5 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Helmet from 'react-helmet'
+import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
 import WrapperGrid from '../components/WrapperGrid'
 import BlogHero from '../components/Blog/BlogHero'
@@ -13,6 +15,9 @@ const Blog = ({ data, location }) => {
 
   return (
     <Layout location={location}>
+      <Helmet>
+        <title>{`${config.siteTitle} - Blog`}</title>
+      </Helmet>
       <SEO />
       <WrapperGrid>
         <BlogHero image={blog.heroImage} />

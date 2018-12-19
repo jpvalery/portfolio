@@ -16,13 +16,13 @@ const Contact = ({ data, location }) => {
     title: `Contact - ${config.siteTitle}`,
   }
   const info = data.contentfulAbout
-
+  const contactNode = data.contentfulAbout
   return (
     <Layout location={location}>
       <Helmet>
-        <title>{`Contact - ${config.siteTitle}`}</title>
+        <title>{`${config.siteTitle} - Contact`}</title>
       </Helmet>
-      <SEO postNode={postNode} pagePath="contact" customTitle />
+      <SEO postNode={contactNode} pagePath="contact" customTitle pageSEO />
       <WrapperGrid>
         <ContactHero image={info.heroImage} />
         <ContactBody>
@@ -45,6 +45,11 @@ export const query = graphql`
         title
         fluid(maxWidth: 1000) {
           ...GatsbyContentfulFluid_withWebp
+        }
+        ogimg: resize(width: 900) {
+          src
+          width
+          height
         }
       }
       body {

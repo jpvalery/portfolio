@@ -15,7 +15,7 @@ const GalleryTemplate = ({ data, location }) => {
   return (
     <Layout location={location}>
       <Helmet>
-        <title>{`${gallery.title} - ${config.siteTitle}`}</title>
+        <title>{`${config.siteTitle} - ${gallery.title} `}</title>
       </Helmet>
       <SEO pagePath={gallery.slug} postNode={galleryNode} gallerySEO />
       <GalleryHead title={gallery.title} tags={gallery.tags} />
@@ -63,6 +63,11 @@ export const query = graphql`
           src
           width
           height
+        }
+      }
+      body {
+        childMarkdownRemark {
+          html
         }
       }
       galleries {

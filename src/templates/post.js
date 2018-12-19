@@ -29,7 +29,7 @@ const PostTemplate = ({ data, location }) => {
   return (
     <Layout location={location}>
       <Helmet>
-        <title>{`${title} - ${config.siteTitle}`}</title>
+        <title>{`${config.siteTitle} - ${title}`}</title>
       </Helmet>
       <SEO pagePath={slug} postNode={postNode} postSEO />
       <PostHead

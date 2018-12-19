@@ -6,8 +6,10 @@ const Wrapper = styled.div`
   grid-area: Left;
   width: 100%;
   margin: 3.5rem 0 0;
+  padding: 2rem;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     margin: 0;
+    padding: 0;
   }
 `
 

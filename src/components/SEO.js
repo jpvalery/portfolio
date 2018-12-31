@@ -81,7 +81,7 @@ class SEO extends Component {
           '@type': 'BlogPosting',
           url: pageUrl,
           name: title,
-          alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+          alternateName: config.siteTitleAlt,
           headline: title,
           image: {
             '@type': 'ImageObject',
@@ -112,7 +112,7 @@ class SEO extends Component {
         '@type': 'ImageGallery',
         url: pageUrl,
         name: title,
-        alternateName: config.siteTitleAlt ? config.siteTitleAlt : '',
+        alternateName: config.siteTitleAlt,
         headline: title,
         image: {
           '@type': 'ImageObject',

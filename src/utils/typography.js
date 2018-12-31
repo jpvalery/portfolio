@@ -1,5 +1,4 @@
 import Typography from 'typography'
-import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants'
 
 const typography = new Typography({
   title: 'Montserrat + Source Code',
@@ -53,22 +52,9 @@ const typography = new Typography({
     'ul,ol': {
       marginLeft: 0,
     },
-    [MOBILE_MEDIA_QUERY]: {
-      'ul,ol': {
-        marginLeft: rhythm(1),
-      },
-      blockquote: {
-        marginLeft: rhythm(-3 / 4),
-        marginRight: 0,
-        paddingLeft: rhythm(9 / 16),
-      },
-    },
     'h1,h2,h3,h4,h5,h6': {
       fontFamily: ['Montserrat', 'Helvetica', 'serif'].join(','),
       fontWeight: options.headerWeight,
-    },
-    h4: {
-      letterSpacing: '0.140625em',
       textTransform: 'uppercase',
     },
     h6: {

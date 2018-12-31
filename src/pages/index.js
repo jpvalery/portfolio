@@ -72,6 +72,11 @@ export const query = graphql`
         fluid(maxWidth: 1000) {
           ...GatsbyContentfulFluid_withWebp
         }
+        ogimg: resize(width: 900) {
+          src
+          width
+          height
+        }
       }
       body {
         childMarkdownRemark {

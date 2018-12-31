@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
 import WrapperGrid from '../components/WrapperGrid'
-import ContactHero from '../components/Contact/ContactHero'
+import Hero from '../components/Hero'
 import ContactBody from '../components/Contact/ContactBody'
 import ContactBodyTop from '../components/Contact/ContactBodyTop'
 import ContactBodyBottom from '../components/Contact/ContactBodyBottom'
@@ -12,19 +12,15 @@ import ContactForm from '../components/Contact/ContactForm'
 import SEO from '../components/SEO'
 
 const Contact = ({ data, location }) => {
-  const postNode = {
-    title: `Contact - ${config.siteTitle}`,
-  }
   const info = data.contentfulAbout
-  const contactNode = data.contentfulAbout
   return (
     <Layout location={location}>
       <Helmet>
         <title>{`${config.siteTitle} - Contact`}</title>
       </Helmet>
-      <SEO postNode={contactNode} pagePath="contact" customTitle pageSEO />
+      <SEO postNode={info} pagePath="contact" customTitle pageSEO />
       <WrapperGrid>
-        <ContactHero image={info.heroImage} />
+        <Hero image={info.heroImage} />
         <ContactBody>
           <ContactBodyTop body={info.body} />
           <ContactBodyBottom>

@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
 import WrapperGrid from '../components/WrapperGrid'
-import BlogHero from '../components/Blog/BlogHero'
+import Hero from '../components/Hero'
 import BlogBody from '../components/Blog/BlogBody'
 import BlogList from '../components/Blog/BlogList'
 import SEO from '../components/SEO'
@@ -18,9 +18,9 @@ const Blog = ({ data, location }) => {
       <Helmet>
         <title>{`${config.siteTitle} - Blog`}</title>
       </Helmet>
-      <SEO />
+      <SEO postNode={blog} pagePath="contact" customTitle pageSEO />
       <WrapperGrid>
-        <BlogHero image={blog.heroImage} />
+        <Hero image={blog.heroImage} />
         <BlogBody>
           {posts.map(({ node: post }) => (
             <BlogList
@@ -74,6 +74,16 @@ export const query = graphql`
         title
         fluid(maxWidth: 1000) {
           ...GatsbyContentfulFluid_withWebp
+        }
+        ogimg: resize(width: 900) {
+          src
+          width
+          height
+        }
+      }
+      body {
+        childMarkdownRemark {
+          html
         }
       }
     }

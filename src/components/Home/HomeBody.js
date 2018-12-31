@@ -10,11 +10,11 @@ const Wrapper = styled.section`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto);
   grid-gap: 0;
-  grid-template-areas: 'ContactBodyTop' 'ContactBodyBottom';
+  grid-template-areas: 'HomeBodyTop' 'HomeBodyBottom';
 `
 
-const ContactBody = props => {
+const HomeBody = props => {
   return <Wrapper>{props.children}</Wrapper>
 }
 
-export default ContactBody
+export default HomeBody

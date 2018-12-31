@@ -28,7 +28,8 @@ const Hero = styled.div`
     }
   }
 `
-const BlogHero = props => {
+
+const HomeHero = props => {
   return (
     <Wrapper>
       <Hero>
@@ -38,4 +39,4 @@ const BlogHero = props => {
   )
 }
 
-export default BlogHero
+export default HomeHero

@@ -63,7 +63,7 @@ const Excerpt = styled.p`
     padding: 0;
   }
 `
-const PortfolioContent = props => {
+const HomeContent = props => {
   return (
     <ProjectLink key={props.id} to={`/${props.slug}/`}>
       <Cover>
@@ -79,4 +79,4 @@ const PortfolioContent = props => {
   )
 }
 
-export default PortfolioContent
+export default HomeContent

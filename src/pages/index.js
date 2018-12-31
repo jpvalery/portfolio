@@ -2,11 +2,11 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import WrapperGrid from '../components/WrapperGrid'
-import PortfolioHero from '../components/Portfolio/PortfolioHero'
-import PortfolioBody from '../components/Portfolio/PortfolioBody'
-import PortfolioBodyTop from '../components/Portfolio/PortfolioBodyTop'
-import PortfolioBodyBottom from '../components/Portfolio/PortfolioBodyBottom'
-import PortfolioList from '../components/Portfolio/PortfolioList'
+import Hero from '../components/Hero'
+import HomeBody from '../components/Home/HomeBody'
+import HomeBodyTop from '../components/Home/HomeBodyTop'
+import HomeBodyBottom from '../components/Home/HomeBodyBottom'
+import HomeList from '../components/Home/HomeList'
 
 import SEO from '../components/SEO'
 
@@ -17,12 +17,12 @@ const Index = ({ data, location }) => {
     <Layout location={location}>
       <SEO />
       <WrapperGrid>
-        <PortfolioHero image={home.heroImage} />
-        <PortfolioBody>
-          <PortfolioBodyTop body={home.body} />
-          <PortfolioBodyBottom>
+        <Hero image={home.heroImage} />
+        <HomeBody>
+          <HomeBodyTop body={home.body} />
+          <HomeBodyBottom>
             {galleries.map(({ node: gallery }) => (
-              <PortfolioList
+              <HomeList
                 key={gallery.id}
                 slug={gallery.slug}
                 image={gallery.heroImage}
@@ -31,8 +31,8 @@ const Index = ({ data, location }) => {
                 excerpt={gallery.body}
               />
             ))}
-          </PortfolioBodyBottom>
-        </PortfolioBody>
+          </HomeBodyBottom>
+        </HomeBody>
       </WrapperGrid>
     </Layout>
   )

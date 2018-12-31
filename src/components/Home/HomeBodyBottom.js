@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'react-emotion'
 
 const Wrapper = styled.section`
-  grid-area: PortfolioBodyBottom;
-  margin: 1rem 0;
+  grid-area: HomeBodyBottom;
+  margin: 0;
   padding: 0;
   display: grid;
   grid-gap: 0;
@@ -13,8 +13,8 @@ const Wrapper = styled.section`
   }
 `
 
-const PortfolioBodyBottom = props => {
+const HomeBodyBottom = props => {
   return <Wrapper>{props.children}</Wrapper>
 }
 
-export default PortfolioBodyBottom
+export default HomeBodyBottom

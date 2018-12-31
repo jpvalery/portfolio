@@ -4,7 +4,7 @@ import find from 'lodash/find'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
-import WrapperPost from '../components/Post/WrapperPost'
+import Wrapper from '../components/Wrapper'
 import PostHead from '../components/Post/PostHead'
 import PostHero from '../components/Post/PostHero'
 import PostArticle from '../components/Post/PostArticle'
@@ -38,14 +38,14 @@ const PostTemplate = ({ data, location }) => {
         tags={tags}
         time={body.childMarkdownRemark.timeToRead}
       />
-      <WrapperPost>
+      <Wrapper>
         <PostHero image={heroImage} />
         <PostArticle
           body={body}
           previous={postIndex.previous}
           next={postIndex.next}
         />
-      </WrapperPost>
+      </Wrapper>
     </Layout>
   )
 }

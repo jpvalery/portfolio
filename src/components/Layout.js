@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import '../styles/reset'
 import theme from '../styles/theme'
 import config from '../utils/siteConfig'
-import Wrapper from '../components/Wrapper'
+import LayoutWrapper from './LayoutWrapper'
 import Menu from '../components/Menu'
 import { injectGlobal } from 'emotion'
 
@@ -80,14 +80,14 @@ const Layout = ({ children, location }) => {
       </Helmet>
 
       <ThemeProvider theme={theme}>
-        <Wrapper>
+        <LayoutWrapper>
           <div id="outer-container">
             <Menu />
             <div className="siteContent" id="page-wrap">
               {children}
             </div>
           </div>
-        </Wrapper>
+        </LayoutWrapper>
       </ThemeProvider>
     </div>
   )

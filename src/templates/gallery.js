@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import config from '../utils/siteConfig'
 import Layout from '../components/Layout'
-import WrapperGallery from '../components/Gallery/WrapperGallery'
+import Wrapper from '../components/Wrapper'
 import GalleryHead from '../components/Gallery/GalleryHead'
 import GalleryComposition from '../components/Gallery/GalleryComposition'
 import SEO from '../components/SEO'
@@ -19,7 +19,7 @@ const GalleryTemplate = ({ data, location }) => {
       </Helmet>
       <SEO pagePath={gallery.slug} postNode={galleryNode} gallerySEO />
       <GalleryHead title={gallery.title} tags={gallery.tags} />
-      <WrapperGallery>
+      <Wrapper>
         {subGalleries.map((subGallery, index) => (
           <div key={index}>
             {subGallery.__typename === 'ContentfulSubGallery' && (
@@ -31,7 +31,7 @@ const GalleryTemplate = ({ data, location }) => {
             )}
           </div>
         ))}
-      </WrapperGallery>
+      </Wrapper>
     </Layout>
   )
 }

@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'react-emotion'
 
 const Wrapper = styled.section`
-  margin: 0 auto;
-  padding: 0;
+  width: 100%;
+  height: 100vh;
 `
 
-const WrapperGallery = props => {
+const PageWrapper = props => {
   return <Wrapper>{props.children}</Wrapper>
 }
 
-export default WrapperGallery
+export default PageWrapper

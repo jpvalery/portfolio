@@ -3,15 +3,11 @@ import styled from 'react-emotion'
 import Social from '../../components/Social'
 
 const Wrapper = styled.section`
-  grid-area: PortfolioBodyTop;
+  grid-area: HomeBodyTop;
   margin: 3.5rem 0 0;
   padding: 2rem;
   display: grid;
   grid-template-rows: repeat(auto);
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    height: 100%;
-    min-height: 0;
-  }
 `
 const Body = styled.div`
   margin: 0;
@@ -23,13 +19,9 @@ const Body = styled.div`
     line-height: 1.25;
     text-transform: capitalize;
   }
-
   p {
     line-height: 1.6;
     margin: 0 0 1em 0;
-    &:last-child {
-      margin: 0;
-    }
   }
 
   a {
@@ -107,7 +99,7 @@ const Body = styled.div`
   }
 `
 
-const PortfolioBodyTop = props => {
+const HomeBodyTop = props => {
   return (
     <Wrapper>
       <Body
@@ -120,4 +112,4 @@ const PortfolioBodyTop = props => {
   )
 }
 
-export default PortfolioBodyTop
+export default HomeBodyTop

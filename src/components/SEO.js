@@ -34,7 +34,7 @@ class SEO extends Component {
 
     // Replace with Page Parameters if post or page
     if (postSEO || pageSEO || gallerySEO) {
-      title = 'I AM MATTHIAS' + ' ' + '-' + ' ' + postNode.title
+      title = 'Jp Valery' + ' ' + '-' + ' ' + postNode.title
       description = postNode.body.childMarkdownRemark.excerpt
 
       pageUrl = config.siteUrl + '/' + pagePath + '/'

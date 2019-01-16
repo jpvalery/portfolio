@@ -23,28 +23,18 @@ const Social = props => {
   return (
     <Wrapper>
       <SocialIcon>
-        <a href="https://github.com/iammatthias/" alt="github">
-          <Ionicon className="icon" fontSize="35px" icon="logo-github" />
+        <a href="https:/unsplash.com/jpvalery" alt="unsplash">
+          <Ionicon className="icon" fontSize="24px" icon="md-camera" />
         </a>
       </SocialIcon>
       <SocialIcon>
-        <a href="https://instagram.com/iammatthias/" alt="instagram">
-          <Ionicon className="icon" fontSize="35px" icon="logo-instagram" />
+        <a href="https://instagram.com/jpvalery/" alt="instagram">
+          <Ionicon className="icon" fontSize="24px" icon="logo-instagram" />
         </a>
       </SocialIcon>
       <SocialIcon>
-        <a href="https://twitter.com/iamMatthias" alt="twitter">
-          <Ionicon className="icon" fontSize="35px" icon="logo-twitter" />
-        </a>
-      </SocialIcon>
-      <SocialIcon>
-        <a href="https://www.linkedin.com/in/iammatthias/" alt="linkedin">
-          <Ionicon className="icon" fontSize="35px" icon="logo-linkedin" />
-        </a>
-      </SocialIcon>
-      <SocialIcon>
-        <a href="https://www.facebook.com/iammatthias" alt="facebook">
-          <Ionicon className="icon" fontSize="35px" icon="logo-facebook" />
+        <a href="https://www.facebook.com/jpvalery" alt="facebook">
+          <Ionicon className="icon" fontSize="24px" icon="logo-facebook" />
         </a>
       </SocialIcon>
     </Wrapper>

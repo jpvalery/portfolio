@@ -7,6 +7,10 @@ const typography = new Typography({
   scaleRatio: 5 / 2,
   googleFonts: [
     {
+      name: 'Alfa Slab One',
+      styles: ['400'],
+    }
+    {
       name: 'Montserrat',
       styles: ['900', '900i'],
     },

@@ -40,7 +40,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(result => {
-      result.data.allContentfulExtendedGallery.edges.map(({ node }) => {
+      result.data.allContentfulExtendedGallery.edges.map(({ node }) => { //This is where the yarn run dev fails - I'm guessing my content model in Contentful is missing something but I can't pinpoint what as I replicated everything...
         createPage({
           path: `${node.slug}/`,
           component: path.resolve(`./src/templates/gallery.js`),

@@ -10,20 +10,20 @@ import { injectGlobal } from 'emotion'
 
 injectGlobal`
 :root {
---color-base: #E6E3E1 ;
---color-secondary: #100B00 ;
---color-tertiary: #223843 ;
---color-highlight: #FE5F55 ;
---color-accent: #FBF2F0 ;
+--color-base: #100B00;
+--color-secondary: #F5F5F5 ;
+--color-tertiary: #c1c1c1 ;
+--color-highlight: #C0392B ;
+--color-accent: #444444 ;
 }
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 :root {
 --color-base: #100B00;
---color-secondary: #E6E3E1;
---color-tertiary: #F4DAD3;
---color-highlight: #FE5F55;
---color-accent: #FCFCFC; 
- }
+--color-secondary: #F5F5F5 ;
+--color-tertiary: #c1c1c1 ;
+--color-highlight: #C0392B ;
+--color-accent: #444444 ;
+} */
 }
 
 body {
@@ -51,7 +51,7 @@ svg {
   }
 }
 .bm-overlay, .bm-menu-wrap {
-  background: var(--color-base);
+  background: var(--color-accent);
 }
 .bm-cross {
   background: var(--color-tertiary);

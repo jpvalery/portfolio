@@ -13,7 +13,7 @@ module.exports = {
   shareImageWidth: 900, // Change to the width of your default share image
   shareImageHeight: 504, // Change to the height of your default share image
   siteLogo: '/logos/logo-512.png', // Logo used for SEO, RSS, and App manifest
-  backgroundColor: '#E6E3E1', // Used for Offline Manifest
-  themeColor: '#100B00', // Used for Offline Manifest
+  backgroundColor: '#101010', // Used for Offline Manifest
+  themeColor: '#F5F5F5', // Used for Offline Manifest
   copyright: '© 1992-2019 Jp Valery', // Copyright string for the RSS feed
 }

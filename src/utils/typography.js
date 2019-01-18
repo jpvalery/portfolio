@@ -9,7 +9,7 @@ const typography = new Typography({
     {
       name: 'Alfa Slab One',
       styles: ['400'],
-    }
+    },
     {
       name: 'Montserrat',
       styles: ['900', '900i'],

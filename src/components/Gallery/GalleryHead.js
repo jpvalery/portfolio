@@ -74,7 +74,7 @@ const Tag = styled.li`
 const Desc = styled.p`
  display: inline;
  margin: 0 5rem;
- color: #000000;
+ color: var(--color-base) !important;
  font-family: 'Montserrat';
  `
 
@@ -91,7 +91,11 @@ const GalleryHead = props => {
           <h4>⬅ Back</h4>
         </BackButton>
         <Title>{props.title}</Title>
-        <Desc>{props.body}</Desc>
+        <Desc
+        dangerouslySetInnerHTML={{
+          __html: props.desc.childMarkdownRemark.html,
+        }}
+        />
         <List>
           {props.tags.map(tag => (
             <Tag key={tag.id}>

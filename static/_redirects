@@ -1,2 +1,5 @@
 # Redirect default Netlify subdomain to primary domain
-https://iamnet.netlify.com/* https://iammatthias.com/:splat 301!
+# https://jpv-portfolio.netlify.com/* https://jpvalery.photo/ 301!
+/about /biography
+/about-me /biography
+/portfolio /

@@ -6,7 +6,7 @@ const Wrapper = styled.section`
   margin: 0;
   padding: 0;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    margin: 4em 0 0;
+    margin: 6rem 0 2rem 0;
   }
 `
 const Body = styled.div`

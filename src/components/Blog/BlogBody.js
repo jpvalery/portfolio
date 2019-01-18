@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'react-emotion'
 
 const Wrapper = styled.section`
-  grid-area: Right;
-  margin: 3.5rem 0;
+  grid-area: Left;
+  margin: 4rem 0;
   display: grid;
   grid-template-rows: repeat(auto);
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {

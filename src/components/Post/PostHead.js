@@ -7,7 +7,7 @@ const Wrapper = styled.section`
   background: var(--color-secondary);
   opacity: 0.95;
   backdrop-filter: blur(50px);
-  top: 3.5rem;
+  top: 4rem;
   margin: 3.5rem auto 0;
   padding: 2rem;
   width: 100%;

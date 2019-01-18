@@ -71,6 +71,13 @@ const Tag = styled.li`
 
 `
 
+const Desc = styled.p`
+ display: inline;
+ margin: 0 5rem;
+ color: #000000;
+ font-family: 'Montserrat';
+ `
+
 const GalleryHead = props => {
   return (
     <Headroom
@@ -84,6 +91,7 @@ const GalleryHead = props => {
           <h4>⬅ Back</h4>
         </BackButton>
         <Title>{props.title}</Title>
+        <Desc>{props.body}</Desc>
         <List>
           {props.tags.map(tag => (
             <Tag key={tag.id}>

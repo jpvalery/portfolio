@@ -51,7 +51,7 @@ svg {
   }
 }
 .bm-overlay, .bm-menu-wrap {
-  background: var(--color-accent);
+  background: #212121;
 }
 .bm-cross {
   background: var(--color-tertiary);

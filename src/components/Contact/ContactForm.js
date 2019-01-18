@@ -86,9 +86,10 @@ const Submit = styled.input`
   cursor: pointer;
   transition: 0.2s;
   width: 100%;
+  margin: 0 auto;
   &:hover {
-    border: 2px solid var(--color-highlight) !important;
-    background: var(--color-highlight) !important;
+    border: 2px solid #388E3C !important;
+    background: #388E3C !important;
   }
   @media (min-width: ${props => props.theme.responsive.medium}) {
     width: 48%;

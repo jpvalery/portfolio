@@ -65,22 +65,17 @@ const List = styled.ul`
 
 const Tag = styled.li`
   display: inline-block;
-  margin: 1rem 0.25rem;
-  a {
+  margin: 0.5rem 0.25rem;
     transition: 0.2s;
     background: var(--color-base);
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    text-transform: capitalize;
-    margin: 0.5rem;
+    padding: 0.25rem 1rem ;
+    text-transform: uppercase;
     text-decoration: none;
-    color: var(--color-tertiary);
+    color: var(--color-secondary);
     &:last-child {
       margin: 0.5rem;
     }
-    &:hover {
-      background: var(--color-highlight);
-    }
-  }
+
 `
 
 const ArticleHead = props => {
@@ -102,7 +97,7 @@ const ArticleHead = props => {
         <List>
           {props.tags.map(tag => (
             <Tag key={tag.id}>
-              <Link to={`/tag/${tag.slug}/`}>{tag.title}</Link>
+              {tag.title}
             </Tag>
           ))}
         </List>

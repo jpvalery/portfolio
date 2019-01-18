@@ -7,9 +7,9 @@ const Wrapper = styled.section`
   background: var(--color-secondary);
   opacity: 0.95;
   backdrop-filter: blur(50px);
-  top: 3.5rem;
+  top: 4rem;
   margin: 3.5rem auto 0;
-  padding: 2rem;
+  padding: 1rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -43,6 +43,7 @@ const Title = styled.h2`
   width: 100%;
   text-transform: uppercase;
   text-align: center;
+  font-size: 3rem;
 `
 const List = styled.ul`
   text-transform: capitalize;
@@ -57,22 +58,17 @@ const List = styled.ul`
 
 const Tag = styled.li`
   display: inline-block;
-  margin: 1rem 0.25rem;
-  a {
+  margin: 0.5rem 0.25rem;
     transition: 0.2s;
     background: var(--color-base);
-    padding: 0.5rem 1rem 0.5rem 1rem;
-    text-transform: capitalize;
-    margin: 0.5rem;
+    padding: 0.25rem 1rem ;
+    text-transform: uppercase;
     text-decoration: none;
-    color: var(--color-tertiary);
+    color: var(--color-secondary);
     &:last-child {
       margin: 0.5rem;
     }
-    &:hover {
-      background: var(--color-highlight);
-    }
-  }
+
 `
 
 const GalleryHead = props => {
@@ -91,7 +87,7 @@ const GalleryHead = props => {
         <List>
           {props.tags.map(tag => (
             <Tag key={tag.id}>
-              <Link to={`/tag/${tag.slug}/`}>{tag.title}</Link>
+              {tag.title}
             </Tag>
           ))}
         </List>

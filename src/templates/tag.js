@@ -64,18 +64,6 @@ export const query = graphql`
       title
       id
       slug
-      extendedgallery {
-        id
-        title
-        slug
-        publishDate(formatString: "MMMM DD, YYYY")
-      }
-      post {
-        id
-        title
-        slug
-        publishDate(formatString: "MMMM DD, YYYY")
-      }
     }
   }
 `

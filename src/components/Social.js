@@ -23,17 +23,17 @@ const Social = props => {
   return (
     <Wrapper>
       <SocialIcon>
-        <a href="https:/unsplash.com/jpvalery" alt="unsplash">
+        <a href="https:/unsplash.com/jpvalery" alt="unsplash" target="_blank">
           <Ionicon className="icon" fontSize="24px" icon="md-camera" />
         </a>
       </SocialIcon>
       <SocialIcon>
-        <a href="https://instagram.com/jpvalery/" alt="instagram">
+        <a href="https://instagram.com/jpvalery/" alt="instagram" target="_blank">
           <Ionicon className="icon" fontSize="24px" icon="logo-instagram" />
         </a>
       </SocialIcon>
       <SocialIcon>
-        <a href="https://www.facebook.com/jpvalery" alt="facebook">
+        <a href="https://www.facebook.com/jpvalery" alt="facebook" target="_blank">
           <Ionicon className="icon" fontSize="24px" icon="logo-facebook" />
         </a>
       </SocialIcon>

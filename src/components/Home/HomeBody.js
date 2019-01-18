@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'react-emotion'
 
 const Wrapper = styled.section`
-  grid-area: Right;
+  grid-area: Left;
   margin: 0;
   padding: 0;
   display: grid;

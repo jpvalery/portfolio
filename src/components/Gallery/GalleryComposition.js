@@ -19,7 +19,6 @@ const Title = styled.h2`
 const GalleryComposition = props => {
   return (
     <Gallery key={props.id}>
-      <Title>{props.title}</Title>
       <GalleryGrid photos={props.images} />
     </Gallery>
   )

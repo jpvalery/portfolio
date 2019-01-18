@@ -18,7 +18,7 @@ const GalleryTemplate = ({ data, location }) => {
         <title>{`${config.siteTitle} - ${gallery.title} `}</title>
       </Helmet>
       <SEO pagePath={gallery.slug} postNode={galleryNode} gallerySEO />
-      <GalleryHead title={gallery.title} tags={gallery.tags} />
+      <GalleryHead title={gallery.title} desc={gallery.body} tags={gallery.tags} />
       <Wrapper>
         {subGalleries.map((subGallery, index) => (
           <div key={index}>

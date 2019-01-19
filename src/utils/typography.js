@@ -1,7 +1,7 @@
 import Typography from 'typography'
 
 const typography = new Typography({
-  title: 'Montserrat + Source Code',
+  title: 'googlefonts',
   baseFontSize: '16px',
   baseLineHeight: 1.618,
   scaleRatio: 5 / 2,
@@ -9,10 +9,6 @@ const typography = new Typography({
     {
       name: 'Alfa Slab One',
       styles: ['400'],
-    },
-    {
-      name: 'Montserrat',
-      styles: ['400', '900', '900i'],
     },
     {
       name: 'Open Sans',

@@ -12,19 +12,19 @@ const typography = new Typography({
     },
     {
       name: 'Montserrat',
-      styles: ['900', '900i'],
+      styles: ['400', '900', '900i'],
     },
     {
-      name: 'Source Code Pro',
-      styles: ['400', '900'],
+      name: 'Open Sans',
+      styles: ['400', '400i', '700', '800'],
     },
     {
       name: 'IBM Plex Mono',
       styles: ['400'],
     },
   ],
-  headerFontFamily: ['Montserrat', 'Helvetica', 'sans-serif'],
-  bodyFontFamily: ['Source Code Pro', 'Helvetica', 'sans-serif'],
+  headerFontFamily: ['FreightSansBold', 'Open Sans'],
+  bodyFontFamily: ['FreightSansBook', 'Open Sans'],
 
   headerWeight: 900,
   bodyWeight: 400,

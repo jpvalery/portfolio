@@ -53,11 +53,13 @@ const Body = styled.div`
 
   ul,
   ol {
+    color: var(--color-secondary);
     margin: 0 0 2em 0;
   }
 
   ul {
     li {
+      color: var(--color-secondary);
       list-style: disc;
       list-style-position: inside;
       line-height: 1.25;
@@ -69,6 +71,7 @@ const Body = styled.div`
 
   ol {
     li {
+      color: var(--color-secondary);
       list-style: decimal;
       list-style-position: inside;
       line-height: 1.25;

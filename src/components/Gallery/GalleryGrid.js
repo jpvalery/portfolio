@@ -41,7 +41,7 @@ class GalleryComposition extends Component {
     return (
       <>
         <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 3, 900: 5 }}>
-          <Masonry gutter="1rem">
+          <Masonry gutter="0.5rem">
             {photos.map((photo, i) => (
               <a
                 key={i}

@@ -79,6 +79,9 @@ const Desc = styled.label`
  p {
 color: var(--color-base) !important;
  }
+ a {
+color: var(--color-base) !important;
+ }
  `
 
 const GalleryHead = props => {

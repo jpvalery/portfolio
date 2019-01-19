@@ -81,6 +81,9 @@ color: var(--color-base) !important;
  }
  a {
 color: var(--color-base) !important;
+  &:hover {
+      color: var(--color-highlight)!important;
+}
  }
  `
 

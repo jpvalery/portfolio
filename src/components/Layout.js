@@ -7,6 +7,8 @@ import config from '../utils/siteConfig'
 import LayoutWrapper from './LayoutWrapper'
 import Menu from '../components/Menu'
 import { injectGlobal } from 'emotion'
+import FreightSansBold from '../styles/fonts/FreightSansBold.woff'
+import FreightSansBook from '../styles/fonts/FreightSansBook.woff'
 
 injectGlobal`
 :root {
@@ -25,6 +27,14 @@ injectGlobal`
 --color-accent: #444444 ;
 } */
 }
+@font-face {
+    font-family: 'FreightSansBook';
+    src: url(${FreightSansBold}) format("woff");
+  }
+@font-face {
+    font-family: 'FreightSansBook';
+    src: url(${FreightSansBook}) format("woff");
+  }
 @font-face {
     font-family: "FreightSansBook";
     src: url("/fonts/FreightSansBook.woff") format("woff");

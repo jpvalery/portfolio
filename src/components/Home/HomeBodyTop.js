@@ -107,7 +107,6 @@ const HomeBodyTop = props => {
           __html: props.body.childMarkdownRemark.html,
         }}
       />
-      <Social />
     </Wrapper>
   )
 }

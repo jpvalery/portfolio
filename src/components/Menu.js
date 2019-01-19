@@ -117,12 +117,17 @@ const Navigation = () => {
             </li>
             <li>
               <h2>
+                <Link to="/biography">About me</Link>
+              </h2>
+            </li>
+            <li>
+              <h2>
                 <Link to="/blog">Blog</Link>
               </h2>
             </li>
             <li>
               <h2>
-                <Link to="/contact">Contact</Link>
+                <Link to="/contact">Get in touch</Link>
               </h2>
             </li>
             <li>

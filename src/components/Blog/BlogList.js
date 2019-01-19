@@ -35,7 +35,7 @@ const Cover = styled.div`
     transition: opacity 0.3s, visibility 0.3s;
     width: calc(50% - 3rem);
     height: calc(100vh - 5.5rem);
-    top: 3.5rem;
+    top: 4rem;
     right: 2rem;
     z-index: 2;
     opacity: 0;

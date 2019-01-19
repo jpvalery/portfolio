@@ -26,6 +26,13 @@ const Title = styled(Link)`
     font-family: 'Alfa Slab One';
   }
 `
+
+const Copyright = styled.p`
+    font-size: 0.7rem;
+    padding: 1rem 0;
+    text-align: center;
+`
+
 const Header = styled.header`
   width: 3.5rem;
   height: 4rem;
@@ -137,8 +144,10 @@ const Navigation = () => {
             <li>
               <Social />
             </li>
-
         </ul>
+        <Copyright>
+          <p>© 1992-2019 Jp Valery</p>
+        </Copyright>
         </MenuMobile>
       </Header>
     </Nav>

@@ -18,6 +18,7 @@ const Body = styled.div`
     font-weight: 600;
     line-height: 1.25;
     text-transform: capitalize;
+    color: var(--color-secondary);
   }
   p {
     line-height: 1.6;

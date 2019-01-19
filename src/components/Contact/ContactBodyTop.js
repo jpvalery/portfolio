@@ -18,6 +18,7 @@ const Body = styled.div`
     line-height: 1.25;
     text-transform: none;
     margin: 0 0 1rem 0;
+    color: var(--color-secondary);
   }
 
   p {

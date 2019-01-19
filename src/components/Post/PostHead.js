@@ -8,7 +8,7 @@ const Wrapper = styled.section`
   opacity: 0.95;
   backdrop-filter: blur(50px);
   margin: 4rem 0 0;
-  padding: 2rem;
+  padding: 1rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -35,20 +35,27 @@ const BackButton = styled(Link)`
     text-align: left;
   }
 `
-const Title = styled.h2`
+const Title = styled.h1`
   color: var(--color-base);
-  padding: 0 1rem 0.25rem;
+  padding: 0 1rem 0.7rem;
   flex-grow: 1;
   width: 100%;
   text-transform: uppercase;
   text-align: center;
 `
-const Date = styled.h4`
-  padding: 0.25rem 1rem 1rem;
+const Date = styled.h5`
+  padding: 0.25rem;
   color: var(--color-base);
-  text-align: left;
   text-align: center;
   text-transform: uppercase;
+  position: relative;
+`
+const Time = styled.h5`
+  padding: 0.25rem;
+  color: var(--color-base);
+  text-align: center;
+  text-transform: uppercase;
+  font-style: italic;
   position: relative;
 `
 const List = styled.ul`
@@ -83,7 +90,7 @@ const ArticleHead = props => {
       style={{
         position: 'fixed',
         zIndex: '899',
-        transition: 'all .5s ease-in-out',
+        transition: 'all 1s ease-in-out',
       }}
     >
       <Wrapper>
@@ -92,8 +99,11 @@ const ArticleHead = props => {
         </BackButton>
         <Title>{props.title}</Title>
         <Date>
-          Published: {props.date} <br /> Reading time: {props.time} min
+          {props.date}
         </Date>
+        <Time>
+           - Reading time: {props.time} min
+        </Time>
       </Wrapper>
     </Headroom>
   )

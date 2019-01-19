@@ -131,6 +131,10 @@ const Navigation = () => {
               </h2>
             </li>
             <li>
+             <br />
+             <br />
+            </li>
+            <li>
               <Social />
             </li>
 

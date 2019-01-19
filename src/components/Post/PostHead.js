@@ -7,8 +7,7 @@ const Wrapper = styled.section`
   background: var(--color-secondary);
   opacity: 0.95;
   backdrop-filter: blur(50px);
-  top: 4rem;
-  margin: 3.5rem auto 0;
+  margin: 4rem 0 0;
   padding: 2rem;
   width: 100%;
   display: flex;
@@ -82,6 +81,7 @@ const ArticleHead = props => {
   return (
     <Headroom
       style={{
+        position: 'fixed',
         zIndex: '899',
         transition: 'all .5s ease-in-out',
       }}
@@ -94,13 +94,6 @@ const ArticleHead = props => {
         <Date>
           Published: {props.date} <br /> Reading time: {props.time} min
         </Date>
-        <List>
-          {props.tags.map(tag => (
-            <Tag key={tag.id}>
-              {tag.title}
-            </Tag>
-          ))}
-        </List>
       </Wrapper>
     </Headroom>
   )

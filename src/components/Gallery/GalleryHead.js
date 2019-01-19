@@ -10,6 +10,7 @@ const Wrapper = styled.section`
   top: 4rem;
   margin: 3.5rem auto 0;
   padding: 1rem;
+  padding-bottom: 0.25rem !important;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -38,7 +39,7 @@ const BackButton = styled(Link)`
 `
 const Title = styled.h2`
   color: var(--color-base);
-  padding: 0 1rem 1rem;
+  padding: 0 1rem 0.5rem 1rem;
   flex-grow: 1;
   width: 100%;
   text-transform: uppercase;
@@ -49,7 +50,7 @@ const List = styled.ul`
   text-transform: capitalize;
   font-weight: 600;
   width: 100%;
-  padding: 0 1rem;
+  padding: 0;
   margin: 0 auto;
   text-align: center;
   display: block;
@@ -58,7 +59,7 @@ const List = styled.ul`
 
 const Tag = styled.li`
   display: inline-block;
-  margin: 0.5rem 0.25rem;
+  margin: 0.25rem;
     transition: 0.2s;
     background: var(--color-base);
     padding: 0.25rem 1rem ;
@@ -71,11 +72,13 @@ const Tag = styled.li`
 
 `
 
-const Desc = styled.p`
+const Desc = styled.label`
  display: inline;
- margin: 0 5rem;
+ margin: 0.5rem 5rem ;
  color: var(--color-base) !important;
- font-family: 'Montserrat';
+ p {
+color: var(--color-base) !important;
+ }
  `
 
 const GalleryHead = props => {

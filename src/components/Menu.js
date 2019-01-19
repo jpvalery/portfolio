@@ -82,6 +82,9 @@ const MenuMobile = styled(Menu)`
     margin: 0;
     padding: 0.618rem 0;
   }
+  h2 {
+    text-transform: uppercase;
+    }
   a {
     text-decoration: none;
     padding: 0.25rem;

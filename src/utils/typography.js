@@ -15,7 +15,7 @@ const typography = new Typography({
       styles: ['400'],
     },
   ],
-  headerFontFamily: ['FreightSansBold', 'FreightSansBook', 'Open Sans'],
+  headerFontFamily: ['FreightSansBold', 'Open Sans'],
   bodyFontFamily: ['FreightSansBook', 'Open Sans'],
 
   headerWeight: 900,
@@ -47,14 +47,6 @@ const typography = new Typography({
     },
     'ul,ol': {
       marginLeft: 0,
-    },
-    'h1,h2,h3,h4,h5,h6': {
-      fontFamily: ['Montserrat', 'Helvetica', 'serif'].join(','),
-      fontWeight: options.headerWeight,
-      textTransform: 'uppercase',
-    },
-    h6: {
-      fontStyle: 'italic',
     },
     a: {
       textDecoration: 'none',

@@ -1,9 +1,9 @@
 {
-  "name": "iam-v2",
-  "description": "VERSION 2",
+  "name": "jpvalery-portfolio",
+  "description": "My Portfolio - Inspired by https://github.com/iammatthias/net",
   "version": "0.3.0",
-  "repository": "https://github.com/iammatthias/net/tree/v2",
-  "author": "Matthias Jordan <me@iammatthias.com>",
+  "repository": "https://github.com/jpvalery/portfolio",
+  "author": "Jp Valery <jp.valery@me.com",
   "dependencies": {
     "babel-plugin-emotion": "^9.2.10",
     "babel-plugin-styled-components": "^1.5.1",

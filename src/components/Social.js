@@ -4,6 +4,7 @@ import Ionicon from 'react-ionicons'
 
 const Wrapper = styled.section`
   margin: 1rem auto 0;
+  text-align: center;
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     margin: 0;
   }
@@ -24,17 +25,17 @@ const Social = props => {
     <Wrapper>
       <SocialIcon>
         <a href="https:/unsplash.com/jpvalery" alt="unsplash" target="_blank">
-          <Ionicon className="icon" fontSize="24px" icon="md-camera" />
+          <Ionicon className="icon" fontSize="32px" icon="md-camera" />
         </a>
       </SocialIcon>
       <SocialIcon>
         <a href="https://instagram.com/jpvalery/" alt="instagram" target="_blank">
-          <Ionicon className="icon" fontSize="24px" icon="logo-instagram" />
+          <Ionicon className="icon" fontSize="32px" icon="logo-instagram" />
         </a>
       </SocialIcon>
       <SocialIcon>
         <a href="https://www.facebook.com/jpvalery" alt="facebook" target="_blank">
-          <Ionicon className="icon" fontSize="24px" icon="logo-facebook" />
+          <Ionicon className="icon" fontSize="32px" icon="logo-facebook" />
         </a>
       </SocialIcon>
     </Wrapper>

@@ -25,25 +25,18 @@ injectGlobal`
 --color-accent: #444444 ;
 } */
 }
-
 @font-face {
-   font-family: "FreightSansBook";
-   font-style: normal;
-   src: local('/fonts/FreightSansBook.woff'), url('/fonts/FreightSansBook.woff}'') format("woff");
- }
-
+    font-family: "FreightSansBook";
+    src: url("/fonts/FreightSansBook.woff") format("woff");
+  }
 @font-face {
     font-family: "FreightSansBold";
-    font-style: normal;
-    src: local('/fonts/FreightSansBold.woff'),url('/fonts/FreightSansBold.woff') format("woff");
+    src: url("/fonts/FreightSansBold.woff") format("woff");
   }
-
 @font-face {
      font-family: "Alfa Slab One";
-     font-style: normal;
-     src: local('/fonts/AlfaSlabOne.woff'),url('/fonts/AlfaSlabOne.woff') format("woff");
+     src: url("/fonts/AlfaSlabOne.woff") format("woff");
    }
-
 body {
   background: var(--color-base);
   color: var(--color-secondary);

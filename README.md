@@ -1,19 +1,23 @@
-# [IAMMATTHIAS](https://iammatthias.com)
+# Photo Portfolio - Gatsby + Contentful + Netlify
+## [See it in action](https://jpvalery.photo)
 
 ![](https://thumbs.gfycat.com/JovialDopeyErmine-size_restricted.gif)
 
 ## Overview
 
-Codebase for [https://iammatthias.com](https://iammatthias.com) — my photography portfolio. Current iteration is built using Contentful, Netlify, and Gatsby V2; and was launched in September 2018. This site makes heavy use of the [`gatsby-image`](https://next.gatsbyjs.org/packages/gatsby-image/) plugin, pulling optimized fluid assets from Contentful.
+Codebase for [https://jpvalery.photo](https://jpvalery.photo) my photography portfolio.
+Current iteration is built using Contentful, Netlify, and Gatsby V2; and was launched in January 2019. Based on [@iammatthias/.com](https://github.com/iammatthias/.com)
+
+This site makes heavy use of the [`gatsby-image`](https://next.gatsbyjs.org/packages/gatsby-image/) plugin, pulling optimized fluid assets from Contentful.
 
 ### Features
 
 - Netlify integration
 - Styled components
-- Google Analytics
 - Progressive Web app
 - Offline Support
 - RSS Feed
+- Google Analytics
 
 ##### Notes
 

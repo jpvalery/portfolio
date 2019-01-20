@@ -28,7 +28,7 @@ const Title = styled(Link)`
 `
 
 const Copyright = styled.p`
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     padding: 1rem 0;
     text-align: center;
 `

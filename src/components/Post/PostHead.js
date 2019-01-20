@@ -24,6 +24,7 @@ const BackButton = styled(Link)`
   justify-self: center;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   h4 {
     color: var(--color-base) !important;
   }

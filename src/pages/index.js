@@ -27,6 +27,8 @@ const Index = ({ data, location }) => {
                 slug={gallery.slug}
                 image={gallery.heroImage}
                 title={gallery.title}
+                year={gallery.year}
+                tags={gallery.tags}
                 date={gallery.publishDate}
                 excerpt={gallery.body}
               />
@@ -41,7 +43,7 @@ const Index = ({ data, location }) => {
 export const query = graphql`
   query Index {
     allContentfulExtendedGallery(
-      limit: 1000
+      limit: 20
       sort: { fields: [publishDate], order: DESC }
     ) {
       edges {
@@ -49,6 +51,12 @@ export const query = graphql`
           title
           id
           slug
+          year
+          tags {
+            title
+            id
+            slug
+          }
           publishDate(formatString: "DD MMM YYYY h:mm a")
           heroImage {
             title

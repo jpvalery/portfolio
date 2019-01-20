@@ -49,11 +49,38 @@ const Title = styled.h2`
   text-transform: uppercase;
   margin: 0;
   padding: 1rem 1rem 0;
+  &:hover{
+    color: var(--color-highlight) !important;
+  }
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     padding: 0;
     z-index: 3;
   }
 `
+
+const Year = styled.h3`
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-left: 0.6rem;
+  margin-bottom: 0.2rem !important;
+  padding: 0.1rem;
+  z-index: 3;
+  color: #d8d8c7;
+`
+
+const List = styled.ul`
+  display: contents;
+  position: relative;
+`
+
+const Tag = styled.li`
+  display: inline-block;
+  margin: 0 0.25rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #d8d8c7;
+`
+
 const Excerpt = styled.p`
   margin-bottom: 0;
   font-weight: normal;
@@ -70,6 +97,12 @@ const HomeContent = props => {
         <Img fluid={props.image.fluid} />
       </Cover>
       <Title>{props.title}</Title>
+      <Year>{props.year} &nbsp;- <List>{props.tags.map(tag => (
+          <Tag key={tag.id}>
+            {tag.title}
+          </Tag>
+        ))}
+      </List></Year>
       <Excerpt
         dangerouslySetInnerHTML={{
           __html: props.excerpt.childMarkdownRemark.excerpt,

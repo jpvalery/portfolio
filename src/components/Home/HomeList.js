@@ -62,6 +62,7 @@ const Year = styled.h3`
   text-transform: uppercase;
   font-size: 1rem;
   margin-left: 0.6rem;
+  margin-bottom: 0.2rem !important;
   padding: 0.1rem;
   z-index: 3;
   color: #d8d8c7;

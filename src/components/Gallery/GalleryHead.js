@@ -25,6 +25,7 @@ const BackButton = styled(Link)`
   align-self: center;
   justify-self: center;
   text-align: center;
+  text-transform: uppercase;
   text-decoration: none;
   h4 {
     color: var(--color-base) !important;
@@ -69,7 +70,6 @@ const Tag = styled.li`
     &:last-child {
       margin: 0.5rem;
     }
-
 `
 
 const Desc = styled.label`

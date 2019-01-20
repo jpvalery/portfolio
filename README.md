@@ -1,7 +1,6 @@
 # Photo Portfolio - Gatsby + Contentful + Netlify
-## [See it in action](https://jpvalery.photo)
 
-![](https://thumbs.gfycat.com/JovialDopeyErmine-size_restricted.gif)
+[See it in action](https://jpvalery.photo)
 
 ## Overview
 

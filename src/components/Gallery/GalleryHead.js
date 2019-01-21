@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'react-emotion'
 import { Link } from 'gatsby'
-import Headroom from 'react-headroom'
 
 const Wrapper = styled.section`
   background: var(--color-secondary);
@@ -18,26 +17,7 @@ const Wrapper = styled.section`
   justify-content: center;
   flex-wrap: wrap;
 `
-const BackButton = styled(Link)`
-  margin: 1rem 0 0.5rem;
-  flex-grow: 1;
-  width: 100%;
-  align-self: center;
-  justify-self: center;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  h4 {
-    color: var(--color-base) !important;
-  }
-  @media screen and (min-width: ${props => props.theme.responsive.large}) {
-    position: fixed;
-    left: 2rem;
-    align-self: flex-start;
-    justify-self: flex-start;
-    text-align: left;
-  }
-`
+
 const Title = styled.h2`
   color: var(--color-base);
   padding: 0 1rem 0.5rem 1rem;
@@ -89,17 +69,7 @@ color: var(--color-base) !important;
 
 const GalleryHead = props => {
   return (
-    <Headroom
-      style={{
-        position: 'fixed',
-        zIndex: '899',
-        transition: 'all .5s ease-in-out',
-      }}
-    >
       <Wrapper>
-        <BackButton to="/">
-          <h4>⬅ Back</h4>
-        </BackButton>
         <Title>{props.title}</Title>
         <Desc
         dangerouslySetInnerHTML={{
@@ -114,7 +84,6 @@ const GalleryHead = props => {
           ))}
         </List>
       </Wrapper>
-    </Headroom>
   )
 }
 

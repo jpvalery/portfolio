@@ -5,18 +5,9 @@ const typography = new Typography({
   baseFontSize: '16px',
   baseLineHeight: 1.618,
   scaleRatio: 5 / 2,
-  googleFonts: [
-    {
-      name: 'Open Sans',
-      styles: ['400', '400i', '700', '800'],
-    },
-    {
-      name: 'IBM Plex Mono',
-      styles: ['400'],
-    },
-  ],
-  headerFontFamily: ['FreightSansBold', 'Open Sans'],
-  bodyFontFamily: ['FreightSansBook', 'Open Sans'],
+
+  headerFontFamily: ['FreightSansBold'-],
+  bodyFontFamily: ['FreightSansBook'-],
 
   headerWeight: 900,
   bodyWeight: 400,

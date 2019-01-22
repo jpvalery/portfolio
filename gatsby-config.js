@@ -79,13 +79,6 @@ module.exports = {
           ? contentfulConfig.development
           : contentfulConfig.production,
     },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: process.env.GOOGLE_ANALYTICS,
-        head: true,
-      },
-    },
     'gatsby-plugin-catch-links',
     'gatsby-plugin-sitemap',
     {

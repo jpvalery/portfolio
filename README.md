@@ -16,7 +16,6 @@ This site makes heavy use of the [`gatsby-image`](https://next.gatsbyjs.org/pack
 - Progressive Web app
 - Offline Support
 - RSS Feed
-- Google Analytics
 
 ##### Notes
 

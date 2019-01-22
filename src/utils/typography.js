@@ -1,13 +1,13 @@
 import Typography from 'typography'
 
 const typography = new Typography({
-  title: 'gfont_fallback',
+  title: 'nogfont',
   baseFontSize: '16px',
   baseLineHeight: 1.618,
   scaleRatio: 5 / 2,
 
-  headerFontFamily: ['FreightSansBold'-],
-  bodyFontFamily: ['FreightSansBook'-],
+  headerFontFamily: ['FreightSansBold'],
+  bodyFontFamily: ['FreightSansBook'],
 
   headerWeight: 900,
   bodyWeight: 400,

@@ -53,11 +53,11 @@ body {
 }
 h1,h2,h3,h4,h5,h6,a,strong {
   color: var(--color-secondary);
-  font-family: "FreightSansBold", "Open Sans";
+  font-family: "FreightSansBold";
 }
 p {
   color: var(--color-secondary);
-  font-family: "FreightSansBook", "Open Sans";
+  font-family: "FreightSansBook";
 }
 a{
   transition: all 0.5s;

@@ -24,7 +24,7 @@ const Social = props => {
   return (
     <Wrapper>
       <SocialIcon>
-        <a href="https:/unsplash.com/jpvalery" alt="unsplash" target="_blank">
+        <a href="https://unsplash.com/jpvalery" alt="unsplash" target="_blank">
           <Ionicon className="icon" fontSize="32px" icon="md-camera" />
         </a>
       </SocialIcon>

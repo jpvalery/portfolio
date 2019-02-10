@@ -4,7 +4,7 @@ import Social from '../../components/Social'
 
 const Wrapper = styled.section`
   grid-area: HomeBodyTop;
-  margin: 4rem 0 0;
+  margin: 6rem 0 4rem 0;
   padding: 2rem;
   display: grid;
   grid-template-rows: repeat(auto);
@@ -12,6 +12,10 @@ const Wrapper = styled.section`
 const Body = styled.div`
   margin: 0;
   padding: 0;
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
   h1,
   h2,
   h3 {
@@ -22,21 +26,17 @@ const Body = styled.div`
   }
   p {
     line-height: 1.6;
-    margin: 0 0 1em 0;
+    font-size: 2rem;
   }
 
   a {
     transition: 0.2s;
     font-weight: 700;
-    text-decoration: none;
+    text-decoration: none !important;
     text-shadow: 1px 1px 0 var(--color-base), -1px 1px 0 $var(--color-base),
       2px 0 0 var(--color-base), -2px 0 0 var(--color-base);
-    box-shadow: inset 0 -1px 0 0 var(--color-base),
-      inset 0 -2px 0 0 var(--color-tertiary);
     &:hover {
       color: var(--color-highlight);
-      box-shadow: inset 0 -1px 0 0 var(--color-base),
-        inset 0 -2px 0 0 var(--color-highlight);
     }
   }
 

@@ -5,7 +5,7 @@ import Social from '../../components/Social'
 const Wrapper = styled.section`
   grid-area: HomeBodyTop;
   margin: 6rem 0px 1rem 0px;
-  padding: 2rem;
+  padding-left:2rem; padding-right:2rem;
   display: grid;
   grid-template-rows: repeat(auto);
 
@@ -23,13 +23,15 @@ const Wrapper = styled.section`
 /* Internet Explorer */
 @-ms-keyframes fadein { from { opacity: 0; }  to  { opacity: 1; }}
 
+@media screen and (min-width: ${props => props.theme.responsive.medium}) {padding: 2rem;}
 `
 const Body = styled.div`
   margin: 0;
   padding: 0;
   h1 {
+    @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     font-size: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;}
   }
   h1,
   h2,
@@ -41,8 +43,9 @@ const Body = styled.div`
   }
   p {
     line-height: 1.6;
+    @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;}
   }
 
   a {

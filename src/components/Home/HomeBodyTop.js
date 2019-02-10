@@ -4,7 +4,7 @@ import Social from '../../components/Social'
 
 const Wrapper = styled.section`
   grid-area: HomeBodyTop;
-  margin: 6rem 0 4rem 0;
+  margin: 6rem 0px 1rem 0px;
   padding: 2rem;
   display: grid;
   grid-template-rows: repeat(auto);
@@ -42,6 +42,7 @@ const Body = styled.div`
   p {
     line-height: 1.6;
     font-size: 2rem;
+    margin-bottom: 0.5rem;
   }
 
   a {

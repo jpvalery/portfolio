@@ -19,10 +19,13 @@ const Body = styled.div`
     line-height: 1.25;
     text-transform: capitalize;
     color: var(--color-secondary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
   p {
     line-height: 1.6;
     margin: 0 0 1em 0;
+    font-size: 1.2rem;
   }
 
   a {
@@ -32,12 +35,8 @@ const Body = styled.div`
     text-decoration: none;
     text-shadow: 1px 1px 0 var(--color-base), -1px 1px 0 $var(--color-base),
       2px 0 0 var(--color-base), -2px 0 0 var(--color-base);
-    box-shadow: inset 0 -1px 0 0 var(--color-base),
-      inset 0 -2px 0 0 var(--color-tertiary);
     &:hover {
       color: var(--color-highlight);
-      box-shadow: inset 0 -1px 0 0 var(--color-base),
-        inset 0 -2px 0 0 var(--color-highlight);
     }
   }
 

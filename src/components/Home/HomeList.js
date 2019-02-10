@@ -7,6 +7,20 @@ const ProjectLink = styled(Link)`
   text-decoration: none;
   margin: 0;
   padding: 2rem;
+  -webkit-animation: fadeup 3.5s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadeup 3.5s; /* Firefox < 16 */
+      -ms-animation: fadeup 3.5s; /* Internet Explorer */
+       -o-animation: fadeup 3.5s; /* Opera < 12.1 */
+          animation: fadeup 3.5s;
+
+@keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
+/* Firefox < 16 */
+@-moz-keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
+/* Internet Explorer */
+@-ms-keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
+
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     transition: all 0.5s;
     display: inline-block;
@@ -31,7 +45,7 @@ const Cover = styled.div`
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     position: fixed !important;
     pointer-events: none;
-    transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.8s, visibility 0.3s;
     width: calc(50% - 3rem);
     height: calc(100vh - 5.5rem);
     top: 4rem;

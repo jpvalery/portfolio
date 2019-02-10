@@ -4,39 +4,54 @@ import Social from '../../components/Social'
 
 const Wrapper = styled.section`
   grid-area: HomeBodyTop;
-  margin: 4rem 0 0;
+  margin: 6rem 0 4rem 0;
   padding: 2rem;
   display: grid;
   grid-template-rows: repeat(auto);
+
+    -webkit-animation: fadein 2.5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2.5s; /* Firefox < 16 */
+        -ms-animation: fadein 2.5s; /* Internet Explorer */
+         -o-animation: fadein 2.5s; /* Opera < 12.1 */
+            animation: fadein 2.5s;
+
+@keyframes fadein { from { opacity: 0; }  to  { opacity: 1; }}
+/* Firefox < 16 */
+@-moz-keyframes fadein { from { opacity: 0; }  to  { opacity: 1; }}
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein { from { opacity: 0; }  to  { opacity: 1; }}
+/* Internet Explorer */
+@-ms-keyframes fadein { from { opacity: 0; }  to  { opacity: 1; }}
+
 `
 const Body = styled.div`
   margin: 0;
   padding: 0;
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
   h1,
   h2,
   h3 {
+    color: var(--color-secondary);
     font-weight: 600;
     line-height: 1.25;
     text-transform: capitalize;
   }
   p {
     line-height: 1.6;
-    margin: 0 0 1em 0;
+    font-size: 2rem;
   }
 
   a {
     transition: 0.2s;
     font-weight: 700;
-    font-style: italic;
-    text-decoration: none;
+    text-decoration: none !important;
     text-shadow: 1px 1px 0 var(--color-base), -1px 1px 0 $var(--color-base),
       2px 0 0 var(--color-base), -2px 0 0 var(--color-base);
-    box-shadow: inset 0 -1px 0 0 var(--color-base),
-      inset 0 -2px 0 0 var(--color-tertiary);
     &:hover {
       color: var(--color-highlight);
-      box-shadow: inset 0 -1px 0 0 var(--color-base),
-        inset 0 -2px 0 0 var(--color-highlight);
     }
   }
 

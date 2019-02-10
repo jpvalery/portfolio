@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/592d351c-5180-41c9-be77-e98fbc33cd2e/deploy-status)](https://app.netlify.com/sites/jpvalery-portfolio/deploys)
+
 # Photo Portfolio - Gatsby + Contentful + Netlify
 
 [See it in action](https://jpvalery.photo)

@@ -15,6 +15,7 @@ const Body = styled.div`
   h1,
   h2,
   h3 {
+    color: var(--color-secondary);
     font-weight: 600;
     line-height: 1.25;
     text-transform: capitalize;
@@ -27,7 +28,6 @@ const Body = styled.div`
   a {
     transition: 0.2s;
     font-weight: 700;
-    font-style: italic;
     text-decoration: none;
     text-shadow: 1px 1px 0 var(--color-base), -1px 1px 0 $var(--color-base),
       2px 0 0 var(--color-base), -2px 0 0 var(--color-base);

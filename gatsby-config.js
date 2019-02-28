@@ -32,6 +32,15 @@ module.exports = {
   },
   plugins: [
     {
+     resolve: 'gatsby-plugin-fathom',
+     options: {
+       // your Fathom server URL
+       trackingUrl: 'jpvalery.usesfathom.com',
+       // unique site id (optional, required for Fathom v1.1.0+)
+       siteId: 'YXKOHEVS'
+     },
+   },
+    {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
         siteUrl: config.siteUrl,

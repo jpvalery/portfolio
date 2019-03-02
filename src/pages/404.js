@@ -5,7 +5,7 @@ import Layout from '../components/Layout'
 
 const Box = styled.div`
   margin: 0 auto;
-  padding: 3em 1.5em 2em;
+  padding: 12em 1.5em 2em;
   text-align: center;
 `
 
@@ -13,6 +13,7 @@ const Text = styled.p`
   text-align: center;
   line-height: 1.6;
   margin: 0 0 1em 0;
+  font-size: 1.6rem;
 `
 
 const Title = styled.h1`
@@ -21,6 +22,7 @@ const Title = styled.h1`
   font-weight: 600;
   margin: 0 0 3rem 0;
   line-height: 1.2;
+  color: var(--color-secondary);
 `
 
 const NotFoundPage = ({ location }) => (
@@ -31,8 +33,8 @@ const NotFoundPage = ({ location }) => (
     </Helmet>
 
     <Box>
-      <Title>Error 404</Title>
-      <Text>Sorry, that page can't be found</Text>
+      <Title>Oops. Error 404.</Title>
+      <Text>It's not you, it's me. Sorry but that link is broken<br />Where next? See <a href="https://jpvalery.photo">my portfolio</a> or <a href="http://jpvalery.photo/contact">get in touch</a>?</Text>
     </Box>
   </Layout>
 )

@@ -25,7 +25,10 @@ const Title = styled.h2`
   width: 100%;
   text-transform: uppercase;
   text-align: center;
+  font-size: 2rem;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
   font-size: 3rem;
+  }
 `
 const List = styled.ul`
   text-transform: capitalize;
@@ -54,7 +57,7 @@ const Tag = styled.li`
 
 const Desc = styled.label`
  display: inline;
- margin: 0.5rem 5rem ;
+ margin: 0.7rem 0.7rem ;
  color: var(--color-base) !important;
  p {
 color: var(--color-base) !important;
@@ -67,6 +70,9 @@ color: var(--color-base) !important;
   &:hover {
       color: var(--color-highlight)!important;
 }
+ }
+ @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+margin: 0.5rem 5rem ;
  }
  `
 

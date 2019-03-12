@@ -110,7 +110,7 @@ module.exports = {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata
           ret.allMarkdownRemark = ref.query.allMarkdownRemark
-          ret.generator = 'I Am Matthias'
+          ret.generator = 'Jp Valery'
           return ret
         },
         query: `
@@ -179,5 +179,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-netlify',
+    'gatsby-plugin-advanced-sitemap',
   ],
 }

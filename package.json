@@ -16,6 +16,7 @@
     "emotion-theming": "^9.2.9",
     "gatsby": "^2.0.91",
     "gatsby-image": "^2.0.0-rc.4",
+    "gatsby-plugin-advanced-sitemap": "^1.0.3",
     "gatsby-plugin-canonical-urls": "^2.0.0-rc.2",
     "gatsby-plugin-catch-links": "^2.0.2",
     "gatsby-plugin-emotion": "^2.0.5",

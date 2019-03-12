@@ -1,7 +1,7 @@
 {
   "name": "jpvalery-portfolio",
   "description": "My Portfolio - Inspired by https://github.com/iammatthias/net",
-  "version": "1.0",
+  "version": "1.2",
   "repository": "https://github.com/jpvalery/portfolio",
   "author": "Jp Valery <jp.valery@me.com",
   "dependencies": {

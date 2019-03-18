@@ -4,7 +4,7 @@ module.exports = {
   publisher: 'Jp Valery', // Organization name used for SEO schema
   siteDescription:
     'Selected shots from a photographer relentlessly documenting and exploring spaces and people.',
-  siteUrl: 'https://sitemap-fixing.jpvalery.photo', // Site domain. Do not include a trailing slash! If you wish to use a path prefix you can read more about that here: https://www.gatsbyjs.org/docs/path-prefix/
+  siteUrl: 'https://jpvalery.photo', // Site domain. Do not include a trailing slash! If you wish to use a path prefix you can read more about that here: https://www.gatsbyjs.org/docs/path-prefix/
   author: 'Jp Valery', // Author for RSS author segment and SEO schema
   authorUrl: 'https://jpvalery.photo', // URL used for author and publisher schema, can be a social profile or other personal site
   userTwitter: '@jpvalery', // Change for Twitter Cards

@@ -89,7 +89,6 @@ module.exports = {
           : contentfulConfig.production,
     },
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -103,7 +102,6 @@ module.exports = {
         icon: `static${config.siteLogo}`,
       },
     },
-    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-plugin-feed',
       options: {

@@ -127,6 +127,11 @@ const Navigation = () => {
             </li>
             <li>
               <h2>
+                <Link to="https://archive.jpvalery.photo/">Archive</Link>
+              </h2>
+            </li>
+            <li>
+              <h2>
                 <Link to="/biography">About me</Link>
               </h2>
             </li>

@@ -127,7 +127,7 @@ const Navigation = () => {
             </li>
             <li>
               <h2>
-                <Link to="https://archive.jpvalery.photo">Archive</Link>
+                <a href="https://archive.jpvalery.photo">Archive</a>
               </h2>
             </li>
             <li>

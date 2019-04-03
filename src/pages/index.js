@@ -45,6 +45,7 @@ export const query = graphql`
     allContentfulExtendedGallery(
       limit: 20
       sort: { fields: [publishDate], order: DESC }
+      filter: {displayHome: {eq:true}}
     ) {
       edges {
         node {
@@ -69,6 +70,7 @@ export const query = graphql`
               excerpt(pruneLength: 140)
             }
           }
+          displayHome
         }
       }
     }

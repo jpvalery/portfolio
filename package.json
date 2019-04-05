@@ -28,6 +28,7 @@
     "gatsby-plugin-netlify": "^2.0.6",
     "gatsby-plugin-nprogress": "2.0.6",
     "gatsby-plugin-react-helmet": "3.0.1",
+    "gatsby-plugin-robots-txt": "^1.4.0",
     "gatsby-plugin-sitemap": "^2.0.11",
     "gatsby-plugin-styled-components": "^3.0.0-rc.5",
     "gatsby-plugin-typography": "2.2.1",

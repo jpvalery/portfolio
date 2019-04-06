@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'react-emotion'
-import { push as Menu } from 'react-burger-menu'
+import { slide as Menu } from 'react-burger-menu'
 import Social from '../components/Social'
 
 const Nav = styled.nav`

@@ -14,9 +14,11 @@ This site makes heavy use of the [`gatsby-image`](https://next.gatsbyjs.org/pack
 ### Features
 
 - Netlify integration
+- Contentful integration
+- Analytics with [Fathom](https://usefathom.com)
+- SEO
 - Styled components
 - Progressive Web app
-- Offline Support
 - RSS Feed
 
 ##### Notes

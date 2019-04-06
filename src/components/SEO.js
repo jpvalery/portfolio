@@ -155,7 +155,7 @@ class SEO extends Component {
         {/* General tags */}
         <meta name="image" content={image} />
         <meta name="description" content={description} />
-        <meta name="pinterest" content="nopin" />
+        <meta name="keywords" content="jp,valery,jpvalery,jp valery,photographer,photographe,photo,portfolio" />
 
         {/* Schema.org tags */}
         <script type="application/ld+json">

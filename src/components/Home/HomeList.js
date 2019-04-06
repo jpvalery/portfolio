@@ -28,6 +28,11 @@ const Cover = styled.div`
     object-fit: cover !important;
     display: block;
   }
+  @media screen and (max-width: ${props => props.theme.responsive.medium}) {
+    animation: fadeup 3.5s;
+    animation-timing-function: cubic-bezier(.25,.1,.25,1) ;
+    @keyframes fadeup { from { opacity: 0; transform: translateY(2rem);} to { opacity: 1; transform: translateY(0) }}
+  }
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     position: fixed !important;
     pointer-events: none;
@@ -52,19 +57,10 @@ const Title = styled.h2`
   &:hover{
     color: var(--color-highlight) !important;
   }
-  -webkit-animation: fadeup 3.5s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadeup 3.5s; /* Firefox < 16 */
-      -ms-animation: fadeup 3.5s; /* Internet Explorer */
-       -o-animation: fadeup 3.5s; /* Opera < 12.1 */
           animation: fadeup 3.5s;
+          animation-timing-function: cubic-bezier(.25,.1,.25,1) ;
+          @keyframes fadeup { from { opacity: 0; transform: translateY(2rem);} to { opacity: 1; transform: translateY(0) }}
 
-@keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
-/* Firefox < 16 */
-@-moz-keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
-/* Internet Explorer */
-@-ms-keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
 
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     padding: 0;
@@ -75,44 +71,25 @@ const Title = styled.h2`
 const Year = styled.h3`
   text-transform: uppercase;
   font-size: 1rem;
-  margin-left: 0.6rem;
-  margin-bottom: 0.2rem !important;
-  padding: 0.1rem;
+  padding-left:1rem;
   z-index: 3;
   color: #d8d8c7;
-  -webkit-animation: fadeup 3.5s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadeup 3.5s; /* Firefox < 16 */
-      -ms-animation: fadeup 3.5s; /* Internet Explorer */
-       -o-animation: fadeup 3.5s; /* Opera < 12.1 */
-          animation: fadeup 3.5s;
-
-@keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
-/* Firefox < 16 */
-@-moz-keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
-/* Internet Explorer */
-@-ms-keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
-
+    animation: fadeup 3.5s;
+    animation-timing-function: cubic-bezier(.25,.1,.25,1) ;
+    @keyframes fadeup { from { opacity: 0; transform: translateY(2rem);} to { opacity: 1; transform: translateY(0) }}
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    margin-left: 0.6rem;
+    margin-bottom: 0.2rem !important;
+    padding: 0.1rem;
+    }
 `
 
 const List = styled.ul`
   display: contents;
   position: relative;
-  -webkit-animation: fadeup 3.5s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadeup 3.5s; /* Firefox < 16 */
-      -ms-animation: fadeup 3.5s; /* Internet Explorer */
-       -o-animation: fadeup 3.5s; /* Opera < 12.1 */
-          animation: fadeup 3.5s;
-
-@keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
-/* Firefox < 16 */
-@-moz-keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
-/* Internet Explorer */
-@-ms-keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
-
+    animation: fadeup 3.5s;
+    animation-timing-function: cubic-bezier(.25,.1,.25,1) ;
+    @keyframes fadeup { from { opacity: 0; transform: translateY(2rem);} to { opacity: 1; transform: translateY(0) }}
 `
 
 const Tag = styled.li`
@@ -131,20 +108,9 @@ const Excerpt = styled.p`
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     padding: 0;
   }
-  -webkit-animation: fadeup 3.5s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadeup 3.5s; /* Firefox < 16 */
-      -ms-animation: fadeup 3.5s; /* Internet Explorer */
-       -o-animation: fadeup 3.5s; /* Opera < 12.1 */
-          animation: fadeup 3.5s;
-
-@keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
-/* Firefox < 16 */
-@-moz-keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
-/* Internet Explorer */
-@-ms-keyframes fadeup { from { opacity: 0; transform: translateY(2rem);}  to  { opacity: 1; transform: translateY(0) }}
-
+    animation: fadeup 3.5s;
+    animation-timing-function: cubic-bezier(.25,.1,.25,1) ;
+    @keyframes fadeup { from { opacity: 0; transform: translateY(2rem);} to { opacity: 1; transform: translateY(0) }}
 `
 const HomeContent = props => {
   return (

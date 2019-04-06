@@ -122,7 +122,7 @@ const Navigation = () => {
           <ul>
             <li>
               <h2>
-                <Link to="/">Portfolio</Link>
+                <Link to="/featured-shots">Portfolio</Link>
               </h2>
             </li>
             <li>

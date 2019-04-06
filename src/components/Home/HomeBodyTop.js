@@ -17,8 +17,9 @@ const Wrapper = styled.section`
 const Body = styled.div`
   margin: 0;
   padding: 0;
+  background-clip: text; -webkit-background-clip: text;
+  background-size: cover;
   background-image:url("sunset-bg.jpg");
-  background-clip: text;
   h1 {
     @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     font-size: 4rem;
@@ -27,7 +28,7 @@ const Body = styled.div`
   h1,
   h2,
   h3 {
-    color: transparent;
+    color: transparent !important;
     font-weight: 600;
     line-height: 1.25;
     text-transform: capitalize;

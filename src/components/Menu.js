@@ -77,7 +77,7 @@ const MenuMobile = styled(Menu)`
   }
   li {
     display: block;
-    margin: 0;
+    margin: 0 0 0 10px;
     padding: 0.618rem 0;
   }
   h2 {

@@ -3,31 +3,22 @@ import styled from 'react-emotion'
 import Social from '../../components/Social'
 
 const Wrapper = styled.section`
+  background-color: transparent;
   grid-area: HomeBodyTop;
   margin: 6rem 0px 1rem 0px;
   padding-left:2rem; padding-right:2rem;
   display: grid;
   grid-template-rows: repeat(auto);
-
-    -webkit-animation: fadein 2.5s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 2.5s; /* Firefox < 16 */
-        -ms-animation: fadein 2.5s; /* Internet Explorer */
-         -o-animation: fadein 2.5s; /* Opera < 12.1 */
-            animation: fadein 2.5s;
-
-@keyframes fadein { from { opacity: 0; }  to  { opacity: 1; }}
-/* Firefox < 16 */
-@-moz-keyframes fadein { from { opacity: 0; }  to  { opacity: 1; }}
-/* Safari, Chrome and Opera > 12.1 */
-@-webkit-keyframes fadein { from { opacity: 0; }  to  { opacity: 1; }}
-/* Internet Explorer */
-@-ms-keyframes fadein { from { opacity: 0; }  to  { opacity: 1; }}
-
+    animation: fadeuptop 3.5s;
+    animation-timing-function: cubic-bezier(.25,.1,.25,1) ;
+    @keyframes fadeuptop { from { opacity: 0; transform: translateY(4rem);} to { opacity: 1; transform: translateY(0) }}
 @media screen and (min-width: ${props => props.theme.responsive.medium}) {padding: 2rem;}
 `
 const Body = styled.div`
   margin: 0;
   padding: 0;
+  background-image:url("sunset-bg.jpg");
+  background-clip: text;
   h1 {
     @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     font-size: 4rem;
@@ -36,7 +27,7 @@ const Body = styled.div`
   h1,
   h2,
   h3 {
-    color: var(--color-secondary);
+    color: transparent;
     font-weight: 600;
     line-height: 1.25;
     text-transform: capitalize;

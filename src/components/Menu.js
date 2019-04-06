@@ -5,9 +5,7 @@ import { slide as Menu } from 'react-burger-menu'
 import Social from '../components/Social'
 
 const Nav = styled.nav`
-  background: var(--color-base);
-  opacity: 0.975;
-  backdrop-filter: blur(50px);
+  background-color:#16161D;
   width: 100%;
   height: 4rem;
   position: fixed;

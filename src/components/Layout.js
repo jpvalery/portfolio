@@ -48,9 +48,7 @@ injectGlobal`
      src: url("/fonts/AlfaSlabOne.woff") format("woff");
    }
 body {
-  background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(22,22,29,1) 100%);
-  background-attachment:fixed;
+  background: #16161d;
   color: var(--color-secondary);
 }
 h1,h2,h3,h4,h5,h6,a,strong {

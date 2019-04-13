@@ -15,7 +15,7 @@ const Form = styled.form`
     font-size: inherit;
     border: 2px solid var(--color-tertiary);
     outline: none;
-    background: var(--color-base);
+    background: rgb(0,0,0,0.1);
     color: var(--color-secondary);
     border-radius: 2px;
     padding: 1rem;

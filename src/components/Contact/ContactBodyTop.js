@@ -3,14 +3,22 @@ import styled from 'react-emotion'
 
 const Wrapper = styled.section`
   grid-area: ContactBodyTop;
-  margin: 6rem 0 2rem 0;
+  margin: 6rem 0 0 0;
   padding: 0;
 `
 const Body = styled.div`
-  margin: 2rem;
-  h1,
+  margin: 0 2rem 0 2rem;
+  h1 {
+    font-size: 3.5rem !important;
+    font-weight: 800;
+    line-height: 1.25;
+    text-transform: none;
+    margin: 0 0 1rem 0;
+    color: var(--color-secondary);
+  }
   h2,
   h3 {
+    font-size: 2.8rem !important;
     font-weight: 800;
     line-height: 1.25;
     text-transform: none;
@@ -19,7 +27,8 @@ const Body = styled.div`
   }
 
   p {
-    line-height: 1.6;
+    font-size: 1.4rem !important;
+    line-height: 1;
     margin: 0 0 1rem 0;
   }
 

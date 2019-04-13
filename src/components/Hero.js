@@ -23,8 +23,9 @@ const Hero = styled.div`
     right: 2rem;
     z-index: -99;
     div {
-      height: 100% !important;
-      object-fit: cover !important;
+      height: 66.67% !important;
+      object-fit: contain !important;
+      margin-top:16.65%;
     }
   }
 `

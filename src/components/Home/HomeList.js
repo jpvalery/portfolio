@@ -11,7 +11,7 @@ const ProjectLink = styled(Link)`
     transition: all 0.5s;
     display: inline-block;
     &:hover div {
-      @supports (object-fit: cover) {
+      @supports (object-fit: contain) {
         opacity: 1;
         visibility: visible;
       }
@@ -23,9 +23,9 @@ const ProjectLink = styled(Link)`
 `
 const Cover = styled.div`
   div {
-    height: 100% !important;
+    height: 66.67% !important;
     width: 100%;
-    object-fit: cover !important;
+    object-fit: contain !important;
     display: block;
   }
   @media screen and (max-width: ${props => props.theme.responsive.medium}) {
@@ -36,7 +36,7 @@ const Cover = styled.div`
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     position: fixed !important;
     pointer-events: none;
-    transition: opacity 0.8s, visibility 0.3s;
+    transition: opacity 0.5s, visibility 0.3s;
     width: calc(50% - 3rem);
     height: calc(100vh - 5.5rem);
     top: 4rem;
@@ -45,8 +45,8 @@ const Cover = styled.div`
     opacity: 0;
     visibility: hidden;
     div {
-      height: 100% !important;
-      object-fit: cover !important;
+      object-fit: contain !important;
+      margin-top:16.65%
     }
   }
 `

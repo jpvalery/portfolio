@@ -4,6 +4,7 @@ import styled from 'react-emotion'
 const Wrapper = styled.section`
   grid-area: Left;
   margin: 0;
+  margin-top: 16.5%;
   padding: 0;
   display: grid;
   height: 100%;

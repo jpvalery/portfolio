@@ -83,6 +83,7 @@ const Message = styled.textarea`
 const Submit = styled.input`
   background: var(--color-tertiary) !important;
   color: var(--color-base) !important;
+  font-weight: 900;
   cursor: pointer;
   transition: 0.2s;
   width: 100%;

@@ -183,7 +183,7 @@ module.exports = {
       options: {
         host: config.siteUrl,
         sitemap:`${config.siteUrl}/sitemap.xml`,
-        policy: [{ userAgent: '*', disallow: ['/.netlify/'] }],
+        policy: [{ userAgent: '*' }],
       },
     },
   ],

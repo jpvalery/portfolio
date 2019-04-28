@@ -1,0 +1,9 @@
+---
+exclude_paths:
+  - 'content/**/*'
+  - 'README.md'
+  - 'LICENSE'
+  - '.github/ISSUE_TEMPLATE/bug_report.md'
+  - '.github/ISSUE_TEMPLATE/feature_request.md'
+  - 'CODE_OF_CONDUCT.md'
+  - 'CONTRIBUTING.md'

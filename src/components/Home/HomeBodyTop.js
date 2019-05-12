@@ -14,7 +14,7 @@ const Wrapper = styled.section`
 @media screen and (min-width: ${props => props.theme.responsive.medium}) {padding: 2rem;}
 `
 const Body = styled.div`
-  margin: 0;
+  margin: 1rem 0;
   padding: 0;
   background-clip: text; -webkit-background-clip: text;
   background-size: cover;
@@ -22,18 +22,18 @@ const Body = styled.div`
   h1 {
     @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     font-size: 4rem;
-    margin-bottom: 2rem;}
+    margin-bottom: 4rem;}
   }
   h1,
   h2,
   h3 {
     color: transparent !important;
     font-weight: 600;
-    line-height: 1.25;
+    line-height: 1;
     text-transform: capitalize;
   }
   p {
-    line-height: 1.6;
+    line-height: 1.4;
     @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     font-size: 2rem;
     margin-bottom: 0.5rem;}

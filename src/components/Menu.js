@@ -17,7 +17,6 @@ const Nav = styled.nav`
 const Title = styled(Link)`
   text-decoration: none;
   display: inline-block;
-  vertical-align: middle;
   h1 {
     text-transform: uppercase;
     font-size: 2rem;
@@ -114,7 +113,7 @@ const Navigation = () => {
   return (
     <Nav>
       <Title to="/">
-        <h1>Jp Valery<span> - Photographer</span></h1>
+        <h1>Jp Valery</h1>
       </Title>
       <Header>
         <MenuMobile

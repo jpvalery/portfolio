@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import Ionicon from 'react-ionicons'
+import { IconContext } from "react-icons";
+import { IoMdCamera, IoLogoFacebook, IoLogoInstagram } from 'react-icons/io'
 
 const Wrapper = styled.section`
   margin: 1rem auto 0;
@@ -25,17 +26,17 @@ const Social = props => {
     <Wrapper>
       <SocialIcon>
         <a href="https://unsplash.com/jpvalery" alt="unsplash" target="_blank">
-          <Ionicon className="icon" fontSize="32px" icon="md-camera" />
+          <IconContext.Provider value={{ size:"2.4em" }}><IoMdCamera /></IconContext.Provider>
         </a>
       </SocialIcon>
       <SocialIcon>
         <a href="https://instagram.com/jpvalery/" alt="instagram" target="_blank">
-          <Ionicon className="icon" fontSize="32px" icon="logo-instagram" />
+          <IconContext.Provider value={{ size:"2.4em" }}><IoLogoInstagram /></IconContext.Provider>
         </a>
       </SocialIcon>
       <SocialIcon>
         <a href="https://www.facebook.com/jpvalery" alt="facebook" target="_blank">
-          <Ionicon className="icon" fontSize="32px" icon="logo-facebook" />
+          <IconContext.Provider value={{ size:"2.4em" }}><IoLogoFacebook /></IconContext.Provider>
         </a>
       </SocialIcon>
     </Wrapper>

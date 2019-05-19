@@ -80,7 +80,7 @@
   "devDependencies": {
     "eslint": "5.15.2",
     "eslint-config-gatsby-standard": "2.1.0",
-    "prettier": "1.15.3",
+    "prettier": "1.17.1",
     "stylelint-config-prettier": "4.0.0",
     "stylelint-config-standard": "18.2.0",
     "stylelint-config-styled-components": "0.1.1",

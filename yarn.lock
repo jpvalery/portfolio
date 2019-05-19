@@ -11956,10 +11956,10 @@ react-images@^0.5.19:
     react-scrolllock "^2.0.1"
     react-transition-group "2"
 
-react-ionicons@^2.1.6:
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/react-ionicons/-/react-ionicons-2.1.6.tgz#c9c472c242f41f228a6261fd6ce156d54e0e7677"
-  integrity sha1-ycRywkL0HyKKYmH9bOFW1U4Odnc=
+react-ionicons@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/react-ionicons/-/react-ionicons-3.0.1.tgz#0378a34c214c653c4c7d120860a679d6de8085cf"
+  integrity sha512-HVdj0BmFtfzpHmEp5f6jmaHkaqQjcmTSbPlpXyPfWVObXRFXTBAVj8LKcxVybnzxk99Iqmpbo74Kwy1+N0REYw==
   dependencies:
     prop-types "15.5.10"
     react "15.4.2"

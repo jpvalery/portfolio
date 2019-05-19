@@ -81,7 +81,7 @@
     "eslint": "5.16.0",
     "eslint-config-gatsby-standard": "2.1.1",
     "prettier": "1.17.1",
-    "stylelint-config-prettier": "4.0.0",
+    "stylelint-config-prettier": "5.2.0",
     "stylelint-config-standard": "18.3.0",
     "stylelint-config-styled-components": "0.1.1",
     "stylelint-processor-styled-components": "1.7.0"

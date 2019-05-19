@@ -5080,13 +5080,13 @@ escodegen@~1.2.0:
   optionalDependencies:
     source-map "~0.1.30"
 
-eslint-config-gatsby-standard@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-gatsby-standard/-/eslint-config-gatsby-standard-2.1.0.tgz#c031aaf90a2e8270b1393a1649b91aa5b64c5873"
-  integrity sha512-v1MobAgpdj00l1C1Tgv09NqdLPyXZCzF0hy1uWYnIiOjzD/AlCyEdmPLtzvA+NltZ1SBjq2Rp9Qq/kHfHcwGcQ==
+eslint-config-gatsby-standard@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-gatsby-standard/-/eslint-config-gatsby-standard-2.1.1.tgz#e09286d63ace9edb2021ce01837007d7f20c2abc"
+  integrity sha512-+zWs22Vkv008Nlu6ZYk5FfsRnsM46b9ZGci7hW4lxNm7Xc7abuQxY22p5ZPPOOsy8THQgMjVxV/H+cFp6SQZCQ==
   dependencies:
     babel-eslint "^10.0.1"
-    eslint-config-prettier "^3.1.0"
+    eslint-config-prettier "^3.3.0"
     eslint-config-standard "^12.0.0"
     eslint-config-standard-react "^7.0.0"
     eslint-plugin-import "^2.14.0"
@@ -5095,10 +5095,10 @@ eslint-config-gatsby-standard@2.1.0:
     eslint-plugin-react "^7.11.1"
     eslint-plugin-standard "^4.0.0"
 
-eslint-config-prettier@^3.1.0:
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-3.3.0.tgz#41afc8d3b852e757f06274ed6c44ca16f939a57d"
-  integrity sha512-Bc3bh5bAcKNvs3HOpSi6EfGA2IIp7EzWcg2tS4vP7stnXu/J1opihHDM7jI9JCIckyIDTgZLSWn7J3HY0j2JfA==
+eslint-config-prettier@^3.3.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-3.6.0.tgz#8ca3ffac4bd6eeef623a0651f9d754900e3ec217"
+  integrity sha512-ixJ4U3uTLXwJts4rmSVW/lMXjlGwCijhBJHk8iVqKKSifeI0qgFEfWl8L63isfc8Od7EiBALF6BX3jKLluf/jQ==
   dependencies:
     get-stdin "^6.0.0"
 

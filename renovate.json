@@ -1,7 +1,6 @@
 {
   "extends": [
     "config:base",
-    "schedule:nonOfficeHours",
     "prHourlyLimit:0"
   ]
 }

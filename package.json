@@ -22,7 +22,7 @@
     "gatsby-plugin-advanced-sitemap": "^1.0.4",
     "gatsby-plugin-canonical-urls": "^2.0.0-rc.2",
     "gatsby-plugin-catch-links": "^2.0.2",
-    "gatsby-plugin-emotion": "^2.0.5",
+    "gatsby-plugin-emotion": "^4.0.0",
     "gatsby-plugin-fathom": "^1.0.4",
     "gatsby-plugin-feed": "2.2.0",
     "gatsby-plugin-manifest": "2.1.1",

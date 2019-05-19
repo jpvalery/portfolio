@@ -58,7 +58,7 @@
     "react-typography": "^0.16.13",
     "stylelint": "^9.10.1",
     "typography": "^0.16.17",
-    "typography-breakpoint-constants": "^0.15.10",
+    "typography-breakpoint-constants": "^0.16.0",
     "whatwg-fetch": "^2.0.4"
   },
   "keywords": [

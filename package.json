@@ -59,7 +59,7 @@
     "stylelint": "^9.10.1",
     "typography": "^0.16.17",
     "typography-breakpoint-constants": "^0.16.0",
-    "whatwg-fetch": "^2.0.4"
+    "whatwg-fetch": "^3.0.0"
   },
   "keywords": [
     "gatsby"

@@ -6041,10 +6041,10 @@ gatsby-plugin-fathom@^1.0.4:
     "@babel/runtime" "7.1.2"
     react "16.5.2"
 
-gatsby-plugin-feed@2.2.1:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.2.1.tgz#a087cf681d925d070771e7012c30e120e1f8b72b"
-  integrity sha512-iolzLrgCWrs/Jp6DP9nt53JtP1nIUPU3b+lY2Us5dlbiEXwIJg/9LHNW9whfnd0vrcNXAyrR5ZhqMxZoBlpQgg==
+gatsby-plugin-feed@2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-2.2.3.tgz#5c1f279b3871c322639fa39ea03c95dac4a6f9b3"
+  integrity sha512-Q42UPtusQ6450envA8227fxDMI6NqNReuUL/VpBR4bfocZCa6/U1gYJovlgypQBApHnBXJ3r3jWUb9sJRyI1XQ==
   dependencies:
     "@babel/runtime" "^7.0.0"
     fs-extra "^7.0.1"
@@ -6166,15 +6166,6 @@ gatsby-remark-images-contentful@^2.0.11:
     semver "^5.6.0"
     sharp "^0.22.1"
     unist-util-select "^1.5.0"
-
-gatsby-remark-prismjs@3.2.9:
-  version "3.2.9"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-3.2.9.tgz#d8f30fe35f9db0db91d28e9109111a4c1499e227"
-  integrity sha512-6SqFpzp46zjnOzoBss2Ghao1YMbFpwPzxpGuD36goFdyNyRtA/m+MBvR+BHFsjVa2bgpm6eYRo6APNjYPyzZcg==
-  dependencies:
-    "@babel/runtime" "^7.0.0"
-    parse-numeric-range "^0.0.2"
-    unist-util-visit "^1.3.0"
 
 gatsby-source-contentful@^2.0.60:
   version "2.0.61"
@@ -10199,11 +10190,6 @@ parse-latin@^4.0.0:
     nlcst-to-string "^2.0.0"
     unist-util-modify-children "^1.0.0"
     unist-util-visit-children "^1.0.0"
-
-parse-numeric-range@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/parse-numeric-range/-/parse-numeric-range-0.0.2.tgz#b4f09d413c7adbcd987f6e9233c7b4b210c938e4"
-  integrity sha1-tPCdQTx6282Yf26SM8e0shDJOOQ=
 
 parse-passwd@^1.0.0:
   version "1.0.0"

@@ -59,31 +59,6 @@ const Time = styled.h5`
   font-style: italic;
   position: relative;
 `
-const List = styled.ul`
-  text-transform: capitalize;
-  font-weight: 600;
-  width: 100%;
-  padding: 0 1rem;
-  margin: 0 auto;
-  text-align: center;
-  display: block;
-  position: relative;
-`
-
-const Tag = styled.li`
-  display: inline-block;
-  margin: 0.5rem 0.25rem;
-    transition: 0.2s;
-    background: var(--color-base);
-    padding: 0.25rem 1rem ;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--color-secondary);
-    &:last-child {
-      margin: 0.5rem;
-    }
-
-`
 
 const ArticleHead = props => {
   return (

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Link } from 'gatsby'
 
 const Wrapper = styled.section`
   background: var(--color-secondary);

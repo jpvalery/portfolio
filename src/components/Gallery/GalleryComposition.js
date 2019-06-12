@@ -10,11 +10,6 @@ const Gallery = styled.div`
     padding: 2rem;
   }
 `
-const Title = styled.h2`
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0 1rem;
-`
 
 const GalleryComposition = props => {
   return (

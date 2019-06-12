@@ -5,7 +5,6 @@ import WrapperGrid from '../components/WrapperGrid'
 import Hero from '../components/Hero'
 import BiographyBody from '../components/Biography/BiographyBody'
 import BiographyBodyTop from '../components/Biography/BiographyBodyTop'
-import BiographyBodyBottom from '../components/Biography/BiographyBodyBottom'
 
 import SEO from '../components/SEO'
 

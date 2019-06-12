@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
-require('../../styles/prism.css')
 
 const Wrapper = styled.div`
   margin: 0 auto;

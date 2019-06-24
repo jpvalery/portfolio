@@ -31,7 +31,16 @@ const Cover = styled.div`
   @media screen and (max-width: ${props => props.theme.responsive.medium}) {
     animation: fadeup 3.5s;
     animation-timing-function: cubic-bezier(.25,.1,.25,1) ;
-    @keyframes fadeup { from { opacity: 0; transform: translateY(2rem);} to { opacity: 1; transform: translateY(0) }}
+    @keyframes fadeup {
+      from {
+        opacity: 0;
+        transform: translateY(2rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
   }
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     position: fixed !important;
@@ -57,9 +66,19 @@ const Title = styled.h2`
   &:hover{
     color: var(--color-highlight) !important;
   }
+
           animation: fadeup 3.5s;
           animation-timing-function: cubic-bezier(.25,.1,.25,1) ;
-          @keyframes fadeup { from { opacity: 0; transform: translateY(2rem);} to { opacity: 1; transform: translateY(0) }}
+          @keyframes fadeup {
+            from {
+              opacity: 0;
+              transform: translateY(2rem);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0)
+            }
+          }
 
 
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
@@ -76,9 +95,16 @@ const Year = styled.h3`
   color: #d8d8c7;
     animation: fadeup 3.5s;
     animation-timing-function: cubic-bezier(.25,.1,.25,1) ;
-    @keyframes fadeup { from { opacity: 0; transform: translateY(2rem);} to { opacity: 1; transform: translateY(0) }}
-  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
-    margin-left: 0.6rem;
+    @keyframes fadeup {
+      from {
+        opacity: 0;
+        transform: translateY(2rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     margin-bottom: 0.2rem !important;
     padding: 0.1rem;
     }
@@ -89,7 +115,16 @@ const List = styled.ul`
   position: relative;
     animation: fadeup 3.5s;
     animation-timing-function: cubic-bezier(.25,.1,.25,1) ;
-    @keyframes fadeup { from { opacity: 0; transform: translateY(2rem);} to { opacity: 1; transform: translateY(0) }}
+    @keyframes fadeup {
+      from {
+        opacity: 0;
+        transform: translateY(2rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
 `
 
 const Tag = styled.li`
@@ -108,9 +143,19 @@ const Excerpt = styled.p`
   @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     padding: 0;
   }
+
     animation: fadeup 3.5s;
     animation-timing-function: cubic-bezier(.25,.1,.25,1) ;
-    @keyframes fadeup { from { opacity: 0; transform: translateY(2rem);} to { opacity: 1; transform: translateY(0) }}
+    @keyframes fadeup {
+      from {
+        opacity: 0;
+        transform: translateY(2rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
 `
 const HomeContent = props => {
   return (

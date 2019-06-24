@@ -4,14 +4,23 @@ import styled from '@emotion/styled'
 const Wrapper = styled.section`
   background-color: transparent;
   grid-area: HomeBodyTop;
-  margin: 6rem 0px 1rem 0px;
+  margin: 6rem 0 1rem 0;
   padding-left:2rem; padding-right:2rem;
   display: grid;
   grid-template-rows: repeat(auto);
     animation: fadeuptop 3.5s;
     animation-timing-function: cubic-bezier(.25,.1,.25,1) ;
-    @keyframes fadeuptop { from { opacity: 0; transform: translateY(4rem);} to { opacity: 1; transform: translateY(0) }}
-@media screen and (min-width: ${props => props.theme.responsive.medium}) {padding: 2rem;}
+    @keyframes fadeup {
+      from {
+        opacity: 0;
+        transform: translateY(2rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {padding: 2rem;}
 `
 const Body = styled.div`
   margin: 1rem 0;
@@ -20,6 +29,7 @@ const Body = styled.div`
   background-size: cover;
   background-image:url("sunset-bg.jpg");
   h1 {
+    margin-bottom: 2rem;
     @media screen and (min-width: ${props => props.theme.responsive.medium}) {
     font-size: 4rem;
     margin-bottom: 4rem;}

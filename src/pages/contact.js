@@ -24,7 +24,7 @@ const Contact = ({ data, location }) => {
         <ContactBody>
           <ContactBodyTop body={info.body} />
           <ContactBodyBottom>
-            <ReactTypeformEmbed url="https://jpvalery.typeform.com/to/y96C4A" hideHeaders="true" hideFooter="true" opacity="0" popup="true" />
+            <ReactTypeformEmbed url="https://jpvalery.typeform.com/to/y96C4A" hideHeaders="true" hideFooter="true" opacity="0" style="{{ position: `fixed` }}" />
           </ContactBodyBottom>
         </ContactBody>
       </WrapperGrid>

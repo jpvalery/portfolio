@@ -56,6 +56,7 @@
     "react-resize-detector": "^4.0.0",
     "react-responsive-masonry": "^2.0.0",
     "react-transition-group": "^4.0.0",
+    "react-typeform-embed": "^0.2.0",
     "react-typography": "^0.16.13",
     "stylelint": "^10.0.0",
     "typescript": "^3.4.5",

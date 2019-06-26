@@ -8,7 +8,7 @@ import Hero from '../components/Hero'
 import ContactBody from '../components/Contact/ContactBody'
 import ContactBodyTop from '../components/Contact/ContactBodyTop'
 import ContactBodyBottom from '../components/Contact/ContactBodyBottom'
-import ContactForm from '../components/Contact/ContactForm'
+import { ReactTypeformEmbed } from 'react-typeform-embed';
 import SEO from '../components/SEO'
 
 const Contact = ({ data, location }) => {
@@ -24,7 +24,7 @@ const Contact = ({ data, location }) => {
         <ContactBody>
           <ContactBodyTop body={info.body} />
           <ContactBodyBottom>
-            <ContactForm />
+            <ReactTypeformEmbed url="https://jpvalery.typeform.com/to/y96C4A" hideHeaders="true" hideFooter="true" opacity="0" style={{ position: `relative`, minHeight: `460px` }} />
           </ContactBodyBottom>
         </ContactBody>
       </WrapperGrid>

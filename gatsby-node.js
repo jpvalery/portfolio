@@ -1,5 +1,20 @@
 const path = require(`path`)
 
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+    if (stage === 'build-html') {
+        actions.setWebpackConfig({
+            module: {
+                rules: [
+                  {
+                    test: /@typeform/,
+                    loader: 'null-loader',
+                  },
+                ],
+              }
+        })
+    }
+}
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -40,7 +55,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     `).then(result => {
-      result.data.allContentfulExtendedGallery.edges.map(({ node }) => { 
+      result.data.allContentfulExtendedGallery.edges.map(({ node }) => {
         createPage({
           path: `${node.slug}/`,
           component: path.resolve(`./src/templates/gallery.js`),

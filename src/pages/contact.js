@@ -8,8 +8,20 @@ import Hero from '../components/Hero'
 import ContactBody from '../components/Contact/ContactBody'
 import ContactBodyTop from '../components/Contact/ContactBodyTop'
 import ContactBodyBottom from '../components/Contact/ContactBodyBottom'
-import { ReactTypeformEmbed } from 'react-typeform-embed';
 import SEO from '../components/SEO'
+import styled from '@emotion/styled'
+
+const Typeform = styled.a`
+  text-decoration: none;
+  margin: 0 2rem;
+  padding: 1.2rem 2.4rem;
+  font-size: 1.8rem;
+  background-color: #278400;
+    &:hover {
+      color: #ECEFF4;
+      background-color: #15A3A6;
+    }
+`
 
 const Contact = ({ data, location }) => {
   const info = data.contentfulAbout
@@ -24,7 +36,7 @@ const Contact = ({ data, location }) => {
         <ContactBody>
           <ContactBodyTop body={info.body} />
           <ContactBodyBottom>
-            <ReactTypeformEmbed url="https://jpvalery.typeform.com/to/y96C4A" hideHeaders="true" hideFooter="true" style={{ position: `relative`, minHeight: `460px` }} />
+            <Typeform href="https://jpvalery.typeform.com/to/y96C4A" rel="noopener noreferrer" alt="Contact Form Button" target="_blank">Let's get started</Typeform>
           </ContactBodyBottom>
         </ContactBody>
       </WrapperGrid>

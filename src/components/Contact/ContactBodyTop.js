@@ -3,8 +3,11 @@ import styled from '@emotion/styled'
 
 const Wrapper = styled.section`
   grid-area: ContactBodyTop;
-  margin: 6rem 0 0 0;
+  margin: 16.5% 0 1.6rem 0;
   padding: 0;
+  @media screen and (min-width: ${props => props.theme.responsive.medium}) {
+    margin: 33% 0 3rem 0;
+  }
 `
 const Body = styled.div`
   margin: 0 2rem 0 2rem;

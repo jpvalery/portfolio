@@ -2,8 +2,13 @@
 # https://jpv-portfolio.netlify.com/* https://jpvalery.photo/ 301!
 /about /biography
 /about-me /biography
-/portfolio /
+/portfolio /featured-shots
 /free /blog/freebies
 /freebies /blog/freebies
 /timberland-unsplash-celebrating-the-icons /timberland-x-unsplash
 /no-sleep-till-brooklyn-nyc-2017 /no-sleep-till-brooklyn
+/favicon.ico /
+/montreal-quebec /americana
+/aerial /
+/wildlife /
+/wp-login.php /

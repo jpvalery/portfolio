@@ -40,7 +40,7 @@
     "gatsby-transformer-remark": "^2.3.12",
     "history": "^4.7.2",
     "inquirer": "^6.3.1",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.13",
     "path": "^0.12.7",
     "prismjs": "^1.15.0",
     "react": "^16.7.0",

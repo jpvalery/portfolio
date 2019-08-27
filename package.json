@@ -39,7 +39,7 @@
     "gatsby-source-filesystem": "^2.0.36",
     "gatsby-transformer-remark": "^2.3.12",
     "history": "^4.7.2",
-    "inquirer": "^6.3.1",
+    "inquirer": "^7.0.0",
     "lodash": "^4.17.13",
     "path": "^0.12.7",
     "prismjs": "^1.15.0",

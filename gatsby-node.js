@@ -1,20 +1,5 @@
 const path = require(`path`)
 
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
-    if (stage === 'build-html') {
-        actions.setWebpackConfig({
-            module: {
-                rules: [
-                  {
-                    test: /@typeform/,
-                    loader: 'null-loader',
-                  },
-                ],
-              }
-        })
-    }
-}
-
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 

@@ -15,6 +15,9 @@ jobs:
       run: yarn install
     - name: Yarn Build
       run: yarn build
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        SPACE_ID: ${{ secrets.SPACE_ID }}
     - name: Percy
       run: yarn percy snapshot ./public
       env:

@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  CI_Workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1 
+    - name: Yarn Install
+      run: yarn install
+    - name: Yarn Build
+      run: yarn build
+    - name: Percy
+      run: yarn percy snapshot ./public
+      env:
+        PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

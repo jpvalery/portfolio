@@ -47,7 +47,7 @@
     "react-burger-menu": "^2.6.10",
     "react-dom": "^16.4.2",
     "react-emotion": "^10.0.0",
-    "react-headroom": "^2.2.2",
+    "react-headroom": "^3.0.0",
     "react-helmet": "^5.2.1",
     "react-icons": "^3.7.0",
     "react-images": "^0.5.19",

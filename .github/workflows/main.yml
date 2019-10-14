@@ -6,19 +6,13 @@ on:
     - master
 
 jobs:
-  CI_Workflow:
+
+  Action_Workflow:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1 
-    - name: Yarn Install
-      run: yarn install
-    - name: Yarn Build
-      run: yarn build
-      env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        SPACE_ID: ${{ secrets.SPACE_ID }}
-    - name: Percy
-      run: yarn percy snapshot ./public
+    - uses: actions/checkout@v1
+    - name: Yarn & Percy CI
+      uses: jpvalery/yarn-percy-ci@master
       env:
         PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

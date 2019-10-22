@@ -16,3 +16,5 @@ jobs:
       uses: jpvalery/yarn-percy-ci@master
       env:
         PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        SPACE_ID: ${{ secrets.SPACE_ID }}

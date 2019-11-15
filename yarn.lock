@@ -1431,6 +1431,11 @@
     "@types/unist" "*"
     "@types/vfile-message" "*"
 
+"@types/which@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@types/which/-/which-1.3.2.tgz#9c246fc0c93ded311c8512df2891fb41f6227fdf"
+  integrity sha512-8oDqyLC7eD4HM307boe2QWKyuzdzWBj56xI/imSl2cpL+U3tCMaTAkMJ4ee5JBZ/FsOJlvRGeIShiZDAl1qERA==
+
 "@webassemblyjs/ast@1.7.11":
   version "1.7.11"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.7.11.tgz#b988582cafbb2b095e8b556526f30c90d057cace"
@@ -10909,15 +10914,16 @@ percy-client@^3.2.0:
     request-promise "^4.2.2"
     walk "^2.3.14"
 
-percy@0.20.0:
-  version "0.20.0"
-  resolved "https://registry.yarnpkg.com/percy/-/percy-0.20.0.tgz#1468bdcca224d87193debf3c5324ccc03999b862"
-  integrity sha512-/i6vjh/4T8JcnxJziP+mf2tbjDH/YwRN2y13OWBGcsrj+RT7MdAI8fPPE+bs/lDUUDzC83MPh7CbVd/6gWMTlg==
+percy@0.20.1:
+  version "0.20.1"
+  resolved "https://registry.yarnpkg.com/percy/-/percy-0.20.1.tgz#e46be3605225152a41ed119b2a5658358cb1c7b8"
+  integrity sha512-JyEwlDrNEqNaRQ2lVwyr0pq/ITMF3T/ClXL+D8SUhYhRE/1YCLSVPClcv75veKbQdJcLkL3qNgwAPsUc/h//jg==
   dependencies:
     "@oclif/command" "1.5.16"
     "@oclif/config" "^1"
     "@oclif/plugin-help" "^2"
     "@oclif/plugin-not-found" "^1.2"
+    "@types/which" "^1.3.2"
     axios "^0.19.0"
     body-parser "^1.18.3"
     colors "^1.3.2"
@@ -10934,6 +10940,7 @@ percy@0.20.0:
     percy-client "^3.2.0"
     puppeteer "^1.13.0"
     retry-axios "^1.0.1"
+    which "^2.0.1"
     winston "^3.0.0"
 
 performance-now@^2.1.0:
@@ -15153,6 +15160,13 @@ which@^1.2.14, which@^1.2.9, which@^1.3.1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/which/-/which-1.3.1.tgz#a45043d54f5805316da8d62f9f50918d3da70b0a"
   integrity sha512-HxJdYWq1MTIQbJ3nw0cqssHoTNU267KlrDuGZ1WYlxDStUtKUhOaJmh112/TZmHxxUfuJqPXSOm7tDyas0OSIQ==
+  dependencies:
+    isexe "^2.0.0"
+
+which@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/which/-/which-2.0.1.tgz#f1cf94d07a8e571b6ff006aeb91d0300c47ef0a4"
+  integrity sha512-N7GBZOTswtB9lkQBZA4+zAXrjEIWAUOB93AvzUiudRzRxhUdLURQ7D/gAIMY1gatT/LTbmbcv8SiYazy3eYB7w==
   dependencies:
     isexe "^2.0.0"
 

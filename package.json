@@ -57,7 +57,7 @@
     "react-responsive-masonry": "^2.0.0",
     "react-transition-group": "^4.0.0",
     "react-typography": "^0.16.13",
-    "stylelint": "^11.0.0",
+    "stylelint": "^12.0.0",
     "typescript": "^3.4.5",
     "typography": "^0.16.17",
     "typography-breakpoint-constants": "^0.16.0",

@@ -2,7 +2,7 @@
 
 [See it in action](https://jpvalery.photo)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/592d351c-5180-41c9-be77-e98fbc33cd2e/deploy-status)](https://app.netlify.com/sites/jpvalery-portfolio/deploys) [![Maintainability](https://api.codeclimate.com/v1/badges/8c4c1cfe4b182212ae3c/maintainability)](https://codeclimate.com/github/jpvalery/portfolio/maintainability) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e4864e257d8d4c40a2a3535b619f9fe9)](https://www.codacy.com/app/jpvalery/portfolio?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jpvalery/portfolio&amp;utm_campaign=Badge_Grade)
+[![Maintainability](https://api.codeclimate.com/v1/badges/8c4c1cfe4b182212ae3c/maintainability)](https://codeclimate.com/github/jpvalery/portfolio/maintainability) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e4864e257d8d4c40a2a3535b619f9fe9)](https://www.codacy.com/app/jpvalery/portfolio?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jpvalery/portfolio&amp;utm_campaign=Badge_Grade)
 
 
 ## Overview

@@ -32,14 +32,15 @@ module.exports = {
   },
   plugins: [
     {
-     resolve: 'gatsby-plugin-fathom',
-     options: {
-       // your Fathom server URL
-       trackingUrl: 'jpvalery.usesfathom.com',
-       // unique site id (optional, required for Fathom v1.1.0+)
-       siteId: 'YXKOHEVS'
-     },
-   },
+      resolve: `gatsby-plugin-umami`,
+      options: {
+        websiteId: 'e75bdc12-6377-4c26-90c1-06b64ad3a35a',
+        srcUrl: 'https://analytics.jpvalery.com/umami.js',
+        includeInDevelopment: false,
+        autoTrack: true,
+        respectDoNotTrack: true
+      },
+    },
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {

@@ -1,5 +1,5 @@
-import Instagram from "../elements/icons/Instagram";
-import Unsplash from "../elements/icons/Unsplash";
+import Instagram from '../elements/icons/Instagram'
+import Unsplash from '../elements/icons/Unsplash'
 
 export default function Footer() {
   return (
@@ -29,5 +29,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

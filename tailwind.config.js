@@ -1,7 +1,7 @@
-const colors = require("tailwindcss/colors");
+const colors = require('tailwindcss/colors')
 
 module.exports = {
-  purge: ["./pages/**/*.js", "./components/**/*.js", "./elements/**/*.js"],
+  purge: ['./pages/**/*.js', './components/**/*.js', './elements/**/*.js'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -13,12 +13,12 @@ module.exports = {
         cta: colors.blue,
       },
       margin: {
-       '-menu': '-28rem',
-      }
-    }
+        '-menu': '-28rem',
+      },
+    },
   },
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography")],
-};
+  plugins: [require('@tailwindcss/typography')],
+}

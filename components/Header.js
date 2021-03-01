@@ -1,17 +1,15 @@
-import { useState } from "react";
-import { Transition, Menu } from "@headlessui/react";
-import NextLink from "next/link";
-import React from "react";
+import { useState } from 'react'
+import { Transition, Menu } from '@headlessui/react'
+import NextLink from 'next/link'
+import React from 'react'
 
 export default function Header() {
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isMobileOpen, setIsMobileOpen] = useState(false)
   return (
     <div className="max-w-7xl mx-auto sticky top-0 z-50 pt-4 bg-eigengrau bg-opacity-20">
       <div className="flex justify-between py-6">
         <NextLink href="/">
-          <span className="w-24 h-12 -mt-9">
-            JP VALERY
-          </span>
+          <span className="w-24 h-12 -mt-9">JP VALERY</span>
         </NextLink>
 
         <div className="-mr-2 -my-2 md:hidden">
@@ -40,11 +38,11 @@ export default function Header() {
         </div>
 
         <div className="hidden md:flex">
-        <NextLink href="/featured-shots">
-          <span className="group text-gray-500 inline-flex items-center text-base font-medium hover:text-accent ml-4 outline-none">
-            Portfolio
-          </span>
-        </NextLink>
+          <NextLink href="/featured-shots">
+            <span className="group text-gray-500 inline-flex items-center text-base font-medium hover:text-accent ml-4 outline-none">
+              Portfolio
+            </span>
+          </NextLink>
           <Menu>
             {({ open }) => (
               <>
@@ -77,37 +75,37 @@ export default function Header() {
                     <div className="absolute z-50 -ml-menu mt-12 outline-none">
                       <div className="w-screen max-w-md rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-8 bg-white px-8 py-8">
-                        <Menu.Item>
-                          {({ active }) => (
-                            <NextLink href="/biography">
-                              <span className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
-                                <svg
-                                  className="flex-shrink-0 h-6 w-6 text-indigo-800"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  stroke="currentColor"
-                                  aria-hidden="true"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    strokeWidth={2}
-                                    d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                                  />
-                                </svg>
-                                <div className="ml-4">
-                                  <p className="text-base font-medium text-gray-900">
-                                    About me
-                                  </p>
-                                  <p className="mt-1 text-sm text-gray-500">
-                                    Biography and achievements
-                                  </p>
-                                </div>
-                              </span>
-                            </NextLink>
-                          )}
-                        </Menu.Item>
+                          <Menu.Item>
+                            {({ active }) => (
+                              <NextLink href="/biography">
+                                <span className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                                  <svg
+                                    className="flex-shrink-0 h-6 w-6 text-indigo-800"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    aria-hidden="true"
+                                  >
+                                    <path
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                      strokeWidth={2}
+                                      d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    />
+                                  </svg>
+                                  <div className="ml-4">
+                                    <p className="text-base font-medium text-gray-900">
+                                      About me
+                                    </p>
+                                    <p className="mt-1 text-sm text-gray-500">
+                                      Biography and achievements
+                                    </p>
+                                  </div>
+                                </span>
+                              </NextLink>
+                            )}
+                          </Menu.Item>
 
                           <Menu.Item>
                             {({ active }) => (
@@ -553,5 +551,5 @@ export default function Header() {
         )}
       </Transition>
     </div>
-  );
+  )
 }

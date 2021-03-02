@@ -1,8 +1,10 @@
 import NextLink from 'next/link'
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+
+import CardGallery from '../components/CardGallery'
 
 export default function Home({ galleries }) {
-  console.log(galleries);
+  console.log(galleries)
   return (
     <div className="mx-auto py-24 grid gap-20 md:gap-30">
       <div className="pb-8">
@@ -11,70 +13,96 @@ export default function Home({ galleries }) {
           <br />
           ordinary things
         </h1>
-        <div className="prose prose-xl prose-accent text-center text-gray-50 py-8">
+        <div className="text-2xl text-center text-gray-50 py-8">
           <p>I'm a self-taught photographer documenting spaces and people.</p>
           <p>
-            Learn more <NextLink href="/biography">about me</NextLink> or{' '}
-            <a href="https://contact.jpvalery.me">get in touch</a>.
+            Learn more{' '}
+            <NextLink href="/biography">
+              <span className="hover:text-accent underline cursor-pointer">
+                about me
+              </span>
+            </NextLink>{' '}
+            or{' '}
+            <a
+              href="https://contact.jpvalery.me"
+              className="hover:text-accent underline"
+            >
+              get in touch
+            </a>
+            .
           </p>
         </div>
       </div>
-      <div className="grid">
-        {galleries.map(gallery => {
+      <div className="grid grid-cols-1 lg:grid-cols-3 justify-items-center gap-12">
+        {galleries.map((gallery) => {
           return (
-            <p>{gallery.title}</p>
-          );
+            <CardGallery
+              key={gallery.id}
+              slug={gallery.slug}
+              image={gallery.heroImage}
+              title={gallery.title}
+              year={gallery.year}
+              tags={gallery.tagsCollection.items}
+              date={gallery.publishDate}
+            />
+          )
         })}
-        </div>
+      </div>
     </div>
   )
 }
 
+// We use getStaticProps to get the content at build time
 export async function getStaticProps() {
-
-  const space = process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID
-  const accessToken = process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
-
+  // We use Apollo to query Contentful GraphQL API
   const client = new ApolloClient({
-  uri: `https://graphql.contentful.com/content/v1/spaces/${space}/?access_token=${accessToken}`,
-  cache: new InMemoryCache(),
-  credentials: 'same-origin',
-  });
+    uri: `https://graphql.contentful.com/content/v1/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}/?access_token=${process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN}`,
+    cache: new InMemoryCache(),
+    credentials: 'same-origin',
+  })
 
-
+  // We define our query here
   const { data } = await client.query({
-  query: gql`
-  query Index {
-    extendedGalleryCollection(order: publishDate_DESC, where: {displayHome: true}) {
-      items {
-        title
-        slug
-        year
-        body
-        metaDescription
-        summary
-        publishDate
-        displayHome
-        heroImage {
-          title
-          description
-          contentType
-          fileName
-          size
-          url
-          width
-          height
+    query: gql`
+      query Index {
+        extendedGalleryCollection(
+          order: publishDate_DESC
+          where: { displayHome: true }
+        ) {
+          items {
+            title
+            slug
+            year
+            body
+            metaDescription
+            summary
+            tagsCollection {
+              items {
+                title
+                slug
+              }
+            }
+            publishDate
+            heroImage {
+              title
+              description
+              contentType
+              fileName
+              size
+              url
+              width
+              height
+            }
+          }
         }
       }
-    }
-  }
-  `
-});
+    `,
+  })
 
-
+  // We return the result of the query as props to pass them above
   return {
     props: {
-      galleries: data.extendedGalleryCollection.items
-    }
+      galleries: data.extendedGalleryCollection.items,
+    },
   }
 }

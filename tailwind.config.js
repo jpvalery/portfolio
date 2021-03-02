@@ -10,6 +10,8 @@ module.exports = {
         accent: '#D8D8C7',
         titleg1: '#A56D5E',
         titleg2: '#E88B6A',
+        overlayg1: '#00000088',
+        overlayg2: '#FFFFFF44',
         cta: colors.blue,
       },
       margin: {
@@ -18,7 +20,7 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: { transform: ['hover', 'focus'], rotate: ['odd', 'even'] },
   },
   plugins: [require('@tailwindcss/typography')],
 }

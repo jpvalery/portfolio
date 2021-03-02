@@ -1,4 +1,5 @@
 const colors = require('tailwindcss/colors')
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   purge: ['./pages/**/*.js', './components/**/*.js', './elements/**/*.js'],
@@ -16,6 +17,18 @@ module.exports = {
       },
       margin: {
         '-menu': '-28rem',
+      },
+      typography: {
+        DEFAULT: {
+          css: {
+            a: {
+              color: '#FFFFFF',
+              '&:hover': {
+                color: '#D8D8C7',
+              },
+            },
+          },
+        },
       },
     },
   },

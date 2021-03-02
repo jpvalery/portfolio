@@ -26,8 +26,11 @@
 		"postcss": "^8.2.4",
 		"react": "17.0.1",
 		"react-dom": "17.0.1",
+		"remark-parse": "^9.0.0",
+		"remark-react": "^8.0.0",
 		"swr": "^0.4.0",
-		"tailwindcss": "^2.0.2"
+		"tailwindcss": "^2.0.2",
+		"unified": "^9.2.1"
 	},
 	"devDependencies": {
 		"prettier": "2.2.1"

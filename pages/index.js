@@ -12,23 +12,12 @@ export default function Home({ galleries }) {
           <br />
           ordinary things
         </h1>
-        <div className="text-2xl text-center text-gray-50 py-8">
-          <p>I'm a self-taught photographer documenting spaces and people.</p>
+        <div className="prose prose-2xl text-center text-gray-50 py-8 mx-auto">
           <p>
-            Learn more{' '}
-            <NextLink href="/biography">
-              <span className="hover:text-accent underline cursor-pointer">
-                about me
-              </span>
-            </NextLink>{' '}
-            or{' '}
-            <a
-              href="https://contact.jpvalery.me"
-              className="hover:text-accent underline"
-            >
-              get in touch
-            </a>
-            .
+            I'm a self-taught photographer documenting spaces and people.
+            <br />
+            Learn more <NextLink href="/biography">about me</NextLink> or{' '}
+            <a href="https://contact.jpvalery.me">get in touch</a>.
           </p>
         </div>
       </div>

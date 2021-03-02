@@ -14,8 +14,7 @@ const SubGallery = (props) => {
           />
         )
       })}
-      </>
-
+    </>
   )
 }
 

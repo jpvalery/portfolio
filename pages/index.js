@@ -4,7 +4,6 @@ import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 import CardGallery from '../components/CardGallery'
 
 export default function Home({ galleries }) {
-  console.log(galleries)
   return (
     <div className="mx-auto py-24 grid gap-20 md:gap-30">
       <div className="pb-8">

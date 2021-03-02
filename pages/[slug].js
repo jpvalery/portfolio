@@ -1,7 +1,8 @@
 import NextLink from 'next/link'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 
-export default function Home({ gallery, subgalleries }) {
+export default function Home({ gallery }) {
+  console.log(gallery)
   return (
     <div className="mx-auto py-24 grid gap-20 md:gap-30">
       <h1>{gallery.title}</h1>
@@ -96,12 +97,15 @@ export async function getStaticProps({ params }) {
         }
       }
     `,
+    variables: {
+      slug: params.slug
+        }
   })
 
   // We return the result of the query as props to pass them above
   return {
     props: {
-      gallery: data.extendedGalleryCollection.items,
+      gallery: data.extendedGalleryCollection.items.[0],
       // subgalleries: data.extendedGalleryCollection.items.galleriesCollection.items,
     },
   }

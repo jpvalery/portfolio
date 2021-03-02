@@ -33,7 +33,7 @@ export default function Home({ metadata, tags, galleries }) {
           </ul>
         </div>
 
-        <div className="py mx-24">
+        <div className="py mx-auto">
           <p className="prose prose-2xl text-center text-gray-50">{content}</p>
         </div>
       </div>

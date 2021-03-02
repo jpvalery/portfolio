@@ -6,10 +6,10 @@ import React from 'react'
 export default function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   return (
-    <div className="max-w-7xl mx-auto sticky top-0 z-50 pt-4 bg-eigengrau bg-opacity-20">
-      <div className="flex justify-between py-6">
+    <div className="max-w-7xl mx-auto sticky top-0 z-50 pt-4 bg-gradient-to-b from-eigengrau">
+      <div className="flex justify-between py-6 items-center">
         <NextLink href="/">
-          <span className="w-24 h-12 -mt-9">JP VALERY</span>
+          <span className="w-24 h-12 cursor-pointer">JP VALERY</span>
         </NextLink>
 
         <div className="-mr-2 -my-2 md:hidden">

@@ -33,7 +33,7 @@ export default function Home({ galleries }) {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 justify-items-center gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-3 justify-items-center items-center gap-12">
         {galleries.map((gallery) => {
           return (
             <CardGallery

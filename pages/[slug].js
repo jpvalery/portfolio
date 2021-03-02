@@ -2,37 +2,45 @@ import NextLink from 'next/link'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 
 import TagLabel from '../components/TagLabel'
+import SubGallery from '../components/SubGallery'
 
-export default function Home({ gallery, tags }) {
-  console.log(gallery, tags)
+export default function Home({ metadata, tags, galleries }) {
   return (
-    <div className="mx-auto py-12 grid">
+    <main>
+      <div className="mx-auto py-12 grid">
+        <div className="pb-2">
+          <h1 className="font-serif font-bold text-5xl md:text-6xl text-center from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text text-transparent">
+            {metadata.title}
+          </h1>
+          <p className="text-2xl text-accent font-bold text-center text-gray-200 pt-2">
+            {metadata.year}
+          </p>
+        </div>
 
-      <div className="pb-2">
-        <h1 className="font-serif font-bold text-5xl md:text-6xl text-center from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text text-transparent">
-          {gallery.title}
-        </h1>
-        <p className="text-2xl text-accent font-bold text-center text-gray-200 pt-2">
-          {gallery.year}
-        </p>
+        <div className="mx-auto pt-2 pb-4">
+          <ul className="grid grid-flow-col gap-2">
+            {tags.map((tag) => {
+              return <TagLabel slug={tag.slug} title={tag.title} />
+            })}
+          </ul>
+        </div>
+
+        <div className="py mx-24">
+          <p className="text-2xl text-center text-gray-50">{metadata.body}</p>
+        </div>
       </div>
 
-      <div className="mx-auto pt-2 pb-4">
-      <ul className="grid grid-flow-col gap-2">
-        {tags.map((tag) => { return(
-          <TagLabel
-            slug={tag.slug}
-            title={tag.title}
-          />
-        )})}
-      </ul>
+      <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-3 gap-12 justify-items-center items-center">
+        {galleries.map((gallery) => {
+          return (
+            <SubGallery
+              title={gallery.title}
+              images={gallery.imagesCollection.items}
+            />
+          )
+        })}
       </div>
-
-      <div className="py mx-24">
-        <p className="text-2xl text-center text-gray-50">{gallery.body}</p>
-      </div>
-
-    </div>
+    </main>
   )
 }
 
@@ -114,6 +122,8 @@ export async function getStaticProps({ params }) {
                   items {
                     title
                     url
+                    width
+                    height
                   }
                 }
               }
@@ -130,9 +140,10 @@ export async function getStaticProps({ params }) {
   // We return the result of the query as props to pass them above
   return {
     props: {
-      gallery: data.extendedGalleryCollection.items[0],
+      metadata: data.extendedGalleryCollection.items[0],
       tags: data.extendedGalleryCollection.items[0].tagsCollection.items,
-      // subgalleries: data.extendedGalleryCollection.items.galleriesCollection.items,
+      galleries:
+        data.extendedGalleryCollection.items[0].galleriesCollection.items,
     },
   }
 }

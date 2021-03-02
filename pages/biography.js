@@ -26,83 +26,77 @@ export default function Biography() {
         </h1>
       </div>
 
-      <div>
+      <div className="w-10/12 mx-auto">
         <h2 className="text-2xl font-serif font-bold py-6">About me</h2>
 
-        <p className="text-lg py-2">
-          I'm a 29 years old self-taught photographer based in Montréal, QC. My
-          passion for photography was born from a deep desire to share and
-          document the beauty I see in my environment.
-        </p>
+        <div className="prose prose-lg text-white max-w-full">
+          <p>
+            I'm a 29 years old self-taught photographer based in Montréal, QC.
+            My passion for photography was born from a deep desire to share and
+            document the beauty I see in my environment.
+          </p>
 
-        <p className="text-lg py-2">
-          My work has been featured in international publications multiple
-          times. I published my first book "An American Road Trip" in 2016 which
-          was followed by my sophomore effort in 2018 "Mystic Mists of
-          Massachusetts".
-        </p>
+          <p>
+            My work has been featured in international publications multiple
+            times. I published my first book "An American Road Trip" in 2016
+            which was followed by my sophomore effort in 2018 "Mystic Mists of
+            Massachusetts".
+          </p>
 
-        <p className="text-lg py-2">
-          In 2017 and 2018, I have been nominated Community Allstar on
-          Unsplash.com where my pictures have received more than{' '}
-          <a
-            href="https://unsplash.com/@jpvalery"
-            className="underline hover:text-accent"
-          >
-            130 Millions views.
-          </a>
-        </p>
+          <p>
+            In 2017 and 2018, I have been nominated Community Allstar on
+            Unsplash.com where my pictures have received more than{' '}
+            <a href="https://unsplash.com/@jpvalery">130 Millions views.</a>
+          </p>
 
-        <p className="text-lg py-2">
-          In 2019, I founded the{' '}
-          <a
-            href="https://montrealphoto.club"
-            className="underline hover:text-accent"
-          >
-            Montréal Photo Club
-          </a>{' '}
-          to organize photography events and gatherings in Montréal.
-        </p>
+          <p>
+            In 2019, I founded the{' '}
+            <a href="https://montrealphoto.club">Montréal Photo Club</a> to
+            organize photography events and gatherings in Montréal.
+          </p>
 
-        <p className="text-lg py-2">
-          In 2020, I released{' '}
-          <a
-            href="https://lookbutnostopping.com"
-            className="underline hover:text-accent"
-          >
-            LookButNoStopping.com
-          </a>
-          , an interactive web experience with photos from my trip to
-          Newfoundland the year before.
-        </p>
+          <p>
+            In 2020, I released{' '}
+            <a
+              href="https://lookbutnostopping.com"
+              className="underline hover:text-accent"
+            >
+              LookButNoStopping.com
+            </a>
+            , an interactive web experience with photos from my trip to
+            Newfoundland the year before.
+          </p>
 
-        <p className="text-lg py-2">
-          For more information, or to get in touch regarding employment
-          opportunities, or to just say hello, feel free to{' '}
-          <a
-            href="https://contact.jpvalery.me/photography"
-            className="underline hover:text-accent"
-          >
-            send me a message
-          </a>
-          .
-        </p>
+          <p>
+            For more information, or to get in touch regarding employment
+            opportunities, or to just say hello, feel free to{' '}
+            <a
+              href="https://contact.jpvalery.me/photography"
+              className="underline hover:text-accent"
+            >
+              send me a message
+            </a>
+            .
+          </p>
+        </div>
 
         <h2 className="text-2xl font-serif font-bold py-6">
           My artist statement
         </h2>
 
-        <p className="text-lg py-2">
-          I envision a very natural photography – close to the standards for
-          photojournalism. Thus, all of my pictures are not digitally altered
-          (so neither retouched, photoshopped, or transformed).
-        </p>
+        <div className="prose prose-lg text-white">
+          <p>
+            I envision a very natural photography – close to the standards for
+            photojournalism. Thus, all of my pictures are not digitally altered
+            (so neither retouched, photoshopped, or transformed).
+          </p>
 
-        <p className="text-lg py-2">
-          I try to capture images that transmit emotion and tell stories. I’d
-          define my vision as almost naturalist but not emotionless in the
-          depiction of my reality.
-        </p>
+          <p>
+            I try to capture images that transmit emotion and tell stories. I’d
+            define my vision as almost naturalist but not emotionless in the
+            depiction of my reality.
+          </p>
+        </div>
 
         <p className="text-lg py-2 italic font-semibold text-accent">
           There’s a lot of beauty in ordinary things. Isn’t that kind of the
@@ -113,7 +107,7 @@ export default function Biography() {
           Media Coverage & Featurings
         </h2>
 
-        <ul className="grid grid-flow-row uppercase gap-1">
+        <ul className="grid grid-flow-row grid-cols-1 md:grid-cols-2 justify-items-start uppercase gap-1">
           {Media.map(({ name }) => (
             <li className="px-2 py-1 inline-flex items-center">
               {' '}

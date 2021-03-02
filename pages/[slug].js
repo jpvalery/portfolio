@@ -1,11 +1,37 @@
 import NextLink from 'next/link'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 
-export default function Home({ gallery }) {
-  console.log(gallery)
+import TagLabel from '../components/TagLabel'
+
+export default function Home({ gallery, tags }) {
+  console.log(gallery, tags)
   return (
-    <div className="mx-auto py-24 grid gap-20 md:gap-30">
-      <h1>{gallery.title}</h1>
+    <div className="mx-auto py-12 grid">
+
+      <div className="pb-2">
+        <h1 className="font-serif font-bold text-5xl md:text-6xl text-center from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text text-transparent">
+          {gallery.title}
+        </h1>
+        <p className="text-2xl text-accent font-bold text-center text-gray-200 pt-2">
+          {gallery.year}
+        </p>
+      </div>
+
+      <div className="mx-auto pt-2 pb-4">
+      <ul className="grid grid-flow-col gap-2">
+        {tags.map((tag) => { return(
+          <TagLabel
+            slug={tag.slug}
+            title={tag.title}
+          />
+        )})}
+      </ul>
+      </div>
+
+      <div className="py mx-24">
+        <p className="text-2xl text-center text-gray-50">{gallery.body}</p>
+      </div>
+
     </div>
   )
 }
@@ -75,7 +101,6 @@ export async function getStaticProps({ params }) {
             year
             body
             metaDescription
-            summary
             tagsCollection {
               items {
                 title
@@ -98,14 +123,15 @@ export async function getStaticProps({ params }) {
       }
     `,
     variables: {
-      slug: params.slug
-        }
+      slug: params.slug,
+    },
   })
 
   // We return the result of the query as props to pass them above
   return {
     props: {
-      gallery: data.extendedGalleryCollection.items.[0],
+      gallery: data.extendedGalleryCollection.items[0],
+      tags: data.extendedGalleryCollection.items[0].tagsCollection.items,
       // subgalleries: data.extendedGalleryCollection.items.galleriesCollection.items,
     },
   }

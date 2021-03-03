@@ -1,10 +1,15 @@
 const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   purge: ['./pages/**/*.js', './components/**/*.js', './elements/**/*.js'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    screens: {
+      'md': '720px',
+      ...defaultTheme.screens,
+    },
     extend: {
       colors: {
         eigengrau: '#16161D',
@@ -30,10 +35,22 @@ module.exports = {
           },
         },
       },
+      scale: {
+        '115': '1.15',
+      },
+      rotate: {
+        '4': '4deg',
+        '-4': '-4deg',
+      },
+      spacing: {
+         'max2': '26rem',
+         'max3': '40rem',
+
+       },
     },
   },
   variants: {
-    extend: { transform: ['hover', 'focus'], rotate: ['odd', 'even'] },
+    extend: { transform: ['hover', 'focus', 'group-hover'], rotate: ['odd', 'even', 'group-hover'], scale: ['hover', 'focus', 'group-hover'], },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio')],
 }

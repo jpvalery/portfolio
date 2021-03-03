@@ -1,27 +1,29 @@
-# Photo Portfolio - Gatsby + Contentful + Netlify
+# Photo Portfolio V3 - Next.js + TailwindCSS
 
 [See it in action](https://jpvalery.photo)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/8c4c1cfe4b182212ae3c/maintainability)](https://codeclimate.com/github/jpvalery/portfolio/maintainability) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e4864e257d8d4c40a2a3535b619f9fe9)](https://www.codacy.com/app/jpvalery/portfolio?utm_source=github.com&utm_medium=referral&utm_content=jpvalery/portfolio&utm_campaign=Badge_Grade)
+<img width="1289" alt="image" src="https://user-images.githubusercontent.com/4112343/109871710-756d2780-7c39-11eb-9841-2000f2e8e222.png">
 
 ## Overview
 
 Codebase for [https://jpvalery.photo](https://jpvalery.photo) my photography portfolio.
-Current iteration is built using Contentful, Netlify, and Gatsby V2; and was launched in January 2019. Based on [@iammatthias/.com](https://github.com/iammatthias/.com)
+Current iteration is built using Next.js + TailwindCSS and pulls content from Contentful. It was launched in March 2021. 
+
 
 This site makes heavy use of the [`gatsby-image`](https://next.gatsbyjs.org/packages/gatsby-image/) plugin, pulling optimized fluid assets from Contentful.
 
 ### Features
 
-- Netlify integration
-- Contentful integration
-- Analytics with [Fathom](https://usefathom.com)
-- SEO
-- Styled components
-- RSS Feed
+- Next.js
+- TailwindCSS
+- Contentful
+- Analytics w/ [Umami](https://umami.is)
+- Hosted on Vercel
 
 ##### Notes
 
-> Code can be used as a reference for other Gatsby projects, but this repo will not work out-of-the-box without replicating the Contentful data structure. If you would like to quickly bootstrap a Gatsby + Contentful + Netlify project, I recommend checking out the fantastic [GCN](https://github.com/ryanwiemer/gatsby-starter-gcn) starter.
+> Code can be used as a reference for other projects but won't work out of the box without replicating Contentful schema.
 
-> This repo uses Yarn, over NPM.
+> Inspire yourself and tinker all you want, just give credit and don't do a mindless copy-paste.
+
+> Previous iteration was built using Contentful, Netlify, and Gatsby V2; and was launched in January 2019. Based on [@iammatthias/.com](https://github.com/iammatthias/.com). Without Matthias' work, I'll still be on format or whatever service. 

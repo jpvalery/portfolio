@@ -9,9 +9,6 @@
 Codebase for [https://jpvalery.photo](https://jpvalery.photo) my photography portfolio.
 Current iteration is built using Next.js + TailwindCSS and pulls content from Contentful. It was launched in March 2021. 
 
-
-This site makes heavy use of the [`gatsby-image`](https://next.gatsbyjs.org/packages/gatsby-image/) plugin, pulling optimized fluid assets from Contentful.
-
 ### Features
 
 - Next.js

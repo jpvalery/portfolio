@@ -50,7 +50,13 @@ module.exports = {
     },
   },
   variants: {
-    extend: { transform: ['hover', 'focus', 'group-hover'], rotate: ['odd', 'even', 'group-hover'], scale: ['hover', 'focus', 'group-hover'], },
+    extend: { transform: ['hover', 'focus', 'group-hover',], rotate: ['odd', 'even', 'group-hover', '3n',], translate: ['odd', 'even', 'group-hover', '3n',], scale: ['hover', 'focus', 'group-hover',], inset: ['first', 'even', 'odd', '3n',],},
   },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio')],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio'),plugin(function({ addVariant, e }) {
+      addVariant('3n', ({ modifySelectors, separator }) => {
+        modifySelectors(({ className }) => {
+          return `.${e(`3n${separator}${className}`)}:nth-child(3n+0)`
+        })
+      })
+    })],
 }

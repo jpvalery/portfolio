@@ -38,7 +38,7 @@ export default function Home({ metadata, tags, galleries }) {
         </div>
       </div>
 
-      <div className="grid grid-flow-row grid-cols-1 lg:grid-cols-3 gap-12 justify-items-center items-center p-10 md:p-20">
+      <div className="grid grid-flow-row grid-cols-1 gap-12 justify-items-center items-center p-32">
         {galleries.map((gallery) => {
           return (
             <SubGallery

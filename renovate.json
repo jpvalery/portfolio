@@ -1,7 +1,0 @@
-{
-  "extends": [
-    "config:base"  ],
-  "prHourlyLimit": 0,
-  "ignoreDeps": ["gatsby-plugin-feed"],
-  "reviewers": ["jpvalery"]
-}

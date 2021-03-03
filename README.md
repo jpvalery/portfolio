@@ -2,8 +2,7 @@
 
 [See it in action](https://jpvalery.photo)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/8c4c1cfe4b182212ae3c/maintainability)](https://codeclimate.com/github/jpvalery/portfolio/maintainability) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e4864e257d8d4c40a2a3535b619f9fe9)](https://www.codacy.com/app/jpvalery/portfolio?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jpvalery/portfolio&amp;utm_campaign=Badge_Grade)
-
+[![Maintainability](https://api.codeclimate.com/v1/badges/8c4c1cfe4b182212ae3c/maintainability)](https://codeclimate.com/github/jpvalery/portfolio/maintainability) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e4864e257d8d4c40a2a3535b619f9fe9)](https://www.codacy.com/app/jpvalery/portfolio?utm_source=github.com&utm_medium=referral&utm_content=jpvalery/portfolio&utm_campaign=Badge_Grade)
 
 ## Overview
 

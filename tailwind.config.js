@@ -23,6 +23,12 @@ module.exports = {
       margin: {
         '-menu': '-28rem',
       },
+      width: {
+        '9/10': '92%',
+      },
+      height: {
+        '9/10': '92%',
+      },
       typography: {
         DEFAULT: {
           css: {
@@ -48,6 +54,9 @@ module.exports = {
       spacing: {
         max2: '26rem',
         max3: '40rem',
+      },
+      animation: {
+        'pulse-slow': 'pulse 3s infinite',
       },
     },
   },

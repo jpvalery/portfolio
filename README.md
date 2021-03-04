@@ -7,7 +7,7 @@
 ## Overview
 
 Codebase for [https://jpvalery.photo](https://jpvalery.photo) my photography portfolio.
-Current iteration is built using Next.js + TailwindCSS and pulls content from Contentful. It was launched in March 2021. 
+Current iteration is built using Next.js + TailwindCSS and pulls content from Contentful. It was launched in March 2021.
 
 ### Features
 
@@ -23,4 +23,4 @@ Current iteration is built using Next.js + TailwindCSS and pulls content from Co
 
 > Inspire yourself and tinker all you want, just give credit and don't do a mindless copy-paste.
 
-> Previous iteration was built using Contentful, Netlify, and Gatsby V2; and was launched in January 2019. Based on [@iammatthias/.com](https://github.com/iammatthias/.com). Without Matthias' work, I'll still be on format or whatever service. 
+> Previous iteration was built using Contentful, Netlify, and Gatsby V2; and was launched in January 2019. Based on [@iammatthias/.com](https://github.com/iammatthias/.com). Without Matthias' work, I'll still be on format or whatever service.

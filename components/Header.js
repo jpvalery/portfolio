@@ -9,7 +9,9 @@ export default function Header() {
     <div className="max-w-7xl mx-auto sticky top-0 z-50 pt-4 bg-gradient-to-b from-eigengrau">
       <div className="flex justify-between py-6 items-center">
         <NextLink href="/">
-          <span className="font-mono text-xl font-black cursor-pointer">JP VALERY</span>
+          <span className="font-mono text-xl font-black cursor-pointer">
+            JP VALERY
+          </span>
         </NextLink>
 
         <div className="-mr-2 -my-2 md:hidden">

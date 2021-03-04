@@ -17,10 +17,10 @@ export default function Home({ metadata, tags, galleries }) {
     <main>
       <div className="mx-auto py-12 grid">
         <div className="pb-2">
-          <h1 className="font-serif font-bold text-5xl md:text-6xl text-center from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text text-transparent">
+          <h1 className="font-serif font-bold text-5xl md:text-6xl text-center from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text text-transparent py-4">
             {metadata.title}
           </h1>
-          <p className="text-2xl text-accent font-bold text-center text-gray-200 pt-2">
+          <p className="text-2xl text-accent font-bold text-center text-gray-200">
             {metadata.year}
           </p>
         </div>

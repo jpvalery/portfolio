@@ -1,17 +1,19 @@
 import Image from 'next/image'
-import SubGalleryGrid from './SubGalleryGrid'
 
 const SubGallery = (props) => {
   return (
     <>
       {props.images.map((image) => {
         return (
-          <SubGalleryGrid
-            title={image.title}
-            url={image.url}
-            height={image.height}
-            width={image.width}
-          />
+          <div className="bg-gray-200 rounded-sm shadow-xl max-w-3xl p-1 md:p-2 transform even:-rotate-2 rotate-1 3n:rotate-4 sticky even:top-32 top-28 first:top-24">
+            <Image
+              src={image.url}
+              alt={image.title}
+              width={image.width}
+              height={image.height}
+              layout="intrinsic"
+            />
+          </div>
         )
       })}
     </>

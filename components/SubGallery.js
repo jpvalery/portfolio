@@ -14,7 +14,7 @@ const SubGallery = (props) => {
               layout="intrinsic"
               className="z-50"
             />
-            <div className="bg-yellow-900 animate-pulse-slow z-0 absolute h-9/10 w-9/10 top-4 left-4"></div>
+            <div className="bg-yellow-900 animate-pulse-slow z-0 absolute h-5/6 w-5/6 md:h-9/10 md:w-9/10 top-4 left-4"></div>
           </div>
         )
       })}

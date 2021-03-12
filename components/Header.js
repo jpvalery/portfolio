@@ -6,23 +6,23 @@ import React from 'react'
 export default function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   return (
-    <div className="max-w-7xl mx-auto sticky top-0 z-50 pt-4 bg-gradient-to-b from-eigengrau">
-      <div className="flex justify-between py-6 items-center">
+    <div className="sticky top-0 z-50 pt-4 mx-auto max-w-7xl bg-gradient-to-b from-eigengrau">
+      <div className="flex items-center justify-between py-6">
         <NextLink href="/">
           <span className="font-mono text-xl font-black cursor-pointer">
             JP VALERY
           </span>
         </NextLink>
 
-        <div className="-mr-2 -my-2 md:hidden">
+        <div className="-my-2 -mr-2 md:hidden">
           <button
             type="button"
             onClick={() => setIsMobileOpen(!isMobileOpen)}
-            className="bg-gray-900 bg-opacity-10 rounded-md p-2 inline-flex items-center justify-center text-accent hover:text-white hover:bg-gray-800 focus:outline-none"
+            className="inline-flex items-center justify-center p-2 bg-gray-900 bg-opacity-10 rounded-md text-accent hover:text-white hover:bg-gray-800 focus:outline-none"
           >
             <span className="sr-only">Open menu</span>
             <svg
-              className="h-6 w-6"
+              className="w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -41,17 +41,17 @@ export default function Header() {
 
         <div className="hidden md:flex">
           <NextLink href="/featured-shots">
-            <span className="group text-gray-400 inline-flex items-center text-base font-medium hover:text-accent ml-4 outline-none cursor-pointer">
+            <span className="inline-flex items-center ml-4 text-base font-medium text-gray-400 outline-none cursor-pointer group hover:text-accent">
               Portfolio
             </span>
           </NextLink>
           <Menu>
             {({ open }) => (
               <>
-                <Menu.Button className="group text-gray-400 inline-flex items-center text-base font-medium hover:text-accent ml-4 outline-none focus:outline-none">
+                <Menu.Button className="inline-flex items-center ml-4 text-base font-medium text-gray-400 outline-none group hover:text-accent focus:outline-none">
                   <span>More</span>
                   <svg
-                    className="ml-2 h-5 w-5 text-gray-400 group-hover:text-accent"
+                    className="w-5 h-5 ml-2 text-gray-400 group-hover:text-accent"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
@@ -74,15 +74,15 @@ export default function Header() {
                   leaveTo="opacity-0 scale-90"
                 >
                   <Menu.Items static as={React.Fragment}>
-                    <div className="absolute z-50 -ml-menu mt-12 outline-none">
-                      <div className="w-screen max-w-md rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                        <div className="relative grid gap-8 bg-gray-900 px-8 py-8">
+                    <div className="absolute z-50 mt-12 outline-none -ml-menu">
+                      <div className="w-screen max-w-md overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                        <div className="relative px-8 py-8 bg-gray-900 grid gap-8">
                           <Menu.Item>
                             {({ active }) => (
                               <NextLink href="/biography">
-                                <span className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800 cursor-pointer">
+                                <span className="flex items-start p-3 -m-3 rounded-lg cursor-pointer hover:bg-gray-800">
                                   <svg
-                                    className="flex-shrink-0 h-6 w-6 text-accent"
+                                    className="flex-shrink-0 w-6 h-6 text-accent"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
@@ -114,10 +114,10 @@ export default function Header() {
                               <a
                                 href="https://archive.jpvalery.photo"
                                 target="_blank"
-                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800"
+                                className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-800"
                               >
                                 <svg
-                                  className="flex-shrink-0 h-6 w-6 text-accent"
+                                  className="flex-shrink-0 w-6 h-6 text-accent"
                                   xmlns="http://www.w3.org/2000/svg"
                                   fill="none"
                                   viewBox="0 0 24 24"
@@ -132,10 +132,10 @@ export default function Header() {
                                   />
                                 </svg>
                                 <div className="ml-4">
-                                  <p className="text-base font-medium text-white inline-flex">
+                                  <p className="inline-flex text-base font-medium text-white">
                                     Photo Archive
                                     <svg
-                                      className="mt-1 ml-2 h-4 w-4 text-gray-500"
+                                      className="w-4 h-4 mt-1 ml-2 text-gray-500"
                                       xmlns="http://www.w3.org/2000/svg"
                                       viewBox="0 0 20 20"
                                       fill="currentColor"
@@ -157,10 +157,10 @@ export default function Header() {
                               <a
                                 href="https://montrealphoto.club"
                                 target="_blank"
-                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800"
+                                className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-800"
                               >
                                 <svg
-                                  className="flex-shrink-0 h-6 w-6 text-accent"
+                                  className="flex-shrink-0 w-6 h-6 text-accent"
                                   xmlns="http://www.w3.org/2000/svg"
                                   fill="none"
                                   viewBox="0 0 24 24"
@@ -175,10 +175,10 @@ export default function Header() {
                                   />
                                 </svg>
                                 <div className="ml-4">
-                                  <p className="text-base font-medium text-white inline-flex">
+                                  <p className="inline-flex text-base font-medium text-white">
                                     Montréal Photo Club
                                     <svg
-                                      className="mt-1 ml-2 h-4 w-4 text-gray-500"
+                                      className="w-4 h-4 mt-1 ml-2 text-gray-500"
                                       xmlns="http://www.w3.org/2000/svg"
                                       viewBox="0 0 20 20"
                                       fill="currentColor"
@@ -200,10 +200,10 @@ export default function Header() {
                               <a
                                 href="https://unsplash.com/@jpvalery"
                                 target="_blank"
-                                className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800"
+                                className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-800"
                               >
                                 <svg
-                                  className="flex-shrink-0 h-6 w-6 text-accent"
+                                  className="flex-shrink-0 w-6 h-6 text-accent"
                                   xmlns="http://www.w3.org/2000/svg"
                                   fill="currentColor"
                                   viewBox="0 0 24 24"
@@ -213,10 +213,10 @@ export default function Header() {
                                   <path d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z" />
                                 </svg>
                                 <div className="ml-4">
-                                  <p className="text-base font-medium text-white inline-flex">
+                                  <p className="inline-flex text-base font-medium text-white">
                                     Unsplash
                                     <svg
-                                      className="mt-1 ml-2 h-4 w-4 text-gray-500"
+                                      className="w-4 h-4 mt-1 ml-2 text-gray-500"
                                       xmlns="http://www.w3.org/2000/svg"
                                       viewBox="0 0 20 20"
                                       fill="currentColor"
@@ -237,13 +237,13 @@ export default function Header() {
                         <Menu.Item>
                           {({ active }) => (
                             <div className="px-5 py-5 bg-gray-800 hover:bg-gray-700 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
-                              <div className="flow-root w-full">
+                              <div className="w-full flow-root">
                                 <a
                                   href="https://contact.jpvalery.me/photography"
-                                  className="-m-3 p-3 flex items-center rounded-md text-base font-medium text-white"
+                                  className="flex items-center p-3 -m-3 text-base font-medium text-white rounded-md"
                                 >
                                   <svg
-                                    className="flex-shrink-0 h-6 w-6 text-gray-400"
+                                    className="flex-shrink-0 w-6 h-6 text-gray-400"
                                     xmlns="http://www.w3.org/2000/svg"
                                     fill="none"
                                     viewBox="0 0 24 24"
@@ -287,10 +287,10 @@ export default function Header() {
         {(ref) => (
           <div
             ref={ref}
-            className="absolute top-5 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+            className="absolute inset-x-0 p-2 top-5 transition transform origin-top-right md:hidden"
           >
-            <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-gray-900 divide-y-2 divide-gray-50">
-              <div className="pt-5 pb-6 px-5">
+            <div className="bg-gray-900 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50">
+              <div className="px-5 pt-5 pb-6">
                 <div className="flex items-center justify-between">
                   <div></div>
 
@@ -298,11 +298,11 @@ export default function Header() {
                     <button
                       type="button"
                       onClick={() => setIsMobileOpen(!isMobileOpen)}
-                      className="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-accent hover:bg-gray-100 focus:outline-none"
+                      className="inline-flex items-center justify-center p-2 text-gray-400 bg-gray-900 rounded-md hover:text-accent hover:bg-gray-100 focus:outline-none"
                     >
                       <span className="sr-only">Close menu</span>
                       <svg
-                        className="h-6 w-6"
+                        className="w-6 h-6"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -323,9 +323,9 @@ export default function Header() {
                 <div className="mt-6">
                   <nav className="grid gap-y-8">
                     <NextLink href="/featured-shots">
-                      <span className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-800 cursor-pointer">
+                      <span className="flex items-center p-3 -m-3 cursor-pointer rounded-md hover:bg-gray-800">
                         <svg
-                          className="flex-shrink-0 h-6 w-6 text-accent"
+                          className="flex-shrink-0 w-6 h-6 text-accent"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -354,10 +354,10 @@ export default function Header() {
                     <a
                       href="https://archive.jpvalery.photo"
                       target="_blank"
-                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-800"
+                      className="flex items-center p-3 -m-3 rounded-md hover:bg-gray-800"
                     >
                       <svg
-                        className="flex-shrink-0 h-6 w-6 text-accent"
+                        className="flex-shrink-0 w-6 h-6 text-accent"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
@@ -371,10 +371,10 @@ export default function Header() {
                           d="M6 5c7.18 0 13 5.82 13 13M6 11a7 7 0 017 7m-6 0a1 1 0 11-2 0 1 1 0 012 0z"
                         />
                       </svg>
-                      <span className="ml-3 text-base font-medium text-white inline-flex">
+                      <span className="inline-flex ml-3 text-base font-medium text-white">
                         Photo Archive
                         <svg
-                          className="mt-1 ml-2 h-4 w-4 text-gray-500"
+                          className="w-4 h-4 mt-1 ml-2 text-gray-500"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
@@ -386,9 +386,9 @@ export default function Header() {
                     </a>
 
                     <NextLink href="/about">
-                      <span className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-800 cursor-pointer">
+                      <span className="flex items-center p-3 -m-3 cursor-pointer rounded-md hover:bg-gray-800">
                         <svg
-                          className="flex-shrink-0 h-6 w-6 text-accent"
+                          className="flex-shrink-0 w-6 h-6 text-accent"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -411,10 +411,10 @@ export default function Header() {
                     <a
                       href="https://unsplash.com/@jpvalery"
                       target="_blank"
-                      className="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-800"
+                      className="flex items-start p-3 -m-3 rounded-lg hover:bg-gray-800"
                     >
                       <svg
-                        className="flex-shrink-0 h-6 w-6 text-accent"
+                        className="flex-shrink-0 w-6 h-6 text-accent"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
                         viewBox="0 0 24 24"
@@ -423,10 +423,10 @@ export default function Header() {
                       >
                         <path d="M7.5 6.75V0h9v6.75h-9zm9 3.75H24V24H0V10.5h7.5v6.75h9V10.5z" />
                       </svg>
-                      <span className="ml-3 text-base font-medium text-white inline-flex">
+                      <span className="inline-flex ml-3 text-base font-medium text-white">
                         Unsplash
                         <svg
-                          className="mt-1 ml-2 h-4 w-4 text-gray-500"
+                          className="w-4 h-4 mt-1 ml-2 text-gray-500"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 20 20"
                           fill="currentColor"
@@ -443,10 +443,10 @@ export default function Header() {
                     >
                       <span
                         href="#"
-                        className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-800"
+                        className="flex items-center p-3 -m-3 rounded-md hover:bg-gray-800"
                       >
                         <svg
-                          className="flex-shrink-0 h-6 w-6 text-accent"
+                          className="flex-shrink-0 w-6 h-6 text-accent"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"

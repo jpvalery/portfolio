@@ -14,9 +14,9 @@ export default function BlogPost({ metadata, tags }) {
 
   return (
     <main>
-      <div className="mx-auto py-12 grid">
+      <div className="py-12 mx-auto grid">
         <div className="pb-2">
-          <h1 className="font-serif font-bold text-5xl md:text-6xl text-center from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text text-transparent py-4">
+          <h1 className="py-4 font-serif text-5xl font-bold text-center text-transparent md:text-6xl from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text">
             {metadata.title}
           </h1>
         </div>
@@ -29,8 +29,8 @@ export default function BlogPost({ metadata, tags }) {
           </ul>
         </div>
 
-        <div className="py mx-auto">
-          <p className="prose prose-2xl text-gray-50 p-12">{content}</p>
+        <div className="mx-auto py">
+          <p className="p-12 prose prose-2xl text-gray-50">{content}</p>
         </div>
       </div>
     </main>

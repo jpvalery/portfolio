@@ -4,11 +4,11 @@ import LocalLogic from '../elements/logos/companies/LocalLogic'
 
 export default function Logos() {
   return (
-    <div className="mx-auto py-8">
-      <h2 className="text-xl uppercase font-extrabold text-gray-50 text-center pb-8">
+    <div className="py-8 mx-auto">
+      <h2 className="pb-8 text-xl font-extrabold text-center uppercase text-gray-50">
         Over a decade of experience at companies like
       </h2>
-      <div className="text-gray-400 grid grid-flow-row md:grid-flow-col justify-center justify-items-center items-center gap-8 md:gap-12">
+      <div className="items-center justify-center text-gray-400 grid grid-flow-row md:grid-flow-col justify-items-center gap-8 md:gap-12">
         <Gameloft />
         <LANDR />
         <LocalLogic />

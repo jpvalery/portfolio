@@ -17,19 +17,19 @@ export default function Biography() {
     <main>
       <div className="grid justify-items-center gap-8">
         <img
-          className="h-48 w-48 rounded-full"
+          className="w-48 h-48 rounded-full"
           src="/static/jp-valery-avatar.webp"
           alt=""
         />
-        <h1 className="font-serif font-bold text-5xl md:text-6xl text-center pb-8 from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text text-transparent">
+        <h1 className="pb-8 font-serif text-5xl font-bold text-center text-transparent md:text-6xl from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text">
           About me
         </h1>
       </div>
 
       <div className="w-10/12 mx-auto">
-        <h2 className="text-2xl font-serif font-bold py-6">About me</h2>
+        <h2 className="py-6 font-serif text-2xl font-bold">About me</h2>
 
-        <div className="prose prose-lg text-white max-w-full">
+        <div className="max-w-full text-white prose prose-lg">
           <p>
             I'm a 29 years old self-taught photographer based in Montréal, QC.
             My passion for photography was born from a deep desire to share and
@@ -80,11 +80,11 @@ export default function Biography() {
           </p>
         </div>
 
-        <h2 className="text-2xl font-serif font-bold py-6">
+        <h2 className="py-6 font-serif text-2xl font-bold">
           My artist statement
         </h2>
 
-        <div className="prose prose-lg text-white">
+        <div className="text-white prose prose-lg">
           <p>
             I envision a very natural photography – close to the standards for
             photojournalism. Thus, all of my pictures are not digitally altered
@@ -98,24 +98,24 @@ export default function Biography() {
           </p>
         </div>
 
-        <p className="text-lg py-2 italic font-semibold text-accent">
+        <p className="py-2 text-lg italic font-semibold text-accent">
           There’s a lot of beauty in ordinary things. Isn’t that kind of the
           point?
         </p>
 
-        <h2 className="text-2xl font-serif font-bold py-6">
+        <h2 className="py-6 font-serif text-2xl font-bold">
           Media Coverage & Featurings
         </h2>
 
-        <ul className="grid grid-flow-row grid-cols-1 md:grid-cols-2 justify-items-start uppercase gap-1">
+        <ul className="uppercase grid grid-flow-row grid-cols-1 md:grid-cols-2 justify-items-start gap-1">
           {Media.map(({ name }) => (
-            <li className="px-2 py-1 inline-flex items-center">
+            <li className="inline-flex items-center px-2 py-1">
               {' '}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
                 viewBox="0 0 20 20"
-                className="h-4 w-4 mr-2"
+                className="w-4 h-4 mr-2"
               >
                 <path
                   fillRule="evenodd"
@@ -128,8 +128,8 @@ export default function Biography() {
           ))}
         </ul>
 
-        <h2 className="text-2xl font-serif font-bold py-6">Exhibitions</h2>
-        <p className="text-lg py-2">
+        <h2 className="py-6 font-serif text-2xl font-bold">Exhibitions</h2>
+        <p className="py-2 text-lg">
           <span className="font-semibold text-accent">
             2018 An American Road Trip
           </span>{' '}

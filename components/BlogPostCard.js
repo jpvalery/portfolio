@@ -14,8 +14,8 @@ const BlogPostCard = (props) => {
   return (
     <>
       <NextLink href={`/blog/${props.slug}/`}>
-        <div className="grid grid-flow-col justify-start bg-white bg-opacity-10 rounded-md max-w-2xl m-8 p-4 cursor-pointer transform transform hover:scale-105 transition-transform duration-500 ease-in-out">
-          <div className="relative h-48 w-48">
+        <div className="justify-start max-w-2xl p-4 m-8 bg-white cursor-pointer grid grid-flow-col bg-opacity-10 rounded-md transform hover:scale-105 transition-transform duration-500 ease-in-out">
+          <div className="relative w-48 h-48">
             <Image
               src={props.imageUrl}
               alt={props.imageAlt}

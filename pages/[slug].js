@@ -15,17 +15,17 @@ export default function Home({ metadata, tags, galleries }) {
 
   return (
     <main>
-      <div className="mx-auto py-12 grid">
+      <div className="py-12 mx-auto grid">
         <div className="pb-2">
-          <h1 className="font-serif font-bold text-5xl md:text-6xl text-center from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text text-transparent py-4">
+          <h1 className="py-4 font-serif text-5xl font-bold text-center text-transparent md:text-6xl from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text">
             {metadata.title}
           </h1>
-          <p className="text-2xl text-accent font-bold text-center text-gray-200">
+          <p className="text-2xl font-bold text-center text-gray-200 text-accent">
             {metadata.year}
           </p>
         </div>
 
-        <div className="mx-auto pt-2 pb-4">
+        <div className="pt-2 pb-4 mx-auto">
           <ul className="grid grid-flow-col gap-2">
             {tags.map((tag) => {
               return <TagLabel slug={tag.slug} title={tag.title} />
@@ -33,12 +33,12 @@ export default function Home({ metadata, tags, galleries }) {
           </ul>
         </div>
 
-        <div className="py mx-auto">
-          <p className="prose prose-2xl text-center text-gray-50">{content}</p>
+        <div className="mx-auto py">
+          <p className="text-center prose prose-2xl text-gray-50">{content}</p>
         </div>
       </div>
 
-      <div className="grid grid-flow-row grid-cols-1 gap-32 justify-items-center items-center p-8 md:p-32">
+      <div className="items-center p-8 grid grid-flow-row grid-cols-1 gap-32 justify-items-center md:p-32">
         {galleries.map((gallery) => {
           return (
             <SubGallery

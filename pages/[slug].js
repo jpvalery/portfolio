@@ -15,12 +15,12 @@ export default function Home({ metadata, tags, galleries }) {
 
   return (
     <main>
-      <div className="py-12 mx-auto grid">
+      <div className="grid py-12 mx-auto">
         <div className="pb-2">
           <h1 className="py-4 font-serif text-5xl font-bold text-center text-transparent md:text-6xl from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text">
             {metadata.title}
           </h1>
-          <p className="text-2xl font-bold text-center text-gray-200 text-accent">
+          <p className="text-2xl font-bold text-center text-accent">
             {metadata.year}
           </p>
         </div>
@@ -34,11 +34,11 @@ export default function Home({ metadata, tags, galleries }) {
         </div>
 
         <div className="mx-auto py">
-          <p className="text-center prose prose-2xl text-gray-50">{content}</p>
+          <p className="prose prose-2xl text-center text-gray-50">{content}</p>
         </div>
       </div>
 
-      <div className="items-center p-8 grid grid-flow-row grid-cols-1 gap-32 justify-items-center md:p-32">
+      <div className="grid items-center grid-flow-row grid-cols-1 gap-32 p-8 justify-items-center md:p-32">
         {galleries.map((gallery) => {
           return (
             <SubGallery

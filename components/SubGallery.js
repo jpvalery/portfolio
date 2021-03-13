@@ -5,7 +5,7 @@ const SubGallery = (props) => {
     <>
       {props.images.map((image) => {
         return (
-          <div className="relative sticky max-w-3xl p-1 bg-gray-200 rounded-sm shadow-xl md:p-2 transform even:-rotate-2 rotate-1 3n:rotate-4 even:top-32 top-28 first:top-24">
+          <div className="sticky max-w-3xl p-1 transform bg-gray-200 rounded-sm shadow-xl md:p-2 even:-rotate-2 rotate-1 3n:rotate-4 even:top-32 top-28 first:top-24">
             <Image
               src={image.url}
               alt={image.title}

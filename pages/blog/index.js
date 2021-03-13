@@ -6,12 +6,12 @@ import BlogPostCard from '../../components/BlogPostCard'
 export default function BlogIndex({ metadata }) {
   return (
     <main>
-      <div className="py-12 mx-auto grid">
+      <div className="grid py-12 mx-auto">
         <div className="pb-2">
           <h1 className="py-4 font-serif text-5xl font-bold text-center text-transparent md:text-6xl from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text">
             Blog
           </h1>
-          <p className="text-2xl font-bold text-center text-gray-200 text-accent">
+          <p className="text-2xl font-bold text-center text-accent">
             Occasional ramblings and writings about photography
           </p>
         </div>

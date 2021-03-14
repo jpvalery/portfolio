@@ -1,8 +1,9 @@
-import NextLink from 'next/link'
 import unified from 'unified'
 import parse from 'remark-parse'
 import remark2react from 'remark-react'
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+
+import { NextSeo } from 'next-seo'
 
 import TagLabel from '../../components/TagLabel'
 
@@ -13,27 +14,36 @@ export default function BlogPost({ metadata, tags }) {
     .processSync(metadata.body).result
 
   return (
-    <main>
-      <div className="py-12 mx-auto grid">
-        <div className="pb-2">
-          <h1 className="py-4 font-serif text-5xl font-bold text-center text-transparent md:text-6xl from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text">
-            {metadata.title}
-          </h1>
-        </div>
+    <>
+      <NextSeo
+        title={metadata.title}
+        description={metadata.metaDescription}
+        openGraph={{
+          images: [{ url: `${metadata.heroImage.url}` }],
+        }}
+      />
+      <main>
+        <div className="grid py-12 mx-auto">
+          <div className="pb-2">
+            <h1 className="py-4 font-serif text-5xl font-bold text-center text-transparent md:text-6xl from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text">
+              {metadata.title}
+            </h1>
+          </div>
 
-        <div className="mx-auto">
-          <ul className="grid grid-flow-col gap-2">
-            {tags.map((tag) => {
-              return <TagLabel slug={tag.slug} title={tag.title} />
-            })}
-          </ul>
-        </div>
+          <div className="mx-auto">
+            <ul className="grid grid-flow-col gap-2">
+              {tags.map((tag) => {
+                return <TagLabel slug={tag.slug} title={tag.title} />
+              })}
+            </ul>
+          </div>
 
-        <div className="mx-auto py">
-          <p className="p-12 prose prose-2xl text-gray-50">{content}</p>
+          <div className="mx-auto py">
+            <p className="p-12 prose prose-2xl text-gray-50">{content}</p>
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   )
 }
 

@@ -1,4 +1,3 @@
-import NextLink from 'next/link'
 import unified from 'unified'
 import parse from 'remark-parse'
 import remark2react from 'remark-react'
@@ -7,6 +6,8 @@ import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 import TagLabel from '../components/TagLabel'
 import SubGallery from '../components/SubGallery'
 
+import { NextSeo } from 'next-seo'
+
 export default function Home({ metadata, tags, galleries }) {
   const content = unified()
     .use(parse)
@@ -14,41 +15,52 @@ export default function Home({ metadata, tags, galleries }) {
     .processSync(metadata.body).result
 
   return (
-    <main>
-      <div className="grid py-12 mx-auto">
-        <div className="pb-2">
-          <h1 className="py-4 font-serif text-5xl font-bold text-center text-transparent md:text-6xl from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text">
-            {metadata.title}
-          </h1>
-          <p className="text-2xl font-bold text-center text-accent">
-            {metadata.year}
-          </p>
+    <>
+      <NextSeo
+        title={metadata.title}
+        description={metadata.metaDescription}
+        openGraph={{
+          images: [{ url: `${metadata.heroImage.url}` }],
+        }}
+      />
+      <main>
+        <div className="grid py-12 mx-auto">
+          <div className="pb-2">
+            <h1 className="py-4 font-serif text-5xl font-bold text-center text-transparent md:text-6xl from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text">
+              {metadata.title}
+            </h1>
+            <p className="text-2xl font-bold text-center text-accent">
+              {metadata.year}
+            </p>
+          </div>
+
+          <div className="pt-2 pb-4 mx-auto">
+            <ul className="grid grid-flow-col gap-2">
+              {tags.map((tag) => {
+                return <TagLabel slug={tag.slug} title={tag.title} />
+              })}
+            </ul>
+          </div>
+
+          <div className="mx-auto py">
+            <p className="prose prose-2xl text-center text-gray-50">
+              {content}
+            </p>
+          </div>
         </div>
 
-        <div className="pt-2 pb-4 mx-auto">
-          <ul className="grid grid-flow-col gap-2">
-            {tags.map((tag) => {
-              return <TagLabel slug={tag.slug} title={tag.title} />
-            })}
-          </ul>
+        <div className="grid items-center grid-flow-row grid-cols-1 gap-32 p-8 justify-items-center md:p-32">
+          {galleries.map((gallery) => {
+            return (
+              <SubGallery
+                title={gallery.title}
+                images={gallery.imagesCollection.items}
+              />
+            )
+          })}
         </div>
-
-        <div className="mx-auto py">
-          <p className="prose prose-2xl text-center text-gray-50">{content}</p>
-        </div>
-      </div>
-
-      <div className="grid items-center grid-flow-row grid-cols-1 gap-32 p-8 justify-items-center md:p-32">
-        {galleries.map((gallery) => {
-          return (
-            <SubGallery
-              title={gallery.title}
-              images={gallery.imagesCollection.items}
-            />
-          )
-        })}
-      </div>
-    </main>
+      </main>
+    </>
   )
 }
 
@@ -117,6 +129,9 @@ export async function getStaticProps({ params }) {
             year
             body
             metaDescription
+            heroImage {
+              url
+            }
             tagsCollection {
               items {
                 title

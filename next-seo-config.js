@@ -4,7 +4,8 @@ const description =
 const siteUrl = 'https://jpvalery.photo'
 
 const SEO = {
-  title: title,
+  titleTemplate: `%s | Jp Valery`,
+  defaultTitle: title,
   description: description,
   canonical: siteUrl,
   openGraph: {

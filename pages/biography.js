@@ -20,6 +20,11 @@ export default function Biography() {
       <NextSeo
         title="About"
         description="I'm a 29 years old self-taught photographer based in Montréal, QC. My passion for photography was born from a deep desire to share and document the beauty I see in my environment."
+        openGraph={{
+          title: 'About',
+          description:
+            "I'm a 29 years old self-taught photographer based in Montréal, QC. My passion for photography was born from a deep desire to share and document the beauty I see in my environment.",
+        }}
       />
       <main>
         <div className="grid gap-8 justify-items-center">

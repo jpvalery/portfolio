@@ -20,6 +20,8 @@ export default function Home({ metadata, tags, galleries }) {
         title={metadata.title}
         description={metadata.metaDescription}
         openGraph={{
+          title: `${metadata.title}`,
+          description: `${metadata.metaDescription}`,
           images: [{ url: `${metadata.heroImage.url}` }],
         }}
       />

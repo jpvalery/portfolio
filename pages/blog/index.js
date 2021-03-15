@@ -9,6 +9,10 @@ export default function BlogIndex({ metadata }) {
       <NextSeo
         title="Photography Blog"
         description="Occasional articles about photography"
+        openGraph={{
+          title: 'Photography Blog',
+          description: 'Occasional articles about photography',
+        }}
       />
       <main>
         <div className="grid py-12 mx-auto">

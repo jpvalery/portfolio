@@ -19,6 +19,8 @@ export default function BlogPost({ metadata, tags }) {
         title={metadata.title}
         description={metadata.metaDescription}
         openGraph={{
+          title: `${metadata.title}`,
+          description: `${metadata.metaDescription}`,
           images: [{ url: `${metadata.heroImage.url}` }],
         }}
       />

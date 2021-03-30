@@ -29,6 +29,9 @@ module.exports = {
       height: {
         '9/10': '92%',
       },
+      zIndex: {
+        100: '100',
+      },
       typography: {
         DEFAULT: {
           css: {

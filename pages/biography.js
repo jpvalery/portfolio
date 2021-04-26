@@ -58,7 +58,7 @@ export default function Biography() {
             <p>
               In 2017 and 2018, I have been nominated Community Allstar on
               Unsplash.com where my pictures have received more than{' '}
-              <a href="https://unsplash.com/@jpvalery">130 Millions views.</a>
+              <a href="https://unsplash.com/@jpvalery">145 Millions views.</a>
             </p>
 
             <p>
@@ -96,7 +96,7 @@ export default function Biography() {
             My artist statement
           </h2>
 
-          <div className="prose prose-lg text-white">
+          <div className="max-w-full prose prose-lg text-white">
             <p>
               I envision a very natural photography – close to the standards for
               photojournalism. Thus, all of my pictures are not digitally

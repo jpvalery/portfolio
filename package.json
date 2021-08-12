@@ -20,10 +20,10 @@
 		"@tailwindcss/aspect-ratio": "^0.2.0",
 		"@tailwindcss/typography": "^0.3.1",
 		"autoprefixer": "^10.2.1",
-		"comma-number": "^2.0.1",
-		"contentful": "^8.1.8",
+		"comma-number": "^2.1.0",
+		"contentful": "^8.4.2",
 		"graphql": "^15.5.0",
-		"next": "^10.2.3",
+		"next": "11.1.0",
 		"next-seo": "^4.17.0",
 		"postcss": "^8.2.10",
 		"react": "17.0.1",
@@ -31,7 +31,7 @@
 		"remark-parse": "^9.0.0",
 		"remark-react": "^8.0.0",
 		"swr": "^0.4.0",
-		"tailwindcss": "^2.1.2",
+		"tailwindcss": "2.2.7",
 		"unified": "^9.2.1"
 	},
 	"devDependencies": {

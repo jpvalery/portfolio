@@ -1,6 +1,6 @@
 module.exports = {
   images: {
-    domains: ['images.ctfassets.net', 'images.ctfassets.net'],
+    domains: ['images.ctfassets.net', 'downloads.ctfassets.net'],
   },
   async redirects() {
     return [

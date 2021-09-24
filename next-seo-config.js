@@ -4,7 +4,7 @@ const description =
 const siteUrl = 'https://jpvalery.photo'
 
 const SEO = {
-  titleTemplate: `%s | Jp Valery`,
+  titleTemplate: '%s | Jp Valery',
   defaultTitle: title,
   description: description,
   canonical: siteUrl,
@@ -16,9 +16,10 @@ const SEO = {
     description: description,
     images: [
       {
-        url: 'https://jpvalery.photo/static/og-banner.jpg',
-        width: 1920,
-        height: 1280,
+        url:
+          'https://og.jpvalery.me/**JP%20VALERY**.png?theme=dotphoto&md=1&fontSize=125px&images=https%3A%2F%2Fog.jpvalery.me%2Fstatic%2Fcamera.svg&heights=300',
+        width: 1531,
+        height: 875,
         alt: 'Open Graph Image',
       },
     ],

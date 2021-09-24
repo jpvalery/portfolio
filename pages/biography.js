@@ -24,6 +24,15 @@ export default function Biography() {
           title: 'About',
           description:
             "I'm a 29 years old self-taught photographer based in Montréal, QC. My passion for photography was born from a deep desire to share and document the beauty I see in my environment.",
+          images: [
+            {
+              url:
+                'https://og.jpvalery.me/**About**.png?theme=dotphoto&md=1&fontSize=125px&images=https%3A%2F%2Fog.jpvalery.me%2Fstatic%2Fcamera.svg&heights=300',
+              width: 1531,
+              height: 875,
+              alt: 'Open Graph Image',
+            },
+          ],
         }}
       />
       <main>

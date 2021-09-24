@@ -4,7 +4,7 @@ const description =
 const siteUrl = 'https://jpvalery.photo'
 
 const SEO = {
-  titleTemplate: '%s | Jp Valery',
+  titleTemplate: '%s | Jp Valery 📷',
   defaultTitle: title,
   description: description,
   canonical: siteUrl,

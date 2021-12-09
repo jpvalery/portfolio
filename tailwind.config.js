@@ -3,8 +3,7 @@ const plugin = require('tailwindcss/plugin')
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: ['./pages/**/*.js', './components/**/*.js', './elements/**/*.js'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./pages/**/*.js', './components/**/*.js', './elements/**/*.js'],
   theme: {
     screens: {
       md: '720px',
@@ -61,15 +60,6 @@ module.exports = {
       animation: {
         'pulse-slow': 'pulse 3s infinite',
       },
-    },
-  },
-  variants: {
-    extend: {
-      transform: ['hover', 'focus', 'group-hover'],
-      rotate: ['odd', 'even', 'group-hover', '3n'],
-      translate: ['odd', 'even', 'group-hover', '3n'],
-      scale: ['hover', 'focus', 'group-hover'],
-      inset: ['first', 'even', 'odd', '3n'],
     },
   },
   plugins: [

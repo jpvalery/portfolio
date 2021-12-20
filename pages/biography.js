@@ -1,18 +1,6 @@
-const Media = [
-  { name: 'CBC-Radio Canada - Radio interview' },
-  { name: 'Lonely Planet' },
-  { name: 'Explore Canada' },
-  { name: 'PetaPixel' },
-  { name: 'BoredPanda' },
-  { name: 'Abduzeedo - Daily Inspiration' },
-  { name: 'Unsplash' },
-  { name: 'Burst' },
-  { name: 'Scribe' },
-  { name: 'VYSUAL' },
-  { name: 'Kedge Business School - Alumni Portraits' },
-]
-
 import { NextSeo } from 'next-seo'
+
+import AsSeenOn from '../components/AsSeenOn'
 
 export default function Biography() {
   return (
@@ -47,6 +35,8 @@ export default function Biography() {
           </h1>
         </div>
 
+        <AsSeenOn />
+
         <div className="w-10/12 mx-auto">
           <h2 className="py-6 font-serif text-2xl font-bold">About me</h2>
 
@@ -67,7 +57,10 @@ export default function Biography() {
             <p>
               In 2017 and 2018, I have been nominated Community Allstar on
               Unsplash.com where my pictures have received more than{' '}
-              <a href="https://unsplash.com/@jpvalery">145 Millions views.</a>
+              <a href="https://unsplash.com/@jpvalery">
+                176 Millions views and have been downloaded close to 1 Million
+                times.
+              </a>
             </p>
 
             <p>
@@ -123,31 +116,6 @@ export default function Biography() {
             There’s a lot of beauty in ordinary things. Isn’t that kind of the
             point?
           </p>
-
-          <h2 className="py-6 font-serif text-2xl font-bold">
-            Media Coverage & Featurings
-          </h2>
-
-          <ul className="grid grid-flow-row grid-cols-1 gap-1 uppercase md:grid-cols-2 justify-items-start">
-            {Media.map(({ name }) => (
-              <li className="inline-flex items-center px-2 py-1">
-                {' '}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  className="w-4 h-4 mr-2"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-                {name}
-              </li>
-            ))}
-          </ul>
 
           <h2 className="py-6 font-serif text-2xl font-bold">Exhibitions</h2>
           <p className="py-2 text-lg">

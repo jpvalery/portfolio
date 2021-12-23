@@ -14,6 +14,15 @@ import {
   XIcon,
 } from '@heroicons/react/outline'
 
+function Mlink(props) {
+  let { href, children, ...rest } = props
+  return (
+    <NextLink href={href}>
+      <a {...rest}>{children}</a>
+    </NextLink>
+  )
+}
+
 export default function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false)
   return (
@@ -64,7 +73,7 @@ export default function Header() {
                         <div className="relative grid gap-8 px-8 py-8 bg-gray-900">
                           <Menu.Item>
                             {({ active }) => (
-                              <NextLink href="/biography">
+                              <Mlink href="/biography">
                                 <span className="flex items-start p-3 -m-3 rounded-lg cursor-pointer hover:bg-gray-800">
                                   <UserCircleIcon className="flex-shrink-0 w-6 h-6 text-accent" />
                                   <div className="ml-4">
@@ -76,7 +85,7 @@ export default function Header() {
                                     </p>
                                   </div>
                                 </span>
-                              </NextLink>
+                              </Mlink>
                             )}
                           </Menu.Item>
 
@@ -227,14 +236,14 @@ export default function Header() {
 
                 <div className="w-11/12">
                   <nav className="grid gap-y-8">
-                    <NextLink href="/featured-shots">
+                    <Mlink href="/featured-shots">
                       <span className="flex items-center p-3 -m-3 rounded-md cursor-pointer hover:bg-gray-800">
                         <CameraIcon className="flex-shrink-0 w-6 h-6 text-accent" />
                         <span className="ml-3 text-base font-medium text-white">
                           Portfolio
                         </span>
                       </span>
-                    </NextLink>
+                    </Mlink>
 
                     <a
                       href="https://archive.jpvalery.photo"
@@ -248,14 +257,14 @@ export default function Header() {
                       </span>
                     </a>
 
-                    <NextLink href="/about">
+                    <Mlink href="/about">
                       <span className="flex items-center p-3 -m-3 rounded-md cursor-pointer hover:bg-gray-800">
                         <UserCircleIcon className="flex-shrink-0 w-6 h-6 text-accent" />
                         <span className="ml-3 text-base font-medium text-white">
                           About me
                         </span>
                       </span>
-                    </NextLink>
+                    </Mlink>
 
                     <a
                       href="https://unsplash.com/@jpvalery"

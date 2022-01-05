@@ -24,7 +24,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
           <p className="text-base text-center text-gray-500">
-            &copy; 1992-2021 Jp Valery. All rights reserved.
+            &copy; 1992-2022 Jp Valery. All rights reserved.
           </p>
         </div>
       </div>

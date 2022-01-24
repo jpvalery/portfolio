@@ -5,14 +5,14 @@ import CardGallery from '../components/CardGallery'
 
 export default function Home({ galleries }) {
   return (
-    <div className="py-24 mx-auto grid gap-20 md:gap-30">
+    <div className="md:gap-30 mx-auto grid gap-20 py-24">
       <div className="pb-8">
-        <h1 className="pb-8 font-serif text-5xl font-bold text-center text-transparent md:text-6xl from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text">
+        <h1 className="bg-gradient-to-r from-titleg1 to-titleg2 bg-clip-text pb-8 text-center font-serif text-5xl font-bold text-transparent md:text-6xl">
           There's a lot of beauty in
           <br />
           ordinary things
         </h1>
-        <div className="py-8 mx-auto text-center prose prose-2xl text-gray-50">
+        <div className="prose prose-2xl mx-auto py-8 text-center text-gray-50">
           <p>
             I'm a self-taught photographer documenting spaces and people.
             <br />
@@ -21,7 +21,7 @@ export default function Home({ galleries }) {
           </p>
         </div>
       </div>
-      <div className="items-center grid grid-cols-1 justify-items-center gap-12 md:gap-48">
+      <div className="grid grid-cols-1 items-center justify-items-center gap-12 md:gap-48">
         {galleries.map((gallery) => {
           return (
             <CardGallery

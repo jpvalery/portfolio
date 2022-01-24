@@ -3,14 +3,14 @@ import Image from 'next/image'
 
 const CardGallery = (props) => {
   return (
-    <container className="flex items-center justify-center group">
+    <container className="group flex items-center justify-center">
       {/* Main picture frame */}
       <div
         key={props.id}
-        className="z-50 max-w-2xl p-2 bg-gray-200 rounded-sm shadow-2xl transform group-hover:scale-105 transition-transform duration-500 ease-in-out"
+        className="z-50 max-w-2xl transform rounded-sm bg-gray-200 p-2 shadow-2xl transition-transform duration-500 ease-in-out group-hover:scale-105"
       >
         <NextLink href={`/${props.slug}/`}>
-          <div className="relative cursor-pointer max-w-max">
+          <div className="relative max-w-max cursor-pointer">
             <div className="relative flex">
               <Image
                 src={props.image.url}
@@ -21,8 +21,8 @@ const CardGallery = (props) => {
               />
             </div>
 
-            <div className="absolute bottom-0 w-full h-full">
-              <div className="z-50 items-end h-full p-4 from-overlayg1 to-overlayg2 bg-gradient-to-t grid grid-flow-row">
+            <div className="absolute bottom-0 h-full w-full">
+              <div className="z-50 grid h-full grid-flow-row items-end bg-gradient-to-t from-overlayg1 to-overlayg2 p-4">
                 <div>
                   <h2 className="text-xl font-extrabold uppercase">
                     {props.title}
@@ -47,13 +47,13 @@ const CardGallery = (props) => {
       </div>
 
       {/* 2nd frame */}
-      <div className="absolute z-10 border-8 border-gray-300 rounded-sm shadow-xl transform rotate-2 group-hover:rotate-4 scale-100 sm:scale-110 group-hover:scale-115 transition-all duration-500 ease-in-out">
-        <div className="hidden bg-yellow-900 sm:block opacity-90 md:w-max3 md:h-max2"></div>
+      <div className="absolute z-10 rotate-2 scale-100 transform rounded-sm border-8 border-gray-300 shadow-xl transition-all duration-500 ease-in-out group-hover:rotate-4 group-hover:scale-115 sm:scale-110">
+        <div className="hidden bg-yellow-900 opacity-90 md:h-max2 md:w-max3 sm:block"></div>
       </div>
 
       {/* 3rd frame */}
-      <div className="absolute z-0 border-8 border-gray-300 rounded-sm shadow-xl transform -rotate-3 group-hover:-rotate-4 scale-100 sm:scale-110 group-hover:scale-115 transition-all duration-500 ease-in-out">
-        <div className="hidden bg-yellow-900 md:block opacity-90 md:w-max3 md:h-max2"></div>
+      <div className="absolute z-0 -rotate-3 scale-100 transform rounded-sm border-8 border-gray-300 shadow-xl transition-all duration-500 ease-in-out group-hover:-rotate-4 group-hover:scale-115 sm:scale-110">
+        <div className="hidden bg-yellow-900 opacity-90 md:block md:h-max2 md:w-max3"></div>
       </div>
     </container>
   )

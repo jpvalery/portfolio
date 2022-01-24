@@ -26,17 +26,17 @@ export default function Home({ metadata, tags, galleries }) {
         }}
       />
       <main>
-        <div className="grid py-12 mx-auto">
+        <div className="mx-auto grid py-12">
           <div className="pb-2">
-            <h1 className="py-4 font-serif text-5xl font-bold text-center text-transparent md:text-6xl from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text">
+            <h1 className="bg-gradient-to-r from-titleg1 to-titleg2 bg-clip-text py-4 text-center font-serif text-5xl font-bold text-transparent md:text-6xl">
               {metadata.title}
             </h1>
-            <p className="text-2xl font-bold text-center text-accent">
+            <p className="text-center text-2xl font-bold text-accent">
               {metadata.year}
             </p>
           </div>
 
-          <div className="pt-2 pb-4 mx-auto">
+          <div className="mx-auto pt-2 pb-4">
             <ul className="grid grid-flow-col gap-2">
               {tags.map((tag) => {
                 return <TagLabel slug={tag.slug} title={tag.title} />
@@ -44,14 +44,14 @@ export default function Home({ metadata, tags, galleries }) {
             </ul>
           </div>
 
-          <div className="mx-auto py">
+          <div className="py mx-auto">
             <p className="prose prose-2xl text-center text-gray-50">
               {content}
             </p>
           </div>
         </div>
 
-        <div className="grid items-center grid-flow-row grid-cols-1 gap-32 p-8 justify-items-center md:p-32">
+        <div className="grid grid-flow-row grid-cols-1 items-center justify-items-center gap-32 p-8 md:p-32">
           {galleries.map((gallery) => {
             return (
               <SubGallery

@@ -35,6 +35,7 @@
 		"unified": "^9.2.1"
 	},
 	"devDependencies": {
-		"prettier": "2.2.1"
+		"prettier": "2.2.1",
+		"prettier-plugin-tailwindcss": "^0.1.3"
 	}
 }

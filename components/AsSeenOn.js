@@ -12,13 +12,13 @@ import Kedge from '../elements/logos/Kedge'
 
 export default function AsSeenOn() {
   return (
-    <div className="w-10/12 pb-12 mx-auto">
+    <div className="mx-auto w-10/12 pb-12">
       <div>
-        <h2 className="py-6 text-xl font-bold text-center uppercase">
+        <h2 className="py-6 text-center text-xl font-bold uppercase">
           As Seen On
         </h2>
       </div>
-      <div className="grid items-center content-around justify-center grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 md:gap-8 justify-items-center">
+      <div className="grid grid-cols-1 content-around items-center justify-center justify-items-center gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
         <CBC />
         <ExploreCanada />
         <LonelyPlanet />

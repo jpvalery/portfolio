@@ -14,8 +14,8 @@ const BlogPostCard = (props) => {
   return (
     <>
       <NextLink href={`/blog/${props.slug}/`}>
-        <div className="justify-start max-w-2xl p-4 m-8 bg-white cursor-pointer grid grid-flow-col bg-opacity-10 rounded-md transform hover:scale-105 transition-transform duration-500 ease-in-out">
-          <div className="relative w-48 h-48">
+        <div className="m-8 grid max-w-2xl transform cursor-pointer grid-flow-col justify-start rounded-md bg-white bg-opacity-10 p-4 transition-transform duration-500 ease-in-out hover:scale-105">
+          <div className="relative h-48 w-48">
             <Image
               src={props.imageUrl}
               alt={props.imageAlt}
@@ -24,7 +24,7 @@ const BlogPostCard = (props) => {
               className="rounded-sm"
             />
           </div>
-          <div className="w-full px-4 grid grid-flow-row gap-0">
+          <div className="grid w-full grid-flow-row gap-0 px-4">
             <h2 className="font-serif text-3xl font-bold text-white">
               {props.title}
             </h2>

@@ -24,23 +24,23 @@ export default function Biography() {
         }}
       />
       <main>
-        <div className="grid gap-8 justify-items-center">
+        <div className="grid justify-items-center gap-8">
           <img
-            className="w-48 h-48 rounded-full"
+            className="h-48 w-48 rounded-full"
             src="/static/jp-valery-avatar.webp"
             alt=""
           />
-          <h1 className="pb-8 font-serif text-5xl font-bold text-center text-transparent md:text-6xl from-titleg1 to-titleg2 bg-gradient-to-r bg-clip-text">
+          <h1 className="bg-gradient-to-r from-titleg1 to-titleg2 bg-clip-text pb-8 text-center font-serif text-5xl font-bold text-transparent md:text-6xl">
             About me
           </h1>
         </div>
 
         <AsSeenOn />
 
-        <div className="w-10/12 mx-auto">
+        <div className="mx-auto w-10/12">
           <h2 className="py-6 font-serif text-2xl font-bold">About me</h2>
 
-          <div className="max-w-full prose prose-lg text-white">
+          <div className="prose prose-lg max-w-full text-white">
             <p>
               I'm a 29 years old self-taught photographer based in Montréal, QC.
               My passion for photography was born from a deep desire to share
@@ -98,7 +98,7 @@ export default function Biography() {
             My artist statement
           </h2>
 
-          <div className="max-w-full prose prose-lg text-white">
+          <div className="prose prose-lg max-w-full text-white">
             <p>
               I envision a very natural photography – close to the standards for
               photojournalism. Thus, all of my pictures are not digitally
@@ -112,7 +112,7 @@ export default function Biography() {
             </p>
           </div>
 
-          <p className="py-2 text-lg italic font-semibold text-accent">
+          <p className="py-2 text-lg font-semibold italic text-accent">
             There’s a lot of beauty in ordinary things. Isn’t that kind of the
             point?
           </p>

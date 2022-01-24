@@ -2,7 +2,7 @@ const TagLabel = (props) => {
   return (
     <li
       key={props.slug}
-      className="uppercase text-gray-200 bg-gray-800 text-sm rounded-sm px-2.5 py-1.5"
+      className="rounded-sm bg-gray-800 px-2.5 py-1.5 text-sm uppercase text-gray-200"
     >
       {props.title}
     </li>

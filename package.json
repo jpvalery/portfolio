@@ -23,7 +23,7 @@
 		"comma-number": "^2.1.0",
 		"contentful": "^8.4.2",
 		"graphql": "^15.5.0",
-		"next": "^12.0.7",
+		"next": "12.1.0",
 		"next-seo": "^4.17.0",
 		"postcss": "^8.4.4",
 		"react": "^17.0.2",

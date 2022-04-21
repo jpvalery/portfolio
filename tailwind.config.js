@@ -49,10 +49,6 @@ module.exports = {
       scale: {
         115: '1.15',
       },
-      rotate: {
-        4: '4deg',
-        '-4': '-4deg',
-      },
       spacing: {
         max2: '26rem',
         max3: '40rem',

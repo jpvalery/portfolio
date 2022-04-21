@@ -37,7 +37,7 @@ export default function Biography() {
 
         <div className="mx-auto grid w-10/12 grid-flow-row gap-12">
           <AsSeenOn />
-          
+
           <div>
             <h2 className="py-6 font-serif text-2xl font-bold">About me</h2>
 

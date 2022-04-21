@@ -4,7 +4,6 @@ const SubGallery = (props) => {
   return (
     <>
       {props.images.map((image) => {
-
         // Random rotation generated at render
         const rotate = [
           '-rotate-[3deg]',
@@ -19,7 +18,7 @@ const SubGallery = (props) => {
 
         return (
           <div
-            className={`sticky top-28 max-w-3xl transform rounded-sm bg-gray-200 p-1 shadow-xl first:top-24 ${rotate[random]} md:p-2 grid justify-items-center align`}
+            className={`sticky top-28 max-w-3xl transform rounded-sm bg-gray-200 p-1 shadow-xl first:top-24 ${rotate[random]} align grid justify-items-center md:p-2`}
           >
             <Image
               src={image.url}
@@ -30,7 +29,7 @@ const SubGallery = (props) => {
               className="z-50"
             />
             <div
-              className={`absolute top-4 left-4 right-4 bottom-4 z-0 m-auto w-9/10 h-9/10 animate-pulse-slow bg-yellow-900`}
+              className={`absolute top-4 left-4 right-4 bottom-4 z-0 m-auto h-9/10 w-9/10 animate-pulse-slow bg-yellow-900`}
             ></div>
           </div>
         )

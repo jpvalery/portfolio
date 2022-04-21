@@ -47,12 +47,12 @@ const CardGallery = (props) => {
       </div>
 
       {/* 2nd frame */}
-      <div className="absolute z-10 rotate-2 scale-100 transform rounded-sm border-8 border-gray-300 shadow-xl transition-all duration-500 ease-in-out group-hover:rotate-4 group-hover:scale-115 sm:scale-110">
+      <div className="group-hover:rotate-4 absolute z-10 rotate-2 scale-100 transform rounded-sm border-8 border-gray-300 shadow-xl transition-all duration-500 ease-in-out group-hover:scale-115 sm:scale-110">
         <div className="hidden bg-yellow-900 opacity-90 md:h-max2 md:w-max3 sm:block"></div>
       </div>
 
       {/* 3rd frame */}
-      <div className="absolute z-0 -rotate-3 scale-100 transform rounded-sm border-8 border-gray-300 shadow-xl transition-all duration-500 ease-in-out group-hover:-rotate-4 group-hover:scale-115 sm:scale-110">
+      <div className="group-hover:-rotate-4 absolute z-0 -rotate-3 scale-100 transform rounded-sm border-8 border-gray-300 shadow-xl transition-all duration-500 ease-in-out group-hover:scale-115 sm:scale-110">
         <div className="hidden bg-yellow-900 opacity-90 md:block md:h-max2 md:w-max3"></div>
       </div>
     </container>

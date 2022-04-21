@@ -12,7 +12,7 @@ import Kedge from '../elements/logos/Kedge'
 
 export default function AsSeenOn() {
   return (
-    <div className="mx-auto w-10/12 pb-12">
+    <div className="mx-auto w-full pb-12">
       <div>
         <h2 className="py-6 text-center text-xl font-bold uppercase">
           As Seen On

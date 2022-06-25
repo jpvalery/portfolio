@@ -57,9 +57,9 @@ export default function Biography() {
 
               <p>
                 In 2017 and 2018, I have been nominated Community Allstar on
-                Unsplash.com where my pictures have received more than{' '}
+                Unsplash.com where my pictures have received close to{' '}
                 <a href="https://unsplash.com/@jpvalery">
-                  176 Millions views and have been downloaded close to 1 Million
+                  200 Millions views and have been downloaded over 1 Million
                   times.
                 </a>
               </p>

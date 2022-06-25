@@ -7,11 +7,11 @@ export default function Biography() {
     <>
       <NextSeo
         title="About"
-        description="I'm a 29 years old self-taught photographer based in Montréal, QC. My passion for photography was born from a deep desire to share and document the beauty I see in my environment."
+        description="I'm a 30 years old self-taught photographer based in Montréal, QC. My passion for photography was born from a deep desire to share and document the beauty I see in my environment."
         openGraph={{
           title: 'About',
           description:
-            "I'm a 29 years old self-taught photographer based in Montréal, QC. My passion for photography was born from a deep desire to share and document the beauty I see in my environment.",
+            "I'm a 30 years old self-taught photographer based in Montréal, QC. My passion for photography was born from a deep desire to share and document the beauty I see in my environment.",
           images: [
             {
               url:
@@ -43,7 +43,7 @@ export default function Biography() {
 
             <div className="prose prose-lg max-w-full text-white">
               <p>
-                I'm a 29 years old self-taught photographer based in Montréal,
+                I'm a 30 years old self-taught photographer based in Montréal,
                 QC. My passion for photography was born from a deep desire to
                 share and document the beauty I see in my environment.
               </p>

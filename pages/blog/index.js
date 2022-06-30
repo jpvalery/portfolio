@@ -1,5 +1,5 @@
+import { ApolloClient, gql, InMemoryCache } from '@apollo/client'
 import { NextSeo } from 'next-seo'
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 
 import BlogPostCard from '../../components/BlogPostCard'
 

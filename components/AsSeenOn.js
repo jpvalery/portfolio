@@ -1,14 +1,14 @@
-import CBC from '../elements/logos/CBC'
-import LonelyPlanet from '../elements/logos/LonelyPlanet'
-import ExploreCanada from '../elements/logos/ExploreCanada'
-import PetaPixel from '../elements/logos/PetaPixel'
-import BoredPanda from '../elements/logos/BoredPanda'
 import Abduzeedo from '../elements/logos/Abduzeedo'
-import Unsplash from '../elements/logos/Unsplash'
+import BoredPanda from '../elements/logos/BoredPanda'
 import Burst from '../elements/logos/Burst'
-import Scribe from '../elements/logos/Scribe'
-import VYSUAL from '../elements/logos/VYSUAL'
+import CBC from '../elements/logos/CBC'
+import ExploreCanada from '../elements/logos/ExploreCanada'
 import Kedge from '../elements/logos/Kedge'
+import LonelyPlanet from '../elements/logos/LonelyPlanet'
+import PetaPixel from '../elements/logos/PetaPixel'
+import Scribe from '../elements/logos/Scribe'
+import Unsplash from '../elements/logos/Unsplash'
+import VYSUAL from '../elements/logos/VYSUAL'
 
 export default function AsSeenOn() {
   return (

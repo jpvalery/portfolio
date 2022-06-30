@@ -1,18 +1,14 @@
-import { useState } from 'react'
-import { Transition, Menu } from '@headlessui/react'
-import NextLink from 'next/link'
-import React from 'react'
-import Unsplash from '../elements/icons/Unsplash'
-import { ExternalLinkIcon, ChevronDownIcon } from '@heroicons/react/solid'
+import { Menu, Transition } from '@headlessui/react'
 import {
-  CameraIcon,
-  RssIcon,
+  CameraIcon, InboxInIcon,
+  MenuIcon, RssIcon,
   UserCircleIcon,
-  UserGroupIcon,
-  InboxInIcon,
-  MenuIcon,
-  XIcon,
+  UserGroupIcon, XIcon
 } from '@heroicons/react/outline'
+import { ChevronDownIcon, ExternalLinkIcon } from '@heroicons/react/solid'
+import NextLink from 'next/link'
+import React, { useState } from 'react'
+import Unsplash from '../elements/icons/Unsplash'
 
 function Mlink(props) {
   let { href, children, ...rest } = props

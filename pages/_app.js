@@ -1,15 +1,13 @@
 import 'tailwindcss/tailwind.css'
 
-import React, { useEffect } from 'react'
-import Router from 'next/router'
 import Head from 'next/head'
 
 import { DefaultSeo } from 'next-seo'
 
 import SEO from '../next-seo-config'
 
-import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 function MyApp({ Component, pageProps }) {
   return (

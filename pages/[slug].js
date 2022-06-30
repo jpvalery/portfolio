@@ -1,10 +1,10 @@
-import unified from 'unified'
+import { ApolloClient, gql, InMemoryCache } from '@apollo/client'
 import parse from 'remark-parse'
 import remark2react from 'remark-react'
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+import unified from 'unified'
 
-import TagLabel from '../components/TagLabel'
 import SubGallery from '../components/SubGallery'
+import TagLabel from '../components/TagLabel'
 
 import { NextSeo } from 'next-seo'
 

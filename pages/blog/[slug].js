@@ -1,7 +1,7 @@
-import unified from 'unified'
+import { ApolloClient, gql, InMemoryCache } from '@apollo/client'
 import parse from 'remark-parse'
 import remark2react from 'remark-react'
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
+import unified from 'unified'
 
 import { NextSeo } from 'next-seo'
 

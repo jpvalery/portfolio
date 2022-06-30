@@ -1,5 +1,5 @@
+import { ApolloClient, gql, InMemoryCache } from '@apollo/client'
 import NextLink from 'next/link'
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client'
 
 import CardGallery from '../components/CardGallery'
 

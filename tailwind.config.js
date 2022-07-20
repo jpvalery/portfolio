@@ -3,7 +3,12 @@ const plugin = require('tailwindcss/plugin')
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  content: ['./pages/**/*.js', './components/**/*.js', './elements/**/*.js'],
+  content: [
+    './pages/**/*.js',
+    './components/**/*.js',
+    './elements/**/*.js',
+    './node_modules/@jpvalery/mistral/**/*.js',
+  ],
   theme: {
     screens: {
       md: '720px',

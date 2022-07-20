@@ -1,0 +1,53 @@
+[
+  {
+    "title": {
+      "text": "Explore"
+    },
+    "items": [
+            {
+        "title": "About me",
+        "description": "Biography, achievements, and media coverage",
+        "icon": "UserCircleIcon",
+        "url": "/biography",
+        "urlExternal": false,
+        "color": "accent"
+      },
+      {
+        "title": "Portfolio",
+        "description": "My photography portfolio",
+        "icon": "CameraIcon",
+        "url": "/featured-shots",
+        "urlExternal": false,
+        "color": "accent"
+      },
+      {
+        "title": "Contact Sheets",
+        "description": "An unfiltered stream of all my photos",
+        "icon": "RssIcon",
+        "url": "https://archive.jpvalery.photo",
+        "urlExternal": true,
+        "color": "accent"
+      },
+      {
+        "title": "Montréal Photo Club",
+        "description": "I founded a Photo Club in Montréal in 2019",
+        "icon": "UserGroupIcon",
+        "url": "https://montrealphoto.club",
+        "urlExternal": true,
+        "color": "accent"
+      },
+      {
+        "title": "Unsplash",
+        "description": "I share hundreds of photos for free on Unsplash",
+        "icon": "Unsplash",
+        "url": "https://unsplash.com/@jpvalery",
+        "urlExternal": true,
+        "color": "accent"
+      }
+    ],
+    "cta": {
+      "text": "Get in touch about my photography",
+      "url": "https://contact.jpvalery.me/photography"
+    }
+  }
+]

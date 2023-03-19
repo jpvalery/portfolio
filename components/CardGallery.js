@@ -7,7 +7,7 @@ const CardGallery = (props) => {
       {/* Main picture frame */}
       <div
         key={props.id}
-        className="z-50 max-w-2xl transform rounded-sm bg-gray-200 p-2 shadow-2xl transition-transform duration-500 ease-in-out group-hover:scale-105"
+        className="z-20 max-w-2xl transform rounded-sm bg-gray-200 p-2 shadow-2xl transition-transform duration-500 ease-in-out group-hover:scale-105"
       >
         <NextLink href={`/${props.slug}/`}>
           <div className="relative max-w-max cursor-pointer">

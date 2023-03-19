@@ -22,7 +22,7 @@ const CardGallery = (props) => {
             </div>
 
             <div className="absolute bottom-0 h-full w-full">
-              <div className="z-50 grid h-full grid-flow-row items-end bg-gradient-to-t from-overlayg1 to-overlayg2 p-4">
+              <div className="z-20 grid h-full grid-flow-row items-end bg-gradient-to-t from-overlayg1 to-overlayg2 p-4">
                 <div>
                   <h2 className="text-xl font-extrabold uppercase">
                     {props.title}

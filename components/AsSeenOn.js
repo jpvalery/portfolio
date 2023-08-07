@@ -10,7 +10,7 @@ import Scribe from '../elements/logos/Scribe'
 import Unsplash from '../elements/logos/Unsplash'
 import VYSUAL from '../elements/logos/VYSUAL'
 
-import { LogoGrid } from "@jpvalery/mistral"
+import { LogoGrid } from '@jpvalery/mistral'
 
 export default function AsSeenOn() {
   return (

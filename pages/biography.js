@@ -7,11 +7,11 @@ export default function Biography() {
     <>
       <NextSeo
         title="About"
-        description="I'm a 30 years old self-taught photographer based in Montréal, QC. My passion for photography was born from a deep desire to share and document the beauty I see in my environment."
+        description="I'm a self-taught photographer based in Montréal, QC. My passion for photography was born from a deep desire to share and document the beauty I see in my environment."
         openGraph={{
           title: 'About',
           description:
-            "I'm a 30 years old self-taught photographer based in Montréal, QC. My passion for photography was born from a deep desire to share and document the beauty I see in my environment.",
+            "I'm a self-taught photographer based in Montréal, QC. My passion for photography was born from a deep desire to share and document the beauty I see in my environment.",
           images: [
             {
               url:
@@ -43,9 +43,9 @@ export default function Biography() {
 
             <div className="prose prose-lg max-w-full text-white">
               <p>
-                I'm a 30 years old self-taught photographer based in Montréal,
-                QC. My passion for photography was born from a deep desire to
-                share and document the beauty I see in my environment.
+                I'm a self-taught photographer based in Montréal, QC. My passion
+                for photography was born from a deep desire to share and
+                document the beauty I see in my environment.
               </p>
 
               <p>
@@ -59,7 +59,7 @@ export default function Biography() {
                 In 2017 and 2018, I have been nominated Community Allstar on
                 Unsplash.com where my pictures have received close to{' '}
                 <a href="https://unsplash.com/@jpvalery">
-                  200 Millions views and have been downloaded over 1 Million
+                  225 Millions views and have been downloaded over 1.25 Million
                   times.
                 </a>
               </p>

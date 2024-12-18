@@ -10,8 +10,6 @@ import Scribe from '../elements/logos/Scribe'
 import Unsplash from '../elements/logos/Unsplash'
 import VYSUAL from '../elements/logos/VYSUAL'
 
-import { LogoGrid } from '@jpvalery/mistral'
-
 export default function AsSeenOn() {
   return (
     <div className="mx-auto w-full pb-12">
@@ -20,7 +18,7 @@ export default function AsSeenOn() {
           As Seen On
         </h2>
       </div>
-      <LogoGrid>
+      <div className="grid grid-cols-1 content-around items-center justify-center justify-items-center gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-4">
         <CBC />
         <ExploreCanada />
         <LonelyPlanet />
@@ -33,7 +31,7 @@ export default function AsSeenOn() {
         <VYSUAL />
         <Kedge />
         <p className="text-xl font-bold text-accent">and more</p>
-      </LogoGrid>
+      </div>
     </div>
   )
 }

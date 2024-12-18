@@ -12,13 +12,12 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx}\""
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx}\""
   },
   "dependencies": {
     "@apollo/client": "^3.3.11",
-    "@headlessui/react": "^1.7.13",
+    "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.0.16",
-    "@jpvalery/mistral": "^0.4.1",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/typography": "^0.5.0",
     "autoprefixer": "^10.4.0",

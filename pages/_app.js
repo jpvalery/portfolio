@@ -5,7 +5,8 @@ import Head from 'next/head'
 import { DefaultSeo } from 'next-seo'
 import SEO from '../next-seo-config'
 
-import { Footer, Header, MainBody } from '@jpvalery/mistral'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 import menus from '../content/menu.json'
 
@@ -16,10 +17,11 @@ function MyApp({ Component, pageProps }) {
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
       <DefaultSeo {...SEO} />
+
       <Header menus={menus} />
-      <MainBody>
+      <div className="mx-auto max-w-4xl py-12">
         <Component {...pageProps} />
-      </MainBody>
+      </div>
       <Footer displaySocial socialSelection="Photography" />
     </div>
   )

@@ -16,8 +16,7 @@ const SEO = {
     description: description,
     images: [
       {
-        url:
-          'https://og.jpvalery.me/**JP%20VALERY**.png?theme=dotphoto&md=1&fontSize=125px&images=https%3A%2F%2Fog.jpvalery.me%2Fstatic%2Fcamera.svg&heights=300',
+        url: 'https://og.jpvalery.me/api/og/photo/Portfolio',
         width: 1531,
         height: 875,
         alt: 'Open Graph Image',

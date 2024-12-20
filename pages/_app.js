@@ -8,8 +8,6 @@ import SEO from '../next-seo-config'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 
-import menus from '../content/menu.json'
-
 function MyApp({ Component, pageProps }) {
   return (
     <div>
@@ -18,7 +16,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <DefaultSeo {...SEO} />
 
-      <Header menus={menus} />
+      <Header />
       <div className="mx-auto max-w-4xl py-12">
         <Component {...pageProps} />
       </div>

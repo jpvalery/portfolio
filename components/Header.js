@@ -1,208 +1,145 @@
-import Link from 'next/link'
-import PropTypes from 'prop-types'
 import React from 'react'
 
-import { Menu, Transition } from '@headlessui/react'
+import Link from 'next/link'
 
+import {
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+  MenuSeparator,
+} from '@headlessui/react'
+
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/16/solid'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Bars3Icon } from '@heroicons/react/24/outline'
+import {
+  Camera,
+  FilmStrip,
+  Mailbox,
+  UserCircleCheck,
+  UsersThree,
+} from '@phosphor-icons/react'
+import Unsplash from '../elements/icons/Unsplash'
 
-import Bookmark from '../components/Bookmark'
-import Button from '../components/Button'
+function MenuItemTexts({ title, external, description }) {
+  return (
+    <>
+      <div className="grid grid-flow-col justify-between items-center w-full">
+        <div className="grid grid-flow-row gap">
+          <span>{title}</span>
+          <span className="max-w-72">{description}</span>
+        </div>
 
-export default function Header({
-  brand,
-  menus,
-  mobileCtaColor,
-  mobileCtaIcon,
-  mobileCtaLabel,
-  mobileCtaUrl,
-}) {
+        <kbd className="hidden font-sans text-xs text-white/50 group-data-[focus]:inline">
+          {external && <ArrowTopRightOnSquareIcon className="size-4" />}
+        </kbd>
+      </div>
+    </>
+  )
+}
+
+export default function Header() {
   return (
     <div className="sticky top-0 z-50 bg-gradient-to-b from-stone-900 pb-4 pt-0 md:pt-4">
       <div className="mx-auto max-w-4xl text-stone-300">
-        <div className="flex items-center justify-between py-4">
+        <div className="flex items-center justify-between py-4 px-4 md:px-0">
           <div className="cursor-pointer font-mono text-xl font-black uppercase">
-            <Link href="/">{brand}</Link>
+            <Link href="/">JP VALERY</Link>
           </div>
+          <Menu className="z-100" as="div">
+            <MenuButton className="inline-flex items-center justify-between gap-2 rounded-md py-1.5 pl-4 pr-2 text-sm/6 font-semibold text-white focus:outline-none data-[hover]:bg-stone-800 data-[open]:bg-stone-800 data-[focus]:outline-1 data-[focus]:outline-white">
+              Explore
+              <ChevronDownIcon className="size-4 fill-white/60" />
+            </MenuButton>
 
-          <div className="hidden md:flex">
-            {menus.map((menu) => {
-              return (
-                <Menu
-                  as="div"
-                  className="z-[100] relative inline-block text-left"
+            <MenuItems
+              transition
+              anchor="bottom end"
+              className="z-100 w-[30rem] space-y-2 mt-2 origin-top-right rounded-xl border border-white/5 bg-stone-900 p-1 text-sm/6 text-white transition duration-100 ease-out [--anchor-gap:var(--spacing-1)] focus:outline-none data-[closed]:scale-95 data-[closed]:opacity-0"
+            >
+              <MenuItem>
+                <Link
+                  href="/biography"
+                  className="group flex w-full items-center gap-6 rounded-lg py-1.5 px-3 data-[focus]:bg-stone-200/10"
                 >
-                  <div className="hover:text-stone-50">
-                    <Menu.Button className="inline-flex w-full justify-center px-4 py-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-                      {menu.title.text}
-                      <ChevronDownIcon
-                        className="ml-2 -mr-1 h-5 w-5"
-                        aria-hidden="true"
-                      />
-                    </Menu.Button>
-                  </div>
-                  <Transition
-                    enter="transition ease-out duration-50 transform"
-                    enterFrom="opacity-0 scale-90"
-                    enterTo="opacity-100 scale-100"
-                    leave="transition ease-in duration-50 transform"
-                    leaveFrom="opacity-100 scale-100"
-                    leaveTo="opacity-0 scale-90"
-                  >
-                    <Menu.Items className="absolute right-0 mt-2 w-[30rem] origin-top-right gap-8 rounded-[0.75rem] bg-zinc-900 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <div className="grid grid-flow-row gap-2 p-2">
-                        {menu.items.map((item) => {
-                          return (
-                            <Menu.Item>
-                              {({ active }) => (
-                                <Bookmark
-                                  color={item.color}
-                                  description={item.description}
-                                  icon={item.icon}
-                                  title={item.title}
-                                  url={item.url}
-                                  urlExternal={item.urlExternal}
-                                />
-                              )}
-                            </Menu.Item>
-                          )
-                        })}
-                        {menu.cta && (
-                          <Menu.Item>
-                            <Button
-                              color="emerald"
-                              icon="InboxArrowDownIcon"
-                              label={menu.cta.text}
-                              url={menu.cta.url}
-                              maxW
-                            />
-                          </Menu.Item>
-                        )}
-                      </div>
-                    </Menu.Items>
-                  </Transition>
-                </Menu>
-              )
-            })}
-          </div>
-
-          <div className="flex md:hidden">
-            <Menu as="div" className="relative inline-block text-left">
-              <div className="hover:text-stone-50">
-                <Menu.Button className="inline-flex w-full justify-center px-4 py-2 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
-                  <span className="sr-only">Open menu</span>
-                  <Bars3Icon className="h-8 w-8" />
-                </Menu.Button>
-              </div>
-              <Transition
-                enter="transition ease-out duration-50 transform"
-                enterFrom="opacity-0 scale-90"
-                enterTo="opacity-100 scale-100"
-                leave="transition ease-in duration-50 transform"
-                leaveFrom="opacity-100 scale-100"
-                leaveTo="opacity-0 scale-90"
-              >
-                <Menu.Items className="absolute right-0 mt-2 w-72 origin-top-right gap-8 rounded-[0.75rem] bg-zinc-900 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:w-96">
-                  <div className="grid grid-flow-row gap-1 p-2">
-                    {menus.map((menu) => {
-                      return (
-                        <>
-                          {menu.items.map((item) => {
-                            return (
-                              <Menu.Item>
-                                {({ active }) => (
-                                  <Bookmark
-                                    color={item.color}
-                                    icon={item.icon}
-                                    title={item.title}
-                                    url={item.url}
-                                    urlExternal={item.urlExternal}
-                                  />
-                                )}
-                              </Menu.Item>
-                            )
-                          })}
-                        </>
-                      )
-                    })}
-                    <Menu.Item>
-                      <Button
-                        color={mobileCtaColor}
-                        icon={mobileCtaIcon}
-                        label={mobileCtaLabel}
-                        url={mobileCtaUrl}
-                        maxW
-                      />
-                    </Menu.Item>
-                  </div>
-                </Menu.Items>
-              </Transition>
-            </Menu>
-          </div>
+                  <UserCircleCheck className="size-10 fill-stone-100/50 group-hover:fill-stone-100/90" />
+                  <MenuItemTexts
+                    title="About me"
+                    description="Biography, achievements, and media coverage"
+                  />
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link
+                  href="/featured-shots"
+                  className="group flex w-full items-center gap-6 rounded-lg py-1.5 px-3 data-[focus]:bg-stone-200/10"
+                >
+                  <Camera className="size-10 fill-stone-100/50 group-hover:fill-stone-100/90" />
+                  <MenuItemTexts
+                    title="Portfolio"
+                    description="My photography portfolio"
+                  />
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link
+                  href="https://archive.jpvalery.photo"
+                  className="group flex w-full items-center gap-6 rounded-lg py-1.5 px-3 data-[focus]:bg-stone-200/10"
+                >
+                  <FilmStrip className="size-10 fill-stone-100/50 group-hover:fill-stone-100/90" />
+                  <MenuItemTexts
+                    title="Contact Sheets"
+                    description="An unfiltered stream of all my photos"
+                    external
+                  />
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link
+                  href="https://montrealphoto.club"
+                  className="group flex w-full items-center gap-6 rounded-lg py-1.5 px-3 data-[focus]:bg-stone-200/10"
+                >
+                  <UsersThree className="size-10 fill-stone-100/50 group-hover:fill-stone-100/90" />
+                  <MenuItemTexts
+                    title="Montréal Photo Club"
+                    description="I founded a Photo Club in Montréal in 2019"
+                    external
+                  />
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link
+                  href="https://unsplash.com/@jpvalery"
+                  className="group flex w-full items-center gap-6 rounded-lg py-1.5 px-3 data-[focus]:bg-stone-200/10"
+                >
+                  <span className="size-10 text-stone-100/50 group-hover:text-stone-100/90">
+                    <Unsplash />
+                  </span>
+                  <MenuItemTexts
+                    title="Unsplash"
+                    description="Where I share hundreds of photos for free"
+                    external
+                  />
+                </Link>
+              </MenuItem>
+              <MenuSeparator className="my-3 mx-6 h-px bg-stone-100/5" />
+              <MenuItem>
+                <Link
+                  href="https://jpvalery.me/contact/photography"
+                  className="group flex w-full items-center gap-6 rounded-lg py-1.5 px-3 data-[focus]:bg-green-500/20"
+                >
+                  <Mailbox className="size-10 fill-stone-100/50 group-hover:fill-stone-100/90" />
+                  <MenuItemTexts
+                    title="Get in touch about my photography"
+                    description=""
+                    external
+                  />
+                </Link>
+              </MenuItem>
+            </MenuItems>
+          </Menu>
         </div>
       </div>
     </div>
   )
-}
-
-Header.propTypes = {
-  brand: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
-  menus: PropTypes.arrayOf(PropTypes.object),
-  mobileCtaColor: PropTypes.string,
-  mobileCtaIcon: PropTypes.string,
-  mobileCtaLabel: PropTypes.string,
-  mobileCtaUrl: PropTypes.string,
-}
-
-Header.defaultProps = {
-  brand: 'Jp Valery',
-  menus: [
-    {
-      title: {
-        text: 'About',
-      },
-      items: [
-        {
-          title: '/about',
-          description: 'Who the heck am I!?',
-          icon: 'UserCircleIcon',
-          url: '/about',
-          urlExternal: false,
-          color: 'amber',
-        },
-      ],
-      cta: {
-        text: 'Get in touch about anything',
-        url: 'https://contact.jpvalery.me/',
-      },
-    },
-    {
-      title: {
-        text: 'Photography',
-        icon: 'CameraIcon',
-        colorFrom: '#A56D5E',
-        colorTo: '#16161D',
-        link: '',
-      },
-      items: [
-        {
-          title: 'Portfolio',
-          description: 'My photography portfolio',
-          icon: 'CameraIcon',
-          url: 'https://jpvalery.photo',
-          urlExternal: true,
-          color: 'amber',
-        },
-      ],
-      cta: {
-        text: 'Get in touch about my photography',
-        url: 'https://contact.jpvalery.me/photography',
-      },
-    },
-  ],
-  mobileCtaColor: 'green',
-  mobileCtaIcon: 'InboxInIcon',
-  mobileCtaLabel: 'Get in touch',
-  mobileCtaUrl: 'https://contact.jpvalery.me',
 }

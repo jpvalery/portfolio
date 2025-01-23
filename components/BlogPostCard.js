@@ -19,7 +19,7 @@ const BlogPostCard = (props) => {
             <Image
               src={props.imageUrl}
               alt={props.imageAlt}
-              className="rounded-sm"
+              className="rounded-xs"
               fill
               sizes="100vw"
               style={{

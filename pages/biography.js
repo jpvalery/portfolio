@@ -29,7 +29,7 @@ export default function Biography() {
             src="/static/jp-valery-avatar.webp"
             alt=""
           />
-          <h1 className="bg-gradient-to-r from-titleg1 to-titleg2 bg-clip-text pb-8 text-center font-serif text-5xl font-bold text-transparent md:text-6xl">
+          <h1 className="bg-linear-to-r from-titleg1 to-titleg2 bg-clip-text pb-8 text-center font-serif text-5xl font-bold text-transparent md:text-6xl">
             About me
           </h1>
         </div>

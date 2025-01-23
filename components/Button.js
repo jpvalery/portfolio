@@ -133,7 +133,7 @@ export default function Button({
                 ? 'hover:bg-rose-500 hover:shadow-rose-500/20 focus:ring-rose-500'
                 : ''
             }
-      h-12 py-2 px-4 text-base font-medium shadow-md shadow-zinc-900/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:w-auto sm:text-sm`}
+      h-12 py-2 px-4 text-base font-medium shadow-md shadow-zinc-900/20 hover:text-white focus:outline-hidden focus:ring-2 focus:ring-offset-2 sm:w-auto sm:text-sm`}
           >
             {icon && (
               <div className="h-6 w-6">
@@ -265,7 +265,7 @@ export default function Button({
                 ? 'hover:bg-rose-500 hover:shadow-rose-500/20 focus:ring-rose-500'
                 : ''
             } 
-      h-12 py-2 px-4 text-base font-medium shadow-md shadow-zinc-900/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:w-auto sm:text-sm`}
+      h-12 py-2 px-4 text-base font-medium shadow-md shadow-zinc-900/20 hover:text-white focus:outline-hidden focus:ring-2 focus:ring-offset-2 sm:w-auto sm:text-sm`}
             >
               {icon && (
                 <div className="h-6 w-6">
@@ -398,7 +398,7 @@ export default function Button({
                 ? 'hover:bg-rose-500 hover:shadow-rose-500/20 focus:ring-rose-500'
                 : ''
             }
-      h-12 py-2 px-4 text-base font-medium shadow-md shadow-zinc-900/20 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 sm:w-auto sm:text-sm`}
+      h-12 py-2 px-4 text-base font-medium shadow-md shadow-zinc-900/20 hover:text-white focus:outline-hidden focus:ring-2 focus:ring-offset-2 sm:w-auto sm:text-sm`}
       >
         {icon && (
           <div className="h-6 w-6">

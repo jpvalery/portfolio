@@ -27,7 +27,7 @@ export default function BlogPost({ metadata, tags }) {
       <main>
         <div className="mx-auto grid py-12">
           <div className="pb-2">
-            <h1 className="bg-gradient-to-r from-titleg1 to-titleg2 bg-clip-text py-4 text-center font-serif text-5xl font-bold text-transparent md:text-6xl">
+            <h1 className="bg-linear-to-r from-titleg1 to-titleg2 bg-clip-text py-4 text-center font-serif text-5xl font-bold text-transparent md:text-6xl">
               {metadata.title}
             </h1>
           </div>

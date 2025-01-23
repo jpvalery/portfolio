@@ -7,7 +7,7 @@ export default function Home({ galleries }) {
   return (
     <div className="md:gap-30 mx-auto grid gap-20 py-24">
       <div className="pb-8">
-        <h1 className="bg-gradient-to-r from-titleg1 to-titleg2 bg-clip-text pb-8 text-center font-serif text-5xl font-bold text-transparent md:text-6xl">
+        <h1 className="bg-linear-to-r from-titleg1 to-titleg2 bg-clip-text pb-8 text-center font-serif text-5xl font-bold text-transparent md:text-6xl">
           There's a lot of beauty in
           <br />
           ordinary things

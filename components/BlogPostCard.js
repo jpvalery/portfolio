@@ -25,6 +25,7 @@ const BlogPostCard = (props) => {
               style={{
                 objectFit: 'cover',
               }}
+              unoptimized
             />
           </div>
           <div className="grid w-full grid-flow-row gap-0 px-4">

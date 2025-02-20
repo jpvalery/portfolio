@@ -21,6 +21,7 @@ const CardGallery = (props) => {
                   maxWidth: '100%',
                   height: 'auto',
                 }}
+                unoptimized
               />
             </div>
 

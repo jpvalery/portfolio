@@ -31,6 +31,7 @@ const SubGallery = (props) => {
                 maxWidth: '100%',
                 height: 'auto',
               }}
+              unoptimized
             />
             <div
               className={`absolute top-4 left-4 right-4 bottom-4 z-0 m-auto h-9/10 w-9/10 animate-pulse-slow bg-yellow-900`}

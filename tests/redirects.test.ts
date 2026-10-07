@@ -22,5 +22,7 @@ test("vercel.json sends permanent redirects, specific rules before catch-alls", 
 	const lastLegacy = r.findLastIndex((x) => /^\/p\/\d+$/.test(x.source));
 	assert.ok(lastLegacy < firstCatchAll);
 	assert.ok(r.at(-1)?.has, "the archive host rule comes last");
+	// Vercel's "/:path*" skips the bare root, which left archive.jpvalery.photo/ serving the site.
+	assert.equal(r.at(-1)?.source, "/(.*)", "the archive host rule must also match /");
 	assert.ok(r.length + vercel.headers.length < 2048);
 });

@@ -42,7 +42,8 @@ const config = {
 		})),
 		{ source: "/p/:rest*", destination: `${SITE}/archive`, statusCode: 301 },
 		{
-			source: "/:path*",
+			// "/(.*)" rather than "/:path*": Vercel's "/:path*" doesn't match the bare root.
+			source: "/(.*)",
 			has: [{ type: "host", value: "archive.jpvalery.photo" }],
 			destination: `${SITE}/archive`,
 			statusCode: 301,

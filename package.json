@@ -25,7 +25,7 @@
 		"gen:press": "node scripts/gen/press-logos.ts"
 	},
 	"dependencies": {
-		"gray-matter": "4.0.3",
+		"js-yaml": "5.4.3",
 		"next": "16.4.0",
 		"react": "19.3.0",
 		"react-dom": "19.3.0",

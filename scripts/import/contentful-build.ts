@@ -12,7 +12,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import matter from "gray-matter";
+import { stringifyFrontmatter } from "../../lib/frontmatter.ts";
 import { ChapterFrontmatter, PostFrontmatter } from "../../lib/schemas.ts";
 import { archiveIdFromFilename, seriesPhotoId } from "../photos/lib/ids.ts";
 import { type LibraryEntry, writeLibrary } from "../photos/lib/library.ts";
@@ -173,7 +173,7 @@ for (const g of ordered) {
 	});
 	const body = rewriteImages((f.body ?? "").trim(), f.slug);
 	const file = path.join(repoRoot, "content/chapters", `${f.slug}.md`);
-	fs.writeFileSync(file, matter.stringify(body ? `${body}\n` : "", stripUndefined(data)));
+	fs.writeFileSync(file, stringifyFrontmatter(body ? `${body}\n` : "", stripUndefined(data)));
 	seriesOut.push(
 		`${String(data.chapter).padStart(2)} ${data.listed ? "listed  " : "unlisted"} ${f.slug} (${seriesIds.length} photos)`,
 	);
@@ -209,7 +209,7 @@ for (const p of ofType("post")) {
 	const body = rewriteImages(f.body.trim(), f.slug);
 	fs.writeFileSync(
 		path.join(repoRoot, "content/posts", `${f.slug}.md`),
-		matter.stringify(`${body}\n`, stripUndefined(data)),
+		stringifyFrontmatter(`${body}\n`, stripUndefined(data)),
 	);
 	postsOut.push(f.slug);
 }

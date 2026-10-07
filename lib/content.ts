@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
-import matter from "gray-matter";
 import type { z } from "zod";
+import { parseFrontmatter } from "./frontmatter.ts";
 import { getPhoto } from "./photos.ts";
 import {
 	type BiographyFrontmatter as BiographyData,
@@ -27,7 +27,7 @@ function readDir<T extends { slug: string }>(dir: string, schema: z.ZodType<T>):
 		.readdirSync(full)
 		.filter((f) => f.endsWith(".md"))
 		.map((f) => {
-			const { data, content } = matter(fs.readFileSync(path.join(full, f), "utf8"));
+			const { data, content } = parseFrontmatter(fs.readFileSync(path.join(full, f), "utf8"));
 			const parsed = schema.safeParse(data);
 			if (!parsed.success) throw new Error(`content/${dir}/${f}: ${parsed.error.message}`);
 			if (`${parsed.data.slug}.md` !== f) throw new Error(`content/${dir}/${f}: slug does not match the file name`);
@@ -75,6 +75,6 @@ export function allPosts(): Post[] {
 export const getPost = (slug: string) => allPosts().find((p) => p.slug === slug);
 
 export function biography(): Biography {
-	const { data, content } = matter(fs.readFileSync(path.join(root(), "pages/biography.md"), "utf8"));
+	const { data, content } = parseFrontmatter(fs.readFileSync(path.join(root(), "pages/biography.md"), "utf8"));
 	return { ...BiographyFrontmatter.parse(data), body: content.trim() };
 }

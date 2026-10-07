@@ -1,0 +1,45 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.5.15/schema.json",
+	"vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+	"files": {
+		"ignoreUnknown": true,
+		"includes": [
+			"**",
+			"!node_modules",
+			"!.next",
+			"!out",
+			"!.cache",
+			"!.migration",
+			"!content/photos/*.json",
+			"!content/redirects/*.json",
+			"!vercel.json",
+			"!next-env.d.ts"
+		]
+	},
+	"formatter": { "enabled": true, "indentStyle": "tab", "indentWidth": 1, "lineWidth": 120 },
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"preset": "recommended",
+			"suspicious": { "noUnknownAtRules": "off" },
+			"performance": { "noImgElement": "off" },
+			"style": {
+				"noRestrictedImports": {
+					"level": "error",
+					"options": {
+						"paths": {
+							"next/image": "Use components/photo/Photo: next/image routes images through Vercel's optimizer.",
+							"next/legacy/image": "Use components/photo/Photo: next/image routes images through Vercel's optimizer.",
+							"@apollo/client": "Content lives in content/; Contentful is retired.",
+							"contentful": "Content lives in content/; Contentful is retired.",
+							"cloudinary": "Photos are served from R2; Cloudinary is retired."
+						}
+					}
+				}
+			},
+			"nursery": { "useSortedClasses": "error" }
+		}
+	},
+	"css": { "parser": { "tailwindDirectives": true } },
+	"assist": { "actions": { "source": { "organizeImports": "on" } } }
+}

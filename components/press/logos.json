@@ -1,0 +1,68 @@
+{
+	"abduzeedo.png": {
+		"width": 95,
+		"height": 19,
+		"offsetX": 1.6,
+		"offsetY": -1.8
+	},
+	"bored-panda.svg": {
+		"width": 49,
+		"height": 47,
+		"offsetX": 0.6,
+		"offsetY": -1.3
+	},
+	"burst.svg": {
+		"width": 62,
+		"height": 28,
+		"offsetX": -0.9,
+		"offsetY": 1.3
+	},
+	"cbc.svg": {
+		"width": 81,
+		"height": 21,
+		"offsetX": -1,
+		"offsetY": -0.2
+	},
+	"explore-canada.svg": {
+		"width": 54,
+		"height": 33,
+		"offsetX": 3.1,
+		"offsetY": 1.8
+	},
+	"kedge.svg": {
+		"width": 78,
+		"height": 27,
+		"offsetX": 0.6,
+		"offsetY": 1.9
+	},
+	"lonely-planet.svg": {
+		"width": 116,
+		"height": 16,
+		"offsetX": 0.4,
+		"offsetY": 0.3
+	},
+	"peta-pixel.svg": {
+		"width": 89,
+		"height": 23,
+		"offsetX": 1,
+		"offsetY": -1.6
+	},
+	"scribe.png": {
+		"width": 87,
+		"height": 25,
+		"offsetX": 1.6,
+		"offsetY": -2.1
+	},
+	"unsplash.svg": {
+		"width": 39,
+		"height": 39,
+		"offsetX": 0,
+		"offsetY": -5.3
+	},
+	"vysual.svg": {
+		"width": 107,
+		"height": 20,
+		"offsetX": 2.6,
+		"offsetY": -1.3
+	}
+}

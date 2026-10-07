@@ -1,0 +1,159 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Darkroom: prints on a dark table (#16161D) under a faint safelight. */
+@theme {
+	--color-eigengrau: #16161d;
+	--color-ink: #f0ede6;
+	--color-dim: #a9a69c;
+	--color-faint: #75736d;
+	--color-rule: #2b2b34;
+	--color-paper: #ece9e2;
+	--color-safelight: #e26842;
+
+	--font-sans: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
+	--font-mono: var(--font-dm-mono), ui-monospace, Menlo, monospace;
+
+	--breakpoint-md: 45rem;
+}
+
+@layer base {
+	html {
+		background-color: var(--color-eigengrau);
+		color: var(--color-ink);
+		color-scheme: dark;
+		-webkit-text-size-adjust: 100%;
+	}
+	body {
+		min-height: 100dvh;
+		font-family: var(--font-sans);
+		-webkit-font-smoothing: antialiased;
+		background:
+			radial-gradient(120% 42rem at 50% -14rem, rgb(226 104 66 / 0.13), transparent 70%) no-repeat,
+			var(--color-eigengrau);
+	}
+	/* <Photo> renders <picture style="display: contents"> so the <img> can be a grid or
+	   absolutely positioned item; its <source> children must not become grid items too. */
+	picture > source {
+		display: none;
+	}
+	::selection {
+		background-color: var(--color-safelight);
+		color: var(--color-eigengrau);
+	}
+	:focus-visible {
+		outline: 2px solid var(--color-safelight);
+		outline-offset: 3px;
+	}
+	h1,
+	h2,
+	h3 {
+		text-wrap: balance;
+	}
+}
+
+/* Condensed capitals for titles (Archivo's width axis). */
+@utility font-cond {
+	font-variation-settings: "wdth" 64;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: -0.005em;
+	line-height: 0.9;
+}
+
+/* Small uppercase monospace for metadata, nav and film-edge notes. */
+@utility label {
+	font-family: var(--font-mono);
+	font-size: 0.75rem;
+	line-height: 1.4;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+/* A photo printed on paper: a paper border (the photo's own placeholder colour shows inside while it loads). */
+@utility print {
+	border: clamp(0.3rem, 0.8vw, 0.7rem) solid var(--color-paper);
+	box-shadow: 0 1.5rem 3rem -1.25rem rgb(0 0 0 / 0.8);
+}
+
+/* Blog and biography text. */
+@utility prose-darkroom {
+	--tw-prose-invert-body: var(--color-dim);
+	--tw-prose-invert-headings: var(--color-ink);
+	--tw-prose-invert-links: var(--color-ink);
+	--tw-prose-invert-bold: var(--color-ink);
+	--tw-prose-invert-quotes: var(--color-ink);
+	--tw-prose-invert-quote-borders: var(--color-safelight);
+	--tw-prose-invert-hr: var(--color-rule);
+	--tw-prose-invert-bullets: var(--color-faint);
+	--tw-prose-invert-counters: var(--color-faint);
+	--tw-prose-invert-captions: var(--color-faint);
+	--tw-prose-invert-code: var(--color-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Home: each chapter is a pile of three prints that fans out on hover or focus. */
+@layer components {
+	/* A fixed 4:3 table. Prints are absolutely centred inside it, so a tall or huge photo
+	   can never resize the card (and every pile in a row is the same height). */
+	.pile {
+		position: relative;
+		aspect-ratio: 4 / 3;
+	}
+	.pile img {
+		position: absolute;
+		inset: 0;
+		margin: auto;
+		max-width: 82%;
+		max-height: 82%;
+		width: auto;
+		height: auto;
+		transition:
+			transform 0.6s cubic-bezier(0.2, 0.75, 0.15, 1),
+			filter 0.6s;
+	}
+	.pile .p0 {
+		transform: rotate(var(--r0));
+	}
+	.pile .p1 {
+		transform: rotate(var(--r1)) translate(-2%, 1%);
+		filter: brightness(0.78);
+	}
+	.pile .p2 {
+		transform: rotate(var(--r2)) translate(2%, 2%);
+		filter: brightness(0.66);
+	}
+	@media (hover: hover) {
+		.group:hover .pile .p0 {
+			transform: rotate(0deg) translateY(-3%);
+		}
+		.group:hover .pile .p1 {
+			transform: rotate(calc(var(--r1) * 2.4)) translate(-13%, 3%);
+			filter: none;
+		}
+		.group:hover .pile .p2 {
+			transform: rotate(calc(var(--r2) * 2.4)) translate(13%, 4%);
+			filter: none;
+		}
+	}
+	.group:focus-within .pile .p0 {
+		transform: rotate(0deg) translateY(-3%);
+	}
+	.group:focus-within .pile .p1 {
+		transform: rotate(calc(var(--r1) * 2.4)) translate(-13%, 3%);
+		filter: none;
+	}
+	.group:focus-within .pile .p2 {
+		transform: rotate(calc(var(--r2) * 2.4)) translate(13%, 4%);
+		filter: none;
+	}
+}

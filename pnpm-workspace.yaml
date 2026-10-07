@@ -1,0 +1,7 @@
+onlyBuiltDependencies:
+  - sharp
+# Pin exact versions when adding dependencies
+saveExact: true
+# logo-soup asks for sharp ^0.34; share our copy so only one libvips is ever loaded
+overrides:
+  "logo-soup>sharp": 0.35.5

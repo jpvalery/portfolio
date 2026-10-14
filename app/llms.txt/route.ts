@@ -59,6 +59,11 @@ export function GET() {
 		link("Unsplash", SITE.links.unsplash, "Free photos under the Unsplash License."),
 		link("Instagram", SITE.links.instagram),
 		link("Montréal Photo Club", SITE.links.photoClub, "A photography community Jp founded in 2019."),
+		link(
+			"Monobath",
+			SITE.links.monobath,
+			"A Mac app Jp builds that converts camera scans of film negatives into photos.",
+		),
 		"",
 	].join("\n");
 

@@ -8,7 +8,7 @@ import { pageMetadata } from "@/lib/seo.ts";
 export const metadata = pageMetadata({
 	title: "Blog",
 	description:
-		"Occasional notes from Jp Valery on photography: restoring a Mamiya RB67, free resources and the making of this site.",
+		"Occasional notes from Jp Valery on photography: Monobath, restoring a Mamiya RB67, free resources and the making of this site.",
 	path: "/blog",
 });
 

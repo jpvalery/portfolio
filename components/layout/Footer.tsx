@@ -4,6 +4,7 @@ const LINKS = [
 	{ href: SITE.links.instagram, label: "Instagram" },
 	{ href: SITE.links.unsplash, label: "Unsplash" },
 	{ href: SITE.links.photoClub, label: "Montréal Photo Club" },
+	{ href: SITE.links.monobath, label: "Monobath" },
 	{ href: SITE.contact, label: "Contact" },
 ];
 

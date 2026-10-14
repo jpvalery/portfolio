@@ -37,6 +37,8 @@ In 2019, I founded the [Montréal Photo Club](https://montrealphoto.club) to org
 
 In 2020, I released [lookbutnostopping.com](https://lookbutnostopping.com), an interactive story built from photos of my trip across Newfoundland the year before.
 
+I shoot 35mm, 120 and 4×5 film, and I develop and scan it at home. In 2026, I started building [Monobath](https://monobath.app), a Mac app that turns camera scans of film negatives into photos. I [wrote about it here](/blog/monobath).
+
 For commissions, collaborations or licensing, or just to say hello, [send me a message](https://jpvalery.me/contact/photography).
 
 ## My artist statement

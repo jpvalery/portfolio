@@ -11,6 +11,7 @@ export const SITE = {
 		instagram: "https://instagram.com/jpvalery",
 		unsplash: "https://unsplash.com/@jpvalery",
 		photoClub: "https://montrealphoto.club",
+		monobath: "https://monobath.app",
 	},
 	umami: { src: "https://analytics.jpvalery.com/script.js", id: "e75bdc12-6377-4c26-90c1-06b64ad3a35a" },
 	since: 1992,
